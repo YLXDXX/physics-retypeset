@@ -1,0 +1,27 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx}
+\setCJKmainfont{Noto Serif CJK SC}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary {decorations.pathmorphing, decorations.pathreplacing, decorations.shapes,}
+\begin{document}
+\small
+\begin{tikzpicture}[>=stealth, scale=1.0]
+  \draw [densely dashed](-0.5,0)--(11,0);
+  \foreach \x[ count=\i] in {0,1,...,9}
+  {
+    \fill({\x+0.8*cos(0.25*pi*\x r)},0)circle(1pt)node[above right]{\i};
+  }
+  \draw(10.000, 0.000)--( 9.946, 0.400)--( 9.837,-0.400)--( 9.729, 0.400)--( 9.620,-0.400)--( 9.566, 0.000)--( 9.470, 0.400)--( 9.279,-0.400)--( 9.087, 0.400)--( 8.896,-0.400)--( 8.800, 0.000)--( 8.646, 0.400)--( 8.337,-0.400)--( 8.029, 0.400)--( 7.720,-0.400)--( 7.566, 0.000)--( 7.370, 0.400)--( 6.979,-0.400)--( 6.587, 0.400)--( 6.196,-0.400)--( 6.000, 0.000)--( 5.804, 0.400)--( 5.413,-0.400)--( 5.021, 0.400)--( 4.630,-0.400)--( 4.434, 0.000)--( 4.280, 0.400)--( 3.971,-0.400)--( 3.663, 0.400)--( 3.354,-0.400)--( 3.200, 0.000)--( 3.104, 0.400)--( 2.913,-0.400)--( 2.721, 0.400)--( 2.530,-0.400)--( 2.434, 0.000)--( 2.380, 0.400)--( 2.271,-0.400)--( 2.163, 0.400)--( 2.054,-0.400)--( 2.000, 0.000)--( 1.946, 0.400)--( 1.837,-0.400)--( 1.729, 0.400)--( 1.620,-0.400)--( 1.566, 0.000)--( 1.470, 0.400)--( 1.279,-0.400)--( 1.087, 0.400)--( 0.896,-0.400)--( 0.800, 0.000);
+  \fill(10,0)circle(1pt)node[above right]{11};
+  \draw[thin,densely dashed](3.2,0)--(3.2,-0.9)(1.567,0)--(1.567,-0.9);
+  \draw[thin,<->](1.567,-0.8)--(1,-0.8)node[midway,above]{$x_2$};
+  \draw[thin,<->](3.2,-0.8)--(4,-0.8)node[midway,above]{$x_5$};
+  \node at (2.2,-0.8){密部};
+  \node at (7.5,-0.8){疏部};
+  \node at (9.5,-0.8){密部};
+  \foreach \x in {1,4,6,10 }{ \draw[thin,densely dashed] (\x,0.7)--(\x,-1.3);}
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,33 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx}
+\setCJKmainfont{Noto Serif CJK SC}
+\usepackage{tkz-euclide,fontawesome5}
+\usepackage{amsmath}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary {decorations.pathmorphing, decorations.pathreplacing, decorations.shapes,}
+\begin{document}
+\small
+\begin{tikzpicture}[>=stealth,scale=1.2,inner sep=0pt]
+  \fill[ball color=orange!50!red](0,0)circle(0.2)node[below=3mm]{\scriptsize 太阳};
+  \draw[red,decoration={bumps,segment length=1.5mm,amplitude=0.7mm},decorate] (0,0) circle (0.3);
+  \foreach \x/\y/\z/\w in {0.6/50/0.05,0.9/150/0.08,2.2/86/0.08,2.6/118/0.13,3.0/225/0.12}
+  {
+    \draw(0,0)circle(\x);
+    \fill[brown](\y:\x)circle(\z);
+  }
+  \draw(0,0)circle(1.5);
+  \fill[cyan!40](-30:1.5)circle(0.1)node[above=1mm,fill=white,text=black]{\scriptsize 地球};
+  \draw(-30:1.5)circle(0.5);
+  \fill[gray]([shift=(210:0.5)]-30:1.5)circle(1pt)node[left=0.5mm,text=black]{\scriptsize 月球};
+  \draw[densely dashed](0,0)circle(3.3);
+  \node at (86:2.2) [fill=white,below=1mm]{\scriptsize 火星};
+  \node at (150:0.9)[fill=white,above=1mm]{\scriptsize 金星};
+  \node at (50:0.6) [fill=white,right=1mm]{\scriptsize 水星};
+  \node at (118:2.6)[fill=white,above right=1.3mm]{\scriptsize 木星};
+  \node at (225:3.0)[fill=white,right=1.3mm]{\scriptsize 土星};
+  \foreach \x in {1,2,...,20}
+    { \node at (rand*360:3.3) {$\ast$};}
+  \draw(70:3.3)--++(70:0.3)node[above]{恒星所在球壳};
+\end{tikzpicture}
+\end{document}

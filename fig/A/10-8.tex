@@ -1,0 +1,76 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx,ninecolors}
+\setCJKmainfont{Noto Serif CJK SC}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary {decorations.pathmorphing, decorations.pathreplacing, decorations.shapes}
+\newcommand{\posthead}[2][gray]{
+  \begin{scope}[#2]
+    \fill[left color=#1,right color= #1,middle color=#1!20](0,0)ellipse(0.05 and 0.02);
+    \fill[left color=#1,right color= #1,middle color=#1!20](0.05,0)rectangle(-0.05,0.07);
+    \fill[left color=#1,right color= #1,middle color=#1!20](-0.06,0.07)arc(-180:0:0.06 and 0.02)--(0.06,0.15)--(0.05,0.16)--(-0.05,0.16)--(-0.06,0.15)--cycle;
+    \fill[#1!50!gray](0,0.16)ellipse(0.05 and 0.02);
+    \foreach \x in {75,45,15,-15,-45,-75}
+    {
+      \draw[very thin,#1!50!gray]({0.05*sin(\x)},{0.16-0.02*cos(\x)})--({0.06*sin(\x)},{0.15-0.02*cos(\x)})--++(0,-0.08);
+    }
+  \end{scope}
+}
+\begin{document}
+\small
+\begin{tikzpicture}[>=latex,scale=0.8]
+  % \useasboundingbox(-1.9,-3.55)rectangle(3,3.15);
+  \fill[darkgray,rounded corners=2mm](-3,0.75)--(0,0.0)--(3.5,3.5)--(0.5,4.25)--cycle;
+  \fill[darkgray,line join=round](-2.88,0.804)--++(0,0.3)--(3.38,3.746)--++(0,-0.3)--cycle;
+  \fill[gray,rounded corners=2mm](-3,1.05)--(0,0.3)--(3.5,3.8)--(0.5,4.55)--cycle;
+  \draw[brown4,double=brown8](0.7,4.125)..controls(1.6,4.355)and(2.2,4.931)..(2.1,5.722)(2.7,3.634)..controls(3.2,4.063)and(3.5,4.738)..(4.2,5.303);
+  \posthead[green!80!black]{xshift=2.7cm,yshift=3.625cm,scale=2}
+  \posthead[red!80!black]{xshift=0.7cm,yshift=4.125cm,scale=2}
+  \node at (3.2,5.8){接电源};
+  \fill[lightgray](1.35,4.175)--(1.75,4.075)--(2.05,4.375)--(1.65,4.475)--cycle;
+  \fill[darkgray](2.05,4.375)--(2.05,3.975)--(1.75,3.675)--(1.75,4.075)--cycle;
+  \draw[fill=gray](1.7,4.275)ellipse(0.1 and 0.05);
+  \draw[lightgray](1.7,4.275)--++({0.1*cos(30)} ,{0.05*sin(30)})(1.7,4.275)--++({0.1*cos(210)} ,{0.05*sin(210)});
+  \fill[lightgray!50](0.95,3.875)--(0.95,4.375)--(2.15,4.075)--(2.15,3.575)--cycle;
+  \fill[brown6,rounded corners=1mm](1.15,3.825)--(1.15,4.225)--(1.95,4.025)--(1.95,3.625)--cycle;
+  \fill[brown6](1.175,4.17)--++(-1.2,-1.2)--(0.72,2.475)--++(1.2,1.2);
+  \foreach \x in{0.02,0.04,...,1.2}
+  {
+    \draw[very thin,darkgray,rounded corners=1mm](1.95-\x,3.705-\x)--++(0,0.32)--++(-0.732,0.183);
+  }
+  \fill[lightgray!50](-0.25,2.675)--(-0.25,3.175)--(0.95,2.875)--(0.95,2.375)--cycle;
+  \fill[gray,rounded corners=1mm](-0.05,2.625)--(-0.05,3.025)--(0.75,2.825)--(0.75,2.425)--cycle;
+  \fill[darkgray,rounded corners=0.5mm](0.05,2.7)--(0.05,2.9)--(0.65,2.75)--(0.65,2.55)--cycle;
+  \fill[darkgray](-0.255,1.92)--(0.145,1.82)--(0.145,1.87)--(-0.255,1.97);
+  \fill[black!90](0.145,1.87)--(-0.255,1.97)--(-0.095,2.13)--(0.305,2.03);
+  \fill[lightgray!20](-2.76,1.79)--(1.04,0.84)--(1.36,1.16)--(-2.44,2.11);
+  \draw(-2.76,1.79)--(1.04,0.84)(1.36,1.16)--(-2.44,2.11);
+  \fill[blue!80!black](-1.350,0.825)..controls(-1.000,0.737)and(-0.563,0.737)..
+  (-0.300,1.000)..controls(-0.125,1.175)and(-0.300,1.438)..
+  (-0.650,1.525)..controls(-1.000,1.613)and(-1.438,1.613)..
+  (-1.700,1.350)..controls(-1.875,1.175)and(-1.700,0.912)..cycle;
+  \fill[lightgray,draw,ultra thin](-0.71,1.655)--(-0.7,1.475)--(-0.69,1.655);
+  \fill[left color=gray,right color=gray,middle color=white](-0.920,1.699)--(-0.920,1.659)..controls(-0.918,1.617)and(-0.872,1.573)..  (-0.800,1.555)..controls(-0.700,1.530)and(-0.550,1.555)..(-0.500,1.605)--(-0.500,1.645);
+  \fill[lightgray](0.15,2.795)--(-0.900,1.745)..controls(-0.914,1.731)and(-0.920,1.715)..(-0.920,1.699)..controls(-0.918,1.657)and(-0.872,1.613)..(-0.800,1.595)..controls(-0.700,1.570)and(-0.550,1.595)..(-0.500,1.645)--(0.55,2.695);
+  \fill[darkgray!85](-0.500,1.645)--(0.55,2.695)--(0.55,2.655)--(-0.500,1.605);
+  \draw[darkgray](-0.7,1.695)--++(0,0.1);
+  \draw[double=lightgray!20,rounded corners=0.4mm](-2.24,1.61)--++(0,0.15)--++(0.37,0.37)--++(0,-0.15);
+  \draw[double=lightgray!20,rounded corners=0.4mm](0.44,0.94)--++(0,0.15)--++(0.37,0.37)--++(0,-0.15);
+  \fill[ball color=lightgray](-1,1.175)ellipse(0.1 and 0.06);
+  \fill[darkgray](-0.255,2.37)--(0.145,2.27)--(0.145,2.32)--(-0.255,2.42);
+  \fill[lightgray!70](-0.095,2.58)--(-0.255,2.42)--(0.145,2.320)..controls(0.245,2.295)and(0.385,2.310)..
+(0.425,2.350)..controls(0.439,2.364)and(0.446,2.378)..
+(0.446,2.391)..controls(0.445,2.430)and(0.381,2.461)..(0.305,2.480)--cycle;
+  \fill[left color=darkgray,right color=darkgray,middle color=white](0.145,1.820)..controls(0.245,1.795)and(0.385,1.810)..(0.425,1.850)..controls(0.439,1.864)and(0.446,1.878)..(0.446,1.891)--(0.446,2.391)..controls(0.446,2.378)and(0.439,2.364)..(0.425,2.350)..controls(0.385,2.310)and(0.245,2.295)..(0.145,2.320)--cycle;
+
+  \draw[thin](0.9,3.5)--++(135:1.5)node[left]{线圈};
+  \draw[thin](-0.7,1.75)--++(135:1.5)node[left]{振针};
+  \draw[thin](-0.2,2.25)--++(135:1.5)node[left]{振片};
+  \draw[thin](-1.3,1.2)--++(-135:1.2)node[left]{复写纸};
+  \draw[thin](0.64,1.29)--++(-75:1.0)node[right]{限位孔};
+  \draw[thin](1.04,1.04)--++(30:1.0)node[right]{纸带};
+  \draw[thin](0.38,2.12)--++(10:2.2)node[right]{永久磁铁};
+\end{tikzpicture}
+\end{document}

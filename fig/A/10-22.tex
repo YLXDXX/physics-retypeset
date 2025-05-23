@@ -1,0 +1,25 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx}
+\setCJKmainfont{Noto Serif CJK SC}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary {decorations.pathmorphing, decorations.pathreplacing, decorations.shapes,}
+\begin{document}
+\small
+\begin{tikzpicture}[>=latex,scale=1]
+  \fill [pattern =north east lines](-2, 1) rectangle (-2-.25, 1-.5);
+  \draw [thick](-2,1)--(-2,.5);
+  \draw (0,0)--(-2,.75);
+  \draw (0,0)--(2,1);
+  \draw [thick,->](0,0)--(-1,.75/2)node [below]{$F$};
+  \draw [thick,->](0,0)--(1,1/2)node [below]{$F$};
+  \draw [thick,->] (1.75,1.4)--node [above]{$a$} (2.5,1.4);
+  \draw (0,0)--(0,-1);
+  \draw (-0.25,-1) rectangle(.25, -1.8);
+  \draw [thick,->](0,-2.8/2)--(0,-2.5) node [right]{$G=mg$};
+  \draw (1/2,1/4) arc  (30:160:.56);
+  \node at (0,.25){$\alpha$};
+\end{tikzpicture}
+\end{document}

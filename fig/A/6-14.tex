@@ -1,0 +1,53 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx,ninecolors}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary {decorations.pathmorphing, decorations.pathreplacing, decorations.shapes}
+\begin{document}
+\small
+\begin{tikzpicture}[>=stealth,scale=1.0]
+  \fill[top color=gray,bottom color=gray,middle color=white](-2.5,2.5)--(2.5,2.5)arc(-90:90:0.06 and 0.1)--(-2.5,2.7);
+  \fill[gray](-2.5,2.6)ellipse(0.06 and 0.1);
+  \draw[fill=brown8](-0.8,-0.3)--(-1.2,0.3)--(0.8,0.3)--(1.2,-0.3)--cycle;
+  \draw[fill=brown7](-0.8,-1.1)--(-0.8,-0.3)--(1.2,-0.3)--(1.2,-1.1);
+  \draw[fill=brown7](-0.8,-1.1)--(-0.8,-0.3)--(-1.2,0.3)--(-1.2,-0.5);
+  \fill[left color=darkgray,right color=darkgray,middle color=white]
+  (-0.15,0.5)--(-0.15,0)arc(180:360:0.15 and 0.05)--(0.15,0.5);
+  \fill[left color=lightgray,right color=lightgray,middle color=white]
+  (-0.18,0.9)--(-0.18,0.5)arc(180:360:0.18 and 0.06)--(0.18,0.9);
+  \fill[left color=lightgray,right color=lightgray,middle color=white]
+  (-0.21,1.7)--(-0.21,0.9)arc(180:360:0.21 and 0.07)--(0.21,1.7);
+  \fill[left color=lightgray,right color=lightgray,middle color=white]
+  (-0.24,3.0)--(-0.24,1.7)arc(180:360:0.24 and 0.08)--(0.24,3.0);
+  \fill[gray](0,3.0)ellipse(0.24 and 0.08);
+  \draw[very thin,fill=pink!10!orange!10](-2.356,2.338)..controls(-2.221,2.371)and(-2.208,2.747)..
+  (-2.136,2.806)..controls(-2.088,2.851)and(-2.063,2.837)..
+  (-2.034,2.833)..controls(-1.990,2.916)and(-1.910,2.901)..
+  (-1.818,2.971)..controls(-1.762,3.014)and(-1.739,3.017)..
+  (-1.683,3.000)..controls(-1.610,3.040)and(-1.585,3.017)..
+  (-1.409,2.857)..controls(-1.362,2.811)and(-1.324,2.768)..
+  (-1.322,2.716)..controls(-1.133,2.758)and(-0.939,2.605)..
+  (-1.300,2.515)..controls(-1.510,2.353)and(-1.630,2.366)..
+  (-1.690,2.292)..controls(-1.816,2.192)and(-1.934,2.217)..(-2.004,2.087)
+  (1.483,1.974)..controls(1.526,2.211)and(1.441,2.140)..
+(1.442,2.215)..controls(1.445,2.341)and(1.299,2.361)..
+(1.193,2.492)..controls(1.058,2.497)and(0.888,2.519)..
+(0.966,2.626)..controls(1.046,2.727)and(1.194,2.729)..
+(1.513,2.567)..controls(1.478,2.657)and(1.426,2.725)..
+(1.353,2.721)..controls(1.384,2.820)and(1.456,2.828)..
+(1.496,2.874)..controls(1.564,2.934)and(1.612,2.878)..
+(1.705,2.891)..controls(1.811,2.913)and(1.816,2.848)..
+(1.921,2.850)..controls(1.977,2.847)and(1.987,2.767)..
+(2.062,2.755)..controls(2.106,2.751)and(2.160,2.707)..
+(2.108,2.507)..controls(2.061,2.333)and(1.911,2.098)..(1.926,1.977);
+\draw[very thin](-1.539,2.691)..controls(-1.516,2.715)and(-1.509,2.759)..(-1.513,2.788)
+(-1.577,2.789)..controls(-1.572,2.698)and(-1.531,2.721)..(-1.531,2.647)
+(-1.646,2.640)..controls(-1.459,2.633)and(-1.459,2.693)..(-1.322,2.716)
+(-1.233,2.554)..controls(-1.257,2.609)and(-1.239,2.668)..(-1.149,2.660)
+(-1.350,2.622)..controls(-1.364,2.592)and(-1.362,2.564)..(-1.343,2.536)
+( 1.192,2.603)..controls( 1.221,2.565)and( 1.217,2.517)..( 1.193,2.492)
+( 1.001,2.626)..controls( 1.113,2.603)and( 1.120,2.570)..( 1.091,2.522);
+\end{tikzpicture}
+\end{document}

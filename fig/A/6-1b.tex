@@ -1,0 +1,23 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx}
+\setCJKmainfont{Noto Serif CJK SC}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary {decorations.pathmorphing, decorations.pathreplacing, decorations.shapes,}
+\begin{document}
+\small
+\begin{tikzpicture}[>=latex,scale=1]
+  \useasboundingbox(-1.2,-3.55)rectangle(1.2,3.15);
+  \tkzDefPoints{0/0/O,0/1.5/A,0.6/0.35/B}
+  \tkzDefPointBy[translation = from B to A](O)\tkzGetPoint{C}
+  \draw[->,thick] (O)--(C)node[left]{$F_1$};
+  \draw[->,thick] (O)--(B)node[right]{$F_2$};
+  \draw[->,thick] (O)--++(0,-1.5)node[below]{$F_3$};
+  \draw[->,thick,densely dashed] (O)--(A)node[above]{$F$};
+  \draw[densely dashed](A)--(B)(A)--(C);
+  \tkzLabelPoints[below left](O)
+  % \tkzDrawSegments[densely dashed,semithick](A,B A,C)
+\end{tikzpicture}
+\end{document}

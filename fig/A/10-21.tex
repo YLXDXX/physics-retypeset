@@ -1,0 +1,92 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx,ninecolors}
+\setCJKmainfont{Noto Serif CJK SC}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary{decorations.pathmorphing, decorations.pathreplacing, decorations.shapes,3d}
+\begin{document}
+\small
+\begin{tikzpicture}[>=latex,z={(15:10mm)},x={(130:5mm)}]
+\begin{scope}[canvas is zx plane at y=0]
+  \draw[fill=brown9](-5,0)rectangle(5,1.8);
+  \draw[fill=gray,very thin](4.9,1.2)rectangle(5,0.8);
+  \draw[fill=gray,very thin](1.4,1.2)rectangle(1.7,1.0);
+  \draw[fill=gray,very thin](1.85,1.2)rectangle(2.15,1.0);
+\end{scope}
+\begin{scope}[canvas is yz plane at x=1.0]
+  \draw[fill=lightgray,very thin](0,4.9)rectangle(1.8,5);
+  \draw[fill=lightgray,very thin](0,1.5)rectangle(3.5,1.6);
+  \draw[fill=lightgray,very thin](0,1.95)rectangle(3.5,2.05);
+\end{scope}
+\begin{scope}[canvas is zx plane at y=3.6]
+  \draw[fill=lightgray,very thin](1.5,1.2)rectangle(1.6,0.4);
+  \draw[fill=lightgray,very thin](1.95,1.2)rectangle(2.05,0.4);
+\end{scope}
+\draw[very thin,red](0.7,3.5,2)--(0.7,3.2,2);
+\draw[brown](1.0,3.5,1.55)--(0.875,2.1,1.575);
+\draw[brown](1.0,3.5,2)--(0.875,2.1,1.975);
+\foreach \x in {1.5,1.95}
+{
+  \begin{scope}[canvas is xy plane at z=\x]
+    \draw[fill=darkgray,very thin](1.2,0)--(1.2,3.6)--(0.4,3.6)--(0.4,3.5)--(1.0,3.5)--(1.0,0);
+  \end{scope}
+}
+\begin{scope}[canvas is yz plane at x=0]
+  \draw[fill=brown8](0,-5)rectangle(-0.1,5);
+\end{scope}
+\begin{scope}[canvas is xy plane at z=-5]
+  \draw[fill=brown7](0,0)rectangle(1.8,-0.1);
+\end{scope}
+
+%%% 画板立面
+\begin{scope}[canvas is yz plane at x=1.0]
+  \draw[fill=brown9](0.3,1.5)rectangle(1.8,5);
+  \draw[fill=white](0.4,1.6)rectangle(1.7,4.9);
+  \foreach \x in {185,180,...,145}
+  {
+    \draw[ultra thin]([shift=(\x:3.0)]3.5,2.0)--++(\x:-0.2);
+    \draw[ultra thin]([shift=(\x-2.5:3.0)]3.5,2.0)--++(\x-2.5:-0.17);
+    \foreach \y in {1,2,3,4,6,7,8,9}
+    {
+      \draw[ultra thin]([shift=(\x-0.5*\y:3.0)]3.5,2.0)--++(\x-0.5*\y:-0.12);
+    }
+  }
+  \draw[ultra thin]([shift=(140:3.0)]3.5,2.0)--++(140:-0.2);
+  % \draw(3.5,2.0)--(0.4,2.0);
+\end{scope}
+\draw[very thin,red](0.7,3.2,2)--(0.7,0.6,2);
+\begin{scope}[canvas is yz plane at x=0.4]
+  \draw[fill=lightgray,very thin](3.5,1.5)rectangle(3.6,2.05);
+\end{scope}
+\begin{scope}[canvas is yz plane at x=0.6]
+  \draw[fill=lightgray,very thin](0.5,1.55)rectangle(0.7,2.0);
+  \fill(0.6,1.775)circle(0.07);
+\end{scope}
+\begin{scope}[canvas is xy plane at z=1.55]
+  \draw[fill=darkgray,very thin](0.8,0.5)rectangle(0.6,0.7);
+  \fill(0.7,0.6)circle(0.07);
+\end{scope}
+\begin{scope}[canvas is zx plane at y=0.7]
+  \draw[fill=lightgray,very thin](1.55,0.8)rectangle(2,0.6);
+  \draw(1.6,0.7)--++(120:1.0)node[left]{摆锤};
+\end{scope}
+\draw[brown](0.875,2.1,1.575)--(0.75,0.7,1.6)(0.4,3.5,1.55)--(0.65,0.7,1.6);
+\draw[brown](0.875,2.1,1.975)--(0.75,0.7,1.95)(0.4,3.5,2)--(0.65,0.7,1.95);
+\draw(0.7,2.7,2)--++(150:1.5)node[right]{指针};
+\begin{scope}[canvas is yz plane at x=0.8]
+  \fill[darkgray](0,-4)--++(0.1,0)arc(180:90:0.3)arc(90:0:0.2)--++(0.1,0)--++(0,1)--++(-0.1,0)arc(0:-90:0.2)arc(-90:-180:0.3)--++(-0.1,0)--cycle;
+\end{scope}
+\draw[ultra thick,lightgray,line cap=round](0.7,0.7,-4)--(1.0,0.7,-4);
+\foreach \x in {80,70,...,10}
+{
+  \draw[line width={2.5*sin(\x)},brown!\x](0.7,0.7,-4.2)--(0.7,0.7,-2);
+}
+\begin{scope}[canvas is yz plane at x=0.6]
+  \fill[top color=gray,bottom color=gray,middle color=white](0,-4)--++(0.1,0)arc(180:90:0.3)arc(90:0:0.2)--++(0.1,0)--++(0,1)--++(-0.1,0)arc(0:-90:0.2)arc(-90:-180:0.3)--++(-0.1,0)--cycle;
+\end{scope}
+\draw(0.7,0.7,-2.5)--++(0,0.5,0)node[above]{弹簧枪};
+\end{tikzpicture}
+\end{document}

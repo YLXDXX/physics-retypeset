@@ -1,0 +1,121 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary {decorations.pathmorphing, decorations.pathreplacing, decorations.shapes,}
+\newcommand\dynamometer[3][0]{
+  \begin{scope}[#2,rotate=#1,inner sep=0pt]
+    \coordinate (A) at (0,2.0);
+    \coordinate (B) at (0,2.0+#3*0.2);
+    \foreach \x/\y in {100/2.0, 70/1.5, 50/1.2, 30/0.7 }
+    {
+      \draw[line width=\y pt,gray!\x ]([yshift=1cm]B)circle(0.2);
+    }
+    \fill[top color=gray, bottom color=gray,middle color=white]([xshift=-1mm,yshift=7mm]B)rectangle([xshift=1mm,yshift=8.7mm]B);
+    \fill[green!30!black]([xshift=2.8mm,yshift=6mm]B)--([xshift=2.8mm,yshift=-1.2cm]B)to[bend left=50]([xshift=-2.8mm,yshift=-1.2cm]B)--([xshift=-2.8mm,yshift=6mm]B)to[bend left=50]cycle;
+    \fill[lightgray,even odd rule](0.1,0.4)arc(360:180:0.1)--++(0,1.6)--++(0.2,0)--cycle(0,0.4)circle(0.05)([xshift=-0.4mm]A)rectangle++(0.8mm,0.5mm);
+    \fill[lightgray!30,even odd rule]([xshift=2.2mm,yshift=5mm]B)--([xshift=2.2mm,yshift=-1.1cm]B)to[bend left]([xshift=-2.2mm,yshift=-1.1cm]B)[rounded corners=2pt]--([xshift=-2.2mm,yshift=5mm]B)[sharp corners]--([xshift=-1mm,yshift=5mm]B)arc(180:0:0.1)[rounded corners=2pt]--cycle[sharp corners]
+    ([xshift=-0.4mm,yshift=2mm]B)rectangle([xshift=0.4mm]A);
+    \draw[darkgray](0.1,0.1)arc(360:90:0.1)--++(0,0.15);
+    \foreach \x in {0,1,...,9}
+    {
+      \draw[line width=0.1pt,line join=round,lightgray]([yshift=2mm-\x*0.15mm-\x*#3*0.2mm]B)--++(0.3mm,-0.0375mm-#3*0.05mm)--++(-0.6mm,-0.075mm-#3*0.1mm)--++(0.3mm,-0.0375mm-#3*0.05mm);
+    }
+    \fill[red]([yshift=-0.2mm]A)--([xshift=-1mm]A)--([xshift=1mm]A);
+    \foreach \x in {0,1,2,3,4}
+    {
+      \draw[ultra thin]([xshift=0.5mm,yshift=-\x*2mm]B)--++(0.07,0)node[rotate=#1,right]{\resizebox{!}{0.5mm}{\x}};
+      \draw[ultra thin]([xshift=-0.5mm,yshift=-\x*2mm]B)--++(-0.07,0)node[rotate=#1,left]{\resizebox{!}{0.5mm}{\x}};
+      \foreach \y in {1,2,3,4,6,7,8,9}
+      {
+        \draw[ultra thin]([xshift=0.5mm,yshift=-\x*2mm-\y*0.2mm]B)--++(0.05,0);
+        \draw[ultra thin]([xshift=-0.5mm,yshift=-\x*2mm-\y*0.2mm]B)--++(-0.05,0);
+      }
+      \draw[ultra thin]([xshift=0.5mm,yshift=-\x*2mm-1mm]B)--++(0.06,0);
+      \draw[ultra thin]([xshift=-0.5mm,yshift=-\x*2mm-1mm]B)--++(-0.06,0);
+    }
+    \draw[ultra thin]([xshift=0.5mm,yshift=-1cm]B)--++(0.07,0)node[rotate=#1,right]{\resizebox{!}{0.5mm}{5}};
+    \draw[ultra thin]([xshift=-0.5mm,yshift=-1cm]B)--++(-0.07,0)node[rotate=#1,left]{\resizebox{!}{0.5mm}{5}};
+  \end{scope}
+  }
+  \newcommand\hand[2][0]{
+    \begin{scope}[#2,rotate=#1]
+    \fill[pink!10!orange!10,draw=black,very thin]
+    (-0.349, 0.942)..controls(-0.260, 0.685)and(-0.474, 0.475)..
+(-0.416, 0.335)..controls(-0.404, 0.292)and(-0.383, 0.263)..
+(-0.379, 0.217)..controls(-0.367, 0.130)and(-0.327, 0.063)..
+(-0.296, 0.082)..controls(-0.283, 0.055)and(-0.244, 0.017)..
+(-0.194, 0.049)..controls(-0.162,-0.015)and(-0.123,-0.024)..
+(-0.087, 0.034)..controls(-0.081,-0.083)and( 0.075,-0.103)..
+( 0.083, 0.009)..controls( 0.080, 0.143)and( 0.084, 0.122)..
+( 0.103, 0.189)..controls( 0.159, 0.102)and( 0.215, 0.099)..
+( 0.233, 0.143)..controls( 0.243, 0.165)and( 0.202, 0.206)..
+( 0.205, 0.243)..controls( 0.194, 0.311)and( 0.245, 0.465)..
+( 0.189, 0.564)..controls( 0.147, 0.614)and( 0.102, 0.760)..
+( 0.089, 0.809)..controls( 0.075, 0.837)and( 0.060, 0.826)..
+( 0.060, 0.868)..controls( 0.053, 0.899)and( 0.064, 0.919)..( 0.063, 0.951);
+  \draw[very thin]
+  ( 0.233,0.143)..controls( 0.164,0.156)and( 0.126,0.208)..( 0.196,0.233)
+( 0.123,0.463)..controls( 0.144,0.380)and( 0.128,0.289)..( 0.103,0.189)
+(-0.095,0.309)..controls(-0.082,0.326)and(-0.066,0.336)..(-0.050,0.340)
+(-0.216,0.314)..controls(-0.206,0.238)and(-0.218,0.126)..(-0.194,0.050)
+(-0.340,0.342)..controls(-0.306,0.275)and(-0.311,0.193)..(-0.295,0.085)
+(-0.083,0.229)..controls(-0.084,0.206)and(-0.078,0.152)..
+(-0.083,0.129)..controls(-0.089,0.090)and(-0.073,0.060)..(-0.087,0.034);
+  \end{scope}
+  }
+  \newcommand\handi[2][0]{
+    \begin{scope}[#2,rotate=#1]
+    \fill[pink!10!orange!10,draw=black,very thin]
+    (-0.349, 0.942)..controls(-0.260, 0.685)and(-0.474, 0.475)..
+(-0.416, 0.335)..controls(-0.404, 0.292)and(-0.383, 0.263)..
+(-0.379, 0.217)..controls(-0.367, 0.130)and(-0.327, 0.063)..
+(-0.296, 0.082)..controls(-0.283, 0.055)and(-0.244, 0.017)..
+(-0.194, 0.049)..controls(-0.162,-0.015)and(-0.123,-0.024)..
+(-0.087, 0.034)..controls(-0.081,-0.067)and(-0.086,-0.181)..
+(-0.086,-0.250)..controls(-0.091,-0.314)and(-0.090,-0.352)..
+(-0.030,-0.362)..controls( 0.024,-0.371)and( 0.052,-0.328)..
+( 0.054,-0.299)..controls( 0.052,-0.248)and( 0.076,-0.266)..
+( 0.070,-0.191)..controls( 0.063,-0.124)and( 0.080,-0.070)..
+( 0.083, 0.009)..controls( 0.080, 0.143)and( 0.084, 0.122)..
+( 0.103, 0.189)..controls( 0.159, 0.102)and( 0.215, 0.099)..
+( 0.233, 0.143)..controls( 0.243, 0.165)and( 0.202, 0.206)..
+( 0.205, 0.243)..controls( 0.194, 0.311)and( 0.245, 0.465)..
+( 0.189, 0.564)..controls( 0.147, 0.614)and( 0.102, 0.760)..
+( 0.089, 0.809)..controls( 0.075, 0.837)and( 0.060, 0.826)..
+( 0.060, 0.868)..controls( 0.053, 0.899)and( 0.064, 0.919)..( 0.063, 0.951);
+  \draw[very thin]
+  ( 0.233,0.143)..controls( 0.164,0.156)and( 0.126,0.208)..( 0.196,0.233)
+( 0.123,0.463)..controls( 0.144,0.380)and( 0.128,0.289)..( 0.103,0.189)
+(-0.095,0.309)..controls(-0.082,0.326)and(-0.066,0.336)..(-0.050,0.340)
+(-0.216,0.314)..controls(-0.206,0.238)and(-0.218,0.126)..(-0.194,0.050)
+(-0.340,0.342)..controls(-0.306,0.275)and(-0.311,0.193)..(-0.295,0.085)
+(-0.083,0.229)..controls(-0.084,0.206)and(-0.078,0.152)..
+(-0.083,0.129)..controls(-0.089,0.090)and(-0.073,0.060)..(-0.087,0.034)
+( 0.040,-0.292)..controls(-0.004,-0.283)and( 0.042,-0.204)..
+(-0.026,-0.208)..controls(-0.059,-0.210)and(-0.065,-0.212)..(-0.077,-0.264);
+  \end{scope}
+  }
+\begin{document}
+\small
+\begin{tikzpicture}[>=latex,scale=0.8]
+  \dynamometer{}{1.5}
+  \dynamometer{xshift=2cm,yshift=-0.4cm}{0}
+  \foreach \x/\y in {0/0.3,2/-0.1}
+  {
+    \fill[left color=gray,right color=gray,middle color=white](\x,\y-1)ellipse(0.2 and 0.1);
+    \fill[left color=gray,right color=gray,middle color=white](\x-0.2,\y-1)rectangle++(0.4,0.3);
+    \fill[lightgray](\x,\y-0.7)ellipse(0.2 and 0.1);
+    \fill[left color=gray,right color=gray,middle color=white](\x,\y-0.7)ellipse(0.1 and 0.05);
+    \fill[left color=gray,right color=gray,middle color=white](\x-0.1,\y-0.7)rectangle++(0.2,0.15);
+    \fill[lightgray](\x,\y-0.55)ellipse(0.1 and 0.05);
+    \draw[thick](\x,\y-0.3)--++(0,-0.2);
+    \draw[thin](\x-0.05,\y-0.55)arc(180:0:0.05);
+  }
+  \draw[->](2.7,2)--++(0,-0.5)node[midway,right]{$a=g$};
+  \hand{yshift=3.45cm,scale=1.2}
+  \handi{xshift=2cm,yshift=3.45cm,scale=1.2}
+\end{tikzpicture}
+\end{document}

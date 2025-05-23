@@ -1,0 +1,19 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary {decorations.pathmorphing, decorations.pathreplacing, decorations.shapes,}
+\begin{document}
+\small
+\begin{tikzpicture}[>=stealth, thick,scale=0.8]
+  \draw [->](0,-2) --(14,-2)node [below]{$x$ (\unit{m})} ;
+  \foreach \x in {1,2,...,13}
+  {
+    \draw (\x, -2)--(\x,-2+.2);
+  }
+  \node at (7,-2-.5){$O$}; \node at (8,-2-.5){$x_0=1$}; \node at (2,-2-.5){$x=-5$}; 
+  \draw[->, ultra thick] (8,-2) node [above]{$A$}--(2,-2)node [above]{$B$};
+\end{tikzpicture}
+\end{document}

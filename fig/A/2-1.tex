@@ -1,0 +1,60 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx}
+\setCJKmainfont{Noto Serif CJK SC}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary {decorations.pathmorphing, decorations.markings, decorations.shapes}
+\pgfdeclareverticalshading{pile}{100bp}{
+  color(0bp)=(black);color(50bp)=(white);color(100bp)=(black)
+}
+\begin{document}
+\small
+\begin{tikzpicture}[>=stealth,line join=round,scale=1.25]
+  % \draw (0,0)rectangle(6,4.5);
+  \coordinate (A) at ([shift=(-155:0.2)]-0.8,-0.9);
+  \coordinate (B) at ([yshift=0.2cm]A);
+  \draw[very thick](-2.0,-0.9)--(-2.8,-0.9)--++(45:0.3)--++(-0.1,0)coordinate(C);
+  \fill[top color=brown,bottom color=brown,middle color=white]([yshift=0.3mm]C)--([xshift=-3mm,yshift=0.4mm]C)to[bend right]++(0,-0.08)--([yshift=-0.3mm]C);
+  \draw[fill=gray!70]([shift=(25:1.2)]0,-1.15)--++(-155:2.4)--++(0.2,0)--++(25:2.4);
+  \draw[fill=darkgray]([shift=(25:1.2)]0.2,-1.15)--++(-155:2.4)--++(0,-0.3)--++(25:2.4);
+  \draw[fill=gray!70]([shift=(25:1.2)]0.5,-1.15)--++(-155:2.4)--++(0.2,0)--++(25:2.4);
+  \draw[fill=darkgray]([shift=(25:1.2)]0.7,-1.15)--++(-155:2.4)--++(0,-0.3)--++(25:2.4);
+  \draw[fill=lightgray!30]([shift=(-155:1.2)]0,-1.15)rectangle++(0.2,-0.3);
+  \draw[fill=lightgray!30]([shift=(-155:1.2)]0.5,-1.15)rectangle++(0.2,-0.3);
+  \draw[fill=lightgray!40,very thin](-1,-1.15)--(0.7,-1.15)--(0.7,-1.35)--(0.8,-1.35)--(0.8,-1.05)--(-1,-1.05);
+  \draw[fill=gray!40,very thin](-1,-1.05)--(0.8,-1.05)--++(25:0.3)--++(-1.7,0);
+  \draw[fill=darkgray!40,very thin](0.8,-1.05)--++(25:0.3)--++(0,-0.3)--++(-155:0.3);
+  \draw[very thin,fill=lightgray](-0.8,-0.9)--++(-1.8,0)--++(25:0.4)--++(1.8,0);
+  \draw[very thin,fill=gray](-0.8,-0.9)--++(-1.8,0)--++(0,-0.2)--++(1.8,0);
+  \draw[very thin,fill=lightgray](B)--++(-1.2,0)--++(25:0.8)--++(1.2,0)--cycle;
+  \draw[very thin,fill=darkgray](B)--++(25:0.8)--++(0,-0.4)--++(-155:0.8)--cycle;
+  \draw[very thin,fill=gray](B)rectangle++(-1.2,-0.4);
+  \draw[very thin,fill=lightgray](-0.8,-0.9)--++(0.5,0)--++(25:0.4)--++(-0.5,0);
+  \draw[very thin,fill=gray](-0.8,-0.9)rectangle++(0.5,-0.2);
+  \draw[very thin,fill=darkgray](-0.3,-0.9)--++(0,-0.2)--++(25:0.4)--++(0,0.2);
+  \draw[very thin,fill=darkgray](-1.05,-0.25)--++(25:0.1)--++(0,-0.2)--++(-155:0.1);
+  \draw[very thin,fill=lightgray](-0.9,-0.2)--++(25:0.5)--++(-0.5,0)--++(-155:0.5)--cycle;
+  \draw[very thin,fill=darkgray](-0.9,-0.2)--++(25:0.4)--++(0,-0.15)--++(-155:0.4)--cycle;
+  \draw[fill=gray,very thin](-0.9,-0.2)rectangle(-1.4,-0.35);
+  \draw[very thin,fill=darkgray](-1.05,-0.35)--(-1.05,-0.25)--++(-155:0.8)--++(0,-0.2)--++(25:0.8);
+  \draw[very thin,fill=lightgray](-1.05,-0.25)--++(-0.2,0)--++(-155:0.8)--++(0.2,0);
+  \draw[very thin,fill=gray]([shift=(-155:0.8)]-1.05,-0.25)rectangle++(-0.2,-0.2);
+  \draw[very thin,fill=lightgray](-1.4,0.05)--(-0.3,0.05)--++(25:0.1)--++(-1.1,0)--cycle;
+  \draw[very thin,fill=lightgray](-0.2,0)--++(25:0.1)--++(-0.1,0.05)--++(-155:0.1)--cycle;
+  \fill[left color=gray,right color=gray,middle color=white,draw=black,very thin](-1.1,0.2)--(-1.1,-0.1)arc(180:360:0.1 and 0.05)--(-0.9,0.2);
+  \draw[very thin,fill=gray](-0.95,-0.05)--(-0.3,-0.05)--(-0.2,0)--(-0.3,0.05)--(-0.95,0.05);
+  \draw[very thin,fill=gray](-1.05,-0.05)--(-1.4,-0.05)--(-1.4,0.05)--(-1.05,0.05);
+  \fill[lightgray,draw=black,very thin](-1,0.2)ellipse(0.1 and 0.05);
+  \draw [shading=pile,shading angle=25](115:0.2)--++(25:1.0)arc(115:-65:0.2)--++(-155:1.0)--cycle;
+  \draw[fill=lightgray](0,0)circle(0.2);
+  \draw[thin,postaction={decorate},decoration={markings,mark={at position 0.7 with{\arrow{Stealth[scale=0.5]}}}}](240:0.28)arc(240:300:0.28);
+  % \fill(-1.875,-0.7)circle(1pt);
+  \draw[very thick](-1.875,-0.688)--++(-155:0.1)--++(-65:0.3)--++(-155:0.1)coordinate(D);
+  \fill[top color=brown,bottom color=brown,middle color=white]([shift=(115:0.03)]D)--([shift=(-165:0.3)]D)to[bend right]([shift=(-145:0.3)]D)--([shift=(115:-0.03)]D);
+  \draw[thin,->](-0.3,0.3)--++(25:0.5);
+  \draw[thin](25:1.0)--++(135:0.5)node[left]{工件};
+  \draw[thin](-0.5,0)--++(135:0.6)node[left]{车刀};
+\end{tikzpicture}
+\end{document}

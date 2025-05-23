@@ -1,0 +1,41 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx,ninecolors}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary {decorations.pathmorphing, decorations.pathreplacing, decorations.shapes}
+\begin{document}
+\small
+\begin{tikzpicture}[>=latex,scale=1.0]
+  % \useasboundingbox(-1,-2)rectangle(8,6);
+  \fill[left color=gray,right color=gray,middle color=white](-0.25,-0.5)rectangle(0.25,0.5);
+  % \fill[left color=darkgray,right color=darkgray,middle color=white](0,-1)ellipse(0.5 and 0.25);
+  \fill[left color=darkgray,right color=darkgray,middle color=white](-0.5,-0.5)--(-0.5,-1)arc(120:60:0.5)arc(-120:-60:0.5)--(0.5,-0.5)--cycle;
+  \fill[left color=darkgray,right color=darkgray,middle color=gray](-0.5,-1)arc(120:60:0.5)arc(-60:-120:0.5);
+  \fill[left color=darkgray,right color=darkgray,middle color=white](-0.3,-0.4)rectangle(0.3,0.4);
+  \draw[postaction={decorate},decoration={markings,mark=at position 0.5 with {\arrow{>}}}](-0.7,-1)arc(180:360:0.7 and 0.35);
+  \fill[lightgray](0.7,-0.4)rectangle(2.0,0.4);
+  \fill[lightgray](-0.7,-0.4)rectangle(-4.0,0.4);
+  \fill[left color=lightgray,right color=darkgray](-0.7,-0.4)rectangle(-0.3,0.4);
+  \fill[right color=lightgray,left color=darkgray](0.7,-0.4)rectangle(0.3,0.4);
+  \foreach \x in {0.4,0.6,-0.4,-0.6}
+  {
+    \foreach \y in {-0.3,-0.2,-0.1,0,0.1,0.2,0.3}
+    {
+      \fill[ball color=white](\x,\y)circle(1pt);
+    }
+  }
+  \node at (0,0.5)[above]{转轴};
+  \fill[top color=darkgray,bottom color=darkgray,middle color=white](2,-0.6)rectangle(3,0.6);
+  \begin{scope}[xshift=-4cm,rotate=-70]
+    \draw[fill=lightgray!30](30:0.4)arc(30:150:0.4)--(-1,-0.5)--(-1,-3)--(1,-3)--(1,-0.5)--cycle;
+    \fill[darkgray](-0.9,-0.5)rectangle(0.9,-2.9);
+    \fill[darkgray](0,0)circle(0.3);
+    \fill[brown](-0.4,-2.9)--++(0,1.3)--++(0.1,0)--++(0,-0.6)--++(0.6,0)--++(0,-0.7)--++(-0.1,0)--++(0,0.6)--++(-0.5,0)--++(0,-0.6)--cycle;
+    \fill[lightgray!40,draw=black](-0.15,-1.2)circle(0.15);
+    \fill[lightgray!40,draw=black](0.3,-2.2)[rounded corners=1.5mm]--(-0.3,-2.2)--(-0.3,-1.4)--(0.0,-1.4)--(0.0,-2.0)--(0.5,-2.0)[rounded corners=1mm]--(0.5,-2.9)--(0.3,-2.9)[sharp corners]--cycle;
+    \fill[lightgray!40,draw=black,rounded corners=0.75mm](-0.15,-1.6)--(-0.15,-1.9)--(0.3,-1.9)--(0.3,-2.05)--(-0.3,-2.05)--(-0.3,-1.6);
+  \end{scope}
+\end{tikzpicture}
+\end{document}

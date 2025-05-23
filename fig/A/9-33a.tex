@@ -1,0 +1,28 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx}
+\setCJKmainfont{Noto Serif CJK SC}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary {decorations.pathmorphing, decorations.pathreplacing, decorations.shapes,}
+\begin{document}
+\small
+\begin{tikzpicture}[>=stealth, scale=1.0]
+  % \useasboundingbox(-0.5,1.34)rectangle(7.55,-1.47);
+  \foreach \x in {0.5,1,1.5}  { \draw[very thin,gray](0,\x)--++(4.8,0); }
+  \foreach \x/\y in {0.8/400,1.6/800,2.4/1200,3.2/1600,4.0/2000,4.8/2400}  
+    { 
+      \draw[very thin,gray](\x,0)--++(0,2)node[at start,below,text=black]{\scriptsize \y}; 
+    }
+  \node at (0,0) [left]{\scriptsize 0};
+  \node at (0,1) [left]{\scriptsize 0.5};
+  \node at (0,2) [left]{\scriptsize 1.0};
+  \node at (4,1.5)[fill=white]{钢琴};
+  \draw[thin](0,0)rectangle(4.8,2);
+  \foreach \x/\y in {0.2/2.0, 0.4/1.3,0.6/0.6,0.8/0.75,1.0/0.25,1.2/1.1,1.4/0.2,1.6/0.3,1.8/0.3,2.0/0.3,2.2/0.3,2.4/0.35,2.6/0.3,2.8/0.3,3.4/0.25,3.6/0.2}
+  {
+    \draw[ultra thick](\x,0)--++(0,\y);
+  }
+\end{tikzpicture}
+\end{document}

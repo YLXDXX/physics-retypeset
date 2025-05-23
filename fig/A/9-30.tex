@@ -1,0 +1,35 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary {decorations.pathmorphing, decorations.pathreplacing, decorations.shapes,}
+\begin{document}
+\small
+\begin{tikzpicture}[>=stealth]
+  \useasboundingbox(-0.05,1.34)rectangle(8.05,-1.47);
+  \foreach \x in {0,1.6,...,8}
+  {
+    \begin{scope}[xshift=\x cm]
+    \draw[thick]
+    (0.000, 0.000)..controls(0.008, 1.572)and(0.048, 1.637)..
+    (0.055, 0.745)..controls(0.058, 0.232)and(0.120, 0.319)..
+    (0.135, 0.442)..controls(0.148, 0.550)and(0.188, 0.527)..
+    (0.196, 0.456)..controls(0.204, 0.409)and(0.242, 0.293)..
+    (0.273, 0.568)..controls(0.295, 0.768)and(0.364, 0.867)..
+    (0.391, 0.418)..controls(0.428, 0.057)and(0.483, 0.061)..
+    (0.521, 0.167)..controls(0.539, 0.219)and(0.569, 0.329)..
+    (0.618, 0.020)..controls(0.662,-0.283)and(0.721,-0.489)..
+    (0.763,-0.067)..controls(0.824, 0.390)and(0.853, 0.047)..
+    (0.874,-0.098)..controls(0.921,-0.420)and(0.970,-0.439)..
+    (1.016,-0.288)..controls(1.079,-0.111)and(1.131,-0.315)..
+    (1.136,-0.534)..controls(1.169,-1.170)and(1.227,-0.949)..
+    (1.231,-0.815)..controls(1.239,-0.671)and(1.263,-0.618)..
+    (1.274,-0.704)..controls(1.280,-0.751)and(1.364,-0.832)..
+    (1.405,-0.547)..controls(1.445,-0.268)and(1.477,-0.322)..
+    (1.506,-0.900)..controls(1.530,-1.838)and(1.588,-1.621)..(1.600, 0.000);
+    \end{scope}
+  }
+\end{tikzpicture}
+\end{document}

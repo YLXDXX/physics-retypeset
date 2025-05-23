@@ -1,0 +1,142 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx}
+\setCJKmainfont{Noto Serif CJK SC}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary {decorations.pathmorphing, decorations.pathreplacing, decorations.shapes,}
+\newcommand\dynamometer[3][0]{
+  \begin{scope}[#2,rotate=#1,inner sep=0pt]
+    \coordinate (A) at (0,2.0);
+    \coordinate (B) at (0,2.0+#3*0.2);
+    \foreach \x/\y in {100/2.0, 70/1.5, 50/1.2, 30/0.7 }
+    {
+      \draw[line width=\y pt,gray!\x ]([yshift=1cm]B)circle(0.2);
+    }
+    \fill[top color=gray, bottom color=gray,middle color=white]([xshift=-1mm,yshift=7mm]B)rectangle([xshift=1mm,yshift=8.7mm]B);
+    \fill[green!30!black]([xshift=2.8mm,yshift=6mm]B)--([xshift=2.8mm,yshift=-1.2cm]B)to[bend left=50]([xshift=-2.8mm,yshift=-1.2cm]B)--([xshift=-2.8mm,yshift=6mm]B)to[bend left=50]cycle;
+    \fill[lightgray,even odd rule](0.1,0.4)arc(360:180:0.1)--++(0,1.6)--++(0.2,0)--cycle(0,0.4)circle(0.05)([xshift=-0.4mm]A)rectangle++(0.8mm,0.5mm);
+    \fill[lightgray!30,even odd rule]([xshift=2.2mm,yshift=5mm]B)--([xshift=2.2mm,yshift=-1.1cm]B)to[bend left]([xshift=-2.2mm,yshift=-1.1cm]B)[rounded corners=2pt]--([xshift=-2.2mm,yshift=5mm]B)[sharp corners]--([xshift=-1mm,yshift=5mm]B)arc(180:0:0.1)[rounded corners=2pt]--cycle[sharp corners]
+    ([xshift=-0.4mm,yshift=2mm]B)rectangle([xshift=0.4mm]A);
+    \draw[darkgray](0.1,0.1)arc(360:90:0.1)--++(0,0.15);
+    \foreach \x in {0,1,...,9}
+    {
+      \draw[line width=0.1pt,line join=round,lightgray]([yshift=2mm-\x*0.15mm-\x*#3*0.2mm]B)--++(0.3mm,-0.0375mm-#3*0.05mm)--++(-0.6mm,-0.075mm-#3*0.1mm)--++(0.3mm,-0.0375mm-#3*0.05mm);
+    }
+    \fill[red]([yshift=-0.2mm]A)--([xshift=-1mm]A)--([xshift=1mm]A);
+    \foreach \x in {0,1,2,3,4}
+    {
+      \draw[ultra thin]([xshift=0.5mm,yshift=-\x*2mm]B)--++(0.07,0)node[rotate=#1,right]{\resizebox{!}{0.5mm}{\x}};
+      \draw[ultra thin]([xshift=-0.5mm,yshift=-\x*2mm]B)--++(-0.07,0)node[rotate=#1,left]{\resizebox{!}{0.5mm}{\x}};
+      \foreach \y in {1,2,3,4,6,7,8,9}
+      {
+        \draw[ultra thin]([xshift=0.5mm,yshift=-\x*2mm-\y*0.2mm]B)--++(0.05,0);
+        \draw[ultra thin]([xshift=-0.5mm,yshift=-\x*2mm-\y*0.2mm]B)--++(-0.05,0);
+      }
+      \draw[ultra thin]([xshift=0.5mm,yshift=-\x*2mm-1mm]B)--++(0.06,0);
+      \draw[ultra thin]([xshift=-0.5mm,yshift=-\x*2mm-1mm]B)--++(-0.06,0);
+    }
+    \draw[ultra thin]([xshift=0.5mm,yshift=-1cm]B)--++(0.07,0)node[rotate=#1,right]{\resizebox{!}{0.5mm}{5}};
+    \draw[ultra thin]([xshift=-0.5mm,yshift=-1cm]B)--++(-0.07,0)node[rotate=#1,left]{\resizebox{!}{0.5mm}{5}};
+  \end{scope}
+  }
+\newcommand\hand[2][0]{
+  \begin{scope}[#2,rotate=#1]
+  \fill[pink!10!orange!10,draw=black,very thin]
+  ( 0.206, 0.925)..controls( 0.192, 0.876)and( 0.169, 0.840)..
+( 0.080, 0.697)..controls(-0.010, 0.554)and(-0.034, 0.516)..
+(-0.045, 0.479)..controls(-0.055, 0.442)and(-0.047, 0.419)..
+(-0.087, 0.337)..controls(-0.127, 0.256)and(-0.157, 0.230)..
+(-0.147, 0.193)..controls(-0.137, 0.156)and(-0.112, 0.134)..
+(-0.102, 0.108)..controls(-0.091, 0.082)and(-0.089, 0.075)..
+(-0.088, 0.036)..controls(-0.087,-0.003)and(-0.087,-0.029)..
+(-0.070,-0.041)..controls(-0.053,-0.052)and(-0.048,-0.058)..
+(-0.033,-0.050)..controls(-0.017,-0.042)and(-0.015,-0.037)..
+(-0.015,-0.037)..controls(-0.015,-0.037)and( 0.011,-0.067)..
+( 0.060,-0.068)..controls( 0.108,-0.068)and( 0.118,-0.035)..
+( 0.118,-0.035)..controls( 0.118,-0.035)and( 0.119,-0.069)..
+( 0.179,-0.068)..controls( 0.239,-0.066)and( 0.249,-0.057)..
+( 0.263,-0.021)..controls( 0.278, 0.015)and( 0.276, 0.008)..
+( 0.276, 0.008)..controls( 0.276, 0.008)and( 0.279,-0.022)..
+( 0.321,-0.025)..controls( 0.363,-0.029)and( 0.385,-0.026)..
+( 0.406, 0.019)..controls( 0.426, 0.064)and( 0.428, 0.086)..
+( 0.428, 0.086)..controls( 0.428, 0.086)and( 0.447, 0.071)..
+( 0.473, 0.081)..controls( 0.499, 0.090)and( 0.494, 0.092)..
+( 0.518, 0.118)..controls( 0.542, 0.145)and( 0.542, 0.160)..
+( 0.542, 0.186)..controls( 0.542, 0.211)and( 0.535, 0.267)..
+( 0.535, 0.267)..controls( 0.559, 0.333)and( 0.558, 0.338)..
+( 0.563, 0.365)..controls( 0.569, 0.391)and( 0.599, 0.483)..
+( 0.616, 0.578)..controls( 0.632, 0.673)and( 0.622, 0.708)..
+( 0.616, 0.741)..controls( 0.610, 0.775)and( 0.641, 0.827)..( 0.634, 0.855);
+\draw[very thin](0.091,0.321)..controls(0.091,0.321)and(0.138,0.330)..
+(0.178,0.353)..controls(0.218,0.376)and(0.244,0.415)..
+(0.292,0.459)..controls(0.340,0.503)and(0.358,0.559)..
+(0.372,0.585)..controls(0.386,0.610)and(0.422,0.624)..(0.422,0.624)
+(0.117,0.388)..controls(0.119,0.416)and(0.104,0.465)..(0.088,0.487)--(0.042,0.548)
+(0.026,0.200)..controls(0.026,0.200)and(0.042,0.195)..
+(0.063,0.242)..controls(0.084,0.289)and(0.094,0.319)..
+(0.090,0.328)..controls(0.086,0.337)and(0.076,0.342)..(0.076,0.342)
+(-0.014,-0.035)..controls(-0.014,-0.035)and( 0.004,-0.019)..
+( 0.008, 0.000)..controls( 0.012, 0.019)and( 0.007, 0.037)..
+( 0.017, 0.073)..controls( 0.027, 0.109)and( 0.036, 0.122)..
+( 0.034, 0.162)..controls( 0.031, 0.203)and( 0.020, 0.197)..( 0.020, 0.197)--(-0.021, 0.189)
+(0.111,0.043)..controls(0.123,0.083)and(0.111,0.096)..
+(0.094,0.098)..controls(0.077,0.101)and(0.034,0.074)..
+(0.030,0.064)..controls(0.026,0.054)and(0.022,0.042)..
+(0.036,0.027)..controls(0.049,0.011)and(0.041,0.005)..
+(0.065,0.008)..controls(0.089,0.011)and(0.092,0.015)..(0.092,0.015)
+(0.255,0.195)..controls(0.261,0.218)and(0.259,0.273)..
+(0.231,0.280)..controls(0.204,0.288)and(0.170,0.282)..
+(0.159,0.240)..controls(0.148,0.199)and(0.173,0.181)..
+(0.198,0.175)..controls(0.223,0.169)and(0.237,0.179)..(0.237,0.179)
+(0.384,0.327)..controls(0.387,0.356)and(0.378,0.405)..
+(0.322,0.396)..controls(0.267,0.388)and(0.289,0.322)..
+(0.291,0.310)..controls(0.293,0.298)and(0.322,0.293)..
+(0.345,0.295)..controls(0.368,0.298)and(0.378,0.306)..(0.378,0.306)
+(0.460,0.419)..controls(0.460,0.419)and(0.470,0.390)..
+(0.473,0.374)..controls(0.476,0.358)and(0.458,0.350)..
+(0.444,0.347)..controls(0.430,0.343)and(0.416,0.338)..
+(0.407,0.351)..controls(0.397,0.364)and(0.400,0.382)..(0.400,0.382)
+(0.027, 0.091)..controls(0.027, 0.091)and(0.039, 0.119)..
+(0.064, 0.122)..controls(0.090, 0.126)and(0.122, 0.122)..
+(0.126, 0.087)..controls(0.130, 0.051)and(0.136, 0.062)..
+(0.133, 0.026)..controls(0.131, 0.002)and(0.125,-0.023)..(0.121,-0.037)
+(0.135, 0.053)..controls(0.144, 0.115)and(0.140, 0.158)..
+(0.139, 0.207)..controls(0.139, 0.256)and(0.163, 0.289)..
+(0.199, 0.295)..controls(0.235, 0.301)and(0.265, 0.270)..
+(0.266, 0.226)..controls(0.266, 0.183)and(0.292, 0.177)..
+(0.290, 0.110)..controls(0.287, 0.043)and(0.278, 0.010)..(0.278, 0.010)
+(0.282, 0.166)..controls(0.282, 0.166)and(0.288, 0.178)..
+(0.284, 0.213)..controls(0.280, 0.249)and(0.283, 0.266)..
+(0.278, 0.322)..controls(0.273, 0.379)and(0.283, 0.403)..
+(0.322, 0.412)..controls(0.361, 0.420)and(0.380, 0.391)..
+(0.395, 0.346)..controls(0.412, 0.295)and(0.423, 0.243)..
+(0.427, 0.198)..controls(0.432, 0.145)and(0.430, 0.085)..(0.430, 0.085)
+(0.536, 0.261)--(0.481, 0.391)..controls(0.455, 0.451)and(0.419, 0.434)..
+(0.405, 0.420)..controls(0.391, 0.406)and(0.390, 0.368)..(0.390, 0.368)
+(0.506,0.335)..controls(0.515,0.332)and(0.530,0.328)..(0.550,0.323)
+(0.214,0.382)..controls(0.257,0.402)and(0.295,0.416)..
+(0.342,0.432)..controls(0.420,0.458)and(0.463,0.478)..(0.463,0.478);
+\end{scope}
+}
+\begin{document}
+\small
+\begin{tikzpicture}[>=latex]
+  % \useasboundingbox(-1,-0.75)rectangle(3.7,1.4);
+  \dynamometer[90]{}{1.7}\dynamometer[270]{xshift=-0.07mm}{1.7}
+  \dynamometer[90]{yshift=-1.6cm}{1.7}\dynamometer[270]{xshift=2cm,yshift=-2.3cm}{1.7}
+  \draw[thick,->](0,-1.6)--++(1,0)node[right]{$F$};
+  \draw[thick,->](2,-2.3)--++(-1,0)node[left]{$F'$};
+  \node at (-2.0,-1.1){$A$};
+  \node at (-2.0,0.5){$A$};
+  \node at (4.0,-1.7){$B$};
+  \node at (2.0,0.5){$B$};
+  \hand[-60]{xshift=3.5cm}
+  \hand[-60]{xshift=5.5cm,yshift=-2.3cm}
+  \fill[left color=lightgray,right color=darkgray](-3.8,0.5)rectangle(-4.05,-0.5);
+  \fill[left color=lightgray,right color=darkgray](-3.8,-1.1)rectangle(-4.05,-2.1);
+  \draw[gray,ultra thick](-3.8,-1.6)--++(0.3,0);
+  \draw[gray,ultra thick](-3.8,0)--++(0.3,0);
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,18 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary {decorations.pathmorphing, decorations.pathreplacing, decorations.shapes,}
+\begin{document}
+\small
+\begin{tikzpicture}[>=latex,scale=1]
+  \useasboundingbox (-0.1,0.1) rectangle(6,-3);
+  \draw [-stealth](0,0) parabola (6,-3);
+  \draw[->](0,0)--++(1.2,0)node[right]{$v$};
+  \draw[->](0,0)--++(0,-0.8)node[right]{$G$};
+  \draw[->](2.4,-0.48)--++(0,-0.8)node[right]{$G$};
+  \draw[->](2.4,-0.48)--++(1.15,-0.46)node[above]{$v$};
+\end{tikzpicture}
+\end{document}

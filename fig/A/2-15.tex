@@ -1,0 +1,30 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary {decorations.pathmorphing, decorations.pathreplacing, decorations.shapes,}
+\begin{document}
+\small
+\begin{tikzpicture}[>=stealth, thick,scale=0.8]
+  \draw [<->](0,5.6)node[right]{$v$ (\unit{m/s})}--(0,0)--(5.6,0)node[right]{$t$ (\unit{s})};
+  \foreach \x in {1,2,3,...,5}
+  {
+      \draw(\x, 0) --(\x, .2);
+      \node at (\x,-.2){$\x$};
+  }
+  \foreach \y in {1,2,3,...,10}
+  {
+      \draw(0,\y/2)--(.2, \y/2);
+      \node at (-.2, \y/2)[left]{$\y$};
+  }
+  \node at (-.2,-.2){$0$};
+  \draw[ultra thick](0,0)--(4.4, 5.5);
+  \foreach \z in{1,2,3,4}
+  {
+     \draw [dashed] (\z,0)--(\z, \z/4*5)--(0, \z/4*5);
+  }
+  \node at (3,-1){$v_0=0,\quad a=2.5{\rm m/s}^2$};
+\end{tikzpicture}
+\end{document}

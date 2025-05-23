@@ -1,0 +1,20 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx}
+\setCJKmainfont{Noto Serif CJK SC}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary {decorations.pathmorphing, decorations.pathreplacing, decorations.shapes,}
+\begin{document}
+\small
+\begin{tikzpicture}[>=stealth, thick,scale=0.7]
+  \draw[dashed, ->](1,0)--(12,0) node[below]{选定的正方向};
+  \fill (5,0) circle[radius=2.5pt];
+  \draw[very thick, ->](5,0)--node[above]{$F_2=-\qty{6}{N}$}(2,0);
+  \fill (5,0) circle[radius=2.5pt];
+  \draw[very thick, ->](5,0)--node[above]{$F_1=\qty{10}{N}$}(10,0);
+  \fill (5,-.75) circle[radius=2.5pt];
+  \draw[very thick, ->](5,-.75)--node[below]{$F=\qty{4}{N}$}(7,-.75);
+\end{tikzpicture}
+\end{document}

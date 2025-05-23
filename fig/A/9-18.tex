@@ -1,0 +1,27 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx}
+\setCJKmainfont{Noto Serif CJK SC}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary {decorations.pathmorphing, decorations.pathreplacing, decorations.shapes,decorations.markings,positioning, snakes}
+% \usetikzlibrary{decorations.pathmorphing, patterns}
+% \usetikzlibrary{calc, patterns, decorations.markings}
+% \usetikzlibrary{positioning, snakes}
+
+\begin{document}
+\small
+\begin{tikzpicture}[>=stealth,xscale=0.5]
+  \draw [->](0,-1.5)--(0,1.8)node[right]{$y$};
+  \draw [->](0,0)node[left]{$O$}--(18,0)node[right]{$x$};
+  \draw [thick] plot[domain=0:16.8, samples=1000] function{sin(x)} ;
+  \draw [dashed, thick] plot[domain=0:16.8, samples=1000] function{sin(x-1)} ; 
+  \node at (16,1)[right]{时刻 $t+\Delta t$ 的波形}; 
+  \node at (17,-1)[right]{时刻 $t$ 的波形};
+  \draw (4.5*3.1416, 0)--(4.5*3.1416, 1.5);
+  \draw (4.5*3.1416+1, 0)--(4.5*3.1416+1, 1.5);
+  \draw [<->](4.5*3.1416, 1.4)--node [above]{$\Delta x=v\Delta t$}(4.5*3.1416+1, 1.4);
+  \draw [->](9,1.4)--node[above]{$v$}(11,1.4);
+\end{tikzpicture}
+\end{document}

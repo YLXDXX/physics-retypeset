@@ -1,0 +1,20 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary {decorations.pathmorphing, decorations.pathreplacing, decorations.shapes,}
+\begin{document}
+\small
+\begin{tikzpicture}[>=stealth,scale=1.0]
+  \draw[<->](-0.7,0)--(-0.7,-1.5)node[midway,left]{$h$};
+  \draw(-1,-1.5)--(10,-1.5);
+  \draw[densely dashed](-1,0)--(10,0);
+  \draw(0,0)circle(0.1);
+  \draw[densely dashed](5.1,0)circle(0.1);
+  \draw[semithick](-0.6,0.3)..controls(0.6,-0.6)and(2,-1.5)..(3,-1.5)..controls(3.7,-1.5)and(4.6,-0.6)..(5.5,0.2);
+  \draw[->](0.12,-0.1)--++(0.5,-0.32);
+  \draw[<-](5.0,-0.1)--++(-0.5,-0.4);
+\end{tikzpicture}
+\end{document}

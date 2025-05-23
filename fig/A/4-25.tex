@@ -1,0 +1,20 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx,ninecolors}
+\setCJKmainfont{Noto Serif CJK SC}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary {decorations.pathmorphing, decorations.pathreplacing, decorations.shapes,}
+\begin{document}
+\small
+\begin{tikzpicture}[>=latex,scale=0.7]
+  \fill[lightgray](-0.5,0)rectangle(0.5,0.25);
+  \fill[darkgray](0.367,0.000)..controls( 0.367,0.094)and( 0.354,0.109)..( 0.222,0.122)..controls( 0.077,0.137)and( 0.050,0.167)..( 0.050,0.195)--( 0.050,0.905)..controls( 0.050,0.933)and( 0.077,0.963)..( 0.138,0.969)..controls( 0.186,0.974)and( 0.200,0.989)..( 0.200,1.100)..controls( 0.200,1.209)and( 0.050,1.234)..( 0.000,1.234)..controls(-0.050,1.234)and(-0.200,1.209)..(-0.200,1.100)..controls(-0.200,0.989)and(-0.186,0.974)..(-0.138,0.969)..controls(-0.077,0.963)and(-0.050,0.933)..(-0.050,0.905)--(-0.050,0.195)..controls(-0.050,0.167)and(-0.077,0.137)..(-0.222,0.122)..controls(-0.354,0.109)and(-0.367,0.094)..(-0.367,0.000)--cycle;
+  \fill[brown7](1,0)rectangle(-1,-0.5);
+  \fill[top color=gray,bottom color=gray,middle color=white](1,3.0)rectangle(-0.6,2.4);
+  \fill[top color=gray,bottom color=gray,middle color=white,draw](0.2,4.2)--(0.2,1.2)--(-0.4,1.3)--(-0.4,4.1);
+  \fill[top color=gray,bottom color=gray,middle color=white,draw](0.2,0.9)rectangle(0.4,4.5);
+  \draw[thin](0.3,1.0)--++(0.5,0)node[right]{轮缘};
+\end{tikzpicture}
+\end{document}

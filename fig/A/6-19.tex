@@ -1,0 +1,34 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary {decorations.pathmorphing, decorations.pathreplacing, decorations.shapes,}
+\begin{document}
+\small
+\begin{tikzpicture}[>=stealth,scale=0.9]
+  \fill [pattern=north east lines](-2,-.25) rectangle (1,0);
+  \draw [thick](-2,0)--(1,0);
+  \draw [dashed] (0,0)--(-1,0)--(-1,1.5)--(0,1.5)--(0,0);
+  \draw[rotate=-30,semithick] (0,0)--(-1,0)--(-1,1.5)--(0,1.5)--(0,0);
+  \draw[fill=black] (-.5, 1.5/2) circle (1pt); 
+  \draw[fill=black,rotate=-30] (-.5, 1.5/2) circle (1pt); 
+  \draw [->, thick, rotate=-30](-.5, 1.5/2)--+(-60:1.6);
+  \draw[->] (0,2) arc (90:110: 2);
+  \node at (-.5, 1.5/2)[above]{$C$};
+  \node at (0, 1.5/2+.1)[above]{$C$};
+  \begin{scope}[xshift=4cm]
+    \fill [pattern=north east lines](-2,-.25) rectangle (1,0);
+    \draw [thick](-2,0)--(1,0);
+    \draw [dashed] (0,0)--(-1,0)--(-1,2.5)--(0,2.5)--(0,0);
+    \draw[rotate=-30,semithick] (0,0)--(-1,0)--(-1,2.5)--(0,2.5)--(0,0);
+    \draw[fill=black] (-.5, 2.5/2) circle (1pt); 
+    \draw[fill=black,rotate=-30] (-.5, 2.5/2) circle (1pt); 
+    \draw [->, thick, rotate=-30](-.5, 2.5/2)--+(-60:2);
+    \draw[->] (0,3) arc (90:70: 3);
+    \node at (-.5, 2.5/2)[above]{$C$};
+    \node at (0.2, 2.5/2+.1)[above]{$C$};
+  \end{scope}
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,38 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx,ninecolors}
+\setCJKmainfont{Noto Serif CJK SC}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usetikzlibrary{patterns,calc}
+\usetikzlibrary {decorations.pathmorphing, decorations.pathreplacing, decorations.shapes}
+\begin{document}
+\small
+\begin{tikzpicture}[>=latex, scale=1]
+  \foreach \x in {0.433,-0.433}
+  {
+    \draw[thin,left color=gray,right color=gray,middle color=white]
+    (\x-0.1,-6.5)--(\x+0.1,-6.5)--++(0.2,-0.4)--++(0,-1.8)--++(-0.6,0)--++(0,1.8)--++(0.2,0.4)--cycle;
+    \draw[thin,left color=black,right color=black,middle color=white]
+    (\x-0.2,-8.7)--++(-0.05,-0.1)--++(0.5,0)--++(-0.05,0.1)--cycle;
+    \fill[left color=azure4,right color=azure4,middle color=white]
+    (\x-0.3,-6.9)to[bend right=10](\x+0.3,-6.9)--++(0,-0.1)to[bend left=10](\x-0.3,-7)--cycle;
+    \fill[left color=azure4,right color=azure4,middle color=white](\x-0.3,-8.5)rectangle(\x+0.3,-8.6);
+  }
+  \draw[thin,left color=gray,right color=gray,middle color=white](-0.1,0)to[bend left](0.1,0)--++(0.4,-1.0)to[bend right](-0.5,-1.0)--cycle;
+  \draw[thin,left color=azure4,right color=azure4,middle color=white](0.5,-1.0)to[bend right](-0.5,-1.0)--++(0,-0.1)to[bend left](0.5,-1.1)--cycle;
+  \draw[thin,left color=gray,right color=gray,middle color=white](0.5,-1.1)to[bend right](-0.5,-1.1)--(-0.5,-2)to[bend left=10](0.5,-2)--cycle;
+  \draw[thin,left color=brown3,right color=brown3,middle color=white](0.5,-2)to[bend right=10](-0.5,-2)--++(0.1,-0.1)--(0.4,-2.1)--++(0.1,0.1)--cycle;
+  \draw[thin,left color=gray,right color=gray,middle color=white](0.4,-2.1)rectangle(-0.4,-8.8);
+  \fill[left color=brown3,right color=brown3,middle color=white] (0.4,-3.5)rectangle(-0.4,-3.4)(0.4,-5)rectangle(-0.4,-5.1);
+  \draw[thin,left color=black,right color=black,middle color=white](0.2,-8.8)--++(0.1,-0.15)--++(-0.6,0)--++(0.1,0.15);
+  \draw[thin,left color=gray,right color=gray,middle color=white](-0.1,-6.5)--(0.1,-6.5)--++(0.2,-0.4)--++(0,-1.8)--++(-0.6,0)--++(0,1.8)--++(0.2,0.4)--cycle;
+  \draw[thin,left color=black,right color=black,middle color=white](-0.2,-8.7)--++(-0.05,-0.1)--++(0.5,0)--++(-0.05,0.1)--cycle;
+  \fill[left color=azure4,right color=azure4,middle color=white](-0.3,-6.9)to[bend right=10](+0.3,-6.9)--++(0,-0.1)to[bend left=10](-0.3,-7)--cycle;
+  \fill[left color=azure4,right color=azure4,middle color=white](-0.3,-8.5)rectangle(+0.3,-8.6);
+  \node at (1.2,-5.7){第一级};
+  \node at (1.2,-4.2){第二级};
+  \node at (1.2,-2.7){第三级};
+  \node at (1.2,-1.2){运载物};
+\end{tikzpicture}
+\end{document}

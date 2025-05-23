@@ -1,0 +1,29 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx}
+\setCJKmainfont{Noto Serif CJK SC}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary {decorations.pathmorphing, decorations.pathreplacing, decorations.shapes,}
+\begin{document}
+\small
+\begin{tikzpicture}[>=stealth,scale=.8]
+  \fill [pattern = north east lines] (0,-.25) rectangle (9,0);
+  \draw [fill=gray!20] (1,0) rectangle (3,1.5);
+  \draw [densely dashed, fill=gray!20] (6,0) rectangle (8,1.5);
+  \draw [semithick](0,0)--(9,0);
+  \draw [thick,->] (2,1.5/2)--(4,1.5/2) node [below]{$F_1$};
+  \draw [thick,->] (2,1.5/2)--(2,1.5/2+1.5) node [left]{$F_2$};
+  \draw [thick,->] (2,1.5/2)--(4,1.5/2+1.5) node [right]{$F$};
+  \draw [densely dashed] (2,1.5/2+1.5)--(4,1.5/2+1.5)--(4,1.5/2);
+  \draw [thick,->,dashed] (7,1.5/2)--(9,1.5/2) ;
+  \draw [thick,->,dashed] (7,1.5/2)--(7,1.5/2+1.5) ;
+  \draw [thick,->,dashed] (7,1.5/2)--(9,1.5/2+1.5) node [right]{$F$};
+  \draw [densely dashed] (7,1.5/2+1.5)--(9,1.5/2+1.5)--(9,1.5/2);
+  \draw [thin,<->](2,-0.75)--node [fill=white]{$s$}(7,-0.75);
+  \draw [thin](2,-.25)--(2,-1.25);
+  \draw [thin](7,-.25)--(7,-1.25);
+  \draw (2+0.5,1.5/2) arc(0:36:.5) node[right]{$\alpha$};
+\end{tikzpicture}
+\end{document}

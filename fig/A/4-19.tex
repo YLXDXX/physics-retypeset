@@ -1,0 +1,28 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary {decorations.pathmorphing, decorations.pathreplacing, decorations.shapes}
+\tikzset{
+  plane/.pic={
+    \fill[lightgray,draw=black,ultra thin](-0.238,0.000)--(-0.346,0.074)--(-0.301,0.075)--(-0.104,0.000)(-0.379,0.003)--(-0.423,0.059)--(-0.391,0.059)--(-0.328,0.004);
+    \fill[lightgray,draw=black,ultra thin]( 0.000, 0.000)..controls(-0.065, 0.037)and(-0.364, 0.026)..
+    (-0.390, 0.008)..controls(-0.400, 0.000)and(-0.391,-0.012)..
+    (-0.364,-0.017)..controls(-0.338,-0.023)and(-0.092,-0.024)..cycle;
+    \fill[top color=lightgray,bottom color=lightgray!20,draw=black,ultra thin](-0.238, 0.000)--(-0.346,-0.076)--(-0.301,-0.076)--(-0.104, 0.000);
+    % \fill[line join=round,darkgray,draw](-0.08,0)--(0.08,0)[bend right=20]to(0,0.32)[bend right=20]to cycle;
+  }
+}
+\begin{document}
+\small
+\begin{tikzpicture}[>=stealth,scale=1]
+  % \useasboundingbox (-0.1,0.1) rectangle(6.1,-3.1);
+  \draw(225:5)arc(225:315:5);
+  \fill(0,-5)circle(1pt);
+  \draw(0,-5)node[below]{$P$}--++(0,2.5)node[midway,right]{$r$};
+  \pic at (310:5) [rotate=40,scale=1.5] {plane};
+  \pic at (224:5) [rotate=-46,scale=1.5] {plane};
+\end{tikzpicture}
+\end{document}

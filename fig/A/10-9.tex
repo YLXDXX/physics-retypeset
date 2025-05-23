@@ -1,0 +1,71 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx,ninecolors}
+\setCJKmainfont{Noto Serif CJK SC}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary {decorations.pathmorphing, decorations.pathreplacing, decorations.shapes,}
+\begin{document}
+\small
+\begin{tikzpicture}[>=latex,scale=1]
+  \draw[fill=brown5](0.5,-2)--(0.5,0)--(0.7,0)--(0.7,-2);
+  \draw[fill=brown6](0.5,-2)--(0.5,0)--(0.41,0)--(0.41,-1.88);
+  \draw[fill=brown5](-1.0,-0.2)--(-1.0,2)--(-0.8,2)--(-0.8,-0.2);
+  \draw[fill=brown6](-1.0,-0.2)--(-1.0,2)--(-1.09,2)--(-1.09,-0.08);
+  \draw[fill=brown6](9,0)--(0,0)--(0,-0.2)--(9,-0.2);
+  \draw[fill=brown8](9,0)--(0,0)--(-1.5,2)--(9,2);
+  \draw[fill=brown7](0,0)--(-1.5,2)--(-1.5,1.8)--(0,-0.2)--cycle;
+  \draw[fill=brown9,line join=round](-0.75,0.6)--(8,0.6)--(7.4,1.4)--(-1.35,1.4)--cycle;
+  \draw[fill=brown8,line join=round](-0.75,0.6)--(-1.35,1.4)--(-1.35,1.3)--(-0.75,0.5)--cycle;
+  \draw[fill=brown7](-0.75,0.6)rectangle(8,0.5);
+  
+  \draw(-1.6,1.2)--(-1.6,0);
+  \draw[fill=lightgray](-1.5,1.2)circle(0.15);
+  \fill[darkgray](-1.5,1.2)circle(0.1);
+  \draw[top color=gray,bottom color=gray,middle color=white,line join=round](-1.05,0.9)--(-1.5,1.2)--(-1.05,1.0);
+  \foreach \y in {0,-0.5,-1.0}
+  {
+    \draw(-1.65,\y-0.05)arc(180:-90:0.05)--++(0,-0.3)arc(90:360:0.05);
+    \fill[left color=darkgray,right color=darkgray,middle color=white](-1.75,\y-0.35)rectangle++(0.3,0.2);
+  }
+  %% 打点计时器及纸带
+  \fill[gray!70](6.7,0.65)rectangle(7.5,0.7);
+  \fill[gray!50](6.7,0.65)--(6.1,1.45)--(6.1,1.5)--(6.7,0.7);
+  \fill[gray!30](6.7,0.7)--(6.1,1.5)--(6.9,1.5)--(7.5,0.7);
+  \draw(6.3,1.45)..controls(6.0,1.45)and(5.9,1.6)..(5.7,2.1);
+  \draw(6.39,1.33)..controls(6.0,1.45)and(5.7,1.5)..(5.6,2.1)node[above]{接电源};
+  \foreach \x/\y in {6.3/1.4,6.39/1.28}
+  {
+    \fill[left color=darkgray,right color=darkgray,middle color=white](\x,\y)ellipse(0.02 and 0.01);
+    \fill[left color=darkgray,right color=darkgray,middle color=white](\x-0.02,\y)rectangle++(0.04,0.05);
+    \fill[left color=darkgray,right color=darkgray,middle color=white](\x,\y+0.05)ellipse(0.03 and 0.015);
+    \fill[left color=darkgray,right color=darkgray,middle color=white](\x-0.03,\y+0.05)rectangle++(0.06,0.02);
+    \fill[lightgray](\x,\y+0.07)ellipse(0.03 and 0.015);
+  }
+  \draw[double=lightgray!20,line width=0.1mm,double distance=2pt](6,0.9)--(9,0.9);
+  \fill[blue!80!black](7.09,0.88)ellipse(0.15 and 0.075);
+  \fill[lightgray,draw=black](6.45,1.4)rectangle(6.95,1.6);
+  \foreach \x in {0,1,...,12}
+  {
+    \draw[brown6!80!red,rounded corners=0.4mm](6.6+0.015*\x,1.4-0.02*\x)--++(0,0.15)--++(0.2,0)--++(0,-0.15)--cycle;
+  }
+  \fill[lightgray,draw=black](6.66,1.12)rectangle(7.16,1.32);
+  \fill[gray,draw=black,ultra thin](6.84,1.12)--(6.9,1.04)--(7.16,1.04)--(7.1,1.12)--cycle;
+  \draw[lightgray](7.075,1)--(7.075,0.92);
+  \draw[ultra thin,fill=lightgray](6.86,1.22)--(7.025,1)..controls(7.043,0.976)and(7.143,0.976)..(7.125,1)--(6.96,1.22)--cycle;
+  \fill[darkgray!90,](7.1,1.12)--(7.16,1.04)arc(-90:90:0.025)--cycle;
+  \fill[gray!70,draw=black,ultra thin](6.84,1.17)--(6.9,1.09)--(7.16,1.09)arc(90:36.87:0.025)--++(-0.06,0.08)arc(36.87:90:0.025)--cycle;
+  %% 小车
+  \fill[darkgray](5.2,0.8)circle(0.1)(5.8,0.8)circle(0.1);
+  \fill[lightgray,draw=black,line join=round](4.7,1.2)rectangle(5.7,1.5);
+  \fill[gray,draw=black,line join=round](5.7,1.5)--(5.7,1.2)--(6,0.8)--(6,1.1)--cycle;
+  \fill[lightgray!40,draw=black,line join=round](4.7,1.2)--(5,0.8)--(6,0.8)--(5.7,1.2)--cycle;
+  \fill[lightgray,draw=black,line join=round](5,0.8)rectangle(6,1.1);
+  \fill[lightgray!60,draw=black,line join=round](4.7,1.2)--(5,0.8)--(5,1.1)--(4.7,1.5)--cycle;
+  \draw(-1.5,1.3)--(4.85,1.3);
+  \draw[thin](7.5,0.9)--++(45:0.5)node[right]{纸带};
+  \draw[thin](6.8,0.68)--++(-135:0.6)node[left]{打点计时器};
+  \draw[thin](5.1,1.5)--++(135:0.4)node[left]{小车};
+\end{tikzpicture}
+\end{document}

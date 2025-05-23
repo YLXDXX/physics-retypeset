@@ -1,0 +1,23 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx}
+\setCJKmainfont{Noto Serif CJK SC}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary {decorations.pathmorphing, decorations.pathreplacing, decorations.shapes,}
+\begin{document}
+\small
+\begin{tikzpicture}[>=stealth,scale=1]
+  \draw (0,0) circle (15pt);
+	\node at (0,0){地球};
+	\draw (0,1.5) arc (90:15:1.5);
+	\draw (0,3) arc (90:15:3);
+	\draw [<-](0,2.2) arc (90:70:2.2);
+	\node at (0,2.2)[left]{卫星运行方向};
+	\draw[fill=gray] (60:1.5) circle (2pt) node[above]{$A$};
+	\draw[fill=gray] (75:3) circle (2pt) node[above]{$B$};
+	\draw[fill=gray] (40:3) circle (5pt);
+	\node at  (40:3.2) [right]{$C$};
+\end{tikzpicture}
+\end{document}
