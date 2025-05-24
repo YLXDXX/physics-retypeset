@@ -1,4 +1,4 @@
-\chapter{直线运动}
+\chapter{直线运动}\label{chapter-rectilinear-motion}
 
 \section{机械运动}
  我们在初中学过，一个物体相对于另一个物体的位置变
@@ -8,7 +8,7 @@
 银河系中也是运动的．小到原子和分子，大到宇宙中的天体，
 一切物体都在运动，机械运动是宇宙中最普遍的现象．
 
-    \subsection{参照物} 
+\subsection{参照物} 
 
 既然一切物体都在运动，我们研究一个物体的
 运动时，就必须选取另外的物体作为参照，事先假定这个另外
@@ -36,37 +36,37 @@
     从桌内拉出抽屉的时候，抽屉各部分的运动轨迹完全相
 同，也就是说，各部分的运动完全相同．这样的运动就是\textbf{平
 动}．打桩时重锤的下落运动，汽缸里活塞的运动，车床上车刀
-（图2.1）的运动，在直铁轨上行驶的火车车厢的运动，都是平
+（图~\ref{fig_A_2-1}）的运动，在直铁轨上行驶的火车车厢的运动，都是平
 动．
 \begin{figure}[htp]
 \centering
-\includegraphics[scale=.8]{fig/2-1.png}
-\caption{车床上车刀的平动和工件的转动}
+\includegraphics{fig/A/2-1.pdf}
+\caption{车床上车刀的平动和工件的转动}\label{fig_A_2-1}
 \end{figure}
 
     物体的平动不一定都沿着直线进行，也可以沿曲线进行，
-图2.2所示的铅笔的平动就是沿着曲线进行的．
+图~\ref{fig_A_2-2} 所示的铅笔的平动就是沿着曲线进行的．
 \begin{figure}[htp]
 \centering
 \begin{minipage}[t]{0.48\textwidth}
 \centering
-\includegraphics[scale=.8]{fig/2-2.png}
-\caption{沿曲线进行的平动}
+\includegraphics{fig/A/2-2.pdf}
+\caption{沿曲线进行的平动}\label{fig_A_2-2}
 \end{minipage}
 \begin{minipage}[t]{0.48\textwidth}
 \centering
-\includegraphics[scale=.8]{fig/2-3.png}
-\caption{钻头在工作中同时做平动和转动}
+\includegraphics{fig/A/2-3.pdf}
+\caption{钻头在工作中同时做平动和转动}\label{fig_A_2-3}
 \end{minipage}
 \end{figure}
     推动石磨的时候，磨盘上的各部分都围绕着通过中心
 的轴线做圆周运动．这样的运动就是\textbf{转动}．脱粒机的滚筒的
-运动，机器上飞轮的运动，车床上工件的运动（图2.1），都是
+运动，机器上飞轮的运动，车床上工件的运动（图~\ref{fig_A_2-1}），都是
 转动．
 
 
     在很多情况下，物体同时做平动和转动．钻头在工作的
-时候（图2.3），车轮在路上滚动的时候，螺栓在拧入螺母中的
+时候（图~\ref{fig_A_2-3}），车轮在路上滚动的时候，螺栓在拧入螺母中的
 时候，都是同时做平动和转动的．
 
 \section{质点}
@@ -134,17 +134,17 @@ $1.3\times 10^4$千米）比地球和太阳之间的距离（约$1.5\times 10^8$
 轴的正方向指东，并且取天安门前的旗杆作为坐标原点，那么
 汽车的位置就由它的坐标完全确定了．汽车的坐标是1千
 米，表示它在旗杆以东1千米处；汽车的坐标是$-2$千米，表
-示它在旗杆以西2千米处（图2.4）．
+示它在旗杆以西2千米处（图~\ref{fig_A_2-4}）．
 \begin{figure}[htp]
     \centering
-\includegraphics[scale=.45]{fig/2-4.png}
-    \caption{}
-    \end{figure}
+    \includegraphics{fig/A/2-4.pdf}
+    \caption{}\label{fig_A_2-4}
+\end{figure}
 
     质点在运动过程中，它的位置随时间不断变化，怎样表
 示质点的位置变化呢？物理学中用一个叫做位移的物理量来
 表示质点位置的变化．设质点原来在$A$点，经过一段时间沿
-轨迹$ACB$运动到$B$点（图2.5）．从初位置$A$指向末位置$B$
+轨迹$ACB$运动到$B$点（图~\ref{fig_A_2-5}）．从初位置$A$指向末位置$B$
 作线段$AB$，用它就可以描述质点的位置变化，我们把它叫做
 质点的位移．$AB$的长度，即位移的大小，表示出位置变化的
 大小；$AB$的方向，即位移的方向，表示出位置变化的方向．位
@@ -152,38 +152,19 @@ $1.3\times 10^4$千米）比地球和太阳之间的距离（约$1.5\times 10^8$
 
 \begin{figure}[htp]
     \centering
-    \begin{tikzpicture}[>=stealth,  thick]
-    
-    
-    
-    \draw [->](0,0)node[left]{$A$} --(3,3)node [right]{$B$} ;
-    \draw (0,0) [bend left=-45]  to node [right]{$C$} (3,3);
-    
-    \end{tikzpicture}
-    \caption{}
-    \end{figure}
-    
-    \begin{figure}[htp]
+    \includegraphics{fig/A/2-5.pdf}
+    \caption{}\label{fig_A_2-5}
+\end{figure}
+\begin{figure}[htp]
     \centering
-    \begin{tikzpicture}[>=stealth,  thick]
-    
-    \draw [->](0,0)node[above]{$A$} --(4,0)node [above]{$B$} ;
-    \draw (4,0)--(6,0)node [above]{$C$};
-    \foreach \x in {0,4,6}
-    {
-      \draw (\x, -.2)--(\x,.1);
-    }
-    
-    
-    
-    \end{tikzpicture}
-    \caption{}
-    \end{figure}
+    \includegraphics{fig/A/2-6.pdf}
+    \caption{}\label{fig_A_2-6}
+\end{figure}
 
     位移和路程是两个不同的物理量．路程是指质点所通过
-的实际轨迹的长度，只有大小，没有方向，是标量．在图2.5
+的实际轨迹的长度，只有大小，没有方向，是标量．在图~\ref{fig_A_2-5} 
 中，质点的位移是线段$AB$，而路程是曲线弧$\wideparen{ACB}$的长度，即
-使在直线运动中位移的大小也不一定等于路程．图2.6表示
+使在直线运动中位移的大小也不一定等于路程．图~\ref{fig_A_2-6} 表示
 做直线运动的质点从初位置$A$经过$B$运动到$C$，然后从$C$返
 回，运动到末位置$B$，这时质点的位移是线段$AB$，而路程是
 线段$AC$的长度加上线段$BC$的长度，只有做直线运动的质
@@ -196,38 +177,22 @@ $1.3\times 10^4$千米）比地球和太阳之间的距离（约$1.5\times 10^8$
 \[s=x-x_0\]
 \begin{figure}[htp]
     \centering
-    \begin{tikzpicture}[>=stealth,  thick, scale=.8]
-    
-    \draw [->](0,0)node[left]{甲} --(14,0)node [below]{$x$（米）} ;
-    
-    \foreach \x in {1,2,...,13}
-    {
-      \draw (\x, 0)--(\x,.2);
-    }
-    
-    \node at (7,-.5){$O$}; \node at (9,-.5){$x_0=2$}; \node at (11,-.5){$x=4$}; 
-    
-    \draw[->, ultra thick] (9,0) node [above]{$A$}--(11,0)node [above]{$B$};
-    
-    
-    \draw [->](0,-2)node[left]{乙} --(14,-2)node [below]{$x$（米）} ;
-    
-    \foreach \x in {1,2,...,13}
-    {
-      \draw (\x, -2)--(\x,-2+.2);
-    }
-    
-    \node at (7,-2-.5){$O$}; \node at (8,-2-.5){$x_0=1$}; \node at (2,-2-.5){$x=-5$}; 
-    
-    \draw[->, ultra thick] (8,-2) node [above]{$A$}--(2,-2)node [above]{$B$};
-    
-    
-    \end{tikzpicture}
-    \caption{位移的坐标表示}
-    \end{figure}
+    \begin{subfigure} {0.48\linewidth} 
+		\centering
+		\includegraphics{fig/A/2-7a.pdf} 
+		\caption{}\label{fig_A_2-7a} 
+	\end{subfigure} 
+	\hfill 
+    \begin{subfigure} {0.48\linewidth} 
+        \centering
+        \includegraphics{fig/A/2-7b.pdf} 
+        \caption{}\label{fig_A_2-7b} 
+    \end{subfigure} 
+    \caption{位移的坐标表示}\label{fig_A_2-7}
+\end{figure}
 
 这就是说，位移的数值等于末位置的坐标$x$减去初位置
-的坐标$x_0$．在图2.7中，$A$点表示初位置，$B$点表示位置．图甲
+的坐标$x_0$．在图~\ref{fig_A_2-7} 中，$A$点表示初位置，$B$点表示位置．图甲
 中末，$s=x-x_0=4-2=2$米，位移是正值，它的大小
 是2米，方向与坐标轴的正方向相同．图乙中，$s=x-x_0=-5-1=-6$
 米，位移是负值，它的大小是6米，方向与
@@ -241,10 +206,10 @@ $x_0=0$．这时质点的位移就可以用末位置的坐标来表示：
 \subsection*{练习二}
 \begin{enumerate}
   \item   质点做什么运动，位移的大小才等于路程？
-  \item  图2.6表示做直线运动的质点从初位置$A$经过$B$运
+  \item  图~\ref{fig_A_2-6} 表示做直线运动的质点从初位置$A$经过$B$运
   动到$C$，然后从$C$返回，运动到末位置$B$．设$AB$长7米，$BC$长
   5米．求质点的位移的大小和路程．
-  \item 在图2.4中，汽车初位置的坐标是$-2$千米，末位置的
+  \item 在图~\ref{fig_A_2-4} 中，汽车初位置的坐标是$-2$千米，末位置的
   坐标是1千米．求汽车的位移的大小和方向．
   
 \end{enumerate}
@@ -337,43 +302,19 @@ $x_0=0$．这时质点的位移就可以用末位置的坐标来表示：
 ，是时间$t$的正比函数$s=vt$．
 \begin{figure}[htp]
     \centering
-    \begin{tikzpicture}[>=stealth,  thick, scale=.8]
-    
-    \draw [<->] (0,6) node[right]{$s$（米）}--(0,0)--(5,0)node[below]{$t$（秒）};
-    
-    \foreach \x in {1,2,...,4}
-    {
-        \draw (\x,0)--(\x, 0.2);
-        \draw (0,\x)--(0.2, \x);
-    \node at (\x, -.3){$\x$};
-    \node at (-.2,\x){$\x$};
-    }
-    
-    \node at (-.2,-.2){0};
-    
-    \draw (0,5)--(0.2, 5);
-    \node at (-.2,5){$5$};
-    
-    \draw[dashed] (0,2)--(1,2)--(1,0);
-    \draw[dashed] (0,3)--(1,3)--(1,0);
-    \draw[dashed] (0,5)--(2.5,5)--(2.5,0);
-    
-    \draw [ultra thick](0,0)--(3,6) node [above]{I};
-    \draw [ultra thick](0,0)--(2,6) node [above]{II};
-    
-    \end{tikzpicture}
+    \includegraphics{fig/A/2-8.pdf}
     \caption{匀速运动的位移图象．
     取初位置为坐标原点时，质点的位移等于末位置的坐标，因此这个
-    图象也可以叫做质点的位置-时间图象．}
-    \end{figure}
+    图象也可以叫做质点的位置--时间图象．}\label{fig_A_2-8}
+\end{figure}
 
 在初中数学里已经学过，正比函数的图象是一条通过原
-点的直线．图2.8中的直线I是速度为20$\ms$的匀速运动
+点的直线．图~\ref{fig_A_2-8} 中的直线I是速度为20$\ms$的匀速运动
 的位移图象，直线II是速度为$v=3$$\ms$的位移图象．
 
 
     应用匀速运动的位移图象，我们可以求出物体在任意时
-间内的位移．例如从图2.8可以求出，$v=2$$\ms$的匀速运动
+间内的位移．例如从图~\ref{fig_A_2-8} 可以求出，$v=2$$\ms$的匀速运动
 在2.5秒内的位移是5米，应用位移图象也可以反过来求出
 物体通过任一位移所需的时间．
 
@@ -382,32 +323,12 @@ $x_0=0$．这时质点的位移就可以用末位置的坐标来表示：
 
 \begin{figure}[htp]
     \centering
-    \begin{tikzpicture}[>=stealth,  thick, scale=.8]
-    
-    \draw [<->] (0,6) node[right]{$s$}--(0,0)--(8,0)node[below]{$t$};
-    
-    \node at (-.2,-.2){$O$};
-    
-    
-    \draw[dashed] (0,5*5/8)node [left]{$s_1$}--(5,5*5/8)node [above]{$P_1$}--(5,0)node [below]{$t_1$};
-    \draw[dashed] (0,7*5/8)node [left]{$s_2$}--(7,7*5/8)node [above]{$P_2$}--(7,0)node [below]{$t_2$};
-    \draw[dashed] (5,5*5/8)--(7,5*5/8);
-    
-    \draw[<->] (5,5*5/8-.5)--node [below]{$\Delta t$}(7,5*5/8-.5);
-    \draw[<->] (7.25, 5*5/8)--node [right]{$\Delta s$}(7.25,7*5/8);
-    \draw (7, 5*5/8)--(7.5, 5*5/8); \draw (7, 7*5/8)--(7.5, 7*5/8);
-    
-    \node at (7+.3, 5*5/8-.3) {$Q$};
-    
-    \draw [ultra thick](0,0)--(8,5) node [above]{$P$};
-    
-    
-    \end{tikzpicture}
+    \includegraphics{fig/A/2-9.pdf}
     \caption{匀速运动的速度等
-    于位移图线的斜率}
-    \end{figure}
+    于位移图线的斜率}\label{fig_A_2-9}
+\end{figure}
 
-    在图2.9所示的匀速运动的位移图线$OP$上，任取两点
+    在图~\ref{fig_A_2-9} 所示的匀速运动的位移图线$OP$上，任取两点
     $P_1(t_1,s_1)$和$P_2(t_2,s_2)$．用$\Delta t$表示$t_2-t_1$，用$\Delta s$
     表示$s_2-s_1$．
     在直角三角形$P_1QP_2$中，比值
@@ -432,179 +353,70 @@ $\Delta s/\Delta t$叫做直线的\textbf{斜
 在平面直角坐标系中，用横轴表示时间，用纵轴表示速
 度，画出速度和时间关系的图线，这种图象叫做运动的\textbf{速度-
 时间图象}，简称为\textbf{速度图象}．匀速运动的速度不随时间改变，
-它的速度图象是一条与横轴平行的直线，图2.10中的两条直
+它的速度图象是一条与横轴平行的直线，图~\ref{fig_A_2-10} 中的两条直
 线I和II分别表示$v=2$$\ms$和$v=5$$\ms$的匀速运动的
 速度图象．在同一个坐标平面上，图象的直线在纵轴上的截
 距越大，表示速度越大．
 \begin{figure}[htp]
-    \centering\begin{minipage}[t]{0.48\textwidth}
-\centering
-    \begin{tikzpicture}[>=stealth,  thick, scale=.65]
-    \draw [<->](0,6)node[right]{$v$（$\ms$）}--(0,0)--(7,0)node[below]{$t$（秒）};
-    
-    \foreach \x in {1,2,3}
-    {
-        \draw(\x*1.5, 0) node[below]{$\x$} --(\x*1.5, .2);
-    }
-    
-    \foreach \y in {1,2,3,...,5}
-    {
-        \draw(0,\y)node[left]{$\y$}--(.2, \y);
-    }
-    
-    \node at (-.2,-.2){$0$};
-    
-    \draw (0,2)--node[above]{$v=2$$\ms$}  (6,2)node[right]{I};
-    \draw (0,5)--node[above]{$v=5$$\ms$}  (6,5)node[right]{II};
-    
-    
-    \end{tikzpicture}
-    
-    \caption{匀速运动的速度图象}
-\end{minipage}
-\begin{minipage}[t]{0.48\textwidth}
-\centering
-    \begin{tikzpicture}[>=stealth,  thick, scale=.8]
-    \draw [<->](0,5)node[right]{$v$（$\ms$）}--(0,0)--(7,0)node[below]{$t$（秒）};
-    
-    \draw (5,3)--(5,0);
-    
-    \foreach \x in {1,2,3,...,6}
-    {
-        \draw(\x, 0) node[below]{$\x$} --(\x, .2);
-    }
-    
-    \draw (0,3)--(6.5,3);
-    \node at (.2,3.2){$B$};  \node at (5.2,0.2){$A$};  
-    
-    \foreach \y in {1,2,3,4}
-    {
-        \draw(0,\y)node[left]{$\y$}--(.2, \y);
-    }
-    \node at (-.2,-.2){$O$};
-    
-    \fill [pattern = north east lines] (0,0) rectangle (5,3);
-    
-    
-    \end{tikzpicture}
-    
-    \caption{由速度图象求位移}
-\end{minipage}
-    \end{figure}
+    \centering
+    \begin{minipage}[t]{0.48\textwidth}
+        \centering
+        \includegraphics{fig/A/2-10.pdf}
+        \caption{匀速运动的速度图象}\label{fig_A_2-10}
+    \end{minipage}
+    \begin{minipage}[t]{0.48\textwidth}
+        \centering
+        \includegraphics{fig/A/2-11.pdf}
+        \caption{由速度图象求位移}\label{fig_A_2-11}
+    \end{minipage}
+\end{figure}
 
 应用速度图象可以求出质点在任何时间内的位移，设有
 一个骑自行车的人以3$\ms$的速度做匀速运动，速度图象如
-图2.11所示．现在来求他在5秒钟内的位移．为了求出位
+图~\ref{fig_A_2-11} 所示．现在来求他在5秒钟内的位移．为了求出位
 移，根据公式$s=vt$，必须用时间和速度相乘，也就是用横轴
-上的线段$OA=5$秒和纵轴上的线段$OB=3$$\ms$相乘．图
-2.11中画有斜线的长方形的“面积”，表示的就是这个位移的
+上的线段$OA=5$秒和纵轴上的线段$OB=3$$\ms$相乘．图~\ref{fig_A_2-11} 
+中画有斜线的长方形的“面积”，表示的就是这个位移的
 大小，它的数值是3$\ms$$\times$5s$=15$m，也就是说，位移的数
 值等于这个长方形“面积”的数值．这里我们把“面积”一词打
 上引号，是因为这个长方形的底的单位是秒，高的单位是$\ms$，这个面积的单位是$\ms$$\times$s$=$m，而不是m$^2$．
 
 \subsection*{练习四}
 \begin{figure}[htp]
-    \centering\begin{minipage}[t]{0.48\textwidth}
-\centering
-    \begin{tikzpicture}[>=stealth,  thick, scale=.9]
-    \draw [<->](0,5)node[right]{$s$（千米）}--(0,0)--(4,0)node[right]{$t$（小时）};
-    
-    
-    
-    \foreach \x in {1,2,3,...,12}
-    {
-        \draw(\x/4, 0) --(\x/4, .2);
-    }
-    
-    
-    
-    
-    \foreach \y in {1,2,3,...,8}
-    {
-        \draw(0,\y/2)--(.2, \y/2);
-    }
-    \node at (-.2,-.2){$0$};
-    \node at (1.5,-.2){$1$};
-    \node at (3,-.2){$2$};
-    
-    \node at (-.5,1){$200$};
-    \node at (-.5,2){$400$};
-    \node at (-.5,3){$600$};
-    
-    \draw [dashed] (1.5/2,0)--(1.5/2,1.5)--(0,1.5);
-    \draw [dashed] (1.5,0)--(1.5,3)--(0,3);
-    \draw [dashed] (1.5+1.5/6,0)--(1.5+1.5/6,3.5)--(0,3.5);
-    \draw[ultra thick](0,0)--(1.5*1.5,4.5);
-    
-    \end{tikzpicture}
-    
-    \caption{}
-\end{minipage}
-\begin{minipage}[t]{0.48\textwidth}
-\centering
-    \begin{tikzpicture}[>=stealth,  thick, xscale=.8]
-    \draw [<->](0,4.5)node[right]{$s$（千米）}--(0,0)--(4,0)node[right]{$t$（小时）};
-    
-    
-    
-    \foreach \x in {1,2,3,...,9}
-    {
-        \draw(\x/3, 0) --(\x/3, .2);
-    }
-    
-    
-    
-    
-    \foreach \y in {1,2,3,...,8}
-    {
-        \draw(0,\y/2)--(.2, \y/2);
-    }
-    \node at (-.2,-.2){$0$};
-    \node at (1,-.2){$1$};
-    \node at (2,-.2){$2$};
-    \node at (3,-.2){$3$};
-    
-    \node at (-.5,.5){$20$};
-    \node at (-.5,1.5){$60$};
-    \node at (-.5,2.5){$100$};
-    \node at (-.5,3.5){$140$};
-    
-    \draw [dashed] (1,0)--(1,1.5)--(0,1.5);
-    \draw [dashed] (1+1/3,0)--(1+1/3,2)--(0,2);
-    \draw [dashed] (3,0)--(3,3.5)--(0,3.5);
-    \draw [dashed] (2,0)--(2,2.25);
-    
-    \draw[ultra thick](0,0)--(1.5 ,2.25);
-    \draw[ultra thick](2,2.25)node[right]{$B$}--(1.5 ,2.25)node[left]{$A$};
-    \draw[ultra thick](2,2.25)--(3,3.5)node[right]{$C$}--(4,4.75);
-    
-    \end{tikzpicture}
-    
-    \caption{}
-\end{minipage}
-    \end{figure}
+    \centering
+    \begin{minipage}[t]{0.48\textwidth}
+        \centering
+        \includegraphics{fig/A/2-12.pdf}
+        \caption{}\label{fig_A_2-12}
+    \end{minipage}
+    \begin{minipage}[t]{0.48\textwidth}
+        \centering
+        \includegraphics{fig/A/2-13.pdf}
+        \caption{}\label{fig_A_2-13}
+    \end{minipage}
+\end{figure}
 
 \begin{enumerate}
-    \item 图2.12是一架民航飞机的位移图象．从这个图象求
-    出
-    \begin{enumerate}
-        \item 飞机在30分钟内的位移；
-        \item 飞行700千米所用的时间；
-        \item 飞行速度并画出速度图象．
-    \end{enumerate}
-\item  图2.13是一辆火车运动的位移图象．线段$OA$和$BC$
+\item 
+图~\ref{fig_A_2-12} 是一架民航飞机的位移图象．从这个图象求出
+\begin{enumerate}
+    \item 飞机在30分钟内的位移；
+    \item 飞行700千米所用的时间；
+    \item 飞行速度并画出速度图象．
+\end{enumerate}
+
+\item  
+图~\ref{fig_A_2-13} 是一辆火车运动的位移图象．线段$OA$和$BC$
 所表示的运动，哪个速度大？各等于多大？线段AB与横轴平
 行，表示火车做什么运动？速度是多大？火车在3小时内的位移
 是多少？通过80千米用多长时间？画出火车的速度图象．
 
 
-
-
-    \item  有两个物体，从同一点开始向相同方向做匀速运动，
-    速度分别是3$\ms$和5$\ms$，在同一个坐标平面上画出它们
-    的位移图象和速度图象，并根据这两种图象分别求出它们在5
-    秒内的位移．
-    
+\item  
+有两个物体，从同一点开始向相同方向做匀速运动，
+速度分别是3$\ms$和5$\ms$，在同一个坐标平面上画出它们
+的位移图象和速度图象，并根据这两种图象分别求出它们在5
+秒内的位移．
 
 \end{enumerate}
 
@@ -649,8 +461,8 @@ $\Delta s/\Delta t$叫做直线的\textbf{斜
 每一时刻（或位置）的运动速度．运动物体在某一时刻（或某
 一位置）的速度，叫做\textbf{即时速度}．
 
-物体在某一时刻或某一位置的速度的意义是什么呢？图
-2.14表示一辆做变速运动的汽车．我们要确定汽车经过$A$点
+物体在某一时刻或某一位置的速度的意义是什么呢？图~\ref{fig_A_2-14} 
+表示一辆做变速运动的汽车．我们要确定汽车经过$A$点
 时的即时速度．从$A$起取一小段位移$AA_1$，求出在这段位移上
 的平均速度，这个平均速度可以近似地表示汽车经过$A$点的
 快慢程度．从$A$起所取的位移越小，比如依次取位移$AA_2$、$AA_3$
@@ -668,30 +480,13 @@ $\Delta s/\Delta t$叫做直线的\textbf{斜
 就等于即时速度．
 
 \begin{figure}[htp]
-\centering
-\begin{tikzpicture}[>=stealth,  thick, scale=1]
-
-\draw (0,0)--(9,0);
-
-\foreach \x in {2,4,4.8,6, 8}
-{
-   \draw (\x,0)--(\x, .2);
-}
-\draw[->] (2,1)--(3,1);
-\node at (2,-.3){$A$};\node at (8,-.3){$A_1$};\node at (6,-.3){$A_2$};\node at (4.8,-.3){$A_3$};\node at (4,-.3){$A_4$};
-
-\draw (.5,.25) rectangle (2,.5);
-
-\draw  (.8,.5)--(1,.7)--(1.5,.7)--(1.7,.5);
-\draw  (1,.13) circle [radius=3pt]; 
-\draw  (1.5,.13) circle [radius=3pt]; 
-
-\end{tikzpicture}
-\caption{}
+    \centering
+    \includegraphics{fig/A/2-14.pdf}
+    \caption{}\label{fig_A_2-14}
 \end{figure}
 
-用数学语言可以更为精确地表达上面所讲的意思．在图
-2.14中从$A$起取一小段位移$\Delta s$，求出这小段位移内的平均
+用数学语言可以更为精确地表达上面所讲的意思．在图~\ref{fig_A_2-14} 
+中从$A$起取一小段位移$\Delta s$，求出这小段位移内的平均
 速度$\Delta s/\Delta t$， 当$\Delta t$\textbf{趋近于}零时，平均速度\textbf{趋近于}某一固定数
 值——极限值，这个极限值就是汽车经过$A$点的即时速度．
 
@@ -921,156 +716,57 @@ v_0&=v_t-at\\
 也就是说，汽车的最大允许速度是47$\kmh$．
 \end{solution}
 
-   \subsection{匀变速运动的速度图象}
+
+\subsection{匀变速运动的速度图象}
 
 
 \begin{figure}[htp]
 \centering
-\begin{minipage}[t]{0.48\textwidth}
-\centering
-\begin{tikzpicture}[>=stealth,  thick, scale=.8]
-\draw [<->](0,6)node[right]{$v$（$\ms$）}--(0,0)--(6,0)node[right]{$t$（s）};
-
-\foreach \x in {1,2,3,...,5}
-{
-    \draw(\x, 0) --(\x, .2);
-    \node at (\x,-.2){$\x$};
-}
-
-\foreach \y in {1,2,3,...,10}
-{
-    \draw(0,\y/2)--(.2, \y/2);
-    \node at (-.2, \y/2){$\y$};
-}
-\node at (-.2,-.2){$0$};
-
-\draw[ultra thick](0,0)--(5, 5+5/4);
-
-\foreach \z in{1,2,3,4}
-{
-   \draw [dashed] (\z,0)--(\z, \z/4*5)--(0, \z/4*5);
-}
-
-\node at (3,-1){$v_0=0,\quad a=2.5{\rm m/s}^2$};
-
-
-\end{tikzpicture}
-
-\caption{}
-\end{minipage}
-\begin{minipage}[t]{0.48\textwidth}
-\centering
-\begin{tikzpicture}[>=stealth,  thick, scale=.8]
-\draw [<->](0,5)node[right]{$v$（$\ms$）}--(0,0)--(5,0)node[right]{$t$（s）};
-
-\foreach \x in {1,2,...,4}
-{
-    \draw(\x, 0) --(\x, .2);
-    \node at (\x,-.2){$\x$};
-}
-
-\foreach \y in {1,2,3,...,9}
-{
-    \draw(0,\y/2)--(.2, \y/2);
-    \node at (-.2, \y/2){$\y$};
-}
-\node at (-.2,-.2){$0$};
-
-\draw[ultra thick](0,1)--(5, 4+6/8);
-
-\foreach \z in{1,2,3,4}
-{
-   \draw [dashed] (\z,0)--(\z, 1+6/8*\z)--(0, 1+6/8*\z);
-}
-
-\node at (3,-1){$v_0=2{\rm m/s},\quad a=1.5{\rm m/s}^2$};
-
-
-\end{tikzpicture}
-
-\caption{}
-\end{minipage}
+    \begin{minipage}[t]{0.48\textwidth}
+        \centering
+        \includegraphics{fig/A/2-15.pdf}
+        \caption{}\label{fig_A_2-15}
+    \end{minipage}
+    \begin{minipage}[t]{0.48\textwidth}
+        \centering
+        \includegraphics{fig/A/2-16.pdf}
+        \caption{}\label{fig_A_2-16}
+    \end{minipage}
 \end{figure}
 
 \begin{figure}[htp]
-\centering
-\begin{minipage}[t]{0.48\textwidth}
-\centering
-\begin{tikzpicture}[>=stealth,  thick, scale=.9]
-
-\draw [<->](0,4)node[right]{$v$（$\ms$）}--(0,0)--(6,0)node[right]{$t$（s）};
-
-\foreach \x in {1,2,...,5}
-{
-    \draw(\x, 0) --(\x, .2);
-    \node at (\x,-.2){$\x$};
-}
-
-\foreach \y in {1,2,3,...,6}
-{
-    \draw(0,\y/2)--(.2, \y/2);
-    \node at (-.2, \y/2){$\y$};
-}
-\node at (-.2,-.2){$0$};
-
-\draw [ultra thick](5,0)--(0,5/2) ;
-
-\foreach \z in{1,2,3,4}
-{
-   \draw [dashed] (\z,0)--(\z, 2.5-\z/2)--(0, 2.5-\z/2);
-}
-\node at (3,-1){$v_0=5{\rm m/s},\quad a=-1{\rm m/s}^2$};
-\end{tikzpicture}
-
-\caption{}
-\end{minipage}
-\begin{minipage}[t]{0.48\textwidth}
-\centering
-\begin{tikzpicture}[>=stealth,  thick, scale=.5]
-
-\draw [<->] (0,6) node[right]{$v$}--(0,-1.5)--(8,-1.5)node[below]{$t$};
-
-
-\node at (-.2,-.2-1.5){$O$};
-
-
-\draw[dashed] (0,5*5/8)node [left]{$v_1$}--(5,5*5/8)node [above]{$P_1$}--(5,-1.5)node [below]{$t_1$};
-\draw[dashed] (0,7*5/8)node [left]{$v_2$}--(7,7*5/8)node [above]{$P_2$}--(7,-1.5)node [below]{$t_2$};
-\draw[dashed] (5,5*5/8)--(7,5*5/8);
-
-\draw[<->] (5,5*5/8-.5)--node [below]{$\Delta t$}(7,5*5/8-.5);
-\draw[<->] (7.25, 5*5/8)--node [right]{$\Delta v$}(7.25,7*5/8);
-\draw (7, 5*5/8)--(7.5, 5*5/8); \draw (7, 7*5/8)--(7.5, 7*5/8);
-
-\node at (7+.3, 5*5/8-.3) {$Q$};
-
-\draw [ultra thick](0,0)node [left]{$A$}--(8,5) node [above]{$B$};
-
-
-\end{tikzpicture}
-\caption{速度图线的斜率}
-\end{minipage}
+    \centering
+    \begin{minipage}[t]{0.48\textwidth}
+        \centering
+        \includegraphics{fig/A/2-17.pdf}
+        \caption{}\label{fig_A_2-17}
+    \end{minipage}
+    \begin{minipage}[t]{0.48\textwidth}
+        \centering
+        \includegraphics{fig/A/2-18.pdf}
+        \caption{速度图线的斜率}\label{fig_A_2-18}
+    \end{minipage}
 \end{figure}
 
 匀变速运动的速度和时间的关
 系，也可以用图象来表示．由于$v_t=v_0+at$是时间$t$的一次
 函数，所以匀变速运动的速度-时间图象（简称为速度图象）是
-一条直线，图2.15是初速度为零的匀变速运动的速度图象，
-图2.16是初速度不为零而加速度为正值的匀变速运动的速
-度图象，图2.17是初速度不为零而加速度为负值的匀变速
+一条直线，图~\ref{fig_A_2-15} 是初速度为零的匀变速运动的速度图象，
+图~\ref{fig_A_2-16} 是初速度不为零而加速度为正值的匀变速运动的速
+度图象，图~\ref{fig_A_2-17} 是初速度不为零而加速度为负值的匀变速
 运动的速度图象．从匀变速运动的速度图象可以求出任意时
-刻物体的速度，例如从图2.15可以求出4秒末的速度是10
+刻物体的速度，例如从图~\ref{fig_A_2-15} 可以求出4秒末的速度是10
 $\ms$．从匀变速运动的速度图象也可以求出物体达到某一
-速度所需的时间．例如从图2.16可以求出速度达到8$\ms$
+速度所需的时间．例如从图~\ref{fig_A_2-16} 可以求出速度达到8$\ms$
 所需的时间是4秒．
 
 
-    从匀变速运动的速度图象还可以求出加速度．在图2.18所示的速度图象中，用$\Delta t$表示$t_2-t_1$，用$\Delta v$表示$v_2-v_1$，
+    从匀变速运动的速度图象还可以求出加速度．在图~\ref{fig_A_2-18} 所示的速度图象中，用$\Delta t$表示$t_2-t_1$，用$\Delta v$表示$v_2-v_1$，
 直线$AB$的斜率$k$为
 \[k=\frac{\Delta v}{\Delta t}=a \]
 这就是说，匀变速直线运动的速度图线的斜率，等于运动物体
-的加速度，在图2.15和图2.16中，$\Delta v=v_2-v_1>0$，斜率$k$为
-正值，表示加速度为正值．在图2.17中，$\Delta v=v_2-v_1<0$，斜
+的加速度，在图~\ref{fig_A_2-15} 和图~\ref{fig_A_2-16} 中，$\Delta v=v_2-v_1>0$，斜率$k$为
+正值，表示加速度为正值．在图~\ref{fig_A_2-17} 中，$\Delta v=v_2-v_1<0$，斜
 率$k$为负值，表示加速度为负值．在同一个坐标平面上，斜率
 的绝对值越大，即直线越陡，表示加速度的绝对值越大．
 
@@ -1089,65 +785,39 @@ $\ms$．从匀变速运动的速度图象也可以求出物体达到某一
  
 
 \begin{figure}[htp]
-\centering
-\begin{tikzpicture}[>=stealth,  thick, scale=1]
-\draw [<->](0,4.5)node [right]{$v$}--(0,0)node [left]{$O$}--(4.5,0)node [right]{$t$};
-\draw [ultra thick] (0,2)node [left]{$A$}--(4,4)node [right]{$P$};
-\draw [dashed](4,4)--(4,0);
-
-\foreach \x in {1,2,3,4}
-{
-   \fill [pattern = north east lines, draw] (\x-1, 0) rectangle (\x, 1.5+\x/2);
-}
-\node at (2,-.5){甲}; \node at (4,-.25){$Q$};
-\node at (1,2.7){$B$}; \node at (2,3.2){$C$}; \node at (1.35,2)[fill=white]{$A'$};
-\node at (2.35,2.5)[fill=white]{$B'$}; \node at (3.35,3)[fill=white]{$C'$};
-
-\end{tikzpicture}
-\begin{tikzpicture}[>=stealth,  thick, scale=1.1]
-\draw [<->](0,4.5)node [right]{$v$}--(0,0)node [left]{$O$}--(4.5,0)node [right]{$t$};
-\draw [ultra thick] (0,2)node [left]{$A$}--(4,4)node [right]{$P$};
-\draw [dashed](4,4)--(4,0);
-
-\foreach \x in {1,2,3,4,...,8}
-{
-   \fill [pattern = north east lines, draw] (\x/2-.5, 0) rectangle (\x/2, 1.75+\x/4);
-}
-\node at (2,-.5){乙}; \node at (4,-.25){$Q$};
-\node at (1,2.7){$B$}; \node at (2,3.2){$C$}; 
-
-\end{tikzpicture}
-\begin{tikzpicture}[>=stealth,  thick, scale=1.1]
-\draw [<->](0,4.5)node [right]{$v$}--(0,0)node [left]{$O$}--(4.5,0)node [right]{$t$};
-\draw [ultra thick] (0,2)node [left]{$A$}--(4,4)node [right]{$P$};
-\draw [dashed](4,4)--(4,0);
-
-   \fill [pattern = north east lines, draw] (0, 0) rectangle (4, 2);
-\fill [pattern = north west lines, draw] (4, 2)-- (4, 4)--(0,2);
-
-\node at (2,-.5){丙}; \node at (4,-.25){$Q$};
-\node at (2,1)[fill=white]{$S_1$}; \node at (4.3,2){$R$}; 
-\node at (2.5,2.5)[fill=white]{$S_2$};
-
-\end{tikzpicture}
-
-\caption{由匀变速运动的速度图线求位移}
+    \centering
+    \begin{subfigure} {0.48\linewidth} 
+		\centering
+		\includegraphics{fig/A/2-19a.pdf}
+		\caption{}\label{fig_A_2-19a}
+	\end{subfigure}
+	\begin{subfigure} {0.48\linewidth} 
+		\centering
+		\includegraphics{fig/A/2-19b.pdf} 
+		\caption{}\label{fig_A_2-19b}
+	\end{subfigure}
+	\begin{subfigure} {0.48\linewidth} 
+		\centering
+		\includegraphics{fig/A/2-19c.pdf} 
+		\caption{}\label{fig_A_2-19c}
+	\end{subfigure}
+    \caption{由匀变速运动的速度图线求位移}\label{fig_A_2-19}
 \end{figure}
    匀变速运动的位移又是怎样随着时间而改变的呢？前面
 已经讲过，匀速运动的位移可以用它的速度图线和横轴之间
 的面积求出来．应用这种方法也可以求出做匀变速运动的物
 体的位移．
 
-    图2.19中的直线$AP$是一个做匀变速运动物体的速度
+    图~\ref{fig_A_2-19} 中的直线$AP$是一个做匀变速运动物体的速度
 图线．为了求出物体在时间考内的位移，我们把时间$t$划分
 为许多小的时间间隔，设想物体在每一时间间隔内都做匀速
 运动，而从一个时间间隔到下一个时间间隔，物体的速度跳跃
-性的突然增加．因此，它的速度图线，由图2.19甲中一些平
+性的突然增加．因此，它的速度图线，由图~\ref{fig_A_2-19} 甲中一些平
 行于横轴的间断线段$AA',BB',CC',\ldots$组成．我们知道，
 匀速运动的位移可以用速度图线和横轴之间的矩形面积来表
 示，因此上面设想的物体运动在时间$t$内的位移，其数值等于
 图中阶梯状折线$AA'BB'CC'\ldots$下面画有斜线部分的面积．
-如某时间的分割再细一些（图2.19乙），物体速度的跃变发生
+如某时间的分割再细一些（图~\ref{fig_A_2-19b}），物体速度的跃变发生
 得更频繁，它的速度图象就更接近于汽车的真实运动的图象，
 阶梯状折线和横轴间画有斜线部分的面积数值，就更接近于
 物体的实际位移，这样不断细分下去，当时间间隔分得足够
@@ -1164,7 +834,7 @@ $\ms$．从匀变速运动的速度图象也可以求出物体达到某一
 运动也是适用的．
 
 由上述讨论可知，所求的匀变速运动的物体在时间$t$内
-的位移，等于图2.19丙中的梯形$OAPQ$的面积$S$．从图中
+的位移，等于图~\ref{fig_A_2-19c} 中的梯形$OAPQ$的面积$S$．从图中
 可以看出，梯形的面积$S$等于矩形$OARQ$的面积$S_1$和直角
 三角形$APR$的面积$S_2$之和:
 \[S=S_1+S_2\]
@@ -1509,11 +1179,11 @@ s_3&=(v_0+2at)t +\frac{1}{2}at^2\\
 在同一高度同时释放一个金属片和一个纸片，可以看到金属片比纸片下落得快，从这里似乎可以得到结论：物体下落的快慢是由它们的重量决定的，物体越重，下落得越快．十六世纪以前的学者的看法就是这样的．其实这个结论是错误的，它没有考虑空气阻力的影响．纸片比较轻，空气阻力对它的影响比较大，所以才下落得慢．现在我们改变一下实验的作法：把纸片团成一个小纸团，再让它和金属片同时下落．这时纸团受到的空气阻力大为减小，我们可以看到纸团和金属片几乎是同时落地的．
 \begin{figure}[htp]
 \centering
-\includegraphics[scale=.6, angle=90]{fig/2-20.png}
-\caption{在没有空气的空间里，物体下落的快慢相同}
+\includegraphics{fig/A/2-20.pdf}
+\caption{在没有空气的空间里，物体下落的快慢相同}\label{fig_A_2-20}
 \end{figure}
 
-拿一个长约1.5米，一端封闭，另一端有开关的玻璃筒（图2.20）．把形状和重量都不同的一些物体，如金属片、小
+拿一个长约1.5米，一端封闭，另一端有开关的玻璃筒（图~\ref{fig_A_2-20}）．把形状和重量都不同的一些物体，如金属片、小
 羽毛、小软木塞、小玻璃球等，放到这个玻璃筒里．如果玻璃筒里有空气，把玻璃筒很快倒立过来以后，这些物体下落的快慢不相同．
 如果把玻璃筒里的空气抽出去，把玻璃筒很快倒立过来以后，这些物体下落的快慢就相同了．
 
@@ -1525,13 +1195,13 @@ s_3&=(v_0+2at)t +\frac{1}{2}at^2\\
 
 
 \subsection{自由落体加速度}
-图2.21是自由落体（小球）的闪光照
+图~\ref{fig_A_2-21} 是自由落体（小球）的闪光照
 片，它是每隔1/30秒的时间拍摄的，由这张照片可以测出小球在各个连续相等时间里的位移．小球最初几个位置比较密集，测量起来误差较大，我们从某个稍大些的位置间隔开始测量，下表第一列是这些间隔的标号，第二列是这些间隔的长度，即小球在各个1/30秒内的位移，第三列是后一间隔的长度减去前一间隔的长度所得的结果，这些值在误差范围内可以认为是相等的，从练习九第6题知道，这表示小球的下落是匀变速运动，可见，\textit{自由落体运动是初速度为零的匀变速运动}．
 
 \begin{figure}[htp]
 \centering
-\includegraphics[scale=.6, angle=90]{fig/2-21.png}
-\caption{自由落体的闪光照片}
+\includegraphics[height=0.93\linewidth, angle=90]{fig/A/2-21.png}
+\caption{自由落体的闪光照片}\label{fig_A_2-21}
 \end{figure}
 
 不同的自由落体，它们的运动情况相同：它们在做初速度为零的匀变速运动中，在相同的时间内发生相同的位移．由此可以知道，在同一地点，一切物体在自由落体运动中的加速度都相同．这个加速度叫做自由落体加速度，也叫\textbf{重力加速度}，通常用$g$来表示．
@@ -1663,7 +1333,7 @@ s&=v_0 t-\frac{1}{2}gt^2
 过这个位置的速度总是大小相等、方向相反的，有兴趣的同学，对于后一论断可以自己试做证明．
 
 \begin{example}
-在15米高的塔上以4$\ms$的初速度竖直上抛一个石子（图2.22），求经过2秒后石子离地面的高度．取$g=10\msq$．
+在15米高的塔上以4$\ms$的初速度竖直上抛一个石子（图~\ref{fig_A_2-22} ），求经过2秒后石子离地面的高度．取$g=10\msq$．
 \end{example}
 
 \begin{solution}
@@ -1678,32 +1348,10 @@ s&=v_0 t-\frac{1}{2}gt^2\\
 \[15{\rm m}-12{\rm m}=3{\rm m}\]
 \end{solution}
 
-\begin{figure}[htp]\centering
-\begin{tikzpicture}[>=stealth, thick]
-
-\fill [pattern = north east lines] (0,-.25) rectangle (3, 0);
-\draw (0,0)--(3,0);
-
-
-\draw (.5, 5)node[left]{$A$}--(3,5);
-\draw (1, 1)node[below]{$C$}--(1.75,1);
-\draw [<-](1.25,1)--(1.25, 5);
-\draw [<->](1.5,0)--node [right]{3m}(1.5,1);
-\draw [<->](1.5,1)--node [right]{12m}(1.5, 5);
-\draw [<->](2.5, 5)--node [right]{15m}(2.5,0);
-\draw[ultra thick] (.5, 5)--(.5,5.5);
-\draw[ultra thick] (.5+.5,5.5) arc (0:180:.25);
-\draw[ultra thick] (1,5.5)--(1,1);
-\node at (.75, 6){$B$};
-
-\draw [->](0,5)--node [left]{正方向}(0, 5.7);
-
-\pgfsetlinewidth{2pt}
-\pgfsetinnerlinewidth{1pt}
-\draw (0.25,0)--(.5, 5);
-\draw (0.75,0)--(.5, 5);
-\end{tikzpicture}
-\caption{位移公式的应用}
+\begin{figure}[htp]
+    \centering
+    \includegraphics{fig/A/2-22.pdf}
+    \caption{位移公式的应用}\label{fig_A_2-22}
 \end{figure}
 
 
@@ -1765,35 +1413,6 @@ $s_1,s_2,s_3,\ldots$，那么
 $$s_I=s_1, s_{II}=s_2-s_1, s_{III}=s_3-s_2,\ldots$$
 	\item 从楼顶上落下一个铅球，通过1米高的窗子用了0.1秒的时间．楼顶比窗台高多少米？
 \end{enumerate}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
