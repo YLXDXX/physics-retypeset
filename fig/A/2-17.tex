@@ -7,7 +7,7 @@
 \usetikzlibrary {decorations.pathmorphing, decorations.pathreplacing, decorations.shapes,}
 \begin{document}
 \small
-\begin{tikzpicture}[>=stealth, thick,scale=0.9]
+\begin{tikzpicture}[>=stealth, thick,scale=0.8]
   \draw [<->](0,3.5)node[right]{$v$ (\unit{m/s})}--(0,0)--(6,0)node[right]{$t$ (\unit{s})};
   \foreach \x in {1,2,...,5}
   {
@@ -25,6 +25,6 @@
   {
      \draw [dashed] (\z,0)--(\z, 2.5-\z/2)--(0, 2.5-\z/2);
   }
-  \node at (3,-1){$v_0=5{\rm m/s},\quad a=-1{\rm m/s}^2$};
+  %\node at (3,-1){$v_0=5{\rm m/s},\quad a=-1{\rm m/s}^2$};
 \end{tikzpicture}
 \end{document}

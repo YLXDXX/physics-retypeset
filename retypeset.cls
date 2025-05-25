@@ -209,12 +209,29 @@
 %\cover{cover.pdf}
 
 \RequirePackage{yhmath}
-\newcommand{\ms}{\text{m}/\text{s}}
-\newcommand{\cms}{\text{cm}/\text{s}}
-\newcommand{\msq}{\text{m}/\text{s}^2}
-\newcommand{\cmsq}{\text{cm}/\text{s}^2}
-\newcommand{\kmh}{\text{km}/\text{h}}
 
+%物理单位
+%取 unit 首字母
+\newcommand{\Ums}{\;\text{m}/\text{s}} % m/s
+\newcommand{\Ucms}{\;\text{cm}/\text{s}} % cm/s
+\newcommand{\Umsq}{\;\text{m}/\text{s}^2} % m/s^2
+\newcommand{\Ucmsq}{\;\text{cm}/\text{s}^2} % cm/s^2
+\newcommand{\Ukmh}{\;\text{km}/\text{h}} % km/h
+\newcommand{\Us}{\;\text{s}} % s
+\newcommand{\Usq}{\;\text{s}^2} % s^2
+\newcommand{\Um}{\;\text{m}} % m
+\newcommand{\Umq}{\;\text{m}} % m^2
+
+%取 alone 首字母
+\newcommand{\UmsA}{\text{m}/\text{s}} % m/s
+\newcommand{\UcmsA}{\text{cm}/\text{s}} % cm/s
+\newcommand{\UmsqA}{\text{m}/\text{s}^2} % m/s^2
+\newcommand{\UcmsqA}{\text{cm}/\text{s}^2} % cm/s^2
+\newcommand{\UkmhA}{\text{km}/\text{h}} % km/h
+\newcommand{\UsA}{\text{s}} % s
+\newcommand{\UsqA}{\text{s}^2} % s^2
+\newcommand{\UmA}{\text{m}} % m
+\newcommand{\UmqA}{\text{m}} % m^2
 
 
 \RequirePackage{tkz-euclide}
