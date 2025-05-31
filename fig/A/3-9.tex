@@ -12,12 +12,13 @@
   \begin{scope}[rotate=30]
     \draw(0,0)--(3.6,0);
     \draw[very thick](1.25,0.1)--(1.4,0)--(2.9,0);
-    \tkzDefPoints{2/0.65/C,1.4/0.65/F1}
+    \tkzDefPoints{2/0.65/C,1.4/0.65/F1,2.6/0.65/f}
     \tkzDefShiftPoint[C](240:1.2){G}
     \tkzDefPointBy[translation = from F1 to G](C)\tkzGetPoint{F2}
     \tkzDefPointOnLine[pos=2.0](F2,C)\tkzGetPoint{N}
     \draw[->,semithick](C)--(G)node[below]{$G$};
     \draw[->,semithick](C)--(F1)node[left]{$F_1$};
+    \draw[->,semithick](C)--(f)node[right]{$f$};
     \draw[->,semithick](C)--(F2)node[right]{$F_2$};
     \draw[->,semithick](C)--(N)node[left]{$N$};
     \draw[thin, densely dashed](F1)--(G)--(F2);

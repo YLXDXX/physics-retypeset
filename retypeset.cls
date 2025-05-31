@@ -221,6 +221,12 @@
 \newcommand{\Usq}{\;\text{s}^2} % s^2
 \newcommand{\Um}{\;\text{m}} % m
 \newcommand{\Umq}{\;\text{m}} % m^2
+\newcommand{\Ukgf}{\;\text{kgf}} % kgf
+\newcommand{\Ukg}{\;\text{kg}} % kg
+\newcommand{\UN}{\;\text{N}} % N
+\newcommand{\UNkg}{\;\text{N}/\text{kg}} % N/kg
+\newcommand{\Udyn}{\;\text{dyn}} % dyn
+\newcommand{\Ug}{\;\text{g}} % g
 
 %取 alone 首字母
 \newcommand{\UmsA}{\text{m}/\text{s}} % m/s
@@ -232,7 +238,12 @@
 \newcommand{\UsqA}{\text{s}^2} % s^2
 \newcommand{\UmA}{\text{m}} % m
 \newcommand{\UmqA}{\text{m}} % m^2
-
+\newcommand{\UkgfA}{\text{kgf}} % kgf
+\newcommand{\UkgA}{\text{kg}} % kg
+\newcommand{\UNA}{\text{N}} % N
+\newcommand{\UNkgA}{\text{N}/\text{kg}} % N/kg
+\newcommand{\UdynA}{\text{dyn}} % dyn
+\newcommand{\UgA}{\text{g}} % g
 
 \RequirePackage{tkz-euclide}
 
