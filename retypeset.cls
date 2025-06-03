@@ -227,6 +227,9 @@
 \newcommand{\UNkg}{\;\text{N}/\text{kg}} % N/kg
 \newcommand{\Udyn}{\;\text{dyn}} % dyn
 \newcommand{\Ug}{\;\text{g}} % g
+\newcommand{\UNmqkgq}{\;\text{N}\cdot\text{m}^2/\text{kg}^2} % N·m^2/kg^2 (万有引力常量单位)
+\newcommand{\Ukms}{\;\text{km}/\text{s}} % km/s
+\newcommand{\Ukmsq}{\;\text{km}/\text{s}^2} % km/s^2
 
 %取 alone 首字母
 \newcommand{\UmsA}{\text{m}/\text{s}} % m/s
@@ -244,6 +247,9 @@
 \newcommand{\UNkgA}{\text{N}/\text{kg}} % N/kg
 \newcommand{\UdynA}{\text{dyn}} % dyn
 \newcommand{\UgA}{\text{g}} % g
+\newcommand{\UNmqkgqA}{\text{N}\cdot\text{m}^2/\text{kg}^2} % N·m^2/kg^2 (万有引力常量单位)
+\newcommand{\UkmsA}{\;\text{km}/\text{s}} % km/s
+\newcommand{\UkmsqA}{\;\text{km}/\text{s}^2} % km/s^2
 
 \RequirePackage{tkz-euclide}
 
