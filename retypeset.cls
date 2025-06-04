@@ -230,6 +230,7 @@
 \newcommand{\UNmqkgq}{\;\text{N}\cdot\text{m}^2/\text{kg}^2} % N·m^2/kg^2 (万有引力常量单位)
 \newcommand{\Ukms}{\;\text{km}/\text{s}} % km/s
 \newcommand{\Ukmsq}{\;\text{km}/\text{s}^2} % km/s^2
+\newcommand{\UNm}{\;\text{N}\cdot\text{m}} % N·m
 
 %取 alone 首字母
 \newcommand{\UmsA}{\text{m}/\text{s}} % m/s
@@ -250,6 +251,7 @@
 \newcommand{\UNmqkgqA}{\text{N}\cdot\text{m}^2/\text{kg}^2} % N·m^2/kg^2 (万有引力常量单位)
 \newcommand{\UkmsA}{\;\text{km}/\text{s}} % km/s
 \newcommand{\UkmsqA}{\;\text{km}/\text{s}^2} % km/s^2
+\newcommand{\UNmA}{\text{N}\cdot\text{m}} % N·m
 
 \RequirePackage{tkz-euclide}
 
