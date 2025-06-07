@@ -1,7 +1,6 @@
+\chapter{机械振动和机械波}\label{chapter-mechanical-vibration-and-wave}
 
 
-
-\chapter{机械振动和机械波}
 前面我们已经学过：在平衡力作用下的匀速运动，在大小和方向都不变的恒力作用下的匀变速运动，在大小不变而方向改变的向心力作用下的匀速圆周运动．现在我们要学习在大小和方向都改变的力作用下的机械振动，以及机械振动的传播形成的机械波．
 
 到电学、光学部分将学习的交流电、电磁振荡、电磁波、光波，跟机械振动、机械波相比，虽然物理本质不同，有许多特征和规律却是相同的，因此，机械振动和机械波的知识，对于学习电学、光学、电工学和无线电工学等等也很重要．
@@ -14,7 +13,7 @@
 
 \subsubsection{产生振动的条件} 
 
-物体（或者物体的一部分）在平衡位置附近来回做往复运动，叫做\textbf{机械振动}，常常简称为振动．挂在弹簧下端的重物的上下振动（图9.1），单摆的小球的左右摆动，是振动的典型例子．
+物体（或者物体的一部分）在平衡位置附近来回做往复运动，叫做\textbf{机械振动}，常常简称为振动．挂在弹簧下端的重物的上下振动（图~\ref{fig_A_9-1}），单摆的小球的左右摆动，是振动的典型例子．
 
 把挂在弹簧下端的重物从平衡位置$O$拉下再放开，它就从最低点$B$向着平衡位置$O$运动并越过$O$运动到最高点$C$，然后再向着平衡位置$O$运动并越过$O$回到最低点$B$．以后重物在平衡位置附近经过多次重复的上下振动，最后停在平衡位置，把单摆的小球拉开再放手，小球就在平衡位置附近左右振动，经过多次重复，最后停在平衡位置．击一下鼓或敲一下锣，鼓膜或锣面就在平衡位置附近做起伏振动，经过多次重复，最后停在平衡位置．
 
@@ -32,43 +31,14 @@
 
 振动是一种往复运动，振动物体的位移不象匀速或变速直线运动那样可以继续增大下去，而是有一个最大位移，否则就不成其为振动了．振动物体离开平衡位置的最大距离叫做\textbf{振幅}．图9.1中振动的振幅就等于$OB$或$OC$．振幅是表示振动幅度的大小或振动强弱的物理量．
 
-\begin{figure}[htp]\centering
-    \begin{tikzpicture}[>=stealth, thick, scale=1.2]
-    \tikzstyle{spring1}=[decorate,decoration={aspect=0.5, segment length=4mm, amplitude=3mm,zigzag}]
-    \tikzstyle{spring2}=[decorate,decoration={aspect=0.5, segment length=3mm, amplitude=3mm,zigzag}]
-    \tikzstyle{spring3}=[decorate,decoration={aspect=0.5, segment length=2mm, amplitude=3mm,zigzag}]
-    
-    \fill [pattern = north east lines] (-4,0) rectangle (-2,.25);
-    \fill [pattern = north east lines] (-1,0) rectangle (1,.25);
-    \fill [pattern = north east lines] (2,0) rectangle (4,.25);
-    \draw(-4,0)--(-2,0);  \draw(-1,0)--(1,0);  \draw(2,0)--(4,0);
-    
-    
-    \draw [fill=gray!30] (-3.5, -4.3) rectangle (-2.5, -4);
-    \draw [fill=gray!30] (-.5, -5.3) rectangle (.5, -5);
-    \draw [fill=gray!30] (2.5, -3.3) rectangle (3.5, -3);
-    
-    
-    \draw [spring2](-3,0)--(-3,-4);
-    \draw [spring1](0,0)--(0,-5);
-    \draw [spring3](3,0)--(3,-3);
-    
-    \draw [dashed](-2, -3)node[left]{$C$}--(2.25,-3);
-    \draw [dashed](-2, -4)node[left]{$O$}--(-.25,-4);   
-    \draw [dashed](-2, -5)node[left]{$B$}--(-.25,-5);   
-    
-\draw [<->](-1.5, -3)--node[fill=white]{$A$}(-1.5,-4);
-\draw [<->](-1.5, -5)--node[fill=white]{$A$}(-1.5,-4);
-\draw [->] (-3.75, -4.25)--(-3.75, -3.75);
-\draw [<-] (-4, -4.25)--(-4, -3.75);
+\begin{figure}[htbp]
+    \centering
+    \includegraphics{fig/A/9-1.pdf}
+    \caption{弹簧下端的重物的上下振动}\label{fig_A_9-1}
+\end{figure}
 
 
-    \end{tikzpicture}
-    \caption{弹簧下端的重物的上下振动}
-    \end{figure}
-
-
-振动的最大特点是重复性，或者说周期性，所谓周期性，就是振动物体的位移和速度经过一定时间之后又重复地回到原来的数值．例如在图9.1中，振动物体由$B$点经过$O$到达$C$点，再经过$O$回到$B$点，即完成一次全振动，位移和速度就
+振动的最大特点是重复性，或者说周期性，所谓周期性，就是振动物体的位移和速度经过一定时间之后又重复地回到原来的数值．例如在图~\ref{fig_A_9-1} 中，振动物体由$B$点经过$O$到达$C$点，再经过$O$回到$B$点，即完成一次全振动，位移和速度就
 重复地回到原来的数值，完成一次全振动经过的时间叫做\textbf{周期}，周期是表示振动快慢的物理量．
 
 振动的快慢也可以用频率来表示，在1秒内完成全振动的次数叫做\textbf{频率}，频率的单位是\textbf{赫兹}，简称赫，国际符号是
@@ -81,8 +51,8 @@ Hz，1秒钟振动1次就是1赫．1秒钟振动$n$次就是$n$赫．
 
 \subsection*{练习一}
 \begin{enumerate}
-    \item 设图9.1中振幅是2厘米，完成一次全振动，振动物体通过的路程是多少厘米？如果频率是5赫，振动物体每秒通过的路程是多少厘米？
-    \item 设图9.1中振幅是2厘米，取竖直向上的方向作为正方向，物体运动到点$C$时对平衡位置的位移是多大？运动到点$B$时对平衡位置的位移又是多大？
+    \item 设图~\ref{fig_A_9-1} 中振幅是2厘米，完成一次全振动，振动物体通过的路程是多少厘米？如果频率是5赫，振动物体每秒通过的路程是多少厘米？
+    \item 设图~\ref{fig_A_9-1} 中振幅是2厘米，取竖直向上的方向作为正方向，物体运动到点$C$时对平衡位置的位移是多大？运动到点$B$时对平衡位置的位移又是多大？
 \end{enumerate}
 
 
@@ -96,46 +66,13 @@ Hz，1秒钟振动1次就是1赫．1秒钟振动$n$次就是$n$赫．
 
 \subsubsection{弹簧振子} 
 
-\begin{figure}[htp]\centering
-\begin{tikzpicture}[>=stealth, thick, scale=1.3]
-\tikzstyle{spring1}=[decorate,decoration={aspect=0.5, segment length=4mm, amplitude=3mm,coil}]
-\tikzstyle{spring2}=[decorate,decoration={aspect=0.5, segment length=3mm, amplitude=3mm,coil}]
-\tikzstyle{spring3}=[decorate,decoration={aspect=0.5, segment length=2mm, amplitude=3mm,coil}]
-
-
-
-\fill [pattern = north east lines] (-.25,2) rectangle (0,3);
-\fill [pattern = north east lines] (6,2) rectangle (6.25,3);
-\fill [pattern = north east lines] (-.25,0) rectangle (0,1);
-\fill [pattern = north east lines] (6,0) rectangle (6.25,1);
-\fill [pattern = north east lines] (-.25,-1) rectangle (0,-2);
-\fill [pattern = north east lines] (6,-1) rectangle (6.25,-2);
-
-\draw(0,2)--(0,3);  \draw(0,0)--(0,1);  \draw(0,-1)--(0,-2);
-\draw(6,2)--(6,3);  \draw(6,0)--(6,1);  \draw(6,-1)--(6,-2);
-
-\draw(0,2.5)--(6,2.5); \draw(0,.5)--(6,.5); \draw(0,-1.5)--(6,-1.5);
-\draw [->, ultra thick](5,.5)--(4.2,.5)node [below]{$F$};
-\draw [->, ultra thick](3,-1.5)--(3.8,-1.5)node [below]{$F$};
-\draw [dashed] (3, .5)--node [fill=white]{$C$}(3,-1.5);
-\draw [dashed] (4, .5)--node [fill=white]{$O$}(4,-1.5);
-\draw [dashed] (4, .5)--node [fill=white]{$O$}(4,2.5);
-\draw [dashed] (5, .5)--node [fill=white]{$B$}(5,-1.5);
-
-\draw [shade] (4, 2.5) circle(.2);
-\draw [shade] (5,.5) circle(.2);
-\draw [shade] (3,-1.5) circle(.2);
-
-
-\draw [spring2](0,2.5)--(4-.2,2.5);
-\draw [spring1](0,.5)--(5-.2,.5);
-\draw [spring3](0,-1.5)--(3-.2,-1.5);
-
-\end{tikzpicture}
-\caption{弹簧振子的振动}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics{fig/A/9-2.pdf}
+    \caption{弹簧振子的振动}\label{fig_A_9-2}
 \end{figure}
 
-照图9.2那样，把连在一起的弹簧和小球穿在水平杆上，弹簧左端固定在支架上，小球可以在杆上滑动．杆非常光滑，小球滑动时的摩擦力可以忽略．弹簧的质量比小球的小得多，也可以忽略．这样就成了一个弹簧振子，振子静止在$O$点时，它受的重力和杆的支持力互相平衡，弹簧没有形变因而对它没有弹力作用，$O$点就是振子的平衡位置．把它拉离平衡位置再放开，它就沿水平杆左右振动．
+照图~\ref{fig_A_9-2} 那样，把连在一起的弹簧和小球穿在水平杆上，弹簧左端固定在支架上，小球可以在杆上滑动．杆非常光滑，小球滑动时的摩擦力可以忽略．弹簧的质量比小球的小得多，也可以忽略．这样就成了一个弹簧振子，振子静止在$O$点时，它受的重力和杆的支持力互相平衡，弹簧没有形变因而对它没有弹力作用，$O$点就是振子的平衡位置．把它拉离平衡位置再放开，它就沿水平杆左右振动．
 
 在振子振动过程中，重力和杆的支持力总是互相平衡，对振动不起作用，对振动起作用的只是弹簧作用在振子上的弹力．振子运动到$O$点右侧时，弹簧拉长，振子对平衡位置的位移方向向右，弹簧对振子的弹力方向向左．振子运动到$O$点左侧时，弹簧压缩，振子对平衡位置的位移方向向左，弹簧对振子的弹力方向向右．可见在这个弹簧振子上，总是指向平衡位置的回复力是弹簧对振子的弹力，这个弹力的方向跟振子对平衡位置的位移方向相反．
 
@@ -150,14 +87,14 @@ Hz，1秒钟振动1次就是1赫．1秒钟振动$n$次就是$n$赫．
 第二定律$F=ma$ 可以得到
 \[a=-\frac{k}{m}x\]
 
-上式表明，在简谐振动中，加速度也跟位移成正比而方向相反．在图9.2里，当振子从$O$向右运动时，加速度的方向向左，并且随着位移增大而增大，即振子做变减速运动，到速度减小到零时，振子运动到右端最大位移处$B$，加速度也增大到最大值．振子从$B$向$O$运动的过程中，加速度的方向仍向左，并且随位移的减小而减小，即振子做初速度为零的变加速运动．当振子回到$O$点时，位移减小到零，加速度也减小到零，而速度增大到最大值，方向向左．由于惯性，振子就以这个速度继续向左运动，在越过$O$点以后，加速度的方向向右，
+上式表明，在简谐振动中，加速度也跟位移成正比而方向相反．在图~\ref{fig_A_9-2} 里，当振子从$O$向右运动时，加速度的方向向左，并且随着位移增大而增大，即振子做变减速运动，到速度减小到零时，振子运动到右端最大位移处$B$，加速度也增大到最大值．振子从$B$向$O$运动的过程中，加速度的方向仍向左，并且随位移的减小而减小，即振子做初速度为零的变加速运动．当振子回到$O$点时，位移减小到零，加速度也减小到零，而速度增大到最大值，方向向左．由于惯性，振子就以这个速度继续向左运动，在越过$O$点以后，加速度的方向向右，
 并且随位移的增大而增大，振子做变减速运动，到速度减小到零时，振子运动到左端最大位移处$C$，加速度也增大到最大值．然后振子从$C$向右运动，加速度的方向仍向右，并且随位移的减小而减小，即振子做初速度为零的变加速运动．当振子回到$O$点时，位移、加速度都减小到零，而速度增大到最大值，方向向右．此后将重复上述的过程．
 
 值得注意的是，在简谐振动中速度与加速度的变化不一样，加速度最大时速度等于零，加速度等于零时速度最大．
 
 \subsubsection{简谐振动的周期}
 
-简谐振动的周期跟什么有关呢？在回复力的表示式$F=-kx$中，$k$越大，回复力越大，振子产生的加速度越大，振子来回振动得越快，因而周期越短．在图9.2中用不同倔强系数的弹簧做实验，可以看到倔强系数越大，振子的周期越短，其次，振子的质量$m$越大，产生的加速度越小，振子来回振动得越慢，因而周期越长．在图9.2中用不同质量的振子做实验，可以看到质量越大，振子的周期越长．
+简谐振动的周期跟什么有关呢？在回复力的表示式$F=-kx$中，$k$越大，回复力越大，振子产生的加速度越大，振子来回振动得越快，因而周期越短．在图~\ref{fig_A_9-2} 中用不同倔强系数的弹簧做实验，可以看到倔强系数越大，振子的周期越短，其次，振子的质量$m$越大，产生的加速度越小，振子来回振动得越慢，因而周期越长．在图~\ref{fig_A_9-2} 中用不同质量的振子做实验，可以看到质量越大，振子的周期越长．
 
 计算表明，弹簧振子的周期由下式确定：
 \[T=2\pi\sqrt{\frac{m}{k}} \]
@@ -173,8 +110,9 @@ Hz，1秒钟振动1次就是1赫．1秒钟振动$n$次就是$n$赫．
     \item 物体在任意回复力作用下振动，一定是做简谐振动吗？为什么？
     \item 用手拍球，使球在硬地上来回跳动，球的运动是简谐
     振动吗？为什么？
-\item 分析图9.2中弹簧振子的运动，并填好下表：	
-\begin{center}
+\item 分析图~\ref{fig_A_9-2} 中弹簧振子的运动，并填好表~\ref{tab_A_9-1}．
+\begin{table}[htbp]
+	\centering
     \begin{tabular}{p{.3\textwidth}|c| c |c |c}
         \hline
         振子的运动  & $C\to O$ & $O\to B$ & $B\to O$ & $O\to C$\\
@@ -185,9 +123,10 @@ Hz，1秒钟振动1次就是1赫．1秒钟振动$n$次就是$n$赫．
         速度的方向怎样？大小如何变化？&&&&\\
         \hline
     \end{tabular}
-\end{center}
-	\item 图9.2所示的弹簧振子的质量是100克，频率为2赫，求弹簧的倔强系数．
-    \item 一个如图9.2所示的弹簧振子的质量是200克，弹簧的倔强系数是16牛/米，振幅是2厘米，取水平向右的方向作为正方向．当振子运动到右方最大位移时，回复力和加速度的数值各是多大？当振子运动到左方最大位移时，回复力和加速度的数值又各是多大？这个弹簧振子的周期和频率各是多大？
+    \caption{}\label{tab_A_9-1}
+\end{table}
+	\item 图~\ref{fig_A_9-2} 所示的弹簧振子的质量是100克，频率为2赫，求弹簧的倔强系数．
+    \item 一个如图~\ref{fig_A_9-2} 所示的弹簧振子的质量是200克，弹簧的倔强系数是16牛/米，振幅是2厘米，取水平向右的方向作为正方向．当振子运动到右方最大位移时，回复力和加速度的数值各是多大？当振子运动到左方最大位移时，回复力和加速度的数值又各是多大？这个弹簧振子的周期和频率各是多大？
 \end{enumerate}
 
 
@@ -201,55 +140,13 @@ Hz，1秒钟振动1次就是1赫．1秒钟振动$n$次就是$n$赫．
 当单摆静止不动时，摆线竖直下垂，摆锤$m$（质点）受的重
 力$G=mg$跟摆线对它的拉力$T$互相平衡．
 
-使摆锤偏离平衡位置，然后放开，摆锤就在重力$G$和拉力$T$的作用下，沿着以平衡位置$O$为中点的一段圆弧左右振动．我们来分析摆锤运动到任意一点$P$时的受力情况（图9.3）．这时摆线与竖直方向的夹角是$\alpha$，重力$G$沿摆线方向的分力$F'$跟
+使摆锤偏离平衡位置，然后放开，摆锤就在重力$G$和拉力$T$的作用下，沿着以平衡位置$O$为中点的一段圆弧左右振动．我们来分析摆锤运动到任意一点$P$时的受力情况（图~\ref{fig_A_9-3}）．这时摆线与竖直方向的夹角是$\alpha$，重力$G$沿摆线方向的分力$F'$跟
 拉力$T$的合力，沿着摆线指向圆心（悬挂点），是使摆锤沿圆弧运动的向心力，它只改变摆锤运动的方向，不改变运动的快慢．因此，在研究摆锤沿圆弧运动的位置变化时，不需要考虑向心力，而只考虑重力沿圆弧切线方向的分力$F$，因为正是这个分力$F$是使摆锤振动的回复力．
-\begin{figure}[htp]\centering
-\begin{tikzpicture}[>=latex]
-\fill[pattern=north east lines](-1,0) rectangle (1,.25);
-\draw[thick](-1,0)--(1,0);
-\tkzDefPoints{0/0/O', 0/-5/O, 0/-6.5/G}
-\tkzDefPoint(-135:5){C}
-\tkzDefPoint(-65:5){P}
-\tkzDefPoint(-45:5){B}
-\tkzDrawSegments(O',B O',O O',C O',P)
-\tkzDefPointsBy[translation = from O to G](B,C,P){G1,G2,G3}
-\tkzDrawSegments[thick,->](O,G B,G1 C,G2 P,G3)
-\tkzDrawArc(O',C)(B)
-\foreach \x in {O,B,C,P}
-{
-    \draw(\x) circle(.2);
-}
-\foreach \x/\y in {B/G1,C/G2,P/G3}
-{
-    \tkzDefPointBy[projection = onto O'--\x](\y)
-    \tkzGetPoint{\x'}
-    \tkzDefPointsBy[translation= from \x' to \x](\y){\x''}
-    \tkzDrawSegments[thick, ->](\x,\x'' \x,\x')
-    \tkzDrawSegments[dashed](\y,\x' \y,\x'')
-}
-\tkzLabelPoint[below left](P''){$F$}
-
-\foreach \x/\y in {B/B', C/C', O/G, P/P'}
-{
-    \tkzDefPointBy[symmetry=center \x](\y)
-    \tkzGetPoint{\y'}
-    \tkzDrawSegments[thick, ->](\x,\y')
-}
-\tkzLabelPoints[left=4pt](C)
-\tkzLabelPoints[below left](O)
-\tkzLabelPoints[below right](P)
-\tkzLabelPoints[right=4pt](B)
-
-\tkzMarkAngles[mark=none, size=.9](O,O',P)
-\tkzLabelAngle[pos=1.1](O,O',P){$\alpha$}
-\tkzLabelSegment[right](O',P){$\ell$}
-\tkzLabelPoint[below](G3){$G$}
-\tkzLabelPoint[right](P'){$F'$}
-\tkzLabelPoint[right](P''){$T$}
-
-\end{tikzpicture}
-    \caption{单摆运动时的受力分析}
-    \end{figure}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics{fig/A/9-3.pdf}
+    \caption{单摆运动时的受力分析}\label{fig_A_9-3}
+\end{figure}
     
 重力$G=mg$沿圆弧切线的分力$F=mg\sin\alpha$．当$\alpha$很小时（5$^\circ$以下），圆弧可以近似地看成直线，分力$F$可以近似地看作沿这条直线作用，$OP$ 就是摆锤偏离平衡位置的位移$x$．设摆长是$\ell$，因为$\sin\alpha\approx x/\ell$，所以
 \[F=-\frac{mg}{\ell}x\]
@@ -275,177 +172,48 @@ Hz，1秒钟振动1次就是1赫．1秒钟振动$n$次就是$n$赫．
     \item 假如把单摆和弹簧振子都从地球移到月球上，它们的振动频率是否改变？为什么？
     \item 两个单摆，它们的摆长的比是1:4，求它们的周期的比．两个单摆，它们的频率的比是1:4，求它们的摆长的比．
     \item 测某地的重力加速度时，用了一个摆长为2米的单摆，测得100次全振动所用的时间是4分44秒，这个地方的重力加速度多大？
-    \item 假如把上题中的单摆拿到月球上去，月球的重力加速度是1.6$\msq$，摆的周期将变为多少秒？
+    \item 假如把上题中的单摆拿到月球上去，月球的重力加速度是1.6$\Umsq$，摆的周期将变为多少秒？
 \end{enumerate}
 
 \subsection{相和相差}
 拿两个摆长相等的单摆来，把它们的摆锤移到平衡位置的一侧，先后放开手让它们振动起来．这两个摆的摆长相等，振动频率是相同的．振幅可以不同．振幅即使相同，也可以看出它们振动的区别来．它们的振动步调不一致，它们不是同时通过平衡位置，也不是同时运动到同一侧的最大位移．这时我们说这两个摆的相是不同的，相，又叫做相位、位相或周相．
 
 两个频率相同的简谐振动，如果它们的振动步调一致，我们就说它们的相是相同的，简称为\textbf{同相}．在这种情况下，它们总是同时向同一方向运动，同时经过平衡位置，同时运动到同一侧的最大位移．两个摆长相等的单摆，把它们的摆锤移到
-平衡位置的同一侧，同时放开手让它们开始振动，它们的振动就是同相的（图9.4）．
-\begin{figure}[htp]\centering
-    \begin{tikzpicture}[>=stealth, thick, scale=1]  
-    \fill [pattern = north east lines] (-4,0) rectangle (-3,.25);
-    \fill [pattern = north east lines] (-2,0) rectangle (-1,.25);
-    \fill [pattern = north east lines] (0,0) rectangle (1,.25);
-    \fill [pattern = north east lines] (2,0) rectangle (3,.25);
-\draw(-4,0)--(-3,0);  \draw(-2,0)--(-1,0); \draw(0,0)--(1,0); \draw(2,0)--(3,0); 
-
-    \draw[dashed](-3.5,0)--(-3.5,-3);  \draw(-1.5,0)--(-1.5,-3);  
-    \draw[dashed](.5,0)--(.5,-3);       \draw(2.5,0)--(2.5,-3);
-
-    \draw(-3.5,0)--(-3+.3,-2.7);  \draw(.5,0)--(0-.3,-2.7);
-
-\draw[shade] (-1.5,-3) circle  (3pt);
-\draw[shade] (2.5,-3) circle  (3pt);
-\draw[shade] (-3+.3,-2.7) circle  (3pt);
-\draw[shade] (0-.3,-2.7) circle  (3pt);
-
-\draw (-3.5,-.5) arc (270:285:.5) node [below]{$\theta_1$};
-\draw (.5,-.5) arc (270:255:.5) node [below]{$\theta_1$};
-\draw [<-](-3.5,-3.25) arc (270:285:3.25);
-\draw [->](.5,-3.25) arc (270:255:3.25);
-
-\draw [->](-1.5,-3.25)--(-2,-3.25);
-\draw [<-](3,-3.25)--(2.5,-3.25);
-
-\node at (-4,-4){~~};
-    \end{tikzpicture}
-
-    \begin{tikzpicture}[>=stealth, thick, scale=1]  
-        \fill [pattern = north east lines] (-4,0) rectangle (-3,.25);
-        \fill [pattern = north east lines] (-2,0) rectangle (-1,.25);
-        \fill [pattern = north east lines] (0,0) rectangle (1,.25);
-        \fill [pattern = north east lines] (2,0) rectangle (3,.25);
-\draw(-4,0)--(-3,0);  \draw(-2,0)--(-1,0); \draw(0,0)--(1,0); \draw(2,0)--(3,0); 
-
-        \draw[dashed](-3.5,0)--(-3.5,-3);  \draw(-1.5,0)--(-1.5,-3);  
-        \draw[dashed](.5,0)--(.5,-3);       \draw(2.5,0)--(2.5,-3);
-
-        \draw(-3.5,0)--(-3+.6,-2.8);  \draw(.5,0)--(0-.6,-2.8);
-
-\draw[shade] (-1.5,-3) circle  (3pt);
-\draw[shade] (2.5,-3) circle  (3pt);
-\draw[shade] (-3+.6,-2.8) circle  (3pt);
-\draw[shade] (0-.6,-2.8) circle  (3pt);
-    
-    \draw (-3.5,-.5) arc (270:290:.5) node [below]{$\theta_2$};
-    \draw (.5,-.5) arc (270:250:.5) node [below]{$\theta_2$};
-    \draw [<-](-3.5,-3.25) arc (270:285:3.25);
-    \draw [->](.5,-3.25) arc (270:255:3.25);
-
-    \draw [->](-1.5,-3.25)--(-2,-3.25);
-    \draw [<-](3,-3.25)--(2.5,-3.25);
-
-    \node at (-3.5,-4){$t=0$};\node at (-1.5,-4){$t=\dfrac{1}{4}T$};
-    \node at (.5,-4){$t=\dfrac{1}{2}T$};\node at (2.5,-4){$t=\dfrac{3}{4}T$};
-
-        \end{tikzpicture}
-    \caption{同相的两个简谐振动}
-    \end{figure}
+平衡位置的同一侧，同时放开手让它们开始振动，它们的振动就是同相的（图~\ref{fig_A_9-4}）．
+\begin{figure}[htbp]
+    \centering
+    \includegraphics{fig/A/9-4.pdf}
+    \caption{同相的两个简谐振动}\label{fig_A_9-4}
+\end{figure}
 
 
 多数情况下，两个简谐振动的步调并不一致，即它们的相
 不同，或者说它们存在着\textbf{相差}．其中有一种特殊情形，即振动步调正好相反，这种情形叫做\textbf{反相}．两个摆长相等的单摆，一个从平衡位置右侧，另一个从平衡位置左侧同时被释放，它们
-的振动步调就正好相反（图9.5）．它们的运动方向总是相反的；一个从右向左经过平衡位置的时候，另一个正好从左向右经过平衡位置；一个到达左侧最大位移的时候，另一个正好到达右侧的最大位移等等．
-\begin{figure}[htp]\centering
-    \begin{tikzpicture}[>=stealth, thick, scale=1]  
-    \fill [pattern = north east lines] (-4,0) rectangle (-3,.25);
-    \fill [pattern = north east lines] (-2,0) rectangle (-1,.25);
-    \fill [pattern = north east lines] (0,0) rectangle (1,.25);
-    \fill [pattern = north east lines] (2,0) rectangle (3,.25);
-\draw(-4,0)--(-3,0);  \draw(-2,0)--(-1,0); \draw(0,0)--(1,0); \draw(2,0)--(3,0); 
-
-    \draw[dashed](-3.5,0)--(-3.5,-3);  \draw(-1.5,0)--(-1.5,-3);  
-    \draw[dashed](.5,0)--(.5,-3);       \draw(2.5,0)--(2.5,-3);
-
-    \draw(-3.5,0)--(-3+.3,-2.7);  \draw(.5,0)--(0-.3,-2.7);
-
-\draw[shade] (-1.5,-3) circle  (3pt);
-\draw[shade] (2.5,-3) circle  (3pt);
-\draw[shade] (-3+.3,-2.7) circle  (3pt);
-\draw[shade] (0-.3,-2.7) circle  (3pt);
-
-\draw (-3.5,-.5) arc (270:285:.5) node [below]{$\theta_1$};
-\draw (.5,-.5) arc (270:255:.5) node [below]{$\theta_1$};
-\draw [<-](-3.5,-3.25) arc (270:285:3.25);
-\draw [->](.5,-3.25) arc (270:255:3.25);
-
-\draw [->](-1.5,-3.25)--(-2,-3.25);
-\draw [<-](3,-3.25)--(2.5,-3.25);
-
-\node at (-4,-4){~~};
-    \end{tikzpicture}
-
-    \begin{tikzpicture}[>=stealth, thick, scale=1]  
-        \fill [pattern = north east lines] (-4,0) rectangle (-3,.25);
-        \fill [pattern = north east lines] (-2,0) rectangle (-1,.25);
-        \fill [pattern = north east lines] (0,0) rectangle (1,.25);
-        \fill [pattern = north east lines] (2,0) rectangle (3,.25);
-\draw(-4,0)--(-3,0);  \draw(-2,0)--(-1,0); \draw(0,0)--(1,0); \draw(2,0)--(3,0); 
-
-        \draw[dashed](-3.5,0)--(-3.5,-3);  \draw(-1.5,0)--(-1.5,-3);  
-        \draw[dashed](.5,0)--(.5,-3);       \draw(2.5,0)--(2.5,-3);
-
-        \draw(-3.5,0)--(-3.5-1.2,-2.8);  \draw(.5,0)--(.5+1.2,-2.8);
-
-\draw[shade] (-1.5,-3) circle  (3pt);
-\draw[shade] (2.5,-3) circle  (3pt);
-\draw[shade] (-3.5-1.2,-2.8) circle  (3pt);
-\draw[shade] (.5+1.2,-2.8) circle  (3pt);
-    
-    \draw (-3.5,-.5) arc (270:245:.5) node [below]{$\theta_2$};
-    \draw (.5,-.5) arc (270:295:.5) node [below]{$\theta_2$};
-    \draw [<-](-3.5,-3.25) arc (270:250:3.25);
-    \draw [<-](.5,-3.25) arc (270:290:3.25);
-
-    \draw [<-](-1.2,-3.25)--(-1.7,-3.25);
-    \draw [->](2.75,-3.25)--(2.25,-3.25);
-
-    \node at (-3.5,-4){$t=0$};\node at (-1.5,-4){$t=\dfrac{1}{4}T$};
-    \node at (.5,-4){$t=\dfrac{1}{2}T$};\node at (2.5,-4){$t=\dfrac{3}{4}T$};
-
-        \end{tikzpicture}
-    \caption{反相的两个简谐振动}
-    \end{figure}
+的振动步调就正好相反（图~\ref{fig_A_9-5}）．它们的运动方向总是相反的；一个从右向左经过平衡位置的时候，另一个正好从左向右经过平衡位置；一个到达左侧最大位移的时候，另一个正好到达右侧的最大位移等等．
+\begin{figure}[htbp]
+    \centering
+    \includegraphics{fig/A/9-5.pdf}
+    \caption{反相的两个简谐振动}\label{fig_A_9-5}
+\end{figure}
 
 相和相差在振动和波的研究中是很重要的，今后的学习
 中常常要提到它们．
 
 \subsection{简谐振动的图象}
 物体的运动情况可以用公式来表示，也可以用图象来表示，我们以前学过，匀速直线运动的位移图象是一条通过原点的直线，简谐振动的位移图象是怎样的呢？
-\begin{figure}[htp]\centering
-    \includegraphics[scale=1.5]{fig/9-6.pdf}
-    \caption{摆的振动图象}
-    \end{figure}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics{fig/A/9-6.pdf}
+    \caption{摆的振动图象}\label{fig_A_9-6}
+\end{figure}
 
-简谐振动的图象可以利用图9.6所示的装置直接从振动物体得到．把漏斗吊在支架上，下方放一块硬纸板，纸板上画一条直线$Ot$, 先使漏斗静止不动，使$O$点恰好在漏斗的正下
+简谐振动的图象可以利用图~\ref{fig_A_9-6} 所示的装置直接从振动物体得到．把漏斗吊在支架上，下方放一块硬纸板，纸板上画一条直线$Ot$, 先使漏斗静止不动，使$O$点恰好在漏斗的正下
 方．然后在漏斗里装满细砂，让它摆动，同时沿着跟摆动垂
-直的方向匀速拉动硬纸板．因为每一时刻都从漏斗漏出细砂，所以落在硬纸板上的细砂就记录下各个时刻摆的位置．不断漏下的砂组成连续的砂流，在硬纸板上显示出一条曲线，这条曲线就是以横轴$Ot$表示时间、以纵轴表示对平衡位置的位移的振动图象．可以看到，摆的振动图象是正弦或余弦曲线．实际上，所有简谐振动的图象都是正弦或余弦曲线（图9.7）．
-\begin{figure}\centering
-    \begin{tikzpicture}[>=stealth, xscale=.5, domain=0:4*pi, samples=200]
-\draw [->](0,0)node [left]{$O$}--(14,0) node [below]{$t$};
-\draw [->](0,-1.7)--(0,2) node [right]{$x$};
-
-
-        \draw [very thick]  plot (\x,{cos(\x r)});
-
- \draw [dashed](0, 1) -- (4*pi, 1);  
- \draw [dashed](0,-1) -- (3*pi, -1);     
-
-\draw[<->](2*pi,1.3)--node[fill=white] {$T$}(4*pi,1.3);
-\draw[<->](pi,-1.3)--node[fill=white] {$T$}(3*pi,-1.3);
-
-\draw(pi,-1)--(pi,-1.6); \draw(3*pi,-1)--(3*pi,-1.6); 
-\draw(2*pi,1)--(2*pi,1.6); 
-\draw(4*pi,1)--(4*pi,1.6); 
-
-
-\node at (-.75,1){$+A$};\node at (-.75,-1){$-A$};
-
-
-    \end{tikzpicture}
-    \caption{简谐振动的图象}
+直的方向匀速拉动硬纸板．因为每一时刻都从漏斗漏出细砂，所以落在硬纸板上的细砂就记录下各个时刻摆的位置．不断漏下的砂组成连续的砂流，在硬纸板上显示出一条曲线，这条曲线就是以横轴$Ot$表示时间、以纵轴表示对平衡位置的位移的振动图象．可以看到，摆的振动图象是正弦或余弦曲线．实际上，所有简谐振动的图象都是正弦或余弦曲线（图~\ref{fig_A_9-7}）．
+\begin{figure}[htbp]
+    \centering
+    \includegraphics{fig/A/9-7.pdf}
+    \caption{简谐振动的图象}\label{fig_A_9-7}
 \end{figure}
 
 振动图象表示出振子对平衡位置的位移怎样随时间面变
@@ -453,101 +221,39 @@ Hz，1秒钟振动1次就是1赫．1秒钟振动$n$次就是$n$赫．
 
 在振动图象上还可以表示出振幅和周期，曲线的最大值等于振幅，相邻两个正（或负）的最大值之间的间隔等于周期．
 
-利用振动图象也可以比较振动的相．图9.8是同相的两个简谐振动的图象，从图象容易看出这两个振动的步调是一致的．图9.9是反相的两个简谐振动的图象，从图象容易看出这两个振动的步调恰好相反．
+利用振动图象也可以比较振动的相．图~\ref{fig_A_9-8} 是同相的两个简谐振动的图象，从图象容易看出这两个振动的步调是一致的．图~\ref{fig_A_9-9} 是反相的两个简谐振动的图象，从图象容易看出这两个振动的步调恰好相反．
 
-\begin{figure}\centering
-    \begin{tikzpicture}[>=stealth, scale=1, domain=0:2.5*pi, samples=200]
-\draw [->](0,0)node [left]{$O$}--(9,0) node [below]{$t$};
-\draw [->](0,-1.2)--(0,1.5) node [right]{$x$};
-
-\draw [->](0,-3)node [left]{$O$}--(9,-3) node [below]{$t$};
-\draw [->](0,-4.2)--(0,-1.5) node [right]{$x$};
-        \draw [very thick]  plot (\x,{cos(\x r)});
-        \draw [very thick]  plot (\x,{.8*cos(\x r)-3});
-
- \draw [dashed](.5*pi, 0) -- (.5*pi, 0-3);  
- \draw [dashed](1.5*pi, 0) -- (1.5*pi, 0-3);     
- \draw [dashed](2.5*pi-.5, 0) -- (2.5*pi-.5, 0-3);     
-
- 
-\draw [->](.5*pi, 0)node [above]{$\dfrac{1}{4}T$}--(.5*pi,-.75);
-\draw [->](.5*pi, 0-3)--(.5*pi,-.75-3);
-\draw [->](1.5*pi, 0)node [below]{$\dfrac{3}{4}T$} -- (1.5*pi, .75);    
-\draw [->](1.5*pi, 0-3) -- (1.5*pi, .75-3);    
-\draw [<-](2.5*pi-.5, 0) -- (2.5*pi-.5, .44);  
-\draw [<-](2.5*pi-.5, 0-3) -- (2.5*pi-.5, .44-3);  
-\node at (2.5*pi-.35, -.3){$t$};
-
-
-
-    \end{tikzpicture}
-    \caption{同相的两个简谐振动的图象（图中的箭头表示振子在该时刻的运动方向）}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics{fig/A/9-8.pdf}
+    \caption{同相的两个简谐振动的图象（图中的箭头表示振子在该时刻的运动方向）}\label{fig_A_9-8}
 \end{figure}
 
-\begin{figure}\centering
-    \begin{tikzpicture}[>=stealth, scale=1, domain=0:2.5*pi, samples=200]
-\draw [->](0,0)node [left]{$O$}--(9,0) node [below]{$t$};
-\draw [->](0,-1.2)--(0,1.5) node [right]{$x_1$};
-
-\draw [->](0,-3)node [left]{$O$}--(9,-3) node [below]{$t$};
-\draw [->](0,-4.2)--(0,-1.5) node [right]{$x_2$};
-        \draw [very thick]  plot (\x,{cos(\x r)});
-        \draw [very thick]  plot (\x,{-.8*cos(\x r)-3});
-
- \draw [dashed](.5*pi, 0) -- (.5*pi, 0-3);  
- \draw [dashed](1.5*pi, 0) -- (1.5*pi, 0-3);     
- \draw [dashed](2.5*pi-.5, 0) -- (2.5*pi-.5, 0-3);     
-
- 
-\draw [->](.5*pi, 0)node [above]{$\dfrac{1}{4}T$}--(.5*pi,-.75);
-\draw [->](.5*pi, 0-3)--(.5*pi,.75-3);
-\draw [->](1.5*pi, 0)node [below]{$\dfrac{3}{4}T$} -- (1.5*pi, .75);    
-\draw [->](1.5*pi, 0-3) -- (1.5*pi, -.75-3);    
-\draw [<-](2.5*pi-.5, 0) -- (2.5*pi-.5, .44);  
-\draw [<-](2.5*pi-.5, 0-3) -- (2.5*pi-.5, -.44-3);  
-
-\node at (2.5*pi-.35, -.3){$t$};
-
-    \end{tikzpicture}
-    \caption{反相的两个简谐振动的图象（图中的箭头表示振子在该时刻的运动方向）}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics{fig/A/9-9.pdf}
+    \caption{反相的两个简谐振动的图象（图中的箭头表示振子在该时刻的运动方向）}\label{fig_A_9-9}
 \end{figure}
 
 在许多实际工作中，例如监测地震，振动图象就是直接从振动体记录得来的，分析研究得到的图象可以了解振动的许多情况．
 
 
 \subsection*{练习四}
-\begin{figure}\centering
-    \begin{tikzpicture}[>=stealth, xscale=.7, domain=0:3*pi, samples=200]
-\draw [->](0,0)node [left]{$0$}--(11,0) node [below]{$t$（秒）};
-\draw [->](0,-1.2)--(0,1.5) node [right]{$x$（厘米）};
-
-
-        \draw [very thick]  plot (\x,{cos(\x r)});
-
- \draw [dashed](0, 1) -- (2*pi, 1);  
- \draw [dashed](0,-1) -- (3*pi, -1);     
-
-\foreach \x in{1,2,...,5}
-{
-    \draw(\x*pi/2, 0)node [below]{\x}--(\x*pi/2, 0.2);
-}
-
-\node at (-.5,1){$+10$};\node at (-.5,-1){$-10$};
-
-
-    \end{tikzpicture}
-    \caption{}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics{fig/A/9-10.pdf}
+    \caption{}\label{fig_A_9-10}
 \end{figure}
 
 \begin{enumerate}
-    \item 图9.10是一个简谐振动的图象．根据图象确定它的振幅和周期．
-    \item 图9.10的振动图象是一条余弦曲线，你能不能应用学过的数学知识算出下列时刻振子对平衡位置的位移？
+    \item 图~\ref{fig_A_9-10} 是一个简谐振动的图象．根据图象确定它的振幅和周期．
+    \item 图~\ref{fig_A_9-10} 的振动图象是一条余弦曲线，你能不能应用学过的数学知识算出下列时刻振子对平衡位置的位移？
     \begin{enumerate}
         \item $t=0.5$秒；
         \item $t=1.5$秒．
     \end{enumerate}
 
-    提示：想一想在图9.10中，1秒、2秒等时刻相当于余弦函数的多大的角度．
+    提示：想一想在图~\ref{fig_A_9-10} 中，1秒、2秒等时刻相当于余弦函数的多大的角度．
 
 \end{enumerate}
 
@@ -555,8 +261,7 @@ Hz，1秒钟振动1次就是1赫．1秒钟振动$n$次就是$n$赫．
 
 现在从能量的角度来看一看简谐振动．简谐振动不考虑阻力，振动系统的机械能是守恒的．
 
-以单摆为例，当我们把摆锤从平衡位置$O$拉到$B$点时（图
-9.3），摆锤的位置升高，我们克服重力做了功，做功消耗的能转化为摆锤的重力势能，储存在这个振动系统之中．
+以单摆为例，当我们把摆锤从平衡位置$O$拉到$B$点时（图~\ref{fig_A_9-3}），摆锤的位置升高，我们克服重力做了功，做功消耗的能转化为摆锤的重力势能，储存在这个振动系统之中．
 
 把拉到$B$点的摆锤放开后，在回复力作用下，摆锤向左做变加速运动．位置降低，速度增大，重力势能转化为动能．当回到平衡位置$O$时，重力势能减少到零（取平衡位置时的重力
 势能为零），动能达到最大值，而且这时的动能就等于摆锤在最大位移时的重力势能．
@@ -566,28 +271,24 @@ Hz，1秒钟振动1次就是1赫．1秒钟振动$n$次就是$n$赫．
 此后，摆锤又向平衡位置运动，重力势能又转化为动能；过了平衡位置继续向$B$点运动，动能又转化为重力势能，这种转化重复不息，一直进行下去，而摆锤在任何位置（或任何时刻）的机械能即动能和重力势能之和保持不变，都等于最大
 位移处的重力势能．我们最初把摆锤拉到$B$点，摆锤在$B$点的位移越大，位置越高，储存在振动系统中的重力势能越大．可见简谐振动的能量跟振幅有关：振幅越大，简谐振动的能量就越大．
 
-在图9.2所示的弹簧振子里也进行着相似的能量转化过程，只不过跟动能相互转化的不是重力势能而是弹性势能，当我们把弹簧振子从平衡位置拉到$B$点时，克服弹簧的弹力做了功，做功消耗的能转化为弹性势能储存在振动系统之中．把振子放开，在振动过程中弹性势能和动能相互转化，而且重复不息，一直进行下去，弹簧振子在任何位置（或任何时刻）的机械能即动能和弹性势能之和保持不变，都等于最大位移处的弹性势能．我们知道，弹簧的弹性势能跟弹簧被拉伸或压缩的长度有关系，这个长度越大，弹性势能也越大．可见，振子在$B$点的位移越大，储存的弹性势能就越大，在弹簧振子中我们同样看到：振幅越大，简谐振动的能量就越大．
+在图~\ref{fig_A_9-2} 所示的弹簧振子里也进行着相似的能量转化过程，只不过跟动能相互转化的不是重力势能而是弹性势能，当我们把弹簧振子从平衡位置拉到$B$点时，克服弹簧的弹力做了功，做功消耗的能转化为弹性势能储存在振动系统之中．把振子放开，在振动过程中弹性势能和动能相互转化，而且重复不息，一直进行下去，弹簧振子在任何位置（或任何时刻）的机械能即动能和弹性势能之和保持不变，都等于最大位移处的弹性势能．我们知道，弹簧的弹性势能跟弹簧被拉伸或压缩的长度有关系，这个长度越大，弹性势能也越大．可见，振子在$B$点的位移越大，储存的弹性势能就越大，在弹簧振子中我们同样看到：振幅越大，简谐振动的能量就越大．
 
 简谐振动是一种理想化的振动，一旦供给振动系统一定的能量来使它开始振动，由于机械能守恒，它就要以一定的振幅永不停息地振动下去．可是实际上振动系统不可避免地要受到摩擦和其他阻力，即受到阻尼的作用，振动系统克服阻尼作用做功，系统的机械能就
-要损耗，这样，机械能随着时间逐渐减少，振动的振幅也逐渐减小．待到机械能耗尽之时，振动就停下来了．这种振幅逐渐减小的振动叫做\textbf{阻尼振动}．图9.11是阻尼振动的图象．
+要损耗，这样，机械能随着时间逐渐减少，振动的振幅也逐渐减小．待到机械能耗尽之时，振动就停下来了．这种振幅逐渐减小的振动叫做\textbf{阻尼振动}．图~\ref{fig_A_9-11} 是阻尼振动的图象．
 
-\begin{figure}\centering
-    \begin{tikzpicture}[>=stealth, yscale=3, domain=0:3*pi, samples=500]
-\draw [->](0,0)node [left]{$O$}--(10,0) node [below]{$t$};
-\draw [->](0,-1.1)--(0,1.2) node [right]{$x$};
-        \draw [very thick]  plot (\x,{exp(-.2*\x)*sin(10*\x r)});
-        \draw [dashed]  plot (\x,{exp(-.2*\x)});
-        \draw [dashed]  plot (\x,{-exp(-.2*\x)});
-    \end{tikzpicture}
-    \caption{阻尼振动的图象}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics{fig/A/9-11.pdf}
+    \caption{阻尼振动的图象}\label{fig_A_9-11}
 \end{figure}
 
 振动系统受到的阻尼越大，振幅减小得越快，振动停下来也越快．阻尼过大将不能产生振动．阻尼越小，振幅减小得越慢．在阻尼很小时，在一段不太长的时间内看不出振幅有明显的减小，就可以把振动系统当作简谐振动来处理．前面关于简谐振动的演示就属于这种情形．
 
 \subsection*{练习五}
-分析弹簧振子（图9.2）和单摆（图9.3）在振动中能量的转化情况（增多或减少），填好下表：
+分析弹簧振子（图~\ref{fig_A_9-2}）和单摆（图~\ref{fig_A_9-3}）在振动中能量的转化情况（增多或减少），填好表~\ref{tab_A_9-2}．
 
-\begin{center}
+\begin{table}[htbp]
+	\centering
     \begin{tabular}{c|c|c|c|c}
         \hline
         振子的运动  & $C\to O$ & $O\to B$ & $B\to O$ & $O\to C$\\
@@ -597,7 +298,8 @@ Hz，1秒钟振动1次就是1赫．1秒钟振动$n$次就是$n$赫．
 总能量的变化&&&&\\
 \hline
     \end{tabular}
-\end{center}
+    \caption{}\label{tab_A_9-2}
+\end{table}
 
 \subsection{受迫振动~~共振}
 
@@ -606,12 +308,13 @@ Hz，1秒钟振动1次就是1赫．1秒钟振动$n$次就是$n$赫．
 象弹簧振子和单摆那样，在外力使它们偏离平衡位置后，它们就在系统内部的弹力或重力作用下振动起来，而不再需要其他外力推动，这种振动叫做\textbf{自由振动}．由于阻力不可避免，实际的自由振动必然是阻尼振动，最终要停下来，怎样才能得到持续的周期性振动呢？
 
 得到持续的周期性振动的最简单的方法，是用周期性外力作用于振动物体，物体在周期性外力作用下的振动叫做\textbf{受迫振动}．
-\begin{figure}[htp]\centering
-    \includegraphics[scale=.45]{fig/9-12.png}
-    \caption{受迫振动}
-    \end{figure}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics{fig/A/9-12.pdf}
+    \caption{受迫振动}\label{fig_A_9-12}
+\end{figure}
 
-受迫振动的频率跟什么有关系呢？我们用图9.12所示的装置来研究这个问题．匀速地转动把手，把手就给弹簧振子以周期性的策动力，使振子做受迫振动．这个策动力的周期跟把手转动的周期是相同的．用不同的转速匀速转动把手，可以看到，振子做受迫振动的周期总等于策动力的周期．所以，\textit{物体做受迫振动的频率等于策动力的频率，而跟物体的固有频率没有关系}．
+受迫振动的频率跟什么有关系呢？我们用图~\ref{fig_A_9-12} 所示的装置来研究这个问题．匀速地转动把手，把手就给弹簧振子以周期性的策动力，使振子做受迫振动．这个策动力的周期跟把手转动的周期是相同的．用不同的转速匀速转动把手，可以看到，振子做受迫振动的周期总等于策动力的周期．所以，\textit{物体做受迫振动的频率等于策动力的频率，而跟物体的固有频率没有关系}．
 
 利用受迫振动来得到持续的周期性振动的例子是非常多
 的，例如缝纫机针持续地上下振动，空气压缩机活塞持续地往
@@ -619,48 +322,27 @@ Hz，1秒钟振动1次就是1赫．1秒钟振动$n$次就是$n$赫．
 
 \subsubsection{共振}
 
-难道物体做受迫振动时它的固有频率对振动毫无影响吗？我们用图9.13所示的装置研究这个问题．
+难道物体做受迫振动时它的固有频率对振动毫无影响吗？我们用图~\ref{fig_A_9-13} 所示的装置研究这个问题．
 
 在一根张紧的绳上挂几个摆，其中$A$、$B$、$G$的摆长相等．当$A$摆动的时候，$A$的振动通过张紧的绳给其余各摆施加周期性的策动力，其余各摆就做受迫振动．策动力的频率等于$A$摆的频率，决定于它的摆长．其他各摆的固有频率，也都决定于自己的摆长．可以发现，固有频率跟策动力频率相等的$B$、$G$，振幅最大，固有频率跟策动力频率相差最大的$D$、$E$，振幅最小．
 
-\begin{figure}[htp]\centering
-    \begin{minipage}[t]{0.48\textwidth}
+\begin{figure}[htbp]
     \centering
-	\begin{tikzpicture}[>=latex, scale=1]
-		\tkzDefPoints{.5/3/B1, .9/3/B2, 1.1/3/C1, 1.5/3/C2, 1.7/3/D1, 2.1/3/D2, 2.3/3/A1, 2.7/3/A2, 2.9/3/E1, 3.3/3/E2, 3.5/3/F1, 3.9/3/F2, 4.1/3/G1, 4.5/3/G2}
-		\tkzDefPoints{.7/1/B, 1.3/.5/C, 1.9/.3/D, 2.5/1/A, 3.1/1.7/E, 3.7/1.5/F, 4.3/1.1/G}
-		\tkzDrawSegments(B,B1 B,B2 A,A1 A,A2 C,C1 C,C2 D,D1 D,D2 E,E1 E,E2 F,F1 F,F2 G,G1 G,G2)
-		\tkzLabelPoints[below=5pt](A,B,C,D,E,F,G)
-		\foreach \x in {B,C,D,E,F,G}
-		{
-			\draw[fill=white](\x) circle(4pt);
-		}
-		\draw[fill=gray](A) circle(4pt);
-		\draw(0+.2,3)--(5-.2,3);
-		\draw(0.1,3.2) rectangle (.2,-1);
-		\draw(5-.1,3.2) rectangle (5-.2,-1);
-		
-		\tkzDefPoints{-.1/-1/a, 5.1/-1/b, -.3/-1.1/c, 5.3/-1.1/d, -.3/-1.3/c', 5.3/-1.3/d'}
-		\tkzDrawPolygon(a,b,d,c)
-		\tkzDrawPolygon(d,c,c',d')
-	\end{tikzpicture}
-    \caption{研究摆的共振}
+    \begin{minipage}[b]{0.45\textwidth}
+        \centering
+        \includegraphics{fig/A/9-13.pdf}
+        \caption{研究摆的共振}\label{fig_A_9-13}
     \end{minipage}
-    \begin{minipage}[t]{0.48\textwidth}
-    \centering
-\begin{tikzpicture}[>=stealth, scale=1.3]
-	\draw [thick, ->] (.8,0)node[left]{$O$} -- (1.985,0) node[below]{$f_\text{固}$} -- (4.4,0) node[below]{$f$};
-	\draw [thick, ->] (.8,0) --(.8,3) node[left]{$A$};
-\node at (-0.25+.8,1.5)[rotate=90]{受迫振动的振幅};
-	\draw [thick,gray,dashed] (1.985,0) --++ (0,3);
-	\draw [very thick,domain=1:4,samples=200,variable=\x] plot (\x,{1.8/sqrt((4-\x*\x)*(4-\x*\x)+0.1*\x*\x)});
-	\end{tikzpicture}
-    \caption{共振曲线}
+    \hfil
+    \begin{minipage}[b]{0.45\textwidth}
+        \centering
+        \includegraphics{fig/A/9-14.pdf}
+        \caption{共振曲线}\label{fig_A_9-14}
     \end{minipage}
-    \end{figure}
+\end{figure}
 
 
-图9.14的曲线表示出了受迫振动的振幅$A$跟策动力频率$f$的关系：策动力的频率$f$等于振动物体的固有频率$f_{\text{固}}$时振幅最大；策动力的频率跟固有频率相差越大，振幅越小．
+图~\ref{fig_A_9-14} 的曲线表示出了受迫振动的振幅$A$跟策动力频率$f$的关系：策动力的频率$f$等于振动物体的固有频率$f_{\text{固}}$时振幅最大；策动力的频率跟固有频率相差越大，振幅越小．
 
 \textit{当策动力的频率跟物体的固有频率相等的时候，受迫振动的振幅最大，这种现象叫做共振．}
 
@@ -677,7 +359,7 @@ Hz，1秒钟振动1次就是1赫．1秒钟振动$n$次就是$n$赫．
 \subsection*{练习六}
 \begin{enumerate}
     \item 除了书上讲过的自由振动和受迫振动的例子外，再各举两个实例．
-    \item 仿照图9.13所示的研究共振现象的装置，自己利用手边的材料来做实验，观察受迫振动的振幅跟策动力频率之间的关系．
+    \item 仿照图~\ref{fig_A_9-13} 所示的研究共振现象的装置，自己利用手边的材料来做实验，观察受迫振动的振幅跟策动力频率之间的关系．
     \item 汽车的车身是装在弹簧上的，如果它的固有周期是1.5秒，汽车在一条起伏不平的路上行驶，路上各凸起处相隔的距离都大约是8米，那么汽车以多大的速度行驶时车身的起伏振动最激烈？
 \end{enumerate}
 
@@ -698,15 +380,26 @@ Hz，1秒钟振动1次就是1赫．1秒钟振动$n$次就是$n$赫．
 
 现在稍微细致地看一下机械振动在媒质中是怎样传播的．
 
-照图9.15那样，把绳的一端固定、用手拿着另一端上下振动，就会看到凸凹相间的波向绳的一端传去，设想把绳分成许多小部分，每一小部分看作质点，质点和质点之间有弹
+照图~\ref{fig_A_9-15} 那样，把绳的一端固定、用手拿着另一端上下振动，就会看到凸凹相间的波向绳的一端传去，设想把绳分成许多小部分，每一小部分看作质点，质点和质点之间有弹
 力作用．当质点1在外力作用下振动起来以后，就带动质点2振动起来，不过质点2开始振动的时刻比质点1要迟一些，因而它们振动的相不同．这样依次带动下去，后一个质点总比前一个迟一些开始振动，在这列质点中，正因为相邻质点振动的相不同，从整体上来看才形成凸凹相间的波向前传播．这里我们看到，绳上的质点都在上下振动，并不随波迁移，沿绳传播的只是振动这种运动形式．
 
-\begin{figure}[htp]\centering
-\includegraphics[scale=1.3]{fig/9-15.pdf}
-\caption{沿绳传出凸凹相间的波}
+\begin{figure}[htbp]
+    \centering
+    \begin{subfigure}{0.8\linewidth}
+    	\centering
+    	\includegraphics{fig/A/9-15a.pdf}
+    	\caption{}\label{fig_A_9-15a}
+    \end{subfigure}
+    \\
+    \begin{subfigure}{0.8\linewidth}
+    	\centering
+    	\includegraphics{fig/A/9-15b.pdf}
+    	\caption{}\label{fig_A_9-15b}
+    \end{subfigure}
+    \caption{沿绳传出凸凹相间的波}\label{fig_A_9-15}
 \end{figure}
 
-把一根长的螺旋弹簧用细线水平悬挂起来，在它的一端连接一个金属球，球固定在钢片上（图9.16甲），当金属球沿着弹簧方向左右振动时，在弹簧上就有疏密相间的波向右传去，我们也可以把弹簧看作一列由弹力联系着的质点．金属球振动起来以后，依次带动后面的质点，而且后一个质点也是总比前一个迟一些开始振动，使相邻质点振动的相不同．这里质点是左右振动的，因而从整体上看形成疏密相间的波向前传播（图9.16乙）．质点也不随波迁移，传播的也只是运动形式——振动．
+把一根长的螺旋弹簧用细线水平悬挂起来，在它的一端连接一个金属球，球固定在钢片上（图~\ref{fig_A_9-16a}），当金属球沿着弹簧方向左右振动时，在弹簧上就有疏密相间的波向右传去，我们也可以把弹簧看作一列由弹力联系着的质点．金属球振动起来以后，依次带动后面的质点，而且后一个质点也是总比前一个迟一些开始振动，使相邻质点振动的相不同．这里质点是左右振动的，因而从整体上看形成疏密相间的波向前传播（图~\ref{fig_A_9-16b}）．质点也不随波迁移，传播的也只是运动形式——振动．
 
 \textit{机械波向外传播的只是运动形式——机械振动，媒质本身并不随波迁移．}
 
@@ -716,13 +409,24 @@ Hz，1秒钟振动1次就是1赫．1秒钟振动$n$次就是$n$赫．
 
 按照质点振动方向与波的传播方向之间的关系，可以把波分成横波和纵波．
 
-\textit{振动方向与波的传播方向垂直的波叫做横波}．图9.15所示绳子上的波是横波的例子，质点上下振动，波向右传播，这两个方向互相垂直．
+\textit{振动方向与波的传播方向垂直的波叫做横波}．图~\ref{fig_A_9-15} 所示绳子上的波是横波的例子，质点上下振动，波向右传播，这两个方向互相垂直．
 
 \textit{振动方向与波的传播方向在同一直线上的波叫做纵波}．
-图9.16所示沿弹簧传播的疏密波是纵波的例子，质点左右振动，波向右传，这两个方向在同一直线上．
-\begin{figure}[htp]\centering
-\includegraphics[scale=.52]{fig/9-16.png}
-\caption{沿弹簧传出疏密相间的波}
+图~\ref{fig_A_9-16} 所示沿弹簧传播的疏密波是纵波的例子，质点左右振动，波向右传，这两个方向在同一直线上．
+\begin{figure}[htbp]
+    \centering
+    \begin{subfigure}{0.8\linewidth}
+    	\centering
+    	\includegraphics{fig/A/9-16a.pdf}
+    	\caption{}\label{fig_A_9-16a}
+    \end{subfigure}
+    \\
+    \begin{subfigure}{0.8\linewidth}
+    	\centering
+    	\includegraphics{fig/A/9-16b.pdf}
+    	\caption{}\label{fig_A_9-16b}
+    \end{subfigure}
+    \caption{沿弹簧传出疏密相间的波}\label{fig_A_9-16}
 \end{figure}
 
 
@@ -731,16 +435,16 @@ Hz，1秒钟振动1次就是1赫．1秒钟振动$n$次就是$n$赫．
 
 \subsubsection{波长、频率和波速之间的关系}
 
-从图9.15可以看出，在振动传播到质点13以后，质点13的振动跟质点1的振动，步调完全一致：质点1从平衡位置向上动时（$t=T$的瞬间），质点13从平衡位置向上动；再过四
+从图~\ref{fig_A_9-15} 可以看出，在振动传播到质点13以后，质点13的振动跟质点1的振动，步调完全一致：质点1从平衡位置向上动时（$t=T$的瞬间），质点13从平衡位置向上动；再过四
 分之一周期，质点1向上运动到最大位移处，速度减小到零，质点13也向上运动到最大位移处，速度减小到零，所以这两个质点的振动同相，同样，质点2和质点14，质点3和质点15的振动也是同相．
 
 \textit{沿着波的传播方向，两个相邻的同相质点间的距离，叫做波长}．波长通常用字母$\lambda$表示．
 
-图9.15中质点1和质点13间的距离，质点2和质点14间的距离，质点3和质点15间的距离等等，都等于波长．
+图~\ref{fig_A_9-15} 中质点1和质点13间的距离，质点2和质点14间的距离，质点3和质点15间的距离等等，都等于波长．
 
 在横波中，两个相邻的凸部——波峰的中央间的距离，或两个相邻的凹部——波谷的中央间的距离，都等于波长．
 
-从图9.15还可以看出，在质点1振动一周期后质点13开始振动，在质点4振动一周期后质点16开始振动，可见，在一周期的时间内，振动在媒质中传播的距离等于波长．
+从图~\ref{fig_A_9-15} 还可以看出，在质点1振动一周期后质点13开始振动，在质点4振动一周期后质点16开始振动，可见，在一周期的时间内，振动在媒质中传播的距离等于波长．
 
 既然在一个周期$T$的时间内，振动传播的距离等于波长$\lambda$，那么振动传播的速率——波速$v$可以根据下面的式子求出：
 \[v=\frac{\lambda}{T}\]
@@ -753,9 +457,9 @@ Hz，1秒钟振动1次就是1赫．1秒钟振动$n$次就是$n$赫．
 \subsection*{练习七}
 \begin{enumerate}
     \item 在某一地区，地震波的纵波和横波在地表附近的传播速率分别是9.1${\rm km}/{\rm s}$和3.7${\rm km}/{\rm s}$．在一次地震时，这个地区的一个观测站记录的纵波和横波的到达时刻相差5秒，那么地震的震源距这个观测站多远？
-    \item 一只船停泊在岸边，如果海浪的波峰间的距离是6米，海浪的波速是1.5$\ms$，求船摆晃的周期是多少？
+    \item 一只船停泊在岸边，如果海浪的波峰间的距离是6米，海浪的波速是1.5$\Ums$，求船摆晃的周期是多少？
     \item 甲乙二人分乘两只船在湖中钓鱼，两船相距24米．有一列水波在湖面上传播开来，每只船每分钟上下浮动20次，当甲船位于波峰时，乙船位于波谷，这时两船之间还有一个波峰，水波的波速是多大？
-    \item 仔细研究图9.15，说明：两个相邻的反相质点间的距离等于波长的多少．
+    \item 仔细研究图~\ref{fig_A_9-15}，说明：两个相邻的反相质点间的距离等于波长的多少．
 \end{enumerate}
 
 \subsubsection{波的图象}
@@ -764,115 +468,84 @@ Hz，1秒钟振动1次就是1赫．1秒钟振动$n$次就是$n$赫．
 
 用横坐标表示在波的传播方向上媒质各质点的平衡位置，纵坐标表示某一时刻各质点的位移矢量，连接各位移矢量
 末端得到的曲线，叫做\textbf{波的图象}，它表示某一时刻媒质各质点离开平衡位置的情况．
-\begin{figure}[htp]\centering
-    \includegraphics[scale=.6]{fig/9-17.png}
-    \caption{横波的图象}
-    \end{figure}
+\begin{figure}[htbp]
+    \centering
+    \begin{subfigure}{0.8\linewidth}
+        \centering
+        \includegraphics{fig/A/9-17a.pdf}
+        \caption{}\label{fig_A_9-17a}
+    \end{subfigure}
+    \\
+    \begin{subfigure}{0.8\linewidth}
+        \centering
+        \includegraphics{fig/A/9-17b.pdf}
+        \caption{}\label{fig_A_9-17b}
+    \end{subfigure}
+    \caption{横波的图象}\label{fig_A_9-17}
+\end{figure}
 
-图9.17甲表示某一时刻$t$绳上的一列横波，图9.17乙是它的图象．可见图象直观地表现了这列横波在时刻$t$的形状——波形，从图象上可以直接看出各质点在时刻$t$的位移．
 
-如果我们还知道这列波的传播方向和波速$v$，那么可以进一步知道任何时刻，例如再经过$\Delta t$时间以后，波的形状和各质点的位移，办法是照图9.18那样，使波形曲线沿着波的传播方向移动$v\Delta t=\Delta x$一段距离．
+图~\ref{fig_A_9-17a} 表示某一时刻$t$绳上的一列横波，图~\ref{fig_A_9-17b} 是它的图象．可见图象直观地表现了这列横波在时刻$t$的形状——波形，从图象上可以直接看出各质点在时刻$t$的位移．
 
-在图9.19中，甲图表示一根没有发生形变的弹簧，上面标出一些质点的平衡位置；乙图表示弹簧中出现纵波时，某一时刻各个质点的位移情况；丙图表示的是这列纵波的图象．图
+如果我们还知道这列波的传播方向和波速$v$，那么可以进一步知道任何时刻，例如再经过$\Delta t$时间以后，波的形状和各质点的位移，办法是照图~\ref{fig_A_9-18} 那样，使波形曲线沿着波的传播方向移动$v\Delta t=\Delta x$一段距离．
+
+在图~\ref{fig_A_9-19} 中，甲图表示一根没有发生形变的弹簧，上面标出一些质点的平衡位置；乙图表示弹簧中出现纵波时，某一时刻各个质点的位移情况；丙图表示的是这列纵波的图象．图
 象中，向上的纵坐标表示质点从平衡位置向右的位移，向下的纵坐标表示质点从平衡位置向左的位移，曲线跟横坐标轴的各个交点，依次表示纵波的密部和疏部的中央．
-\begin{figure}[htp]\centering
-\begin{tikzpicture}[>=latex, xscale=.5]
-\draw [->](0,-1.5)--(0,1.8)node[right]{$y$};
-\draw [->](0,0)node[left]{$O$}--(18,0)node[right]{$x$};
-\draw [thick] plot[domain=0:16.8, samples=1000] function{sin(x)} ;
-\draw [dashed, thick] plot[domain=0:16.8, samples=1000] function{sin(x-1)} ;
-\node at (16,1)[right]{时刻$t+\Delta t$的波形};
-\node at (17,-1)[right]{时刻$t$的波形};
-\draw (4.5*3.1416, 0)--(4.5*3.1416, 1.5);
-\draw (4.5*3.1416+1, 0)--(4.5*3.1416+1, 1.5);
-\draw [<->](4.5*3.1416, 1.4)--node [above]{$\Delta x=v\Delta t$}(4.5*3.1416+1, 1.4);
+\begin{figure}[htbp]
+    \centering
+    \includegraphics{fig/A/9-18.pdf}
+    \caption{时刻$t$及时刻$t+\Delta t$的波形曲线}\label{fig_A_9-18}
+\end{figure}
 
-\draw [->](9,1.4)--node[above]{$v$}(11,1.4);
+\begin{figure}[htbp]
+    \centering
+    \begin{subfigure}{0.8\linewidth}
+        \centering
+        \includegraphics{fig/A/9-19a.pdf}
+        \caption{}\label{fig_A_9-19a}
+    \end{subfigure}
+    \\
+    \begin{subfigure}{0.8\linewidth}
+        \centering
+        \includegraphics{fig/A/9-19b.pdf}
+        \caption{}\label{fig_A_9-19b}
+    \end{subfigure}
+    \\
+    \begin{subfigure}{0.8\linewidth}
+        \centering
+        \includegraphics{fig/A/9-19c.pdf}
+        \caption{}\label{fig_A_9-19c}
+    \end{subfigure}
+    \caption{纵波的图象}\label{fig_A_9-19}
+\end{figure}
 
-\end{tikzpicture}
-    \caption{时刻$t$及时刻$t+\Delta t$的波形曲线}
-    \end{figure}
 
-    \begin{figure}[htp]\centering
-        \includegraphics[scale=.6]{fig/9-19.png}
-        \caption{纵波的图象}
-        \end{figure}
 
-把图9.18和9.19所示的波的图象跟图9.7所示的振动图象相比，会看到它们很相似．实际上，由简谐振动在媒质中传播所形成的波——简谐波，在任何时刻的图象都是正弦（或余弦）曲线，媒质的任何质点的振动图象也都是正弦（或余弦）曲线．例如，图9.20甲是在一条绳上传播的简谐波在某一时刻的图象，图9.20乙是这列波传播过程中绳上某一点的振动图象，这两条曲线变化规律相同，都按正弦（或余弦）规律变化，但是它们的物理意义不同．\textit{波的图象表示的是某一时刻各个质点的位移，振动图象表示的是某一质点在各个时刻的
+把图~\ref{fig_A_9-18} 和图~\ref{fig_A_9-19} 所示的波的图象跟图~\ref{fig_A_9-7} 所示的振动图象相比，会看到它们很相似．实际上，由简谐振动在媒质中传播所形成的波——简谐波，在任何时刻的图象都是正弦（或余弦）曲线，媒质的任何质点的振动图象也都是正弦（或余弦）曲线．例如，图~\ref{fig_A_9-20a} 是在一条绳上传播的简谐波在某一时刻的图象，图~\ref{fig_A_9-20b} 是这列波传播过程中绳上某一点的振动图象，这两条曲线变化规律相同，都按正弦（或余弦）规律变化，但是它们的物理意义不同．\textit{波的图象表示的是某一时刻各个质点的位移，振动图象表示的是某一质点在各个时刻的
 位移}．在波的图象中，相邻两个最大值之间的距离等于波长$\lambda$，在振动图象中，相邻两个最大值之间的间隔等于周期$T$．
-\begin{figure}[htp]\centering
-\begin{tikzpicture}[>=latex, xscale=.45]
-    \draw [->](0,-2.5)--(0,2.5)node[right]{$y({\rm cm})$};
-    \draw [->](0,0)--(20,0)node[right]{$x({\rm cm})$};
-    \draw [very thick] plot[domain=0:6*3.1416, samples=1000] function{sin(x)} ;
-
-    \foreach \x in {12,24,...,60}
-    {
-        \node at (\x/12*3.1416, 0)[below]{\x};
-    }
-    \foreach \x in {-2,-1,...,2}
-    {
-        \draw (0,\x)--(0.3,\x);
-    }
-
-\node at (0,-2)[left] {$-10$};
-\node at (0,-1)[left] {$-5$};
-\node at (0,0)[left] {$0$};
-\node at (0,1)[left] {$+5$};
-\node at (0,2)[left] {$+10$};
-\node at (-2,0){甲};
-
-\draw (3.1416/2,1)--(3.1416/2,1.6);
-\draw (3.1416*5/2,1)--(3.1416*5/2,1.6);
-\draw (3.1416*7/2,-1)--(3.1416*7/2,-1.6);
-\draw (3.1416*11/2,-1)--(3.1416*11/2,-1.6);
-
-\draw [<->] (3.1416/2,1.3)--node[fill=white]{$\lambda$}(3.1416*5/2,1.3);
-\draw [<->] (3.1416*7/2,-1.3)--node[fill=white]{$\lambda$}(3.1416*11/2,-1.3);
-
-\end{tikzpicture}
-
-\begin{tikzpicture}[>=latex, xscale=.45]
-    \draw [->](0,-2.5)--(0,2.5)node[right]{$y({\rm cm})$};
-    \draw [->](0,0)--(20.8,0)node[right]{$t({\rm s})$};
-    \draw [very thick] plot[domain=0:6*3.1416, samples=1000] function{cos(x)} ;
-
-    \foreach \x in {2,4,...,10}
-    {
-        \node at (\x/2*3.1416, 0)[below]{\x};
-        \draw (\x/2*3.1416, 0)--(\x/2*3.1416, 0.15);
-    }
-
-    \foreach \x in {-2,-1,...,2}
-    {
-        \draw (0,\x)--(0.3,\x);
-    }
-    \node at (0,-2)[left] {$-10$};
-    \node at (0,-1)[left] {$-5$};
-    \node at (0,0)[left] {$0$};
-    \node at (0,1)[left] {$+5$};
-    \node at (0,2)[left] {$+10$};
-    \node at (-2,0){乙};
-
-    \draw (3.1416*4/2,1)--(3.1416*4/2,1.6);
-    \draw (3.1416*8/2,1)--(3.1416*8/2,1.6);
-    \draw (3.1416*6/2,-1)--(3.1416*6/2,-1.6);
-    \draw (3.1416*10/2,-1)--(3.1416*10/2,-1.6);
-
-    \draw [<->] (3.1416*4/2,1.3)--node[fill=white]{$T$}(3.1416*8/2,1.3);
-\draw [<->] (3.1416*6/2,-1.3)--node[fill=white]{$T$}(3.1416*10/2,-1.3);
-
-\end{tikzpicture}
-    \caption{甲：一列简谐横波在某一时刻的图象；乙：绳上某点的振动图象}
-    \end{figure}
+\begin{figure}[htbp]
+    \centering
+    \begin{subfigure}{0.8\linewidth}
+        \centering
+        \includegraphics{fig/A/9-20a.pdf}
+        \caption{一列简谐横波在某一时刻的图象}\label{fig_A_9-20a}
+    \end{subfigure}
+    \\
+    \begin{subfigure}{0.8\linewidth}
+        \centering
+        \includegraphics{fig/A/9-20b.pdf}
+        \caption{绳上某点的振动图象}\label{fig_A_9-20b}
+    \end{subfigure}
+    \caption{}\label{fig_A_9-20}
+\end{figure}
 
 可见，对待图象也必须象对待表示物理概念或规律的公式那样，弄清它的物理意义．
 
 \subsection*{练习八}
 \begin{enumerate}
     \item 振动图象和波的图象各表示的是什么内容？振动图象中相邻两个最大值之间的间隔等于什么？波的图象中相邻两个最大值之间的间隔等于什么？
-    \item 有一列波，它在某一时刻的波形曲线如图9.18中的实线所示，这列波经过$T/4$后的波形曲线是什么样？经过$2T/4$，$3T/4$后又是什么样？
-    \item 横波的图象直观地表现了横波在某一时刻的波形，纵波的图象却不能直观地表现纵波的情况，但是，我们看到纵波的图象应该很自然地想出纵波的情况，就象我们看到振动图象应该很自然地想出弹簧振子或单摆的振动情况一样．仔细考察图9.19,回答下面的问题．
+    \item 有一列波，它在某一时刻的波形曲线如图~\ref{fig_A_9-18} 中的实线所示，这列波经过$T/4$后的波形曲线是什么样？经过$2T/4$，$3T/4$后又是什么样？
+    \item 横波的图象直观地表现了横波在某一时刻的波形，纵波的图象却不能直观地表现纵波的情况，但是，我们看到纵波的图象应该很自然地想出纵波的情况，就象我们看到振动图象应该很自然地想出弹簧振子或单摆的振动情况一样．仔细考察图~\ref{fig_A_9-19}，回答下面的问题．
     \begin{enumerate}
         \item 在图象的什么地方质点向右的位移最大？
         \item 在图象的什么地方质点向左的位移最大？
@@ -889,20 +562,49 @@ Hz，1秒钟振动1次就是1赫．1秒钟振动$n$次就是$n$赫．
 
 两列或几列波相遇，会不会象两个或几个球相碰时那样
 改变了它们原来的运动状态呢？实验是回答问题的最好办法．
-
-\begin{figure}[htp]\centering
-\includegraphics[scale=1.5]{fig/9-21.pdf}
-\caption{在绳子上两个相遇的波互相穿过}
+\begin{figure}[htbp]
+    \centering
+    \begin{subfigure}{0.8\linewidth}
+        \centering
+        \includegraphics{fig/A/9-21a.pdf}
+        \caption{}\label{fig_A_9-21a}
+    \end{subfigure}
+    \\
+    \begin{subfigure}{0.8\linewidth}
+        \centering
+        \includegraphics{fig/A/9-21b.pdf}
+        \caption{}\label{fig_A_9-21b}
+    \end{subfigure}
+    \\
+    \begin{subfigure}{0.8\linewidth}
+        \centering
+        \includegraphics{fig/A/9-21c.pdf}
+        \caption{}\label{fig_A_9-21c}
+    \end{subfigure}
+    \\
+    \begin{subfigure}{0.8\linewidth}
+        \centering
+        \includegraphics{fig/A/9-21d.pdf}
+        \caption{}\label{fig_A_9-21d}
+    \end{subfigure}
+    \\
+    \begin{subfigure}{0.8\linewidth}
+        \centering
+        \includegraphics{fig/A/9-21e.pdf}
+        \caption{}\label{fig_A_9-21e}
+    \end{subfigure}
+    \caption{在绳子上两个相遇的波互相穿过}\label{fig_A_9-21}
 \end{figure}
 
+
 一个波源在绳的左端发出波1，另一个波源在绳的右端
-发出波2，如果两个波源经过1/2周期后停止振动，就会有如图9.21甲那样的两个波分别从绳的两端发出并相向传播，我们发现两个波在彼此相遇并互相穿过后，波的形状和相遇前一样，传播的情形也和相遇前一样（图9.21戊），也就是它们都
+发出波2，如果两个波源经过1/2周期后停止振动，就会有如图~\ref{fig_A_9-21a} 那样的两个波分别从绳的两端发出并相向传播，我们发现两个波在彼此相遇并互相穿过后，波的形状和相遇前一样，传播的情形也和相遇前一样（图~\ref{fig_A_9-21e}），也就是它们都
 保持自己的状态而不受相遇波的影响．同样，两列水波互相穿过，仍然保持各自的状态继续传播，就象没跟另一列波相遇一样．
 
 \textit{几列波相遇时能够保持各自的状态而不互相干扰，这是波的一个基本性质．}
 
-两列波相遇互相穿过时，在两列波重叠的区域里的媒质质点的位移将怎样呢？根据运动合成的知识知道，每个质点都同时参与这两列波引起的振动，合振动的位移等于两个分振动引起的位移的矢量和．在图9.21里也可以看出两波重
-叠的瞬间（图丙），最大位移等于两波振幅之和．
+两列波相遇互相穿过时，在两列波重叠的区域里的媒质质点的位移将怎样呢？根据运动合成的知识知道，每个质点都同时参与这两列波引起的振动，合振动的位移等于两个分振动引起的位移的矢量和．在图~\ref{fig_A_9-21} 里也可以看出两波重
+叠的瞬间（图~\ref{fig_A_9-21c}），最大位移等于两波振幅之和．
 
 \textit{两列波重叠区域里任何一点的总位移，都等于两列波分别引起的位移的矢量和．}
 
@@ -911,21 +613,23 @@ Hz，1秒钟振动1次就是1赫．1秒钟振动$n$次就是$n$赫．
 一般地说，振动方向以及振幅、频率、相都不相同的几个波源发出的波互相叠加，情形是很复杂的．我们的讨论只限于振动方向相同的两个波源发出的波的叠加．现在我们讨论一种最简单但足最重要的情形，就是这两列波的频率相同、相也相同（或相差恒定）的情形．
 
 把两根细金属丝固定在薄钢片上，让两根金属丝的下端刚刚接触水波演示槽的水面，当薄钢片振动的时候，两根金属丝就周期性地接触水面，成为两个频率和相都相同的波源，从这两个波源分别发出两列波长相同的水波．我们先根据波的叠加分析一下将发生什么现象，然后用实验来检验．
-\begin{figure}[htp]\centering
-    \includegraphics[scale=.6]{fig/9-22.png}
-    \caption{两个相同波源发出的波的叠加示意图}
-    \end{figure}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics{fig/A/9-22.pdf}
+    \caption{两个相同波源发出的波的叠加示意图}\label{fig_A_9-22}
+\end{figure}
 
-既然每一列波的传播都不受另一列波的干扰，我们就可以照图9.22那样，用两组同心圆弧分别表示从波源$S_1$、$S_2$发出的两列波，实线圆弧表示波峰，虚线圆弧表示波谷．某一时刻，在某一点如果是两列波的波峰和波峰相遇，位移为正的最大值（等于两列波振幅之和），那么经过半个周期，两列波各前进了半个波长的距离，在这一点就是波谷和波谷相遇，位移为负的最大值．再经过半个周期，这一点又是波峰和波峰相遇，依次类推，这一点就会按一定的振幅振动，振幅等于两列波振幅之和，所以这一点的振动总是最强，从图9.22可以看出，这样的点都在实线$a$上．某一时刻，在某一点如果是第一列波的波峰和第二列波的波谷相遇，那么经过半个周期，这一点就是第一列波的波谷和第二列波的波峰相遇，再经过半个周期，
-在这一点又是第一列波的波峰和第二列波的波谷相遇，依此类推，这一点也会按一定振幅振动，它的振幅等于两列波的振幅之差，所以这一点的振动总是最弱．如果两列波的振幅相等，这一点的振幅就等于零．从图9.22可以看出，这样的点都在虚线$b$上．$a$和$b$是互相间隔的．
+既然每一列波的传播都不受另一列波的干扰，我们就可以照图~\ref{fig_A_9-22} 那样，用两组同心圆弧分别表示从波源$S_1$、$S_2$发出的两列波，实线圆弧表示波峰，虚线圆弧表示波谷．某一时刻，在某一点如果是两列波的波峰和波峰相遇，位移为正的最大值（等于两列波振幅之和），那么经过半个周期，两列波各前进了半个波长的距离，在这一点就是波谷和波谷相遇，位移为负的最大值．再经过半个周期，这一点又是波峰和波峰相遇，依次类推，这一点就会按一定的振幅振动，振幅等于两列波振幅之和，所以这一点的振动总是最强，从图~\ref{fig_A_9-22} 可以看出，这样的点都在实线$a$上．某一时刻，在某一点如果是第一列波的波峰和第二列波的波谷相遇，那么经过半个周期，这一点就是第一列波的波谷和第二列波的波峰相遇，再经过半个周期，
+在这一点又是第一列波的波峰和第二列波的波谷相遇，依此类推，这一点也会按一定振幅振动，它的振幅等于两列波的振幅之差，所以这一点的振动总是最弱．如果两列波的振幅相等，这一点的振幅就等于零．从图~\ref{fig_A_9-22} 可以看出，这样的点都在虚线$b$上．$a$和$b$是互相间隔的．
 
 可见，根据波的叠加可以预期：两个相同波源发出的波叠加，在空间将出现互相间隔的振动最强的区域和振动最弱的区域．
 
-让固定在薄钢片上的两根金属丝在水波演示槽中产生两列水波，我们看到水面上出现图9.23所示的图样，波动激烈和相当平静的区域互相间隔，证明了上面的分析是正确的．
-\begin{figure}[htp]\centering
-    \includegraphics[scale=.6]{fig/9-23.jpg}
-    \caption{水波的干涉图样}
-    \end{figure}
+让固定在薄钢片上的两根金属丝在水波演示槽中产生两列水波，我们看到水面上出现图~\ref{fig_A_9-23} 所示的图样，波动激烈和相当平静的区域互相间隔，证明了上面的分析是正确的．
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[scale=0.8]{fig/A/9-23.jpg}
+    \caption{水波的干涉图样}\label{fig_A_9-23}
+\end{figure}
 
 \textit{频率相同的两列波叠加，使某些区域的振动加强，集些区域的振动减弱，并且振动加强和振动减弱的区域互相间隔，这种现象叫波的干涉}，形成的图样叫\textbf{干涉图样}．
 
@@ -940,12 +644,24 @@ Hz，1秒钟振动1次就是1赫．1秒钟振动$n$次就是$n$赫．
 \textit{波绕过障碍物的现象，叫做波的衍射．}
 
 是不是任何条件下都能发生波的衍射呢？
-\begin{figure}[htp]\centering
-    \includegraphics[scale=1.2]{fig/9-24A.PDF} \qquad  \includegraphics[scale=1.2]{fig/9-24B.PDF}
-    \caption{波长相同的水波通过宽度不同的孔}
-    \end{figure}
+\begin{figure}[htbp]
+    \centering
+    \begin{subfigure}{0.45\linewidth}
+        \centering
+        \includegraphics{fig/A/9-24a.pdf}
+        \caption{}\label{fig_A_9-24a}
+    \end{subfigure}
+    \hfil
+    \begin{subfigure}{0.45\linewidth}
+        \centering
+        \includegraphics{fig/A/9-24b.pdf}
+        \caption{}\label{fig_A_9-24b}
+    \end{subfigure}
+    \caption{波长相同的水波通过宽度不同的孔}\label{fig_A_9-24}
+\end{figure}
 
-我们利用水波演示槽观察水波通过孔的情形．在图9.24所示的两次实验中，水波的波长相同，孔的宽度不同．在孔的宽度跟波长差不多的情况下（图甲），孔后的整个区域里传播着以孔为中心的环形波，即发生了明显的衍射现象．在孔的宽度比波长大好多倍的情况下（图乙），在孔的后面，水波是在连接波源和孔边的两条直线所限制的区域里传播的，只在离孔比较远的地方，波才稍微弯绕到“影子”区域里．
+
+我们利用水波演示槽观察水波通过孔的情形．在图~\ref{fig_A_9-24} 所示的两次实验中，水波的波长相同，孔的宽度不同．在孔的宽度跟波长差不多的情况下（图甲），孔后的整个区域里传播着以孔为中心的环形波，即发生了明显的衍射现象．在孔的宽度比波长大好多倍的情况下（图乙），在孔的后面，水波是在连接波源和孔边的两条直线所限制的区域里传播的，只在离孔比较远的地方，波才稍微弯绕到“影子”区域里．
 
 
 可见，\textit{能够发生明显的衍射现象的条件是：障碍物或孔的尺寸跟波长相差不多}．
@@ -961,14 +677,15 @@ Hz，1秒钟振动1次就是1赫．1秒钟振动$n$次就是$n$赫．
 
 声音是怎样发生的呢？\textit{简单的观察告诉我们：一切发声
 的物体都在振动，它们就是声源．}
-\begin{figure}[htp]\centering
-    \includegraphics[scale=1]{fig/9-25.PDF}
-    \caption{发声的音叉在振动}
-    \end{figure}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics{fig/A/9-25.pdf}
+    \caption{发声的音叉在振动}\label{fig_A_9-25}
+\end{figure}
 
 用橡皮槌敲音叉，使它发声．如
 果把悬在线上的小球跟发声的音叉接
-触，小球会被弹开（图9.25）．用手指
+触，小球会被弹开（图~\ref{fig_A_9-25}）．用手指
 轻轻接触发声的音叉，可以直接感觉
 到它的振动，如果捏紧音叉的叉股，
 使它停止振动，我们就听不到声音了．
@@ -988,12 +705,13 @@ Hz，1秒钟振动1次就是1赫．1秒钟振动$n$次就是$n$赫．
 声源振动的时候，在空气中形成声波．声源，例如
 振动的音叉，它的叉股向一侧振动时，压缩邻近的空气，使这
 部分空气变密，叉股向相反方向振动对，这部分空气又变疏．
-这种疏密相间的状态由声源向外传播（图9.26），形成声波．
+这种疏密相间的状态由声源向外传播（图~\ref{fig_A_9-26}），形成声波．
 传入人耳，使鼓膜振动，就引起声音的感觉．
-\begin{figure}[htp]\centering
-    \includegraphics[scale=1.2]{fig/9-26.PDF}
-    \caption{空气中的声波}
-    \end{figure}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics{fig/A/9-26.pdf}
+    \caption{空气中的声波}\label{fig_A_9-26}
+\end{figure}
 
 因为空气质点的振动方向与声波的传播方向在同一直线
 上，所以\textit{声波是纵波}．
@@ -1005,23 +723,25 @@ Hz，1秒钟振动1次就是1赫．1秒钟振动$n$次就是$n$赫．
 在水里，可以听到岸上的声音，鱼能够听到岸上人的脚步声
 和说话声，这个事实喜欢钓鱼的人知道得很清楚．
 
-\begin{table}\centering
-    \caption{0$^\circ {\rm C}$时几种媒质中的声波传播速率（${\rm m/s}$）}
+\begin{table}[htbp]
+	\centering
     \begin{tabular}{cccc}
-        \hline
+        \toprule
         媒质&        声速&        媒质&        声速\\
-        \hline
+        \midrule
         空气&       332&        玻璃&        5000—6000\\
         水&        1450&        松木&        3320\\
         铜&        3860&        软木&        430—530\\
         铁&        4900&        橡胶&        30—50\\
-        \hline
+        \bottomrule
     \end{tabular}
+    \caption{0$^\circ {\rm C}$时几种媒质中的声波传播速率（$\UmsA$）}\label{tab_A_9-3}
 \end{table}
 
-声波在不同媒质中的传播速率是不同的，声波在0$^\circ {\rm C}$空
-气里的传播速率是332$\ms$，20$^\circ {\rm C}$时是344$\ms$，30$^\circ {\rm C}$时
-是349$\ms$．声波在水里的传播速率大约是空气里的四倍
+声波在不同媒质中的传播速率是不同的（表~\ref{tab_A_9-3}）．
+声波在0$^\circ {\rm C}$空
+气里的传播速率是332$\Ums$，20$^\circ {\rm C}$时是344$\Ums$，30$^\circ {\rm C}$时
+是349$\Ums$．声波在水里的传播速率大约是空气里的四倍
 半，在金属里传播速率更大．
 
 \subsection{某些声音现象}
@@ -1030,22 +750,21 @@ Hz，1秒钟振动1次就是1赫．1秒钟振动$n$次就是$n$赫．
 声波遇到障碍物会被反射回来，反射回来
 的声波传入人耳，我们就听到回声．对着山崖或高大的建筑
 物喊一声，就可以所到清晰的回声，北京天坛公园的回音壁
-（图9.27）就利用了声波反射的道理，回音壁是明代修建的，
-已有三百多年的历史，它是一个圆形的墙壁，直径有65米（图
-9.28），一个人对着回音壁说话，他发出的声波沿着回音壁多
+（图~\ref{fig_A_9-27}）就利用了声波反射的道理，回音壁是明代修建的，
+已有三百多年的历史，它是一个圆形的墙壁，直径有65米（图~\ref{fig_A_9-28}），一个人对着回音壁说话，他发出的声波沿着回音壁多
 次反射，另一个人贴近回音壁可以听到前一个人说的话，回
 音壁的修建充分显示了我国劳动人民的智慧．
 
-\begin{figure}[htp]
+\begin{figure}[htbp]
     \centering
-    \includegraphics[scale=.46]{fig/9-27.png}
-    \caption{回音壁}
+    \includegraphics[scale=0.28]{fig/A/9-27.jpg}
+    \caption{回音壁}\label{fig_A_9-27}
 \end{figure}
 
-\begin{figure}[htp]
+\begin{figure}[htbp]
     \centering
-    \includegraphics[scale=.55]{fig/9-28.png}
-    \caption{声波沿着回音壁多次反射}
+    \includegraphics{fig/A/9-28.pdf}
+    \caption{声波沿着回音壁多次反射}\label{fig_A_9-28}
 \end{figure}
 
 反射回来的声波要在原来的声波消失后至少经过0.1秒
@@ -1101,14 +820,15 @@ Hz，1秒钟振动1次就是1赫．1秒钟振动$n$次就是$n$赫．
 共鸣，如果两只音叉的频率不同，受迫振动比较弱，不会发生
 共鸣，这时按住敲响的音叉使它停止振动，就听不到另一只音
 叉的声音了．
-\begin{figure}[htp]\centering
-    \includegraphics[scale=1.4]{fig/9-29.pdf}
-    \caption{空气柱的共鸣}
-    \end{figure}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics{fig/A/9-29.pdf}
+    \caption{空气柱的共鸣}\label{fig_A_9-29}
+\end{figure}
 
 音叉和空气柱也可以发生共鸣．在盛水的容器中插一根
 粗玻璃管，在管口的上方放一个
-正在发声的音叉（图9.29），慢
+正在发声的音叉（图~\ref{fig_A_9-29}），慢
 慢把玻璃管提上来，以增大玻璃
 管中空气柱的长度．当空气柱的
 长度增大到一定值时，空气柱的
@@ -1135,16 +855,16 @@ Hz，1秒钟振动1次就是1赫．1秒钟振动$n$次就是$n$赫．
 行的：从铸铁管的一端敲一下钟，在管的另一端听到两次响
 声，第一次是由铸铁管传来的，第二次是由空气传来的．管长
 931米，两次响声相隔2.5秒，如果当时空气中的声速是340
-$\ms$，求铸铁中的声速．
+$\Ums$，求铸铁中的声速．
 
 \item 为了听到回声，反射声波的障碍物至少应该离开我
 们多远？猎人在射击后6秒钟听到射击的回声，障碍物离猎人
-有多远？设空气中的声速是340$\ms$．
+有多远？设空气中的声速是340$\Ums$．
 \item 人能听到的声膏的最高频率是20000赫．狗能听到
 的声音的最高频率是50000赫．蝙蝠能发出并且能听到的声
 音频率高达120000赫．分别求出人、狗、蝙蝠能听到的，在
 0$^{\circ}$C空气中传播的声波的最短波长．
-\item 在一次如图9.29所示的空气柱共鸣的实验中，测得
+\item 在一次如图~\ref{fig_A_9-29}所示的空气柱共鸣的实验中，测得
 共鸣时空气柱的最短长度为19厘米，声波的波长有多长？已
 知音叉的频率是440赫，空气中的声速有多大？
 
@@ -1158,20 +878,22 @@ $\ms$，求铸铁中的声速．
 
 好听悦耳的声音叫做乐音，乐音是由做周期性振动的声
 源（如音叉、乐器、歌唱家的喉咙等）发出来，它的波形曲线
-是周期性的曲线（图9.30）．
-\begin{figure}[htp]\centering
-    \includegraphics[scale=.5]{fig/9-30.png}
-    \caption{乐音的波形曲线}
-    \end{figure}
+是周期性的曲线（图~\ref{fig_A_9-30}）．
+\begin{figure}[htbp]
+    \centering
+    \includegraphics{fig/A/9-30.pdf}
+    \caption{乐音的波形曲线}\label{fig_A_9-30}
+\end{figure}
 
 嘈杂刺耳的声音叫做噪声．劈木材时的破裂声、街道上
 的嘈杂声、工厂里机器的轧轧声，都是噪声．噪声是由做无规
 则的非周期性振动产生的，波形曲线非常复杂，是无规则的
-非周期性曲线（图9.31）．
-\begin{figure}[htp]\centering
-    \includegraphics[scale=.5]{fig/9-31.png}
-    \caption{噪声的波形曲线}
-    \end{figure}
+非周期性曲线（图~\ref{fig_A_9-31}）．
+\begin{figure}[htbp]
+    \centering
+    \includegraphics{fig/A/9-31.pdf}
+    \caption{噪声的波形曲线}\label{fig_A_9-31}
+\end{figure}
 
 
 乐音具有音调、响度、音品三种特性，下面分别加以介绍．
@@ -1187,15 +909,15 @@ $\ms$，求铸铁中的声速．
 用同样大小的力敲这两只音叉，听起来没包铜片的音调高，包
 了铜片的音调低．仔细观察它们的振动会发现，音调高的振
 动得快，频率大；音调的振动得慢，频率小．如果眼晴区分
-不清音叉振动的快慢，还可以做图9.32所示的实验．装在同
+不清音叉振动的快慢，还可以做图~\ref{fig_A_9-32}所示的实验．装在同
 一根轴上的四个齿轮，自上而下，齿数分别为80、60、50、40．
 当这四个齿轮一起旋转时，用一张硬纸片依次接触这四个齿
 轮，会听到纸片依次发出四个音调，齿轮的齿数越多，接触它
 的纸片振动得越快，即频率越大，音调就越高．
-\begin{figure}[htp]
+\begin{figure}[htbp]
     \centering
-    \includegraphics[scale=.5]{fig/9-32.png}
-    \caption{纸片振动得越快，发出的声音越高}
+    \includegraphics{fig/A/9-32.pdf}
+    \caption{纸片振动得越快，发出的声音越高}\label{fig_A_9-32}
 \end{figure}
 
 上面的实验告诉我们：人们对音调的感觉客观上决定于
@@ -1242,27 +964,49 @@ $10^{-12}{\rm W}/{\rm m^2}$
 波；钢琴、黑管等乐器发出的声波是由频率和振幅不同的许多
 简谐波组成的，这些波叠加的结果，波形曲线虽然还是周期性
 的，但已经不是简谐波的正弦或余弦曲线．
-    \begin{figure}[htp]\centering
-        \begin{minipage}[t]{0.48\textwidth}
+
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}[b]{0.48\textwidth}
+        \centering
+        \begin{subfigure}{0.8\linewidth}
             \centering
-            \includegraphics[scale=.4]{fig/9-33.png}
-            \caption{钢琴的波形曲线和声谱}
-        \end{minipage}
-        \begin{minipage}[t]{0.48\textwidth}
+            \includegraphics{fig/A/9-33a.pdf}
+            \caption{}\label{fig_A_9-33a}
+        \end{subfigure}
+        \\
+        \begin{subfigure}{0.8\linewidth}
             \centering
-            \includegraphics[scale=.4]{fig/9-34.png}
-            \caption{黑管的波形曲线和声谱}
-        \end{minipage}
-    \end{figure}
+            \includegraphics{fig/A/9-33b.pdf}
+            \caption{}\label{fig_A_9-33b}
+        \end{subfigure}
+        \caption{钢琴的波形曲线和声谱}\label{fig_A_9-33}
+    \end{minipage}
+    \begin{minipage}[b]{0.48\textwidth}
+        \centering
+        \begin{subfigure}{0.8\linewidth}
+            \centering
+            \includegraphics{fig/A/9-34a.pdf}
+            \caption{}\label{fig_A_9-34a}
+        \end{subfigure}
+        \\
+        \begin{subfigure}{0.8\linewidth}
+            \centering
+            \includegraphics{fig/A/9-34b.pdf}
+            \caption{}\label{fig_A_9-34b}
+        \end{subfigure}
+        \caption{黑管的波形曲线和声谱}\label{fig_A_9-34}
+    \end{minipage}
+\end{figure}
 
 
 
-图9.33乙是频率为100赫的钢琴声的波形曲线，用专
+图~\ref{fig_A_9-33b} 是频率为100赫的钢琴声的波形曲线，用专
 门分析声音的仪器进行分析，发现它是由16个频率不同的简
 谐波组成的．这些频率成整数倍，其中频率最低的声音叫基
 音，频率是100赫，其余的叫泛音，频率分别为200赫、300赫
-等等．图9.33甲表示出了这16个简谐波的频率和振幅，这
-样的图叫声谱，图9.34是频率为100赫的黑管声的波形曲
+等等．图~\ref{fig_A_9-33a} 表示出了这16个简谐波的频率和振幅，这
+样的图叫声谱，图~\ref{fig_A_9-34} 是频率为100赫的黑管声的波形曲
 线和声谱，它是由100赫的基音和9个频率为基音整数倍的
 泛音组成的．
 
@@ -1442,13 +1186,13 @@ $I_0=10^{-12}{\rm W}/{\rm m^2}$的声强级是0分贝，$I=1{\rm W}/{\rm m^2}$�
 \item 火车车轮经过接轨处时要受到震动，因而使车厢在
 弹簧上上下振动．已知弹簧每受1吨的力，被压缩1.6毫米．
 三厢和载重共重55吨，每段铁轨长12.5米，火车沿轨道做
-匀速运动时，它的危险速度是多少$\kmh$？
-\item 已知0$^{\circ}$C时空气中的声速是332$\ms$，水中的声速
-是1450$\ms$，声波由空气传入水中时波长变化了多少倍？
+匀速运动时，它的危险速度是多少$\Ukmh$？
+\item 已知0$^{\circ}$C时空气中的声速是332$\Ums$，水中的声速
+是1450$\Ums$，声波由空气传入水中时波长变化了多少倍？
 \item $A$、$B$、$C$三点分别距声源$S$ 40厘米、52.5厘米、65
 厘米，从$S$传出的声波波长是25厘米，分别求出$A$、$B$两点
 和$A$、$C$两点相的关系．
-\item 图9.35中的$S_1$和$S_2$是两个同相、同频率的波源：
+\item 图~\ref{fig_A_9-35} 中的$S_1$和$S_2$是两个同相、同频率的波源：
 $S_1$和$A$点的距离是$\ell_1$，$S_2$和$A$点的距离是$\ell_2$，如果$\ell_2-\ell_1$等
 于一个波长，两列波到达$A$点时同相，波峰和波峰相遇（或波
 谷和波谷相遇），$A$点的振动加强；如果$\ell_2-\ell_1$等于半个波长，
@@ -1458,30 +1202,11 @@ $S_1$和$A$点的距离是$\ell_1$，$S_2$和$A$点的距离是$\ell_2$，如果
 $\ell_2-\ell_1$为半波长的奇数倍时，$A$点的振动减弱．
 \end{enumerate}
 
-\begin{figure}[htp]\centering
-    \includegraphics[scale=.45]{fig/9-35.png}
-    \caption{}
-    \end{figure}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+\begin{figure}[htbp]
+    \centering
+    \includegraphics{fig/A/9-35.pdf}
+    \caption{}\label{fig_A_9-35}
+\end{figure}
 
 
 
