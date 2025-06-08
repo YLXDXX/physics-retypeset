@@ -1,39 +1,52 @@
+\chapter{固体和液体的性质}\label{chapter-properties-of-solids-and-liquids}
 
-\chapter{固体和液体的性质}
 \section{晶体和非晶体}
 固体可以分成晶体和非晶体两类．在常见的固体中，石英、云母、明矾、食盐、硫酸铜等都是\textbf{晶体}，玻璃、蜂蜡、松香、沥青、橡胶等都是\textbf{非晶体}．晶体和非晶体在外形上和物理性质上都有很大区别．
 
-晶体具有天然的规则的几何形状，它的外形是由若干个平面围成的多面体．例如食盐的晶体是立方体（图4.1甲），明矾的晶体是八面体（图4.1乙），石英的晶体（透明的石英晶体叫水晶）中间是六面棱柱，两端是六面棱锥（图4.1丙），冬季的雪花是水蒸气在空气中冻结时形成的冰的晶体，它们的形状虽然不同，但都呈六角形的规则图案．非晶体则没有规则的外形．
-\begin{figure}[htp]
-\centering
-\includegraphics[scale=1.1]{fig/4-1.pdf}
-\caption{晶体的外形}
+晶体具有天然的规则的几何形状，它的外形是由若干个平面围成的多面体．例如食盐的晶体是立方体（图~\ref{fig_B_4-1a}），明矾的晶体是八面体（图~\ref{fig_B_4-1b}），石英的晶体（透明的石英晶体叫水晶）中间是六面棱柱，两端是六面棱锥（图~\ref{fig_B_4-1c}），冬季的雪花是水蒸气在空气中冻结时形成的冰的晶体，它们的形状虽然不同，但都呈六角形的规则图案．非晶体则没有规则的外形．
+\begin{figure}[htbp]
+    \centering
+    \begin{subfigure}{0.3\linewidth}
+        \centering
+        \includegraphics{fig/B/4-1a.pdf}
+        \caption{}\label{fig_B_4-1a}
+    \end{subfigure}
+    \hfil
+    \begin{subfigure}{0.3\linewidth}
+        \centering
+        \includegraphics{fig/B/4-1b.pdf}
+        \caption{}\label{fig_B_4-1b}
+    \end{subfigure}
+    \hfil
+    \begin{subfigure}{0.3\linewidth}
+        \centering
+        \includegraphics{fig/B/4-1c.pdf}
+        \caption{}\label{fig_B_4-1c}
+    \end{subfigure}
+    \caption{晶体的外形}\label{fig_B_4-1}
 \end{figure}
 
 
 从实验知道，晶体在不同方向上的物理性质（力学性质、热学性质、电学性质、光学性质等）是不同的，这种现象叫做晶体的各向异性．以导热性为例，我们来看下面的实验．在一张云母片上涂上很薄一层石蜡，然后用烧热的钢针的针尖
-接触云母片，接触点周围的石蜡就熔化了，而熔化了的石蜡成椭圆形（图4.2）．这表明云母晶体在不同方向上的导热性是
-不同的，用玻璃板代替云母片重做上面的实验，熔化了的石蜡则成圆形（图4.3），表明非晶体玻璃在不同方向上的导热性是相同的，即各向同性．各向异性是晶体区别于非晶体的一个基本特征，我们可以借助于物体是否具有各向异性来判
+接触云母片，接触点周围的石蜡就熔化了，而熔化了的石蜡成椭圆形（图~\ref{fig_B_4-2}）．这表明云母晶体在不同方向上的导热性是
+不同的，用玻璃板代替云母片重做上面的实验，熔化了的石蜡则成圆形（图~\ref{fig_B_4-3}），表明非晶体玻璃在不同方向上的导热性是相同的，即各向同性．各向异性是晶体区别于非晶体的一个基本特征，我们可以借助于物体是否具有各向异性来判
 断它是不是晶体．
 
-\begin{figure}[htp]\centering
-	\begin{tikzpicture}[>=stealth, scale=1 ]
-\fill [gray](-3,-2) rectangle(3,2);
-\draw [fill=white] (0,0) ellipse [x radius=2, y radius=1];
-
-\end{tikzpicture}
-\caption{云母片上熔化了的石蜡成椭圆形}
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}{0.47\linewidth}
+    	\centering
+    	\includegraphics{fig/B/4-2.pdf}
+    	\caption{云母片上熔化了的石蜡成椭圆形}\label{fig_B_4-2}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.47\linewidth}
+    	\centering
+    	\includegraphics{fig/B/4-3.pdf}
+    	\caption{玻璃板上熔化了的石蜡成圆形}\label{fig_B_4-3}
+    \end{minipage}
 \end{figure}
 
-\begin{figure}[htp]\centering
-	\begin{tikzpicture}[>=stealth, scale=1 ]
-\fill [gray](-3,-2) rectangle(3,2);
-\draw [fill=white] (0,0) circle [radius=1];
-
-\end{tikzpicture}
-\caption{玻璃板上熔化了的
-石蜡成圆形}
-\end{figure}
 
 晶体可以分为单晶体和多晶体，如果整个物体就是一个晶体，这样的物体就叫做单晶体．上面说的晶体就是指单晶体．单晶体是科学技术上的重要原材料，制造各种晶体管就要用纯度很高的单晶硅或单晶锗．
 
@@ -47,107 +60,39 @@
 \textbf{结点}．
 
 晶体中物质微粒的相互作用是很强的，微粒的热运动不足以克服它们的相互作用而远离，因而形成了空间点阵的结构．微粒的热运动主要表现为以结点为平衡位置不停地做微小的振动．
-\begin{figure}[htp]\centering
-	\begin{tikzpicture}[>=stealth, scale=1.5 ]
-%\draw [->](0,0,0)--(0,0,10)node [right]{$z$};
-%\draw [->](0,0,0)--(0,10,0)node [right]{$y$};
-%\draw [->](0,0,0)--(10,0,0)node [right]{$x$};
-
-%\draw (0,0,0) circle (2pt);
-%\draw (0,0,2) circle (2pt);
-
-\draw (0,0,0)--(0,0,2);
-\draw (0,0,0)--(0,2,0);
-\draw (0,0,0)--(2,0,0);
-\draw (0,1,0)--(0,1,2);
-\draw (0,1,0)--(2,1,0);
-\draw (0,2,0)--(0,2,2);
-\draw (0,2,0)--(2,2,0);
-\draw (1,1,0)--(1,1,2);
-\draw (1,2,0)--(1,2,2);
-\draw (2,1,0)--(2,1,2);
-\draw (2,2,0)--(2,2,2);
-\draw (1,0,0)--(1,0,2);
-\draw (1,0,0)--(1,2,0);
-\draw (2,0,0)--(2,0,2);
-\draw (2,0,0)--(2,2,0);
-\draw(0,2,1)--(2,2,1);
-\draw(0,2,2)--(2,2,2);
-\draw(0,1,1)--(2,1,1);
-\draw(0,1,2)--(2,1,2);
-\draw (0,2,2)--(0,0,2);
-\draw (2,0,2)--(0,0,2);
-\draw (2,0,1)--(0,0,1);
-\draw (2,0,2)--(2,2,2);
-\draw (2,0,1)--(2,2,1);
-\draw (1,0,1)--(1,2,1);
-\draw (1,0,2)--(1,2,2);
-\draw (0,0,1)--(0,2,1);
-
-
-\foreach \x in {0,1,2}
-\foreach \y in {0,1,2}
-\foreach \z in {0,1,2}
-{
-\draw [fill=black](\x,\y,\z) circle (2pt);
-}
-
-
-\draw [fill=white] ( 0,0,0 )  circle (2pt);
-\draw [fill=white] ( 0,0,2 )  circle (2pt);
-\draw [fill=white] ( 0,1,1 )  circle (2pt);
-\draw [fill=white] ( 1,0,1 )  circle (2pt);
-\draw [fill=white] ( 2,0,0 )  circle (2pt);
-\draw [fill=white] ( 2,0,2 )  circle (2pt);
-\draw [fill=white] ( 2,1,1 )  circle (2pt);
-\draw [fill=white] ( 1,2,1 )  circle (2pt);
-\draw [fill=white] ( 0,2,0 )  circle (2pt);
-\draw [fill=white] ( 0,2,2 )  circle (2pt);
-\draw [fill=white] ( 1,1,0 )  circle (2pt);
-\draw [fill=white] ( 1,1,2 )  circle (2pt);
-\draw [fill=white] ( 2,2,0 )  circle (2pt);
-\draw [fill=white] ( 2,2,2 )  circle (2pt);
-
-\end{tikzpicture}
-\caption{食盐晶体的空间点阵}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics{fig/B/4-4.pdf}
+    \caption{食盐晶体的空间点阵}\label{fig_B_4-4}
 \end{figure}
 
-图4.4是食盐的空间点阵示意图．食盐的晶体是由钠离子Na$^+$和氯离子Cl$^-$组成的，它们等距离地交错地排列在三
+图~\ref{fig_B_4-4} 是食盐的空间点阵示意图．食盐的晶体是由钠离子Na$^+$和氯离子Cl$^-$组成的，它们等距离地交错地排列在三
 组相互垂直的平行线上，每个Na$^+$的周围有六个Cl$^-$，每个Cl$^-$的周围有六个Na$^+$．
 
 晶体外形的规则性可以用物质微粒的规则排列来解释．
 同样，晶体的各向异性也是由晶体的内部结构决定的．
-\begin{figure}[htp]\centering
-	\begin{tikzpicture}[>=stealth, scale=1 ]
-
-\foreach \x in {0,1,2,...,5}
-\foreach \y in {0,1,2,...,5}
-{
-\draw [fill=black](\x,\y) circle (2pt);
-}
-
-\draw(0,5)node [left]{$B$}--(5,5)node [right]{$A$};
-\draw (5,5)--(0,3-.5)node [left]{$C$};
-\draw (5,5)--(.5,.5)node [left]{$D$};
-
-\end{tikzpicture}
-\caption{各向异性的微观解释}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics{fig/B/4-5.pdf}
+    \caption{各向异性的微观解释}\label{fig_B_4-5}
 \end{figure}
 
-图4.5表示在一个平面上晶体物质微粒的排列情况．从图上可以看出，沿不同方向所画的等长直线$AB$、$AC$、$AD$上，物质微粒的数目不同．直线$AB$上物质微粒较多，直线$AD$上较少，直线$AC$上更少．正因为在不同方向上物质微粒的排列情况不同，才引起晶体在不同方向上物理性质的不同．
+图~\ref{fig_B_4-5} 表示在一个平面上晶体物质微粒的排列情况．从图上可以看出，沿不同方向所画的等长直线$AB$、$AC$、$AD$上，物质微粒的数目不同．直线$AB$上物质微粒较多，直线$AD$上较少，直线$AC$上更少．正因为在不同方向上物质微粒的排列情况不同，才引起晶体在不同方向上物理性质的不同．
 
-有的物质能够生成种类不同的几种晶体，是因为它们的物质微粒能够形成不同的空间点阵．例如，碳原子如果按图4.6那样排列就成为石墨，按图4.7那样排列就成为金刚石．石墨是层状结构，层与层之间距离较大，作用力较弱，沿着这个方向容易把石墨一层层地剥下．金刚石中碳原子间的作用力很强，所以金刚石有很大的硬度．
-\begin{figure}[htp]\centering
-	\begin{minipage}[t]{0.48\textwidth}
-		\centering
-\includegraphics[scale=1.3]{fig/4-6.pdf}
-\caption{石墨的空间点阵}
-	\end{minipage}
-	\begin{minipage}[t]{0.48\textwidth}
-		\centering
-\includegraphics[scale=1.3]{fig/4-7.pdf}
-\caption{金刚石的空间点阵}
-	\end{minipage}
+有的物质能够生成种类不同的几种晶体，是因为它们的物质微粒能够形成不同的空间点阵．例如，碳原子如果按图~\ref{fig_B_4-6} 那样排列就成为石墨，按图~\ref{fig_B_4-7} 那样排列就成为金刚石．石墨是层状结构，层与层之间距离较大，作用力较弱，沿着这个方向容易把石墨一层层地剥下．金刚石中碳原子间的作用力很强，所以金刚石有很大的硬度．
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}[t]{0.45\textwidth}
+        \centering
+        \includegraphics{fig/B/4-6.pdf}
+        \caption{石墨的空间点阵}\label{fig_B_4-6}
+    \end{minipage}
+    \hfil
+    \begin{minipage}[t]{0.45\textwidth}
+        \centering
+        \includegraphics{fig/B/4-7.pdf}
+        \caption{金刚石的空间点阵}\label{fig_B_4-7}
+    \end{minipage}
 \end{figure}
 
 
@@ -174,58 +119,65 @@
 液晶早在十九世纪八十年代就被发现，直到电子技术和其他一些技术迅速发展起来以后，近十几年来，人们对液晶的研究才有了重要的进展，使它获得了广泛的应用．
 
 \section{液体的表面现象}
-荷叶上的小水滴、草叶上的露珠、玻璃板上的小水银滴都是近于球形的．大液滴呈扁平形状，是因为它本身的重量较大，它的形状受到重力的影响也比较大．如果设法消除重力的影响，大液滴也会呈球形．配制水和酒精的混合液，使它的密度跟橄榄油的密度相等．把橄榄油引入这种混合液里，可以看到橄榄油呈球形（图4.8）．
-\begin{figure}[htp]\centering
-	\begin{tikzpicture}[>=stealth, scale=1 ]
-
-\foreach \x in {0,0.1,0.2,0.4,.6,.9,1.2,1.6,2,2.4,2.9,3.4,3.9}
-{
-  \draw [dashed](0,\x)--(5,\x);
-}
-
-\draw [shade] (2.5,2) circle (4mm);
-
-
-\end{tikzpicture}
-\caption{橄榄油在水和酒精的混合液里呈球形}
+荷叶上的小水滴、草叶上的露珠、玻璃板上的小水银滴都是近于球形的．大液滴呈扁平形状，是因为它本身的重量较大，它的形状受到重力的影响也比较大．如果设法消除重力的影响，大液滴也会呈球形．配制水和酒精的混合液，使它的密度跟橄榄油的密度相等．把橄榄油引入这种混合液里，可以看到橄榄油呈球形（图~\ref{fig_B_4-8}）．
+\begin{figure}[htbp]
+    \centering
+    \includegraphics{fig/B/4-8.pdf}
+    \caption{橄榄油在水和酒精的混合液里呈球形}\label{fig_B_4-8}
 \end{figure}
 
 我们知道，在体积相同的各种形状的物体中，球形物体的表面积最小，上述实验表明，液体表面有收缩到最小面积的趋势．
 
-我们还可以用肥皂水做实验来证明液面具有收缩趋势．把一根棉线拴在铁丝环上（棉线不要张紧），把环在肥皂水里浸一下，使环上布满肥皂水的薄膜（图4.9甲）．如果用热针刺破棉线左边的薄膜，棉线就被右边的薄膜拉成弧形（图4.9乙）；如果刺破右边的薄膜，棉线就被左边的薄膜拉成弧形（图4.9丙）．
-\begin{figure}[htp]\centering
-\includegraphics[scale=.45]{fig/4-9.png}
-\caption{薄膜的收缩使棉线成弧形}
+我们还可以用肥皂水做实验来证明液面具有收缩趋势．把一根棉线拴在铁丝环上（棉线不要张紧），把环在肥皂水里浸一下，使环上布满肥皂水的薄膜（图~\ref{fig_B_4-9a}）．如果用热针刺破棉线左边的薄膜，棉线就被右边的薄膜拉成弧形（图~\ref{fig_B_4-9b}）；如果刺破右边的薄膜，棉线就被左边的薄膜拉成弧形（图~\ref{fig_B_4-9c}）．
+\begin{figure}[htbp]
+    \centering
+    \begin{subfigure}{0.3\linewidth}
+        \centering
+        \includegraphics{fig/B/4-9a.pdf}
+        \caption{}\label{fig_B_4-9a}
+    \end{subfigure}
+    \hfil
+    \begin{subfigure}{0.3\linewidth}
+        \centering
+        \includegraphics{fig/B/4-9b.pdf}
+        \caption{}\label{fig_B_4-9b}
+    \end{subfigure}
+    \hfil
+    \begin{subfigure}{0.3\linewidth}
+        \centering
+        \includegraphics{fig/B/4-9c.pdf}
+        \caption{}\label{fig_B_4-9c}
+    \end{subfigure}
+    \caption{薄膜的收缩使棉线成弧形}\label{fig_B_4-9}
 \end{figure}
 
-\begin{figure}[htp]\centering
-\includegraphics[scale=.45]{fig/4-10.png}
-\caption{薄膜的收缩使棉线圈成圆形}
+\begin{figure}[htbp]
+    \centering
+    \begin{subfigure}{0.43\linewidth}
+        \centering
+        \includegraphics{fig/B/4-10a.pdf}
+        \caption{}\label{fig_B_4-10a}
+    \end{subfigure}
+    \hfil
+    \begin{subfigure}{0.43\linewidth}
+        \centering
+        \includegraphics{fig/B/4-10b.pdf}
+        \caption{}\label{fig_B_4-10b}
+    \end{subfigure}
+    \caption{薄膜的收缩使棉线圈成圆形}\label{fig_B_4-10}
 \end{figure}
 
-把一个棉线圈拴在铁丝环上，使环上布满肥皂水的薄膜（图4.10甲）．如果用热针刺破棉线圈里那部分薄膜，外边的薄膜就把棉线圈张紧成圆形（图4.10乙）．
+把一个棉线圈拴在铁丝环上，使环上布满肥皂水的薄膜（图~\ref{fig_B_4-10a}）．如果用热针刺破棉线圈里那部分薄膜，外边的薄膜就把棉线圈张紧成圆形（图~\ref{fig_B_4-10b}）．
 
 这些实验表明：液体的表面就好象张紧的橡皮膜一样，具有收缩的趋势．
 
-为什么液体表面具有收缩的趋势呢？原来液体跟气体接触的表面形成一个薄层，叫做\textbf{表面层}，表面层里的情况跟液体内部有所不同．研究表明，表面层里的分子要比液体内部稀疏些，也就是分子间的距离要比液体内部大些．在液体内部分子间既存在着引力，又存在着斥力．引力和斥力的数量级相同，在通常的条件下可以认为它们的大小是相等的．在表面层里分子间的距离大，引力和斥力都减小，但斥力减小得更快，所以分子间的相互作用表现为引力，如果在液面上划一条分界线$MN$（图4.11），把液面分为（1）和（2）两部分，那么，由于表面层中分子间的引力，液面（1）对液面（2）有引力$f_1$的作用，液面（2）对液面（1）
+为什么液体表面具有收缩的趋势呢？原来液体跟气体接触的表面形成一个薄层，叫做\textbf{表面层}，表面层里的情况跟液体内部有所不同．研究表明，表面层里的分子要比液体内部稀疏些，也就是分子间的距离要比液体内部大些．在液体内部分子间既存在着引力，又存在着斥力．引力和斥力的数量级相同，在通常的条件下可以认为它们的大小是相等的．在表面层里分子间的距离大，引力和斥力都减小，但斥力减小得更快，所以分子间的相互作用表现为引力，如果在液面上划一条分界线$MN$（图~\ref{fig_B_4-11}），把液面分为（1）和（2）两部分，那么，由于表面层中分子间的引力，液面（1）对液面（2）有引力$f_1$的作用，液面（2）对液面（1）
 有引力$f_2$的作用，$f_1$和$f_2$大小相等
 方向相反．象这种液面各部分间相互吸引的力，叫做\textbf{表面张力}．液体的表面张力使液面具有收缩的趋势．
-\begin{figure}[htp]\centering
-	\begin{tikzpicture}[>=latex, scale=1 ]
-
-\draw [very thick](45:.5)node[below]{$M$}--(45:8.5)node[above]{$N$};
-
-\foreach \x in {1,2,...,5}
-{ 
-   \draw[->] (\x+.2,\x-.2)--(\x-1,\x+1);
-   \draw[->] (\x+.5-.2,\x+.5+.2)--(\x+1.5-.2,\x-.5+.2);
-}
-
-\node at (1,5){(1)}; \node at (5,1){(2)};
-\node at (4,2.5){$f_2$}; \node at (2.5,4){$f_1$};
-
-\end{tikzpicture}
-\caption{液体的表面张力}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics{fig/B/4-11.pdf}
+    \caption{液体的表面张力}\label{fig_B_4-11}
 \end{figure}
 
 表面张力是跟液面相切的，如果液面是平面，表面张力
@@ -235,7 +187,7 @@
 
 \subsection*{练习一}
 \begin{enumerate}
-    \item 把玻璃管的裂断口放在火焰上烧熔，它的尖端就变圆．这是什么缘故？
+\item 把玻璃管的裂断口放在火焰上烧熔，它的尖端就变圆．这是什么缘故？
 \item 在处于失重状态的宇宙飞船中，一大滴水银会呈什么形状？
 \item 把熔化的铅一滴一滴地滴入水中，凝固后可以得到
 球形的小铅弹．为什么？
@@ -248,42 +200,21 @@
 
 同一种液体，对一些固体来说是浸润的，对另一些固体来说是不浸润的．水能浸润玻璃，但不能浸润石蜡，水银不能浸润玻璃，但能浸润锌．
 
-把浸润液体装在容器里，例如把水装在玻璃容器里，由于水浸润玻璃，器壁附近的液面向上弯曲（图4.12），把不浸润液体装在容器里，例如把水银装在玻璃容器里，由于水银不浸润
-玻璃，器壁附近的液面向下弯曲（图4.13），在内径较小的容器里，这种现象更显著，液面形成凹形或凸形的弯月面．
+把浸润液体装在容器里，例如把水装在玻璃容器里，由于水浸润玻璃，器壁附近的液面向上弯曲（图~\ref{fig_B_4-12}），把不浸润液体装在容器里，例如把水银装在玻璃容器里，由于水银不浸润
+玻璃，器壁附近的液面向下弯曲（图~\ref{fig_B_4-13}），在内径较小的容器里，这种现象更显著，液面形成凹形或凸形的弯月面．
 
-\begin{figure}[htp]\centering
-	\begin{minipage}[t]{0.48\textwidth}
-		\centering
-	\begin{tikzpicture}[>=stealth, scale=.8]
-\fill [pattern=north east lines](-.25,0) rectangle(0,5);
-\fill [gray!20] (0,0) rectangle (3,3);
-\fill [gray!20] (0,3)--(1,3)--(0,4);
-\draw [fill=white, thick](0,4) arc(180:270:1);
-\draw[thick](1,3)--(3,3);
-\draw (0,0)--(0,5);
-\fill [gray!20] (4, 0) rectangle (4.5, 5);
-\draw [fill=white, rounded corners=0.2cm](4.5, 5)--(4.5, 4)--(4,4)--(4,5);
-\draw (4, 0)--(4,5);
-\draw (4.5, 0)--(4.5,5);
-\end{tikzpicture}
-\caption{液体浸润固体}
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}[t]{0.48\textwidth}
+        \centering
+        \includegraphics{fig/B/4-12.pdf}
+        \caption{液体浸润固体}\label{fig_B_4-12}
     \end{minipage}
-\begin{minipage}[t]{0.48\textwidth}\centering
-	\begin{tikzpicture}[>=stealth, scale=.8]
-
-\fill [gray!50] (0,0) rectangle (3,2);
-\fill [gray!50] (1,2) rectangle (3,3);
-\fill [gray!50] (0,2)--(1,3)--(1,2);
-\draw[ thick ](1,3)--(3,3);
-\draw [fill=gray!50, thick ](1,3) arc(90:180:1);
-\fill [white] (4, 0) rectangle (4.5, 5);
-\draw [fill=gray!50, rounded corners=0.2cm](4.5, 0)--(4.5, 4)--(4,4)--(4,0);
-\draw (4, 0)--(4,5);
-\draw (4.5, 0)--(4.5,5);
-\fill [pattern=north east lines](-.25,0) rectangle(0,5);
-\draw (0,0)--(0,5);
-\end{tikzpicture}
-\caption{液体不浸润固体}
+    \hfil
+    \begin{minipage}[t]{0.48\textwidth}
+        \centering
+        \includegraphics{fig/B/4-13.pdf}
+        \caption{液体不浸润固体}\label{fig_B_4-13}
     \end{minipage}
 \end{figure}
 
@@ -297,57 +228,21 @@
 \end{enumerate}
 
 \section{毛细现象}
-把几根内径不同的细玻璃管插入水中，可以看到管里的水面比容器里的水面高．管的内径越小，管里的水面越高（图4.14）．如果把这些细玻璃管插入水银中，发生的现象正好相
+把几根内径不同的细玻璃管插入水中，可以看到管里的水面比容器里的水面高．管的内径越小，管里的水面越高（图~\ref{fig_B_4-14}）．如果把这些细玻璃管插入水银中，发生的现象正好相
 反，管里的水银面比容器里的水银面低．管的内径越小，管里
-的水银面越低（图4.15）．
-\begin{figure}[htp]\centering
-	\begin{minipage}[t]{0.48\textwidth}\centering
-	\begin{tikzpicture}[>=stealth, scale=.8 ]
-\draw [fill=gray!20, rounded corners=0.2cm, thick](0,5)--(0, 0)--(6,0)--(6,5);
-\draw [fill=white, rounded corners=0.15cm](0,5)--(0,2)--(1.5,2)--(1.5,5);
-\draw [fill=white, rounded corners=0.15cm](2,5)--(2,2)--(3.35,2)--(3.35,5);
-\draw [fill=white, rounded corners=0.15cm](3.75,5)--(3.75,2)--(4.75,2)--(4.75,5);
-\draw [fill=white, rounded corners=0.15cm](5,5)--(5,2)--(6,2)--(6,5);
-
-
-\draw [fill=white, rounded corners=0.1cm](1.5, 5)--(1.5,2.8)--(2, 2.8)--(2,5);
-\draw [fill=white, rounded corners=0.1cm](3.35, 5)--(3.35,3.5)--(3.75, 3.5)-- (3.75, 5);
-\draw [fill=white, rounded corners=0.1cm](4.75, 5)--(4.75, 4.5)--(5, 4.5)--(5, 5);
-
-\foreach \x in {1.5,2,3.35,3.75,4.75,5}
-{
-  \draw (\x, 1)--(\x, 5);
-
-}
-\end{tikzpicture}
-\caption{浸润液体在毛细管里上升
-}
-  \end{minipage}
-\begin{minipage}[t]{0.48\textwidth}\centering
-	\begin{tikzpicture}[>=stealth, scale=.8 ]
-\draw [fill=gray!50, rounded corners=0.2cm, thick](0,1)--(0, 0)--(6,0)--(6,1);
-
-\draw [fill=gray!50, rounded corners=0.15cm](0,1)--(0,2)--(1.5,2)--(1.5,1);
-\draw [fill=gray!50, rounded corners=0.15cm](2,1)--(2,2)--(3.35,2)--(3.35,1);
-\draw [fill=gray!50, rounded corners=0.15cm](3.75,1)--(3.75,2)--(4.75,2)--(4.75,1);
-\draw [fill=gray!50, rounded corners=0.15cm](5,1)--(5,2)--(6,2)--(6,1);
-
-
-\draw [fill=gray!50, rounded corners=0.1cm](1.5, 1)--(1.5,1.8)--(2, 1.8)--(2,1);
-\draw [fill=gray!50, rounded corners=0.1cm](3.35, 1)--(3.35,1.5)--(3.75, 1.5)-- (3.75, 1);
-\draw [fill=gray!50, rounded corners=0.1cm](4.75, 1)--(4.75, 1.2)--(5, 1.2)--(5, 1);
-
-\foreach \x in {0,1.5,2,3.35,3.75,4.75,5,6}
-{
-  \draw (\x, 1)--(\x, 5);
-
-}
-
-
-
-\end{tikzpicture}
-\caption{不浸润液体在毛细管里下降
-}
+的水银面越低（图~\ref{fig_B_4-15}）．
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}[t]{0.48\textwidth}
+        \centering
+        \includegraphics{fig/B/4-14.pdf}
+        \caption{浸润液体在毛细管里上升}\label{fig_B_4-14}
+    \end{minipage}
+    \hfil
+    \begin{minipage}[t]{0.48\textwidth}
+        \centering
+        \includegraphics{fig/B/4-15.pdf}
+        \caption{不浸润液体在毛细管里下降}\label{fig_B_4-15}
     \end{minipage}
 \end{figure}
 
@@ -363,7 +258,7 @@
 
 \subsection*{练习三}
 \begin{enumerate}
-   \item 要想把凝在衣料上面的蜡或油脂去掉，只要把两层吸墨纸分别放在这部分衣料的上面和下面，然后用熨斗来熨就可以了，为什么这样做可以去掉衣料上的蜡或油脂？
+\item 要想把凝在衣料上面的蜡或油脂去掉，只要把两层吸墨纸分别放在这部分衣料的上面和下面，然后用熨斗来熨就可以了，为什么这样做可以去掉衣料上的蜡或油脂？
 \item 建筑楼房的时候，在砌砖的地基上铺一层油毡防潮层．如果不铺这层油毡，楼房就容易受潮，为什么？
 \end{enumerate}
 
