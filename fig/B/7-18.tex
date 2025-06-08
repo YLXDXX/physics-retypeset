@@ -1,0 +1,21 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx}
+\setCJKmainfont{Noto Serif CJK SC}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{circuitikz}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary {decorations.pathmorphing, decorations.pathreplacing, decorations.shapes,}
+\ctikzset{bipoles/length=1cm}
+\begin{document}
+\small
+\begin{circuitikz}[>=latex, scale=0.8,european]
+  % \useasboundingbox(0.9,0)rectangle(5.1,5);
+  \draw (0,0)node[left]{$-$}--(4,0) to [R=$R$] (4,4)--(0,4) node[left]{$+$};
+  \draw  (2.5,0) to [rmeter, t=A, *-*] (2.5, 4);
+  \draw [fill=white](0,0) circle (2pt);
+  \draw [fill=white](0,4) circle (2pt);
+\end{circuitikz}
+\end{document}

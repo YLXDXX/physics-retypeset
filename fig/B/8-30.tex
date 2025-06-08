@@ -1,0 +1,29 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx}
+\setCJKmainfont{Noto Serif CJK SC}
+\usepackage{tkz-euclide}
+\usepackage{circuitikz}
+\usepackage{amsmath}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary {decorations.pathmorphing, decorations.pathreplacing, decorations.shapes,}
+\ctikzset{bipoles/length=1.0cm}
+\begin{document}
+\small
+\begin{circuitikz}[>=latex,scale=1.0,european]
+  % \useasboundingbox(-2,-2.2)rectangle(2,1.5);
+  \coordinate (A) at (-3.5,-2.3);
+  \coordinate (B) at (2,-4);
+  \coordinate (C) at (-2,-4);
+  \coordinate (D) at (-3.5,-0.3);
+  \draw (0,0) node[pnp,tr circle,yscale=-1](Q){};
+  \draw[<-](Q.C-|B)to[rmeter,t=mA](Q.C);
+  \draw[->](B)to[battery](Q.C-|B)(B)--(Q.E|-B)to[rmeter,t=mA,*-](Q.E);
+  \draw(C)to[cute open switch=$K$](Q.E|-B);
+  \draw(C)to[battery2](A|-C)to[R=$R$](A)to[pR=$W$,name=hb,-*](D)--(Q.B-|A)[<-]to[rmeter,t={\unit{\micro A}}](Q.B);
+  \draw(D)--(D-|hb.wiper)--(hb.wiper);
+  \node at (Q.B)[below left]{$I_b$};
+  \node at (Q.C)[above]{$I_c$};
+  \node at (Q.E)[right]{$I_e$};
+  \end{circuitikz}
+\end{document}

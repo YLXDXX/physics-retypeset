@@ -1,0 +1,46 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx}
+\setCJKmainfont{Noto Serif CJK SC}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary {decorations.pathmorphing, decorations.pathreplacing, decorations.shapes,}
+\begin{document}
+\small
+\begin{tikzpicture}[>=stealth,scale=1.0]
+  \draw[rounded corners=5pt] (-1,1)--(-1,0)--(1,0)--(1,1);
+  \fill[rounded corners=5pt] (-1,0.5)rectangle(1,0);
+  \fill[rounded corners=2pt] (-1,0.7)rectangle(-0.06,0.1);
+  \fill[rounded corners=2pt] (1,0.7)rectangle(0.06,0.1);
+  \draw[double=black,double distance=3pt](0,0.5)--(0,3.0);
+  \draw[fill=gray!10](0,4.0)circle(1.7pt);
+  \draw[double=gray!10,double distance=3pt](0,3)--(0,4.0);
+  \draw[fill=black](0,3.0)circle(1.7pt);
+  \draw[thin,<->|](-0.5,0.7)--(-0.5,3.0)node[midway,sloped,above]{\qty{20}{cm}};
+  \draw[thin](0,3.5)--++(45:0.5)node[above]{$A$};
+  \begin{scope}[xshift=2.5cm]
+    \fill[cyan!30](-1.2,0)rectangle(1.2,3.6);
+    \fill[opacity=30,cyan!10](-0.5,1.2)circle(0.3);
+    \draw[thin]([shift=(45:0.3cm)]-0.5,1.2)--++(45:0.2)node[above]{$A$};
+    \node at (-0.5,0.9)[below]{气泡};
+    \node at (-0.7,3.0){水};
+    \draw[thin,<->|](0.7,1.2)--(0.7,3.6)node[midway,sloped,above]{\qty{20}{m}};
+    \draw[thin](-0.4,1.2)--(0.9,1.2);
+  \end{scope}
+  \begin{scope}[xshift=5.2cm]
+    \fill[cyan!30](-1.2,0)rectangle(1.2,3.6);
+    \fill[cyan!30](-0.365,3.6)arc(270:360:0.1)--++(0,-0.1)--++(-0.1,0);
+    \fill[cyan!30](-0.035,3.6)arc(270:180:0.1)--++(0,-0.1)--++(-0.1,0);
+    \node at (-0.7,3.0){水};
+    \draw[thin,<->|](0.7,0.9)--(0.7,3.6)node[midway,sloped,above]{\qty{85}{cm}};
+    \draw[thin,|<->|](-0.7,0.9)--(-0.7,1.5)node[midway,sloped,above]{\qty{10}{cm}};
+    \draw[thin](-0.1,0.9)--(0.9,0.9);
+    \draw[fill=gray!10](-0.2,4.0)circle(1.7pt);
+    \draw[double=cyan!30,double distance=3pt](-0.2,0.9)--(-0.2,1.55);
+    \fill[gray!10](-0.2,1.55)circle(1.5pt);
+    \draw[double=gray!10,double distance=3pt](-0.2,1.55)--(-0.2,4.0);
+    \draw[thin](-0.2,3.5)--++(45:0.5)node[above]{$A$};
+  \end{scope}
+\end{tikzpicture}
+\end{document}

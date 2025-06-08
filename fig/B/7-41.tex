@@ -1,0 +1,27 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx}
+\setCJKmainfont{Noto Serif CJK SC}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{circuitikz}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary {decorations.pathmorphing, decorations.pathreplacing, decorations.shapes,}
+\ctikzset{bipoles/length=1cm}
+\begin{document}
+\small
+\begin{circuitikz}[>=latex, scale=0.7,european]
+  % \useasboundingbox(0.9,0)rectangle(5.1,5);
+  \draw (0,0.5) --(4,0.5) to [R=$R$] (4,4)--(3,4); 
+  \draw(1,4)--(0,4)to [battery2] (0,0.5);
+  \draw (2,0.5)node[below]{$b$} to [C=$C$, *-] (2,3);
+  \draw [ultra thick] (2,4.25)--(2,3);
+  \draw [->] (2,4.25) arc (90:60:1.5);
+  \draw [->] (2,4.25) arc (90:120:1.5);
+  \draw (2,3) [fill=white] circle (1.5pt)node[left]{$a$};
+  \draw (1,4) [fill=white] circle (1.5pt)node[above]{1};
+  \draw (3,4) [fill=white] circle (1.5pt)node[above]{2};
+  \draw (2,4.25) [fill=white] circle (1.5pt);
+\end{circuitikz}
+\end{document}

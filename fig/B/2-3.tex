@@ -1,0 +1,94 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx}
+\setCJKmainfont{Noto Serif CJK SC}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary {decorations.pathmorphing, decorations.pathreplacing, decorations.shapes,shapes.geometric,shapes.misc}
+\tikzset{
+  >=stealth,
+  tool/.style ={
+    regular polygon, 
+    regular polygon sides=6,
+    node distance=12mm,
+    inner sep=0pt,
+    draw=red!80!black,
+    fill=red!50!black!20
+  },
+  methodbase/.style ={
+    rectangle,
+    rounded corners=3pt,
+    node distance=12mm,
+    inner sep=5pt ,
+    draw=green!50!black,
+    fill=green!50!black!20,
+  },
+  methodv/.style={
+    minimum height=#1,
+    methodbase,
+  },
+  methodh/.style={
+    minimum width=#1,
+    methodbase,
+  },
+  machine/.style ={
+    chamfered rectangle, 
+    chamfered rectangle xsep=1cm,
+    draw=yellow!50!black,
+    fill=yellow!50!black!20,
+    % minimum height =15pt,
+    inner sep=1pt
+  }
+}
+\begin{document}
+\small
+\begin{tikzpicture}[>=stealth,scale=1.0]
+  \node (coal) [methodv=2cm] {\parbox{1em}{煤}};
+  \node (oil)  [methodv=2cm,right=6mm of coal] {\parbox{1em}{石油}};
+  \node (gas)  [methodv=2cm,right=6mm of oil] {\parbox{1em}{天然气}};
+  \node (hydraulic)  [methodv=2cm,right=6mm of gas] {\parbox{1em}{水力}};
+  \node (wind)  [methodv=2cm,right=6mm of hydraulic] {\parbox{1em}{风力}};
+  \node (nuclear)  [methodv=2cm,right=10mm of wind] {\parbox{1em}{核能}};
+  \node (sun)  [methodv=2cm,right=18mm of nuclear] {\parbox{1em}{太阳能}};
+  \node (stove)  [tool,below=8mm of oil] {\footnotesize 燃烧炉};
+  \node (turbine)  [tool,below=8mm of hydraulic] {\footnotesize 水轮机};
+  \node (windmill) at (wind|-turbine)  [tool] {\footnotesize 风车};
+  \node (reactor)  [tool,below=8mm of nuclear] {\footnotesize 反应堆};
+  \coordinate (A) at (sun|-stove);
+  \node (solarcooker) at ([xshift=-9mm]A) [tool] {\footnotesize 太阳灶};
+  \node (battery)  at ([xshift=9mm]A) [tool] {\footnotesize 光电池};
+  \node (internal)  [methodh=1.5cm,below=15mm of stove] {内能};
+  \node (engine)  [machine,right=5mm of internal] {\footnotesize 热机};
+  \node (mechanic)  [methodh=1.5cm,right=8mm of engine] {机械能};
+  \node (electricity) at (battery|-internal)  [methodh=1.5cm] {电能};
+  \coordinate (B) at (reactor|-internal);
+  \node (power)  at ([yshift=5mm,xshift=5mm]B)[machine] {\footnotesize 发电机};
+  \node (electric)  at ([yshift=-5mm,xshift=5mm]B)[machine] {\footnotesize 电动机};
+  \coordinate (C) at ([yshift=5mm]battery.north);
+  \draw[->](coal)--(stove);
+  \draw[->](stove)--(internal);
+  \draw[->](oil)--(stove);
+  \draw[->](gas)--(stove);
+  \draw[->](hydraulic)--(turbine);
+  \draw[->](wind)--(windmill);
+  \draw[->](nuclear)--(reactor);
+  \draw(sun)--(sun|-C)--(C)[->]--(battery);
+  \draw(sun|-C)--(C-|solarcooker)[->]--(solarcooker);
+  \draw[->](solarcooker.corner 4)--(internal);
+  \draw[->](reactor.corner 4)--(internal);
+  \draw[->](battery)--(electricity);
+  \draw[->](turbine)--(mechanic);
+  \draw[->](windmill)--(mechanic);
+  \draw[->](internal)--(engine);
+  \draw[->](engine)--(mechanic);
+  \draw[->](mechanic)--(power.west);
+  \draw[->](power.east)--(electricity);
+  \draw[<-](mechanic)--(electric.west);
+  \draw[->](electricity)--(electric.east);
+  \coordinate (D) at ([xshift=5mm]wind.east);
+  \draw[thick,densely dashed] ([yshift=-2.5cm]D)--++(0,4.5);
+  \node at (gas.north)[above=2mm]{常规能源};
+  \node at ([xshift=8mm]nuclear.north east)[above=2mm]{新能源};
+\end{tikzpicture}
+\end{document}

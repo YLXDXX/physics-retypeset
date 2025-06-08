@@ -1,0 +1,62 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx,ninecolors}
+\setCJKmainfont{Noto Serif CJK SC}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{circuitikz}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary {decorations.pathmorphing, decorations.pathreplacing, decorations.shapes}
+\ctikzset{bipoles/length=1cm}
+\newcommand{\posthead}[2][gray]{
+  \begin{scope}[#2]
+    \fill[left color=#1,right color= #1,middle color=#1!20](0,0)ellipse(0.05 and 0.02);
+    \fill[left color=#1,right color= #1,middle color=#1!20](0.05,0)rectangle(-0.05,0.07);
+    \fill[left color=#1,right color= #1,middle color=#1!20](-0.06,0.07)arc(-180:0:0.06 and 0.02)--(0.06,0.15)--(0.05,0.16)--(-0.05,0.16)--(-0.06,0.15)--cycle;
+    \fill[#1!50!gray](0,0.16)ellipse(0.05 and 0.02);
+    \foreach \x in {75,45,15,-15,-45,-75}
+    {
+      \draw[very thin,#1!50!gray]({0.05*sin(\x)},{0.16-0.02*cos(\x)})--({0.06*sin(\x)},{0.15-0.02*cos(\x)})--++(0,-0.08);
+    }
+  \end{scope}
+}
+\begin{document}
+\small
+\begin{circuitikz}[>=latex, scale=1.0,european]
+  % \useasboundingbox(0.9,0)rectangle(5.1,5);
+  \fill[brown8](4,1)--(-2,1)--(-4,-1)--(2,-1);
+  \fill[brown5](2,-1.1)--(2,-1)--(4,1)--(4,0.9);
+  \fill[brown6](-4,-1)rectangle(2,-1.1);
+  \fill[lightgray!20](3.66,0.86)--(-1.94,0.86)--(-3.66,-0.86)--(1.94,-0.86);
+  \fill[ball color=white](3.32,0.72)circle(1pt);
+  \fill[ball color=white](-3.32,-0.72)circle(1pt);
+  \fill[ball color=white](1.88,-0.72)circle(1pt);
+  \fill[ball color=white](-1.88,0.72)circle(1pt);
+  \draw(1,1.7)to[cute open switch](4.5,1.7)--(4.5,0)node[right]{$+$}--(2,0);
+  \draw(1,1.7)to[battery2](-1,1.7)--(-4.5,1.7)--(-4.5,0)node[left]{$-$}--(-2,0);
+  \posthead[red]{xshift=2cm,scale=2}
+  \posthead{xshift=-2cm,scale=2}
+  \node at (2,0.5){$A$};
+  \node at (-2,0.5){$B$};
+  \node [rmetershape,t=G,name=dlj] at (-0.5,-1.7){};
+  \draw(dlj.left)..controls(-3.0,-1.7)and(-1.5,-0.5)..(-1,0)--++(45:0.8);
+  \draw(dlj.right)..controls(3.0,-1.7)and(1.5,-0.5)..(1,0)--++(135:0.8);
+  \foreach \x in {80,60,40,20}
+  {
+    \draw[line width={2*sin(\x)},brown!\x]([shift=(45:0.1)]-1,0)--++(45:0.5);
+    \draw[line width={2*sin(\x)},brown!\x]([shift=(135:0.1)]1,0)--++(135:0.5);
+  }
+  \node at (0,0.2) {探针};
+  % \draw (0,0) --(2,0)--(3,0)--(5,0)to [rmeter, t=\unit{\micro A}] (6,0) to [R=$R$] (6,2)--(5,2) ;
+  % \draw (3,2)--(2.5,2);
+  % \draw[->](2.5,2)--(2.5,1)--(2.15,1);
+  % \draw (2,0) to [R=$R'$, *-](2,2) ;\draw (0,2) to [battery2](0,0);
+  % \draw (3,2) to [cute open switch] (5,2);
+  % \draw(0,2) to  [cute open switch] (2,2);
+  % \node at (4,2)[below]{$K$}; 
+  % \node at (1,2)[below]{$K'$}; 
+  % \draw (4.75,2) to [ecapacitor=$C$, *-*] (4.75,0); 
+  % \draw (3.25,0) to [rmeter, t=V, *-*] (3.25,2);
+\end{circuitikz}
+\end{document}

@@ -1,0 +1,18 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary {decorations.pathmorphing, decorations.pathreplacing, decorations.shapes,}
+\begin{document}
+\small
+\begin{tikzpicture}[>=latex,scale=1.0]
+	\draw [|<->|](0.5,0)--(0.5,3)node [midway,sloped,above]{\qty{2.0}{m}};
+	\draw [|-|, dashed](-1,0)--(-1,3);        
+	\draw [thick](-1.4,0)--(-1,3); 
+	\draw[fill=gray] (-1.4,0) circle (3pt);
+	\draw[very thick] (-2, -1)--(-2, 1)node [left]{$+$}; \draw[very thick] (-.5, -1)--(-.5, 1)node [right]{$-$};
+	\draw [|<->|] (-1.4,-.25)--node [below]{\qty{2.0}{cm}}(-1,-.25);
+\end{tikzpicture}
+\end{document}

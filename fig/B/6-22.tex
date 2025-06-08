@@ -1,0 +1,54 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary {decorations.pathmorphing, decorations.pathreplacing, decorations.shapes,}
+\begin{document}
+\small
+\begin{tikzpicture}[>=latex,scale=1.0]
+  % \useasboundingbox(-1,-2)rectangle(8,6);
+  \fill[ball color=brown!10](2.071,1.973)..controls(2.071,1.883)and(2.071,1.794)..  (2.187,1.595)..controls(2.310,1.384)and(2.613,1.156)..  (3.081,1.148)..controls(3.961,1.133)and(5.065,1.740)..  (5.065,1.973)..controls(5.065,2.205)and(3.961,2.812)..  (3.081,2.797)..controls(2.613,2.790)and(2.310,2.561)..  (2.187,2.350)..controls(2.071,2.151)and(2.071,2.062)..cycle;
+  \foreach \x/\y in {2.153/1.973,2.318/1.532,2.821/1.247,3.401/1.237,3.907/1.359,4.277/1.490,4.499/1.585,4.644/1.668,4.777/1.742,4.864/1.804,4.944/1.874,4.976/1.973,4.944/2.072,4.864/2.141,4.777/2.204,4.644/2.277,4.499/2.360,4.277/2.456,3.907/2.587,3.401/2.708,2.821/2.699,2.318/2.413}
+  {
+    \fill[ball color=orange!90!black](\x,\y)circle(1.2pt);
+    \draw([xshift=-0.8pt]\x,\y)--++(1.6pt,0)([yshift=-0.8pt]\x,\y)--++(0,1.6pt);
+  }
+  \draw[blue!90!black](5.131,1.973)..controls(5.104,2.437)and(3.775,3.180)..(2.690,3.160)..controls(2.004,3.145)and(1.446,2.598)..(1.446,1.973)..controls(1.446,1.347)and(2.004,0.800)..(2.690,0.785)..controls(3.775,0.765)and(5.104,1.508)..cycle
+  (0.799,1.973)..controls(0.799,1.809)and(0.851,1.533)..
+  (0.968,1.279)..controls(1.149,0.890)and(1.594,0.424)..
+  (2.281,0.410)..controls(3.574,0.383)and(5.190,1.245)..
+  (5.190,1.973)..controls(5.190,2.700)and(3.574,3.562)..
+  (2.281,3.535)..controls(1.594,3.521)and(1.149,3.056)..
+  (0.968,2.666)..controls(0.851,2.412)and(0.799,2.136)..cycle
+  (0.178, 1.973)..controls(0.178, 2.180)and(0.260, 2.580)..
+  (0.373, 2.847)..controls(0.582, 3.337)and(1.096, 3.923)..
+  (1.890, 3.941)..controls(3.384, 3.974)and(5.250, 2.890)..
+  (5.250, 1.973)..controls(5.250, 1.055)and(3.384,-0.029)..
+  (1.890, 0.005)..controls(1.096, 0.022)and(0.582, 0.608)..
+  (0.373, 1.098)..controls(0.260, 1.365)and(0.178, 1.766)..cycle;
+  \draw[postaction={decorate},decoration={markings,mark=at position 0.5 with {\arrow{>}}},densely dashed,orange!90!black](2.071,1.973)--(0.042,1.973);
+  \draw[postaction={decorate},decoration={markings,mark=at position 0.5 with {\arrow{>}}},densely dashed,orange!90!black](5.046,1.973)--(5.925,1.973);
+  \draw[postaction={decorate},decoration={markings,mark=at position 0.5 with {\arrowreversed{>}}},densely dashed,orange!90!black](1.323,3.941)..controls(1.779,3.083)and(1.941,2.825)..(2.279,2.483);
+  \draw[postaction={decorate},decoration={markings,mark=at position 0.5 with {\arrowreversed{>}}},densely dashed,orange!90!black](1.323,0.004)..controls(1.779,0.862)and(1.941,1.120)..(2.279,1.462);
+  \draw[postaction={decorate},decoration={markings,mark=at position 0.5 with {\arrowreversed{>}}},densely dashed,orange!90!black](2.872, 3.960)..controls(2.787, 3.613)and(2.724, 3.128)..(2.815, 2.768);
+  \draw[postaction={decorate},decoration={markings,mark=at position 0.5 with {\arrowreversed{>}}},densely dashed,orange!90!black](2.872,-0.015)..controls(2.787, 0.332)and(2.724, 0.818)..(2.815, 1.177);
+  \draw[postaction={decorate},decoration={markings,mark=at position 0.5 with {\arrowreversed{>}}},densely dashed,orange!90!black](3.761, 3.788)..controls(3.581, 3.470)and(3.483, 3.045)..(3.422, 2.777);
+  \draw[postaction={decorate},decoration={markings,mark=at position 0.5 with {\arrowreversed{>}}},densely dashed,orange!90!black](3.761, 0.157)..controls(3.581, 0.475)and(3.483, 0.901)..(3.422, 1.168);
+  \draw[postaction={decorate},decoration={markings,mark=at position 0.5 with {\arrowreversed{>}}},densely dashed,orange!90!black](4.567,0.253)..controls(4.273,0.498)and(4.036,1.010)..(3.949,1.289);
+  \draw[postaction={decorate},decoration={markings,mark=at position 0.5 with {\arrowreversed{>}}},densely dashed,orange!90!black](4.567,3.692)..controls(4.272,3.448)and(4.036,2.936)..(3.949,2.656);
+  \draw[postaction={decorate},decoration={markings,mark=at position 0.5 with {\arrowreversed{>}}},densely dashed,orange!90!black](5.032,3.445)..controls(4.678,3.183)and(4.423,2.807)..(4.307,2.527);
+  \draw[postaction={decorate},decoration={markings,mark=at position 0.5 with {\arrowreversed{>}}},densely dashed,orange!90!black](5.032,0.500)..controls(4.679,0.763)and(4.423,1.139)..(4.307,1.419);
+  \draw[postaction={decorate},decoration={markings,mark=at position 0.5 with {\arrowreversed{>}}},densely dashed,orange!90!black](5.334,0.699)..controls(4.931,1.008)and(4.661,1.277)..(4.536,1.527);
+  \draw[postaction={decorate},decoration={markings,mark=at position 0.5 with {\arrowreversed{>}}},densely dashed,orange!90!black](5.334,3.246)..controls(4.931,2.937)and(4.661,2.668)..(4.536,2.418);
+  \draw[postaction={decorate},decoration={markings,mark=at position 0.5 with {\arrowreversed{>}}},densely dashed,orange!90!black](5.683,2.995)..controls(5.333,2.906)and(4.983,2.748)..(4.697,2.329);
+  \draw[postaction={decorate},decoration={markings,mark=at position 0.5 with {\arrowreversed{>}}},densely dashed,orange!90!black](5.683,0.950)..controls(5.333,1.040)and(4.983,1.197)..(4.697,1.616);
+  \draw[postaction={decorate},decoration={markings,mark=at position 0.5 with {\arrowreversed{>}}},densely dashed,orange!90!black](5.756,1.246)..controls(5.438,1.271)and(5.091,1.411)..(4.839,1.708);
+  \draw[postaction={decorate},decoration={markings,mark=at position 0.5 with {\arrowreversed{>}}},densely dashed,orange!90!black](5.756,2.699)..controls(5.438,2.675)and(5.091,2.534)..(4.839,2.238);
+  \draw[postaction={decorate},decoration={markings,mark=at position 0.5 with {\arrowreversed{>}}},densely dashed,orange!90!black](5.757,2.436)..controls(5.448,2.425)and(5.198,2.362)..(4.954,2.151);
+  \draw[postaction={decorate},decoration={markings,mark=at position 0.5 with {\arrowreversed{>}}},densely dashed,orange!90!black](5.757,1.509)..controls(5.448,1.520)and(5.198,1.583)..(4.954,1.794);
+  \draw[postaction={decorate},decoration={markings,mark=at position 0.5 with {\arrowreversed{>}}},densely dashed,orange!90!black](5.759,1.753)..controls(5.439,1.764)and(5.197,1.785)..(5.036,1.880);
+  \draw[postaction={decorate},decoration={markings,mark=at position 0.5 with {\arrowreversed{>}}},densely dashed,orange!90!black](5.759,2.193)..controls(5.439,2.181)and(5.197,2.160)..(5.036,2.066);
+\end{tikzpicture}
+\end{document}

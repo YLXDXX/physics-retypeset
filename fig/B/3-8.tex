@@ -1,0 +1,16 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary {decorations.pathmorphing, decorations.pathreplacing, decorations.shapes,}
+\begin{document}
+\small
+\begin{tikzpicture}[>=stealth]
+  \draw [pattern=north east lines](2.4,0) rectangle (2.6,1.6);	
+  \pgfsetlinewidth{4pt}
+  \pgfsetinnerlinewidth{3pt}
+  \draw (0,0) rectangle (5,1.6);
+\end{tikzpicture}
+\end{document}

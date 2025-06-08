@@ -1,0 +1,18 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary {decorations.pathmorphing, decorations.pathreplacing, decorations.shapes,}
+\begin{document}
+\small
+\begin{tikzpicture}[>=stealth,scale=0.65]
+  \draw[<->] (0,6.5)node [right]{$p$}--(0,0)--(6,0) node [right]{{$t^\circ$C}};
+  \draw(-6,0)--(0,0);
+  \draw[color=black, ultra thick] (0,2.5)--(5,5);
+  \draw [dashed] (0,2.5)--(-5,0);
+  \node at (0,-.4){$O$}; \node at (-5,-.4){$-273$};
+  \node at (-5,.4){$D$};
+\end{tikzpicture}
+\end{document}

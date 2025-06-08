@@ -1,0 +1,137 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx,bm}
+\setCJKmainfont{Noto Sans CJK SC}
+\usepackage{tkz-euclide,ninecolors,circuitikz}
+\usepackage{amsmath}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary {decorations.pathmorphing, decorations.pathreplacing, decorations.shapes}
+\newcommand{\knob}[2][darkgray]{
+  \begin{scope}[#2]
+    \fill[#1!50](0,0)circle(0.25);
+    \foreach \y in {0,40,...,320}
+    {
+      \fill[#1](0,0)--++(\y:0.15)to[bend right=60](\y+40:0.15);
+      \draw[very thin,#1!20](\y:0.15)--++(\y:0.10);
+    }
+    \fill[black](0,0)circle(0.10);
+  \end{scope}
+}
+\newcommand{\posthead}[2][gray]{
+  \begin{scope}[#2]
+    \foreach \y in {0,40,...,320}
+    {
+      \fill[#1!90!black](0,0)--++(\y:0.12)to[bend right=60](\y+40:0.12);
+    }
+    \fill[#1!50!white](0,0)circle(0.12);
+    \fill[darkgray](0,0)circle(0.08);
+  \end{scope}
+}
+\ctikzset{bipoles/length=7mm}
+\begin{document}
+\footnotesize
+\begin{circuitikz}[>=latex,scale=1.0,inner sep=1pt]
+
+  \draw[rounded corners](-3.2,-4.7)rectangle(3.2,4.7);
+  \draw[rounded corners,thick](-3.0,-4.5)rectangle(3.0,4.5);
+  \posthead{xshift=2.5cm,yshift=-3.5cm}
+  \posthead[red]{xshift=2.5cm,yshift=-2.5cm}
+  \node at (2.1,-2.5){$+$};
+  \node at (2.1,-3.5){$-$};
+  \knob{xshift=-2.2cm,yshift=-1cm}
+  \draw[->]([shift=(100:0.35)]-2.2,-1)arc(100:170:0.35);
+  \draw[->]([shift=(80:0.35)]-2.2,-1)arc(80:10:0.35);
+  \node at (-2.2,-0.65){\scalebox{0.7}{0}};
+  \fill[lightgray](0,-2.5)circle(0.9);
+  \foreach \x[count=\i from 0] in {0,20,...,340}
+  {
+    \draw[very thick]([shift=(\x:1.0)]0,-2.5)--++(\x:0.3) coordinate(n\i);
+  }
+  \foreach \x[count =\i from 3] in {1,10,100,1k}
+  {
+    \draw(n\i)--(n\i|-0,-1.0)node[above]{\scalebox{0.6}{$\times$\x}};
+  }
+  \foreach \x[count =\i from 7] in {OFF,100,10,1}
+  {
+    \draw(n\i)--(n\i-|-1.6,-1.0)node[left]{\scalebox{0.6}{\x}};
+  }
+  \foreach \x[count =\i from 11] in {2.5,10,50,250,500}
+  {
+    \draw(n\i)--(n\i|-0,-3.9)node[below]{\scalebox{0.6}{\x}};
+  }
+  \foreach \x[count =\i from 0] in {50,10,2.5}
+  {
+    \draw(n\i)--(n\i-|1.4,0)node[right]{\scalebox{0.6}{\x}};
+  }
+  \foreach \x[count =\i from 16] in {500,250}
+  {
+    \draw(n\i)--(n\i-|1.4,0)node[right]{\scalebox{0.6}{\x}};
+  }
+  \draw[thick](n16-|1.8,0)--(n2-|1.8,0)node[above=3mm]{\large\unit{V}}node[above=1.5mm]{$\sim$};
+  \draw[thick](n7-|-2.1,0)--(n10-|-2.1,0)node(mA)[below=1.5mm]{\large\unit{mA}};
+  \draw[thick](n11|-0,-4.15)--(n15|-0,-4.15)node(V)[right=3mm]{\large\unit{V}};
+  \draw[thick](n3|-0,-0.75)--(n6|-0,-0.75)node[left=3mm]{\large\unit{\ohm}};
+  \draw(V.south west)--(V.south east);
+  \draw(mA.south west)--(mA.south east);
+  \coordinate (O1) at (0,-2.5);
+  \fill[ball color=darkgray]([shift=(140:1.2)]O1)to[bend right=10]([shift=(-50:0.9)]O1)--([shift=(-30:0.9)]O1)to[bend right=10]([shift=(140:1.2)]O1);
+
+
+  \foreach \r in {3.6,3.4,2.6}
+  {
+    \draw(135:\r)arc(135:45:\r);
+  }
+  \foreach \x/\ti/\tii/\tiii in{135/0/0/0,117/50/10/2,99/100/20/4,81/150/30/6,63/200/40/8}
+  {
+    \draw[ultra thin] (\x:3.4)--++(\x:-0.15);
+    \draw[ultra thin] (\x-9:3.4)--++(\x-9:-0.12);
+    \foreach \y in {1,2,3,4,6,7,8,9}
+    {
+      \draw[ultra thin] (\x-1.8*\y:3.4)--++(\x-1.8*\y:-0.08);
+    }
+    \node at (\x:3.15)[rotate=\x-90]{\scalebox{0.5}{\ti}};
+    \node at (\x:3.0)[rotate=\x-90]{\scalebox{0.5}{\tii}};
+    \node at (\x:2.85)[rotate=\x-90]{\scalebox{0.5}{\tiii}};
+  }
+  \draw[ultra thin] (45:3.4)--++(45:-0.15);
+  \node at (45:3.15)[rotate=-45]{\scalebox{0.5}{250}};
+  \node at (45:3.0)[rotate=-45]{\scalebox{0.5}{50}};
+  \node at (45:2.85)[rotate=-45]{\scalebox{0.5}{10}};
+
+  \foreach \x/\y in {45/2.5,69/2,91.1/1.5,111.5/1,129.5/0.5}
+  {
+    \draw[ultra thin] (\x:2.6)--++(\x:-0.2);
+    \node at (\x:2.30)[rotate=\x-90]{\scalebox{0.5}{\y}};
+  }
+  \foreach \x in {49.715,54.44,59.251,64.16,73.342,77.834,82.373,86.774,95.377,99.214,103.43,107.53,115.18,118.873,122.301,126.045,131.361,132.877,133.969}
+  {
+    \draw[ultra thin] (\x:2.6)--++(\x:-0.1);
+  }
+  \draw[ultra thin] (135:2.6)--++(135:-0.2);
+  \node at (135:2.30)[rotate=45]{\scalebox{0.5}{0}};
+  \foreach \x/\y in {45/0,63.329/10,76.093/20,92.027/40,101.059/60,111.092/100,121.681/200,129.472/500,132.18/1k,135/$\infty$}
+  {
+    \draw[ultra thin] (\x:3.6)--++(\x:0.2);
+    \node at (\x:3.9)[rotate=\x-90]{\scalebox{0.5}{\y}};
+  }
+  \foreach \x in {55.345,85.134,96.967,104.11,107.029,109.201,129.54,133.495,134.243}
+  {
+    \draw[ultra thin] (\x:3.6)--++(\x:0.2);
+  }
+  \foreach \x in {131.227,128.761,127.134,125.143,124.354,123.587,122.56,120.417,119.017,116.91,114.355,110.156,108.092,105.709,102.713,98.979,96.105,95.08,94.023,92.987,90.824,89.475,88.054,86.542,83.381,81.633,79.919,78.067,73.79,71.446,69.022,66.242,61.938,60.386,58.949,57.159,53.651,51.689,49.69 ,47.174}
+  {
+    \draw[ultra thin] (\x:3.6)--++(\x:0.1);
+  }
+
+  \draw(45:3.6)--++(-45:0.1)--++(0.3,0)node[above left]{\scalebox{0.5}{\unit{\ohm}}}--++(0,0.1);
+  \draw(45:3.4)--++(-45:0.1)--++(0.45,0)node[below left]{\scalebox{0.5}{\unit{mA,V}}}--++(0,-0.1);
+  \draw(135:3.4)--++(-135:0.1)--++(-0.45,0)node[below right]{\scalebox{0.5}{$\simeq$}}--++(0,-0.1);
+  \draw(135:2.6)--++(-135:0.1)--++(-0.45,0)node[below right]{\scalebox{0.5}{V}}--++(0,-0.12)node[below right]{\scalebox{0.5}{$\sim$}};
+  \draw[red!70!black,very thin](0,0)--(135:3.9);
+  \draw[red!70!black,very thick](0,0)--(135:1.8);
+  \node at (0,1.8){\unit{A}--\unit{V}--\unit{\ohm}};
+  \fill[darkgray](-3,1.0)--(3,1.0)--(3,0)[rounded corners=3mm]--(0,-0.5)[sharp corners]--(-3,0)--cycle;
+  \fill[lightgray](0,0.0)circle(0.2);
+  \draw[very thick,darkgray](34:0.2)--(-146:0.2);
+\end{circuitikz}
+\end{document}

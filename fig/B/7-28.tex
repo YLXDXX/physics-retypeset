@@ -1,0 +1,20 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx}
+\setCJKmainfont{Noto Serif CJK SC}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{circuitikz}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary {decorations.pathmorphing, decorations.pathreplacing, decorations.shapes,}
+\ctikzset{bipoles/length=1cm}
+\begin{document}
+\small
+\begin{circuitikz}[>=latex, scale=0.8,european]
+  % \useasboundingbox(0.9,0)rectangle(5.1,5);
+  \draw(0,0)--(5,0) to [R=$R$](5,3) to  [cute open switch] (2,3)--(0,3) to[battery2] (0,0);
+  \draw (2,0) to [rmeter, t=V, *-*] (2,3);    
+  \node at (7/2,3)[above] {$K$};
+\end{circuitikz}
+\end{document}

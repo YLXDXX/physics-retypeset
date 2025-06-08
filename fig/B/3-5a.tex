@@ -1,0 +1,37 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx}
+\setCJKmainfont{Noto Serif CJK SC}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary {decorations.pathmorphing,decorations.pathreplacing,decorations.shapes,}
+\begin{document}
+\small
+\begin{tikzpicture}[>=latex,scale=1.0]
+  \useasboundingbox(-0.5,1.9)rectangle(1.5,-5.5);
+  \draw(-0.5,-4)--(-0.5,0)--(0.4,0)--(0.4,-4);
+  \foreach \x in {-0.2,-1.2,-2.2} 
+  {
+    \foreach \y in {1,2,3,4,6,7,8,9}
+    \draw[very thin](0.3,\x-\y*0.1)--++(0.1,0);
+    \draw[very thin](0.25,\x-0.5)--++(0.15,0);
+    \draw[very thin](0.2,\x)--++(0.2,0);
+  }
+  \draw[very thin](0.2,-3.2)--++(0.2,0);
+
+  \fill[darkgray](-0.108,-1.7)--++(0,-1.15)arc(180:225:0.1)arc(45:0:0.1)--++(0,-.2)--++(0.1,0)--++(0,0.2)arc(180:135:0.1)arc(-45:0:0.1)--++(0,1.15)to[bend right]cycle;
+  \fill[cyan!30,opacity=0.3,draw=black](0.05,-0.3)--(-0.05,-0.3)--++(0,-0.4)arc(0:-45:0.1)arc(135:180:0.1)--++(0,-2)arc(180:225:0.1)arc(45:0:0.1)--++(0,-.2)--++(0.1,0)--++(0,0.2)arc(180:135:0.1)arc(-45:0:0.1)--++(0,2)arc(0:45:0.1)arc(225:180:0.1)--cycle;
+  \node at (-0.3,-1.7) {$A$};
+  \node at (-0.3,-0.5) {$a$};
+  \fill[top color=gray,bottom color=gray,middle color=white](-0.08,-0.55)rectangle(0.07,-0.45);
+  \fill[left color=gray,right color=gray,middle color=white](-0.12,-0.6)rectangle(-0.08,-0.4);
+  \begin{scope}[xshift=0.8cm]
+    \draw[->](0,0)--++(0,-0.5)node[at start,above]{$p_0$};
+    \fill[darkgray](-0.108,-1.7)--++(0,-1.15)arc(180:225:0.1)arc(45:0:0.1)--++(0,-.2)--++(0.1,0)--++(0,0.2)arc(180:135:0.1)arc(-45:0:0.1)--++(0,1.15)to[bend right]cycle;
+  \fill[cyan!30,opacity=0.3,draw=black](-0.108,-0.5)--++(0,-2.35)arc(180:225:0.1)arc(45:0:0.1)--++(0,-.2)--++(0.1,0)--++(0,0.2)arc(180:135:0.1)arc(-45:0:0.1)--++(0,2.35)--cycle;
+  \node at (0.3,-1.7) {$B$};
+  \end{scope}
+  \draw[brown!80!black,line width=0.7mm](0,-3.2)--++(0,-0.8)arc(180:360:0.4)--++(0,0.8);
+\end{tikzpicture}
+\end{document}

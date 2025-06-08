@@ -1,0 +1,27 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx}
+\setCJKmainfont{Noto Serif CJK SC}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{circuitikz}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary {decorations.pathmorphing, decorations.pathreplacing, decorations.shapes,}
+\ctikzset{bipoles/length=1cm}
+\begin{document}
+\small
+\begin{circuitikz}[>=latex, scale=1.0,european]
+  % \useasboundingbox(0.9,0)rectangle(5.1,5);
+  \draw  (1,0) to [battery2] (0,0) --(0,6)--(2,6)--(2,4);
+  \draw  (1,0) to [cute open switch=$K$] (2,0)to [pR=$R$,name=hb](4,0);
+  \draw (1,4)--(1,5)to[crossing](3,5)--(4,5)to [rmeter, t=A](4,0);
+  \draw (3,5)--(3,4);
+  \fill [blue!40] (0.5, 1.5) rectangle (3.5,3.8);
+  \draw (3.7,0)--(3.7,0|-hb.wiper)--(hb.wiper);
+  \draw (0.9,4)node[left]{$+$} rectangle (1.1,2);
+  \draw (1.9,4)node[left]{$-$} rectangle (2.1,2);
+  \draw (2.9,2) rectangle (3.1,4)node[right]{$+$};
+  \draw [very thick](.5,4.2)--(.5, 1.5)--(3.5,1.5)--(3.5,4.2);
+\end{circuitikz}
+\end{document}

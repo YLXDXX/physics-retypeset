@@ -1,0 +1,27 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx}
+\setCJKmainfont{Noto Serif CJK SC}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{circuitikz}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary {decorations.pathmorphing, decorations.pathreplacing, decorations.shapes,}
+\ctikzset{bipoles/length=1cm}
+\begin{document}
+\small
+\begin{circuitikz}[>=latex, scale=1.0,european]
+  % \useasboundingbox(0.9,0)rectangle(5.1,5);
+  \draw (4,0) to[battery2] (3,0)--(0,0)--(0,2)to [rmeter,t=G](4,2)to [pR,name=hb](8,2)--(8,0);
+  \draw(7.25,2)--(7.25,2|-hb.wiper)--(hb.wiper);
+  \draw (4,0) to[cute open switch=$K_1$] (8,0);
+  \node at (hb.center)[below=2mm]{$R$};
+  \draw (0,1.0)to [cute open switch=$K_2$] (2,1.0) to [vR=$R'$](4.5,1.0)--(4.5,2);
+  \draw (0,1.0) [fill=black] circle (1.2pt);
+  \draw (4.5,2) [fill=black] circle (1.2pt);
+  \draw (7.25,2) [fill=black] circle (1.2pt);
+  % \node at (6,0)[below]{$K_1$};
+  % \node at (1,1.5)[below]{$K_2$};
+\end{circuitikz}
+\end{document}

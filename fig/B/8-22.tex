@@ -1,0 +1,45 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx}
+\setCJKmainfont{Noto Serif CJK SC}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary {decorations.pathmorphing, decorations.pathreplacing, decorations.shapes,}
+\begin{document}
+\small
+\begin{tikzpicture}[>=latex,scale=1.5]
+  % \useasboundingbox(-2,-2.2)rectangle(2,1.5);
+  \foreach \x in {1,2,3,4,5,6}
+  {
+    \foreach \y in {-1,0,1}
+    {
+      \fill[inner color=white, outer color= red!30](0.5*\x-0.25,0.5*\y)circle(3pt)node{\tiny$+$};
+      \fill[inner color=white, outer color= blue!30](-0.5*\x+0.25,0.5*\y)circle(3pt)node{\tiny$-$};
+    }
+  }
+  \foreach \x in {2,3,4,5,6}
+  {
+    \foreach \y in {-1,0,1}
+    {
+      \fill([shift=(rand*360:4.5pt)]0.5*\x-0.25,0.5*\y)circle(1pt);
+      \draw([shift=(rand*360:4.5pt)]-0.5*\x+0.25,0.5*\y)circle(1pt);
+    }
+  }
+  \fill([shift=(225:4.5pt)]0.25,0.5)circle(1pt);
+  \fill([shift=(225:4.5pt)]0.25,0)circle(1pt);
+  \fill([shift=(225:4.5pt)]0.25,-0.5)circle(1pt);
+  \draw([shift=(45:4.5pt)]-0.25,0.5)circle(1pt);
+  \draw([shift=(45:4.5pt)]-0.25,0)circle(1pt);
+  \draw([shift=(45:4.5pt)]-0.25,-0.5)circle(1pt);
+  \draw[->]([shift=(45:4.5pt)]-0.25,-0.5)--++(0.3,0);
+  \draw[->]([shift=(45:4.5pt)]-0.25,0)--++(0.3,0);
+  \draw[->]([shift=(45:4.5pt)]-0.25,0.5)--++(0.3,0);
+  \draw[->]([shift=(225:4.5pt)]0.25,0.5)--++(-0.3,0);
+  \draw[->]([shift=(225:4.5pt)]0.25,0)--++(-0.3,0);
+  \draw[->]([shift=(225:4.5pt)]0.25,-0.5)--++(-0.3,0);
+  \draw(-3,-0.75)rectangle(3,0.75)(0,-0.75)--(0,0.75);
+  \node at (-1.5,-1){P 区};
+  \node at (1.5,-1){N 区};
+  \end{tikzpicture}
+\end{document}

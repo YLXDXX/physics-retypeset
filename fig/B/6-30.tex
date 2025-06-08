@@ -1,0 +1,25 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx}
+\setCJKmainfont{Noto Serif CJK SC}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{circuitikz}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary {decorations.pathmorphing, decorations.pathreplacing, decorations.shapes}
+\ctikzset{bipoles/length=1cm}
+\begin{document}
+\small
+\begin{circuitikz}[>=latex, scale=0.9,european]
+  % \useasboundingbox(0.9,0)rectangle(5.1,5);
+  \draw[densely dashed,thin](-1.5,0)--(4,0);
+  \draw[very thick] (4,-1.5)--(4,1.5)(3,-1.5)--(3,-0.1)(3,0.1)--(3,1.5);
+  \draw[ultra thick] (-0.5,0.1)arc(0:35:2)(-0.5,-0.1)arc(0:-35:2);
+  \draw(-0.7,-0.95)--(-0.7,-2.0)--(0,-2.0)--(0,-3)to[battery](-2.5,-3)--(-2.5,-2.0)--(-1.7,-2.0)--(-1.7,-0.1)--(-1.6,0)--(-1.7,0.1);
+  \draw(-0.6,-0.8)--(3,-0.8)(3,-1.0)--(2.4,-1.0)[->]--(2.4,-3)node[below]{$+$};
+  \draw(4,-0.8)to[rmeter, t=G](6,-0.8)[->]--(6,-3)node[below]{$-$};
+  \node at (-1.7,-3)[below]{$U$};
+  \node at (4.2,-3)[below]{$U'$};
+\end{circuitikz}
+\end{document}

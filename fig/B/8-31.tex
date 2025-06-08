@@ -1,0 +1,36 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx}
+\setCJKmainfont{Noto Serif CJK SC}
+\usepackage{tkz-euclide}
+\usepackage{circuitikz}
+\usepackage{amsmath}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary {decorations.pathmorphing, decorations.pathreplacing, decorations.shapes,}
+\ctikzset{bipoles/length=1.0cm}
+\begin{document}
+\small
+\begin{circuitikz}[>=latex,scale=1.0,european]
+  % \useasboundingbox(-2,-2.2)rectangle(2,1.5);
+  \coordinate (A) at (-3.5,-2.3);
+  \coordinate (B) at (2,-4);
+  \coordinate (C) at (-2,-4);
+  \coordinate (D) at (-3.5,-0.3);
+  \draw(-0.5,-0.9)rectangle(0.5,0.9)(-0.5,-0.3)--++(1,0)(-0.5,0.3)--++(1,0);
+  \draw[->,line width=1.5mm](0.1,-0.8)--(0.1,0.8);
+  \draw[->,line width=0.5mm](0.1,0)--(-0.4,0);
+  \draw[<-](2,1.5)to[rmeter,t=mA](0,1.5);
+  \draw(0,0.9)--(0,1.5);
+  \draw(2,-4)to[battery](2,1.5);%
+  \draw[->](2,-4)--(0,-4)to[rmeter,t=mA,*-](0,-0.9);
+  \draw(C)to[cute open switch=$K$](0,-4);
+  \draw(C)to[battery2](A|-C)to[R=$R$](A)to[pR=$W$,name=hb,-*](D)--(-3.5,0)[<-]to[rmeter,t={\unit{\micro A}}](-0.5,0);
+  \draw(D)--(D-|hb.wiper)--(hb.wiper);
+  \node at (-0.6,0)[below left]{$I_b$};
+  \node at (0,1.5)[above right]{$I_c$};
+  \node at (0,-1.5)[right]{$I_e$};
+  \node at (0.8,-0.6){P};
+  \node at (0.8,   0){N};
+  \node at (0.8, 0.6){P};
+  \end{circuitikz}
+\end{document}

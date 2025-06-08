@@ -1,0 +1,32 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx}
+\setCJKmainfont{Noto Serif CJK SC}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary {decorations.pathmorphing, decorations.pathreplacing, decorations.shapes,}
+\begin{document}
+\small
+\begin{tikzpicture}[>=stealth]
+  \tkzDefPoint(260:2){A}
+  \tkzDefPoint(280:2){B}
+  \tkzDefShiftPoint[A](0,-0.5){C}
+  \tkzDefShiftPoint[A](0,-1.0){D}
+  \tkzDefShiftPoint[A](0,-1.4){E}
+  \tkzDefShiftPoint[B](0,-1.4){F}
+  \tkzDefShiftPoint[C](-1,0){G}
+  \tkzDefMidPoint(E,F) \tkzGetPoint{O}
+  \draw[semithick,double,rounded corners=3pt,double distance=2pt](G)--(C)--(A)arc(260:-80:2)--(F);
+  \draw[semithick,double,rounded corners=3pt,double distance=2pt](E)--(D)--++(-1,0);
+  \tkzDrawArc[semithick,double,double distance=2pt](O,E)(F)
+  \foreach \x in {190,180,...,-10} {\draw[thin,->](0,0)--(\x:1.9);}
+  \draw[fill=gray] (200:1.9)--(200:1.95)arc(200:-20:1.95)--(-20:1.9)arc(-20:200:1.9);
+  \draw[thin,->](-0.7,-2.7)--++(-1.0,0)node[left]{接真空泵};
+  \draw[thin](45:1.95)--++(45:0.5)node[above]{导电薄膜};
+  \draw[thin](-45:2.0)--++(-45:0.5)node[below]{玻璃容器};
+  \fill[left color=gray,right color=gray,middle color=white](-0.03,-4.0)--(-0.03,-0.5)--(0,0)--(0.03,-0.5)--(0.03,-4.0)--cycle;
+  \draw[thin](0,-0.7)--++(-0.5,0)node[left]{钨针};
+  \draw[thin](1,-0.5)--(10:1.2)(1,-0.5)--(0:.8)(1,-0.5)--(-10:.6)node[at start,below]{离子轨迹};
+\end{tikzpicture}
+\end{document}

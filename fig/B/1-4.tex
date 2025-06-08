@@ -1,0 +1,36 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx}
+\setCJKmainfont{Noto Serif CJK SC}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary {decorations.pathmorphing, decorations.pathreplacing, decorations.shapes,}
+\begin{document}
+\small
+\begin{tikzpicture}[>=latex,scale=1.0]
+  % \useasboundingbox(-1,-2)rectangle(8,6);
+  \fill[cyan!15,draw=black,very thin](-2.5,-0.5)rectangle(2.5,0);
+  \fill[cyan!5,draw=black,very thin](-2.0,0)rectangle(2.0,0.1);
+  \fill[cyan!5!white,draw=black,very thin](-1.5,0)rectangle(1.5,-0.3);
+  \draw[very thin](-0.5,0)to[bend left](-0.5,-0.3);
+  \draw[very thin](0.5,0)to[bend right](0.5,-0.3);
+  \foreach \x in{1,2,...,50}
+    {
+      \fill(rand*0.45,-0.15+rand*0.08)circle(0.01);
+      
+    }
+  \fill[left color=gray,right color=gray,middle color=white](-0.6,0.7)rectangle(0.6,2.0);
+  \fill[left color=gray,right color=gray,middle color=white](-0.6,0.7)--++(0.1,-0.2)--++(1.0,0)--++(0.1,0.2)--cycle;
+  \draw[thin](0.2,1.7)--++(45:1.0)node[above]{显微镜物镜};
+  \draw[thin](1.7,0.1)--++(45:1.0)node[above]{盖玻璃};
+  \draw[thin](0,-0.2)--++(-45:0.7)node[below]{悬浊液};
+  \draw[thin](-1.8,-0.2)--++(-135:0.7)node[below]{载物玻璃};
+  \draw[thick](6.5,1.0)circle(2.0);
+  \foreach \x in{1,2,...,400}
+  {
+    
+    \fill ([shift=(rand*360:rand*2.0)]6.5,1.0) ellipse (0.05*rand and 0.03);
+  }
+\end{tikzpicture}
+\end{document}

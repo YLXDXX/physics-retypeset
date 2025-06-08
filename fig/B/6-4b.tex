@@ -1,0 +1,27 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary {decorations.pathmorphing, decorations.pathreplacing, decorations.shapes,}
+\begin{document}
+\small
+\begin{tikzpicture}[>=latex,scale=1.5]
+  % \useasboundingbox(-1,-2)rectangle(8,6);
+  \tkzSetUpPoint[fill=black]
+  \tkzDefPoints{0/0/O,-0.5/-0.5/A,1/0.8/B,-1.5/0.9/C}
+  \tkzDefPointOnLine[pos=3.0](O,A)\tkzGetPoint{A'}
+  \tkzDefPointOnLine[pos=1.8](O,B)\tkzGetPoint{B'}
+  \tkzDefPointOnLine[pos=1.4](O,C)\tkzGetPoint{C'}
+  \tkzDrawPoints(O,A,B,C)
+  \tkzLabelPoints(A,B,C)
+  \tkzLabelPoint[below right](O){$+Q$}
+  \draw[thick,->](A)--(A')node[left]{$F_A$};
+  \draw[thick,->](B)--(B')node[above]{$F_B$};
+  \draw[thick,->](C)--(C')node[left]{$F_C$};
+  \draw[thin,densely dashed](O)--(A)node[midway,above]{$r_1$};
+  \draw[thin,densely dashed](O)--(B)node[midway,above]{$r_2$};
+  \draw[thin,densely dashed](O)--(C)node[midway,above]{$r_3$};
+\end{tikzpicture}
+\end{document}

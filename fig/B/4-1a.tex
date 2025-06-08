@@ -1,0 +1,17 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx}
+\setCJKmainfont{Noto Serif CJK SC}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usetikzlibrary{patterns, calc,3d}
+\usetikzlibrary {decorations.pathmorphing,decorations.pathreplacing,decorations.shapes,}
+\begin{document}
+\small
+\begin{tikzpicture}[>=latex,scale=2.0]
+  % \useasboundingbox(-1.0,-1.4)rectangle(3.5,3.7);
+  \draw[fill=cyan!20,semithick](1,0,0)--(1,1,0)--(0,1,0)--(0,1,1)--(0,0,1)--(1,0,1)--cycle;
+  \draw[thin](0,1,1)--(1,1,1)--(1,1,0)(1,1,1)--(1,0,1);
+  \draw[thin,densely dashed](0,1,0)--(0,0,0)--(1,0,0)(0,0,0)--(0,0,1);
+\end{tikzpicture}
+\end{document}

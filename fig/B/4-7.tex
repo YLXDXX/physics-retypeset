@@ -1,0 +1,25 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx}
+\setCJKmainfont{Noto Serif CJK SC}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usetikzlibrary{patterns, calc,3d}
+\usetikzlibrary {decorations.pathmorphing,decorations.pathreplacing,decorations.shapes,}
+\begin{document}
+\small
+\begin{tikzpicture}[>=latex,scale=1.5,z={(10:10mm)},x={(-45:5mm)}]
+  % \useasboundingbox(-1.0,-1.4)rectangle(3.5,3.7);
+  \foreach \x/\y/\z in { 0.000/ 0.000/ 0.000,-0.236/-0.667/-0.408,-0.471/-1.333/-0.816, 0.236/-1.333/-0.408, 0.471/-0.667/ 0.000, 0.943/-1.333/ 0.000, 0.236/-1.333/ 0.408,-0.236/-0.667/ 0.408,-0.471/-1.333/ 0.000,-0.471/-1.333/ 0.816}
+  {
+    \draw(\x,\y,\z)--++(0,0.5,0);
+    \draw(\x,\y,\z)--++(-0.2357,-0.1667,-0.4082);
+    \draw(\x,\y,\z)--++(-0.2357,-0.1667,0.4082);
+    \draw(\x,\y,\z)--++(0.4714,-0.1667,0.0000);
+    % \draw(\x,\y,\z)--++(0,0.5,0);
+    \fill[ball color=orange](\x,\y,\z)circle(1.5pt);
+  }
+  \foreach \x/\y/\z in{ 0.000/ 0.500/ 0.000,-0.236/-0.167/-0.408,-0.471/-0.833/-0.816,-0.707/-1.500/-1.225,-0.707/-1.500/-0.408,-0.707/-1.500/ 0.408,-0.707/-1.500/ 1.225,-0.471/-0.833/ 0.000, 0.236/-0.833/ 0.408, 0.000/-1.500/ 0.000, 0.707/-1.500/ 0.408, 1.414/-1.500/ 0.000, 0.943/-0.833/ 0.000, 0.000/-1.500/ 0.816, 0.471/-0.167/ 0.000, 0.236/-0.833/-0.408,-0.236/-0.167/ 0.408, 0.000/-1.500/-0.816,-0.471/-0.833/ 0.816,0.707/-1.500/-0.408}
+  { \fill[ball color=orange](\x,\y,\z)circle(1.5pt); }
+\end{tikzpicture}
+\end{document}

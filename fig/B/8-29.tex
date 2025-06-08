@@ -1,0 +1,42 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx}
+\setCJKmainfont{Noto Serif CJK SC}
+\usepackage{tkz-euclide}
+\usepackage{circuitikz}
+\usepackage{amsmath}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary {decorations.pathmorphing, decorations.pathreplacing, decorations.shapes,}
+\begin{document}
+\small
+\begin{circuitikz}[>=latex,scale=1.0,european]
+  % \useasboundingbox(-2,-2.2)rectangle(2,1.5);
+  \fill[pattern=crosshatch dots,even odd rule,draw=black](-1.25,-0.7)rectangle(1.25,0.7)
+  (-0.9,0.7)[rounded corners]--(-0.9,0.1)--(0.9,0.1)--(0.9,0.7)[sharp corners]
+  (-0.3,0.7)rectangle(0.3,0.4);
+  \draw[very thick] (-0.6,0.7)--++(0,0.5)node[right]{$b$}(0,0.7)--++(0,0.5)node[right]{$e$}(0,-0.7)--++(0,-0.5)node[below]{$c$};
+  \draw[thin](0.2,0.6)--++(45:0.7)node[above]{N};
+  \draw[thin](-0.5,0.2)--++(245:1.1)node[below]{P};
+  \draw[thin](0.7,-0.5)--++(-45:0.4)node[below]{N};
+  \begin{scope}[xshift=4.5cm]
+    \draw(-1,-1.5)rectangle(1,1.0);
+    \draw[very thick] (0,-1.5)--++(0,-0.5)node[right]{$e$}(-1,-0.2)--++(-0.5,0)node[below]{$b$}(0,1)--++(0,0.5)node[above]{$c$};
+    \draw[pattern=north east lines] (-1,0.1)rectangle(1,0);
+    \draw[pattern=north east lines] (-1,-0.4)rectangle(1,-0.5);
+    \node at (0,-0.2){P};
+    \node at (0,0.55){N};
+    \node at (0,-1){N};
+    \draw(-0.7,-0.2)--++(160:0.7)node[left]{集电区};
+    \draw(-0.7, 0.5)--++(160:0.7)node[left]{基区};
+    \draw(-0.7,-0.9)--++(200:0.7)node[left]{发射区};
+    \draw(0.7,0.05)--++(20:0.7)node[right]{集电结};
+    \draw(0.7,-0.45)--++(-20:0.7)node[right]{发射结};
+  \end{scope}
+  \begin{scope}[xshift=9cm]
+    \draw (0,0) node[npn, tr circle](Q){};
+    \node at (Q.B)[left]{$b$};
+    \node at (Q.C)[above]{$c$};
+    \node at (Q.E)[below]{$e$};
+  \end{scope}
+  \end{circuitikz}
+\end{document}

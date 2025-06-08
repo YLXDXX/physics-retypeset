@@ -1,0 +1,116 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx,ninecolors}
+\setCJKmainfont{Noto Serif CJK SC}
+\setCJKsansfont{Noto Sans CJK SC}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary {decorations.pathmorphing, decorations.pathreplacing, decorations.shapes,}
+\begin{document}
+\small
+\begin{tikzpicture}[>=latex,scale=1.0,inner sep =1pt]
+  % \useasboundingbox(-1.4,-1.4)rectangle(1.4,1.4);
+  \begin{scope}[xshift=-1.5cm]
+    \draw[fill=lightgray!70](-0.4,0.9)arc(90:180:0.15)arc(90:180:0.15)--(-0.7,-3.8)arc(180:270:0.15)arc(180:270:0.15)--(0.4,-4.1)arc(270:360:0.15)arc(270:360:0.15)--(0.7,0.6)arc(0:90:0.15)arc(0:90:0.15)--cycle;
+    \foreach \x[count=\i from 0] in {50,40,30,20,10,0,-10,-20}
+    {
+      \draw[ultra thin](-0.1,-0.5*\i)--++(-0.2,0)node[left]{\scalebox{0.5}{$\x$}};
+      \draw[ultra thin](-0.1,-0.5*\i-0.25)--++(-0.15,0);
+      \foreach \z in {1,2,3,4,6,7,8,9}
+      {
+        \draw[ultra thin](-0.1,-0.5*\i-0.05*\z)--++(-0.1,0);
+      }
+    }
+    \foreach \x[count=\i from 0] in {120,100,80,60,40,20,0}
+    {
+      \draw[ultra thin](0.1,-1/18-5*\i/9)--++(0.2,0)node[right]{\scalebox{0.5}{$\x$}};
+      \draw[ultra thin](0.1,-1/18-5*\i/9-5/18)--++(0.15,0);
+      \foreach \z in {1,2,3,4,6,7,8,9}
+      {
+        \draw[ultra thin](0.1,-1/18-5*\i/9-1/18*\z)--++(0.1,0);
+      }
+    }
+    \draw(-0.05,0.2)arc(180:0:0.05)--(0.05,-5)arc(60:-240:0.1)--cycle;
+    \draw[red,very thick](0,-5)--(0,-1.5);
+    \fill[red](0,-5.0866)circle(0.08);
+    \node at (-0.35,0.35){\unit{\celsius}};
+    \node at (0.35,0.35){$^\circ$F};
+    \node at (0,0.6){\sffamily 干};
+  \end{scope}
+  \begin{scope}[xshift=1.5cm]
+    \draw[fill=lightgray!70](-0.4,0.9)arc(90:180:0.15)arc(90:180:0.15)--(-0.7,-3.8)arc(180:270:0.15)arc(180:270:0.15)--(0.4,-4.1)arc(270:360:0.15)arc(270:360:0.15)--(0.7,0.6)arc(0:90:0.15)arc(0:90:0.15)--cycle;
+    \foreach \x[count=\i from 0] in {50,40,30,20,10,0,-10,-20}
+    {
+      \draw[ultra thin](-0.1,-0.5*\i)--++(-0.2,0)node[left]{\scalebox{0.5}{$\x$}};
+      \draw[ultra thin](-0.1,-0.5*\i-0.25)--++(-0.15,0);
+      \foreach \z in {1,2,3,4,6,7,8,9}
+      {
+        \draw[ultra thin](-0.1,-0.5*\i-0.05*\z)--++(-0.1,0);
+      }
+    }
+    \foreach \x[count=\i from 0] in {120,100,80,60,40,20,0}
+    {
+      \draw[ultra thin](0.1,-1/18-5*\i/9)--++(0.2,0)node[right]{\scalebox{0.5}{$\x$}};
+      \draw[ultra thin](0.1,-1/18-5*\i/9-5/18)--++(0.15,0);
+      \foreach \z in {1,2,3,4,6,7,8,9}
+      {
+        \draw[ultra thin](0.1,-1/18-5*\i/9-1/18*\z)--++(0.1,0);
+      }
+    }
+    \draw(-0.05,0.2)arc(180:0:0.05)--(0.05,-5)arc(60:-240:0.1)--cycle;
+    \draw[red,very thick](0,-5)--(0,-2.3);
+    \fill[red](0,-5.0866)circle(0.08);
+    \node at (-0.35,0.35){\unit{\celsius}};
+    \node at (0.35,0.35){$^\circ$F};
+    \node at (0,0.6){\sffamily 湿};
+  \end{scope}
+  \begin{scope}
+    \draw[fill=lightgray!70](-0.4,0.4)arc(90:180:0.15)arc(90:180:0.15)--(-0.7,-3.3)arc(180:270:0.15)arc(180:270:0.15)--(0.4,-3.6)arc(270:360:0.15)arc(270:360:0.15)--(0.7,0.1)arc(0:90:0.15)arc(0:90:0.15)--cycle;
+    \foreach \x[count=\i from 0] in {100,90,80,70,60,50,40}
+    {
+      \draw[ultra thin](-0.1,-0.5*\i)--++(-0.2,0)node[left]{\scalebox{0.5}{$\x$}};
+      \draw[ultra thin](-0.1,-0.5*\i-0.25)--++(-0.2,0);
+      \foreach \z in {1,2,3,4,6,7,8,9}
+      {
+        \draw[ultra thin](-0.1,-0.5*\i-0.05*\z)--++(-0.15,0);
+      }
+    }
+    \foreach \x[count=\i from 0] in {95,85,75,65,55,45,35}
+    {
+      \draw[ultra thin](0.1,-0.5*\i)--++(0.2,0);
+      \draw[ultra thin](0.1,-0.5*\i-0.25)--++(0.2,0)node[right]{\scalebox{0.5}{$\x$}};
+      \foreach \z in {1,2,3,4,6,7,8,9}
+      {
+        \draw[ultra thin](0.1,-0.5*\i-0.05*\z)--++(0.15,0);
+      }
+      \draw[rounded corners=0.3mm](-0.08,0.2)rectangle(0.08,-3.5);
+      \fill[rounded corners=0.3mm,fill=cyan!50,fill opacity=0.5](-0.08,-1.2)rectangle(0.08,-3.5);
+    }
+  \end{scope}
+  \draw[very thick](-2.5,1.1)rectangle(2.5,-6.3);
+  \draw[thick](-2.4,1.0)rectangle(2.4,-6.2);
+  
+  \fill[gray!20,draw=black](0.914,-6.079)..controls(1.266,-6.054)and(1.448,-6.021)..
+  (1.529,-5.922)..controls(1.606,-5.818)and(1.555,-5.771)..
+  (1.575,-5.668)..controls(1.601,-5.478)and(1.618,-5.210)..
+  (1.595,-5.046)..controls(1.617,-4.964)and(1.600,-4.909)..
+  (1.528,-4.907)..controls(1.404,-4.908)and(1.380,-5.008)..
+  (1.380,-5.089)..controls(1.467,-5.497)and(1.439,-5.737)..
+  (1.116,-5.837)..controls(0.996,-5.858)and(0.879,-5.864)..(0.842,-5.868);
+  \draw[fill=cyan!30,fill opacity=0.3](-2.15,-5.6)arc(90:270:0.25)--(2.15,-6.1)arc(-90:90:0.25)--(1.65,-5.6)--++(0,0.6)arc(0:180:0.15)--++(0,-0.6)--cycle;
+  \draw(1.484,-4.974)..controls(1.433,-5.011)and(1.430,-5.068)..(1.468,-5.112)
+  (1.435,-4.984)..controls(1.417,-5.005)and(1.418,-5.037)..(1.422,-5.067)
+  (1.523,-4.943)..controls(1.558,-4.950)and(1.571,-4.978)..(1.567,-5.012)
+  (1.545,-5.102)..controls(1.538,-5.137)and(1.518,-5.151)..(1.496,-5.161)
+  (1.562,-5.203)..controls(1.547,-5.273)and(1.553,-5.342)..(1.565,-5.398)
+  (1.474,-5.304)..controls(1.485,-5.371)and(1.480,-5.415)..(1.511,-5.434)
+  (1.472,-5.481)..controls(1.463,-5.556)and(1.415,-5.664)..(1.371,-5.734)
+  (1.461,-5.727)..controls(1.434,-5.831)and(1.337,-5.884)..(1.232,-5.896)
+  (1.544,-5.623)..controls(1.528,-5.670)and(1.527,-5.724)..(1.543,-5.772);
+  \fill[cyan!40,opacity=0.6]([shift=(160:0.25)]-2.15,-5.85)arc(160:270:0.25)--(2.15,-6.1)arc(-90:20:0.25)--cycle;
+  \draw[fill=darkgray](-0.7,-3.9)rectangle(0.7,-3.7);
+  \fill[top color=lightgray,bottom color=lightgray,middle color=white]
+  (-0.2,-5.65)arc(0:-90:0.4)--++(0,-0.1)--++(1.2,0)--++(0,0.1)arc(270:180:0.4)--++(0,0.1)--++(-0.4,0)--cycle;
+\end{tikzpicture}
+\end{document}

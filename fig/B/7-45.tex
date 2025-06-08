@@ -1,0 +1,31 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx}
+\setCJKmainfont{Noto Serif CJK SC}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{circuitikz}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary {decorations.pathmorphing, decorations.pathreplacing, decorations.shapes,}
+\ctikzset{bipoles/length=1cm}
+\begin{document}
+\small
+\begin{circuitikz}[>=latex, scale=1.0,european]
+  % \useasboundingbox(0.9,0)rectangle(5.1,5);
+  \draw (0,0)--(8,0) to [lamp] (8,2.5)--(3,2.5) to [R=$R$] (0,2.5) to (0,0);
+  \draw (3,0)--(3,2.5);
+  \draw (5,0)to [lamp] (5,2.5);
+  \draw [dashed](6.5,0)to [lamp] (6.5,2.5);        
+  \draw (0,1.25) node[elmech]{$F$};
+  \draw(3,0) to[*-*] (3,2.5);
+  \draw (3,1.25) node[elmech]{$M$};
+  \node at (1,1.5){$\mathcal{E},\; r$};
+  \draw [fill=black](3,2.5)   circle (1pt);
+  \draw [fill=black](5,2.5)   circle (1pt);
+  \draw [fill=black](6.5,2.5) circle (1pt);
+  \draw [fill=black](3,0)   circle (1pt);
+  \draw [fill=black](6.5,0) circle (1pt);
+  \draw [fill=black](5,0)   circle (1pt);
+\end{circuitikz}
+\end{document}

@@ -1,0 +1,118 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx}
+\usepackage{circuitikz}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary {decorations.pathmorphing, decorations.pathreplacing, decorations.shapes}
+\ctikzset{bipoles/length=1cm}
+\newcommand\hand[2][0]{
+    \begin{scope}[#2,rotate=#1]
+    \fill[pink!10!orange!10,draw=black,very thin]
+    ( 0.381,-0.532)..controls( 0.381,-0.532)and( 0.453,-0.637)..
+    ( 0.528,-0.619)..controls( 0.569,-0.608)and( 0.617,-0.592)..
+    ( 0.656,-0.559)..controls( 0.656,-0.559)and( 1.052,-0.743)..
+    ( 1.265,-0.543)..controls( 1.265,-0.543)and( 1.394,-0.497)..
+    ( 1.530,-0.522)..controls( 1.666,-0.548)and( 1.615, 0.055)..
+    ( 1.615, 0.055)..controls( 1.615, 0.055)and( 1.419, 0.062)..
+    ( 1.341, 0.100)..controls( 1.264, 0.138)and( 1.192, 0.195)..
+    ( 1.000, 0.235)..controls( 0.809, 0.275)and( 0.544, 0.376)..
+    ( 0.413, 0.370)..controls( 0.332, 0.366)and(-0.105, 0.228)..
+    (-0.166, 0.109)..controls(-0.185, 0.072)and(-0.211,-0.006)..
+    (-0.220,-0.076)..controls(-0.220,-0.076)and(-0.256,-0.256)..
+    (-0.097,-0.285)..controls(-0.052,-0.297)and(-0.029,-0.260)..
+    (-0.019,-0.245)..controls(-0.008,-0.229)and( 0.017,-0.315)..
+    ( 0.040,-0.343)..controls( 0.063,-0.371)and( 0.097,-0.440)..
+    ( 0.177,-0.440)..controls( 0.191,-0.441)and( 0.207,-0.442)..
+    ( 0.223,-0.441)..controls( 0.223,-0.441)and( 0.282,-0.549)..
+    ( 0.360,-0.536)..controls( 0.366,-0.535)and( 0.373,-0.534)..cycle;
+  \draw[very thin]
+  ( 0.752, 0.050)..controls( 0.752, 0.050)and( 0.479, 0.051)..
+( 0.359, 0.091)..controls( 0.261, 0.123)and( 0.193, 0.129)..
+( 0.071, 0.115)..controls(-0.052, 0.101)and(-0.178, 0.138)..
+(-0.141,-0.040)..controls(-0.113,-0.173)and( 0.258,-0.180)..
+( 0.337,-0.164)..controls( 0.366,-0.157)and( 0.510,-0.263)..( 0.640,-0.218)
+(-0.016,-0.235)..controls( 0.002,-0.204)and( 0.011,-0.164)..( 0.007,-0.146)
+(0.223,-0.441)..controls(0.312,-0.438)and(0.422,-0.404)..
+(0.468,-0.291)..controls(0.476,-0.269)and(0.360,-0.166)..
+(0.240,-0.242)..controls(0.226,-0.233)and(0.205,-0.224)..(0.219,-0.183)
+(0.381,-0.532)..controls(0.473,-0.506)and(0.676,-0.401)..
+(0.615,-0.331)..controls(0.586,-0.298)and(0.537,-0.260)..(0.472,-0.280)
+(0.398,-0.262)..controls(0.420,-0.271)and(0.441,-0.285)..
+(0.438,-0.301)..controls(0.435,-0.316)and(0.364,-0.387)..
+(0.342,-0.382)..controls(0.344,-0.383)and(0.295,-0.348)..
+(0.319,-0.309)..controls(0.343,-0.270)and(0.377,-0.252)..(0.398,-0.262)
+(0.566,-0.236)..controls(0.566,-0.236)and(0.675,-0.413)..(1.099,-0.380)
+(0.625, 0.066)..controls(0.625, 0.066)and(0.702, 0.114)..(0.801, 0.100)
+(0.481, 0.073)..controls(0.481, 0.073)and(0.486, 0.167)..(0.509, 0.222)
+(0.353, 0.096)..controls(0.353, 0.096)and(0.332, 0.155)..(0.338, 0.182)
+(0.234,-0.017)..controls(0.234,-0.017)and(0.226, 0.063)..(0.233, 0.079)
+(0.195,-0.010)..controls(0.195,-0.010)and(0.184, 0.064)..(0.196, 0.091)
+(-0.130,-0.034)..controls(-0.130,-0.034)and( 0.023,-0.059)..
+( 0.038,-0.028)..controls( 0.053, 0.003)and( 0.077, 0.079)..( 0.039, 0.109)
+(0.228,-0.244)..controls(0.228,-0.244)and(0.166,-0.289)..(0.155,-0.319)
+(0.318,-0.422)..controls(0.318,-0.422)and(0.266,-0.402)..(0.272,-0.370)
+(0.492,-0.481)..controls(0.492,-0.481)and(0.459,-0.463)..(0.451,-0.445)
+(0.541,-0.446)..controls(0.541,-0.446)and(0.489,-0.426)..
+(0.508,-0.391)..controls(0.526,-0.356)and(0.565,-0.321)..(0.593,-0.328)
+(0.656,-0.559)..controls(0.688,-0.532)and(0.715,-0.493)..
+(0.728,-0.438)..controls(0.731,-0.403)and(0.666,-0.363)..(0.630,-0.386)
+(0.687,-0.517)..controls(0.687,-0.517)and(0.613,-0.515)..
+(0.631,-0.476)..controls(0.649,-0.438)and(0.666,-0.395)..(0.703,-0.399)
+(0.636,-0.566)..controls(0.636,-0.566)and(0.602,-0.557)..(0.587,-0.522)
+(1.329,-0.381)..controls(1.329,-0.381)and(1.481,-0.291)..(1.489,-0.356);
+  \end{scope}
+}
+\begin{document}
+\small
+\begin{circuitikz}[>=latex,scale=1.2]
+  % \useasboundingbox(-1,-2)rectangle(8,6);
+  \fill[inner color=white, outer color=cyan!20](0,0)circle(0.6);
+  \fill[left color=darkgray,right color=darkgray, middle color=white](-0.5,-1.2)--++(0.2,0)--++(0.05,0.1)--++(0.5,0)--++(0.05,-0.1)--++(0.2,0)--++(-0.1,0.2)--++(-0.8,0)--cycle;
+  \fill[left color=gray,right color=white](-0.05,-0.6)rectangle(-0.02,-1.0);
+  \fill[left color=white,right color=darkgray](-0.02,-0.6)rectangle(0.05,-1.0);
+  \fill[gray](320:0.6)--(320:0.8)arc(320:310:0.8)--(310:0.6)arc(310:320:0.6);
+  \draw[decorate,decoration={coil,segment length=1mm,amplitude=0.6mm}](315:0.8)to[bend left](0.9,-1.2)node[ground]{};
+  \fill[left color=gray,right color=gray, middle color=white](330:0.6)arc(330:210:0.6)--(210:0.7)arc(210:330:0.7)--cycle;
+  \fill[top color=gray,bottom color=gray,middle color=white](-0.05,0.3)rectangle(0.05,0.62);
+  \draw(0,0.62)--(0,1.2);
+  \draw(0,0.3)--(0,0);
+  \draw[very thin,densely dashed](0,0.3)--(0,-0.45);
+  \draw[very thin,red](62:0.45)--(242:0.45);
+  \draw[very thin,red,densely dashed](52:0.45)--(232:0.45);
+  \fill[gray](0,0)circle(1pt);
+  \foreach \x in {200,210,...,260}
+  {
+    \draw[ultra thin](\x:0.55)--(\x:0.45);
+    \foreach \y in {1,2,3,4,6,7,8,9}
+    {\draw[ultra thin](\x+\y:0.55)--(\x+\y:0.5);}
+    \draw[ultra thin](\x+5:0.55)--(\x+5:0.48);
+  }
+  \draw[ultra thin](270:0.55)--(270:0.45);
+  \fill[ball color=gray](0,0.9)circle(0.1);
+  
+  \begin{scope}[xshift=-1.5cm]
+    \fill[left color=darkgray,right color=darkgray, middle color=white](-0.5,-1.2)--++(0.2,0)--++(0.05,0.1)--++(0.5,0)--++(0.05,-0.1)--++(0.2,0)--++(-0.1,0.2)--++(-0.8,0)--cycle;
+  \fill[left color=gray,right color=white](-0.05,0.6)rectangle(-0.02,-1.0);
+  \fill[left color=white,right color=darkgray](-0.02,0.6)rectangle(0.05,-1.0);
+  \fill[top color=gray,bottom color=gray,middle color=white](-0.5,0.475)rectangle(0.3,0.525);
+  \fill[top color=gray,bottom color=gray,middle color=white](-0.1,0.45)rectangle(0.1,0.55);
+  \fill[gray](0,0.5)circle(0.03);
+  \draw[line cap =round,thick]([shift=(-135:0.03)]0,0.5)--++(45:0.06);
+  \fill[gray](-0.6,0.8)rectangle(-0.4,0.9);
+  \fill[top color=gray,bottom color=gray,middle color=white](-0.5,0)rectangle(-0.6,1);
+  \foreach \x in {-0.4,-0.2,...,0.4} {\node at (-0.7,0.5+\x){\tiny$+$};}
+  \draw[decorate,decoration={coil,segment length=1mm,amplitude=0.6mm}](-0.4,0.85)to[bend right=10](1.5,1.1);
+  \end{scope}
+  \hand{xshift=-3.3cm,yshift=0.5cm,xscale=-0.5,yscale=0.5}
+  \begin{scope}[xshift=-3.3cm,yshift=0.5cm]
+    \draw [densely dashed] (0.7,0.0)rectangle(0.8,1.0);
+    \fill[top color=gray,bottom color=gray,middle color=white](0.07,-0.025)rectangle(0.7,0.025);
+    \fill[top color=gray,bottom color=gray,middle color=white](0.7,-0.5)rectangle(0.8,0.5);
+    \foreach \x in {-0.4,-0.2,...,0.4} {\node at (0.9,\x){\tiny$-$};}
+    \draw [decorate,decoration={coil,segment length=1mm,amplitude=0.6mm}](0.75,-0.5)to[bend left](0.2,-1.2)node[ground]{};
+    \draw[->](0.6,0.6)--(0.6,1.0);
+  \end{scope}
+\end{circuitikz}
+\end{document}

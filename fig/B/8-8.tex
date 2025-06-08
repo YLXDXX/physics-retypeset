@@ -1,0 +1,24 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx}
+\setCJKmainfont{Noto Serif CJK SC}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary {decorations.pathmorphing, decorations.pathreplacing, decorations.shapes,}
+\begin{document}
+\small
+\begin{tikzpicture}[>=latex,scale=1.0]
+  % \useasboundingbox(-2,-2.2)rectangle(2,1.5);
+  \draw[fill=lightgray!60](1,0.5)--(-1,0.5)arc(90:270:0.3 and 0.5)--(1,-0.5);
+  \fill[inner color=white,outer color=darkgray,draw=black](1,0)ellipse(0.3 and 0.5);
+  \draw[decorate,decoration={random steps,segment length=1mm,amplitude=1pt},fill=lightgray!20]
+  (-1,0.5)--++(0.5,-0.2)--++(0.8,0)--++(0,-0.6)--++(-0.8,0)--++(-0.5,-0.2);
+  \draw[fill=lightgray!20](-1,0.5)arc(90:270:0.3 and 0.5);
+  \draw(0.3,0)--++(-0.1,0.1)--++(-0.2,-0.2)--++(-0.2,0.2)--++(-0.2,-0.2)--++(-0.2,0.2)--++(-0.2,-0.2)--++(-0.2,0.2)--++(-1,0);
+  \draw(0.3,0)--++(-0.1,-0.1)--++(-0.2,0.2)--++(-0.2,-0.2)--++(-0.2,0.2)--++(-0.2,-0.2)--++(-0.2,0.2)--++(-0.2,-0.2)--++(-1,0);
+  \draw[thin](0.6,0.5)--++(142:0.5)node[above]{套管};
+  \draw[thin](1,0)--++(-60:0.5)node[below]{氧化层};
+  \draw[thin](-1.5,-0.1)--++(-0.3,-0.3)node[below]{热丝};
+  \end{tikzpicture}
+\end{document}

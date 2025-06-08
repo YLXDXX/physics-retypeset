@@ -1,0 +1,26 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx}
+\setCJKmainfont{Noto Serif CJK SC}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{circuitikz}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary {decorations.pathmorphing, decorations.pathreplacing, decorations.shapes,}
+\ctikzset{bipoles/length=1cm}
+\begin{document}
+\small
+\begin{circuitikz}[>=latex, scale=1.5,european]
+  % \useasboundingbox(0.9,0)rectangle(5.1,5);
+  \draw (0,0) --(2,0)--(3,0)--(5,0)to [rmeter, t=\unit{\micro A}] (6,0) to [R=$R$] (6,1.2)--(5,1.2) ;
+  \draw (2,1.2) to [pR,name=hb,-*](2,0);
+  \draw (3,1.2)--(2.5,1.2)--(2.5,1.2|-hb.wiper)--(hb.wiper);
+  \node at ([xshift=-2.5mm]hb.center){$R'$};
+  \draw (0,1.2) to [battery2](0,0);
+  \draw (3,1.2) to [cute open switch=$K$] (5,1.2);
+  \draw (0,1.2) to  [cute open switch=$K'$] (2,1.2);
+  \draw (4.75,1.2) to [ecapacitor=$C$, *-*] (4.75,0); 
+  \draw (3.25,0) to [rmeter, t=V, *-*] (3.25,1.2);
+\end{circuitikz}
+\end{document}

@@ -1,0 +1,24 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx}
+\setCJKmainfont{Noto Serif CJK SC}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{circuitikz}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary {decorations.pathmorphing, decorations.pathreplacing, decorations.shapes}
+\ctikzset{bipoles/length=1cm}
+\begin{document}
+\small
+\begin{circuitikz}[>=latex, scale=1.0,european]
+  % \useasboundingbox(0.9,0)rectangle(5.1,5);
+  \draw(0,0)--(5,0) to  (5,3);
+  \draw (0,3) to [vR=$R$] (5,3);
+  \draw[<->](0,.1) to node [left]{$U$} (0,3-.1);
+  \draw (5,1.5) node[elmech]{};
+  \draw [fill=white](0,0) circle (2pt);
+  \draw [fill=white](0,3) circle (2pt);  
+  \node at (5.7, 1.5){$r_0$};
+\end{circuitikz}
+\end{document}

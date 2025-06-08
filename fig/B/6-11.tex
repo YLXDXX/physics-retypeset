@@ -1,0 +1,189 @@
+\documentclass{standalone}
+\usepackage{tikz,pgfplots}
+\usepackage{ctex,siunitx}
+\usepackage{tkz-euclide}
+\usepackage{amsmath,bm}
+\usetikzlibrary{decorations.markings,intersections,calc}
+\pgfplotsset{compat=1.13}
+\usepackage{ifthen}
+\colorlet{Ecol}{orange!90!black}
+\colorlet{EcolFL}{orange!80!black}
+\colorlet{Bcol}{blue!90!black}
+\tikzstyle{EcolEP}=[blue!80!white]
+\tikzstyle{charge+}=[very thin,ball color=red!50,shading angle=20]
+\tikzstyle{charge-}=[very thin,ball color=blue!50,shading angle=20]
+
+\tikzset{
+   >=stealth,
+   EFielLineArrow/.style args = {#1}{EcolFL,decoration={markings,
+          mark=at position 0.5 with {\arrow[rotate=#1]{latex}}},
+          postaction={decorate}}
+}
+\makeatletter
+  \newcommand{\xy}[3]{% % FIND X, Y
+    \tikz@scan@one@point\pgfutil@firstofone#1\relax
+    \edef#2{\the\pgf@x}%
+    \edef#3{\the\pgf@y}%
+  }
+\makeatother
+
+\newcommand{\EFielLineArrow}[2]{ % ELECTRIC FIELD LINE ARROW
+  \pgfkeys{/pgf/fpu,/pgf/fpu/output format=fixed} % for calculation between -1*10^324 and +1*10^324
+  \pgfmathsetmacro{\x}{#1/28.45pt}
+  \pgfmathsetmacro{\y}{#2/28.45pt}
+  \pgfmathsetmacro{\U}{\Q*((\x+\a)^2+(\y)^2)^(3/2)}
+  \pgfmathsetmacro{\V}{\q*((\x-\a)^2+(\y)^2)^(3/2)}
+  \pgfkeys{/pgf/fpu=false}
+  \pgfmathparse{
+    atan2(((\y)*\V + (\y)*\U),((\x+\a)*\V + (\x-\a)*\U))
+  }
+  \edef\angle{\pgfmathresult}
+  \pgfmathsetmacro{\D}{int(1000*\q*(\x+\a)/sqrt((\x+\a)^2+\y*\y) + 1000*\Q*(\x-\a)/sqrt((\x-\a)^2+\y*\y))/1000}
+  \draw[EFielLineArrow={\angle}] (\xpt,\ypt);
+}
+\newcommand{\EVector}[2]{ % ELECTRIC FIELD VECTOR
+  \pgfmathsetmacro{\x}{#1/28.45pt}
+  \pgfmathsetmacro{\y}{#2/28.45pt}
+  \pgfmathsetmacro{\U}{((\x+\a)^2+(\y)^2)^(3/2)}
+  \pgfmathsetmacro{\V}{((\x-\a)^2+(\y)^2)^(3/2)}
+  \pgfmathsetmacro{\Ex}{\q*3*(\x+\a)/\U + \Q*3*(\x-\a)/\V}
+  \pgfmathsetmacro{\Ey}{\q*3*(\y)/\U + \Q*3*(\y)/\V}
+  \fill[Ecol] (\x,\y) circle (0.8pt);
+  \draw[->,Ecol,thick] (\x,\y) --++ (\Ex,\Ey)
+    node[Ecol,right,scale=0.8] {$\bm{E}$};
+  \pgfmathsetmacro{\D}{int(1000*\q*(\x+\a)/sqrt((\x+\a)^2+\y*\y) + 1000*\Q*(\x-\a)/sqrt((\x-\a)^2+\y*\y))/1000}
+}
+\newcommand{\EFieldLines}{ % ELECTRIC FIELD LINES
+  \message{^^JField lines (\q,\Q) with contours range ^^J\range^^J}
+  
+  % PATHS for intersections
+  \path[name path=ellipse1] (-\a,0) ellipse ({0.90*\R} and {1.5*\R});
+  \path[name path=ellipse2] (+\a,0) ellipse ({0.75*\R} and {1.5*\R});
+  \path[name path=ellipse3] (  0,0) ellipse ({\a+\R} and 1.5*\R);
+  
+  % FIELD LINES
+  \draw[EcolFL,densely dashed,name path=Elines] plot[id=plot, raw gnuplot, smooth]
+    function{
+       f(x,y) = \q*(x+\a)/sqrt((x+\a)**2+y**2) + \Q*(x-\a)/sqrt((x-\a)**2+y**2);
+       set xrange [\xmin:\xmax];
+       set yrange [-\ymax:\ymax];
+       set view 0,0;
+       set isosample 400,400;
+       set cont base;
+       set cntrparam levels discrete \range;
+       unset surface;
+       splot f(x,y)
+    };
+  
+  % ELLIPSE INTERSECTIONS
+  \pgfmathsetmacro{\oppositesign}{\q*\Q<0 ? 1 : 0}
+  \ifthenelse{\oppositesign>0}{
+    % OPPOSITE SIGN
+    \foreach \c in {1,2}{
+      \message{Intersections \c...}
+      \path[name intersections={of=Elines and ellipse\c,total=\t}]
+        \pgfextra{\xdef\Nb{\t}};
+      \message{ found \Nb ^^J}
+      \foreach \i in {1,...,\Nb}{
+        \message{  \i}
+        \xy{(intersection-\i)}{\xpt}{\ypt}
+        \EFielLineArrow{\xpt}{\ypt}
+        \message{ (\D,\x,\y)^^J}
+      }
+    }
+  }{
+    % SAME SIGN
+    \message{Intersections...}
+    \path[name intersections={of=Elines and ellipse3,total=\t}]
+        \pgfextra{\xdef\Nb{\t}}; 
+    \message{ found \Nb ^^J}
+    \foreach \i in {1,...,\Nb}{
+      \message{  \i}
+      \xy{(intersection-\i)}{\xpt}{\ypt}
+      \EFielLineArrow{\xpt}{\ypt}
+      \message{ (\D,\x,\y)^^J}
+    }
+  }
+}
+\newcommand{\EEquipot}{ % EQUIPOTENTIAL SURFACE
+  \message{^^JEquipotential surface (\q,\Q) with contours range ^^J\rangeEP}
+  
+  % FIELD LINES
+  \draw[EcolEP] plot[id=plot, raw gnuplot, smooth] %,dashed
+    function{
+       f(x,y) = \q/sqrt((x+\a)**2+y**2) + \Q/sqrt((x-\a)**2+y**2);
+       set xrange [\xmin:\xmax];
+       set yrange [-\ymax:\ymax];
+       set view 0,0;
+       set isosample 400,400;
+       set cont base;
+       set cntrparam levels discrete \rangeEP;
+       unset surface;
+       splot f(x,y)
+    };
+}
+\newcommand{\EVectorOnFieldLines}{ % ELECTRIC FIELD VECTOR
+  \message{^^JVector on field lines (\q,\Q) with contours range ^^J\C^^J}
+  
+  % FIELD LINES
+  \path[name path=xline] (\Cx,-\ymax) -- (\Cx,-\a) (\Cx,\a) -- (\Cx,\ymax);
+  \path[name path=Elines] plot[id=plot, raw gnuplot, smooth]
+    function{
+       f(x,y) = \q*(x+\a)/sqrt((x+\a)**2+y**2) + \Q*(x-\a)/sqrt((x-\a)**2+y**2);
+       set xrange [\xmin:\xmax];
+       set yrange [-\ymax:\ymax];
+       set view 0,0;
+       set isosample 100,100;
+       set cont base;
+       set cntrparam levels discrete \C;
+       unset surface;
+       splot f(x,y)
+    };
+  
+    \message{Intersections...}
+    \path[name intersections={of=Elines and xline,total=\t}]
+      \pgfextra{\xdef\Nb{\t}};
+    \message{ found \Nb ^^J}
+    \foreach \i in {1,...,\Nb}{
+      \message{  \i}
+      \xy{(intersection-\i)}{\xpt}{\ypt}
+      \EVector{\xpt}{\ypt}
+      \message{ (\D,\x,\y)^^J}
+    }
+}
+
+\begin{document}
+\begin{tikzpicture}[>=latex]
+  % \useasboundingbox(-3,-2)rectangle(3,2);
+  \def\xmin{-3}
+  \def\xmax{3}
+  \def\ymax{5}
+  \def\a{1}
+  \def\q{+1}
+  \def\Q{-1}
+  \def\R{1.0}
+  \def\range{1.4,1.6,1.8,1.9,1.99}
+  \def\rangeEP{-1.8,-1.4,-1.0,-0.8,-0.6,-0.4,-0.2,0.0,0.2,0.4,0.6,0.8,1.0,1.4,1.8}
+  
+  % LINES
+  \EFieldLines
+  % \EEquipot
+  
+  % CHARGES
+  % \draw[charge+] (-\a,0) circle (9pt) node[text=white,scale=1.0] { $\bm +$};
+  % \draw[charge-] (+\a,0) circle (9pt) node[text=white,scale=1.0] { $\bm -$};
+  \begin{scope}[yshift=4cm]
+    \EFieldLines
+  \end{scope}
+  \fill[white](-1,0)rectangle(1,4);
+  \foreach \x in {0.1,0.3,...,3.9}
+    {
+      \draw[densely dashed,->,orange!80!black](-1,\x)--(-0.15,\x);
+      \draw[densely dashed,->,orange!80!black](-0.15,\x)--(0.25,\x);
+      \draw[densely dashed,orange!80!black](0.25,\x)--(1,\x);
+    }
+  \fill[rounded corners=2pt,left color=red!50,right color= red!50,middle color=red!10](-1.1,-0.1)rectangle(-0.9,4.1);
+  \fill[rounded corners=2pt,left color=blue!50,right color= blue!50,middle color=blue!10](1.1,-0.1)rectangle(0.9,4.1);
+   
+\end{tikzpicture}
+\end{document}

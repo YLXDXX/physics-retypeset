@@ -1,0 +1,24 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx}
+\setCJKmainfont{Noto Serif CJK SC}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary {decorations.pathmorphing, decorations.pathreplacing, decorations.shapes,}
+\begin{document}
+\small
+\begin{tikzpicture}[>=latex,scale=1.0]
+  % \useasboundingbox(-1,-2)rectangle(8,6);
+  \draw[thin,-stealth](0,0)node[left]{$O$}--(6,0)node[above]{$r$};
+  \draw[thin,-stealth](0,-3)--(0,4.5)node[left]{$f$};
+  \draw [domain=0.6:5.5, samples=100, densely dashed]plot(\x, {0.5/\x/\x/\x/\x});
+  \draw [domain=0.6:5.5, samples=100, densely dashed]plot(\x, {-0.9/\x/\x});
+  \draw [domain=0.6:5.5, samples=100, thick,red]plot(\x, {0.5/\x/\x/\x/\x-0.9/\x/\x});
+  \fill(0.74,0)circle(1pt)node[below left]{$r_0$};
+  \node at (0.6,0.8)[left]{$F$};
+  \node at(0,4.5)[right]{$F$};
+  \node at (0.75,3.5)[right]{$f_\text{斥}$};
+  \node at (0.75,-2.2)[right]{$f_\text{引}$};
+\end{tikzpicture}
+\end{document}

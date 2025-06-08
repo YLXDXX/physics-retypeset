@@ -1,0 +1,20 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx}
+\setCJKmainfont{Noto Serif CJK SC}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{circuitikz}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary {decorations.pathmorphing, decorations.pathreplacing, decorations.shapes,}
+\ctikzset{bipoles/length=1cm}
+\begin{document}
+\small
+\begin{circuitikz}[>=latex, scale=0.8,european]
+  % \useasboundingbox(0.9,0)rectangle(5.1,5);
+  \draw (0,0)--(0,2);
+  \draw (0,2)to [capacitor=$C$](6,2)--(6,0);
+  \draw (0,0) to [battery2] (3,0) to [cute open switch=$K$] (5,0)--(6,0); 
+\end{circuitikz}
+\end{document}

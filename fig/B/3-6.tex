@@ -1,0 +1,29 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx}
+\setCJKmainfont{Noto Serif CJK SC}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary {decorations.pathmorphing, decorations.pathreplacing, decorations.shapes,}
+\begin{document}
+\small
+\begin{tikzpicture}[>=stealth,domain=.45:4.5, samples=100]
+  \draw[<->] (0,5)node [right]{$p$（\unit{atm}）}--(0,0)--(5,0) node [right]{$V$（\unit{L}）};
+  \foreach \x in {1,2,3,4}
+    {
+      \draw (0,\x)node [left]{\x}--(.1,\x);
+      \draw (\x,0)node [below]{\x}--(\x,.1);
+    }
+  \draw[color=black, ultra thick] plot (\x,{2/\x}) ;
+  \draw [dashed] (1,0)--(1,2)--(0,2);
+  \draw [dashed] (2,0)--(2,1)--(0,1);
+  \draw [dashed] (4,0)--(4,.5)--(0,.5);
+  \draw [dashed] (0.5,0)--(.5,4)--(0,4);
+  \draw [fill=black] (1,2)node [right]{$C$}  circle (2pt);
+  \draw [fill=black] (2,1)node [above]{$A$}  circle (2pt);
+  \draw [fill=black] (4,.5)node [above]{$B$} circle (2pt);
+  \draw [fill=black] (.5,4)node [right]{$D$} circle (2pt);
+  \node at (-.2,-.2){$0$};
+\end{tikzpicture}
+\end{document}

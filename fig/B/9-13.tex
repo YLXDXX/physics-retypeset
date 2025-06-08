@@ -1,0 +1,118 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx,bm}
+\setCJKmainfont{Noto Sans CJK SC}
+\setCJKsansfont{Noto Sans CJK SC}
+\usepackage{tkz-euclide,ninecolors,circuitikz,fontawesome5}
+\usepackage{amsmath}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary {decorations.pathmorphing, decorations.pathreplacing, decorations.shapes,arrows.meta}
+\newcommand{\knob}[2][darkgray]{
+  \begin{scope}[#2]
+    \fill[#1!50](0,0)circle(0.25);
+    \foreach \y in {0,40,...,320}
+    {
+      \fill[#1](0,0)--++(\y:0.15)to[bend right=60](\y+40:0.15);
+      \draw[very thin,#1!20](\y:0.15)--++(\y:0.10);
+    }
+    \fill[black](0,0)circle(0.10);
+  \end{scope}
+}
+\newcommand{\posthead}[2][gray]{
+  \begin{scope}[#2]
+    \foreach \y in {0,40,...,320}
+    {
+      \fill[#1!90!black](0,0)--++(\y:0.12)to[bend right=60](\y+40:0.12);
+    }
+    \fill[#1!50!white](0,0)circle(0.12);
+    \fill[darkgray](0,0)circle(0.08);
+  \end{scope}
+}
+\ctikzset{bipoles/length=7mm}
+\begin{document}
+\footnotesize
+\begin{circuitikz}[>=latex,scale=1.0]
+  \draw[rounded corners](-3.7,-5)rectangle(3.7,5);
+  \draw[rounded corners,thick](-3.5,-4.8)rectangle(3.5,4.8);
+  \begin{scope}[xshift=-0.8cm,yshift=2.2cm]
+    \begin{scope}
+    \clip (0,0)circle(2.0);
+    \draw [help lines,step=3mm] (-1.5,-1.5) grid (1.5,1.5);
+    \draw[line width=0.4mm,fill=darkgray,fill opacity=0.2](0,0)circle(1.98);
+    \end{scope}
+    \draw[rounded corners,thick](-2.3,-2.3)rectangle(2.3,2.3);
+    \foreach \x in {2,-2}
+    {
+      \foreach \y in {2,-2}
+      { \draw[double](\x,\y)circle(0.1); }
+    }
+    \foreach \x in {-1.5,-1.2,...,1.4}
+    {
+      \draw[ultra thin](-0.1,\x)--(0.1,\x)(\x,-0.1)--(\x,0.1);
+      \draw[ultra thin](-0.08,\x+0.15)--(0.08,\x+0.15)(\x+0.15,-0.08)--(\x+0.15,0.08);
+      \foreach \z in {1,2,3,4,6,7,8,9}
+      {
+        \draw[ultra thin](-0.05,\x+0.03*\z)--(0.05,\x+0.03*\z)(\x+0.03*\z,-0.05)--(\x+0.03*\z,0.05);
+      }
+    }
+    \draw[ultra thin](-0.1,1.5)--(0.1,1.5)(1.5,-0.1)--(1.5,0.1);
+  \end{scope}
+  \foreach \h/\s in {3.8/\faSun[regular],2.8/\faDotCircle[regular],1.8/\faCircle[regular]}
+  {
+    \knob{yshift=\h cm,xshift=2.3cm}
+    \node at (3.0,\h){\s};
+  }
+  \node at (3.0,1.2){开};
+  \node at (3.0,0.4){关};
+  \draw(3.0,0.8)circle(0.1);
+  \draw[top color=gray,bottom color=gray,middle color=white](3.03,0.8)to[bend right=90](2.97,0.8)--(2.95,0.65)to[bend right=90](3.05,0.65)--cycle;
+  \draw[fill=gray](2.3,0.8)circle(0.12);
+  \fill[ball color=green!80!black](2.3,0.8)circle(0.1);
+  \draw(0,-4.0)node[ground]{};
+  \posthead{yshift=-4cm};
+  \posthead[red]{xshift=-1cm,yshift=-4cm};
+  \posthead[red]{xshift=1cm,yshift=-4cm};
+  \node at (0,-3.7){地};
+  \node at (-1,-3.7){Y 输入};
+  \node at (1,-3.7){X 输入};
+  \fill[gray](-2.2,-3.9)rectangle(-2.7,-4.1);
+  \fill[gray](2.2,-3.9)rectangle(2.7,-4.1);
+  \fill[black](2.68,-4.12)rectangle(2.48,-3.88);
+  \fill[black](-2.68,-4.12)rectangle(-2.48,-3.88);
+  \node at (2.45,-3.7){同步};
+  \node at (2.2,-4.0)[left]{\scalebox{0.8}{$+$}};
+  \node at (2.7,-4.0)[right]{\scalebox{0.8}{$-$}};
+  \node at (-2.7,-4.0)[left]{\scalebox{0.8}{DC}};
+  \node at (-2.2,-4.0)[right]{\scalebox{0.8}{AC}};
+  \node at (0.8,-0.4){X 增益};
+  \knob{yshift=-0.8cm,xshift=0.8cm}
+  \node at (-0.8,-0.4){Y 增益};
+  \knob{yshift=-0.8cm,xshift=-0.8cm}
+  \knob{yshift=-0.8cm,xshift=-2.4cm}
+  \knob{yshift=-0.8cm,xshift=2.4cm}
+  \draw[arrows={-Stealth[harpoon]}](-2.8,-0.6)--(-2.8,-1);
+  \draw[arrows={-Stealth[harpoon]}](-2.9,-1)--(-2.9,-0.6);
+  \draw[arrows={-Stealth[harpoon]}](3.2,-0.85)--(2.8,-0.85);
+  \draw[arrows={-Stealth[harpoon]}](2.8,-0.75)--(3.2,-0.75);
+  \node at (0,-1.3){扫描微调};
+  \draw[->]([shift=(170:0.33)]0,-1.9)arc(170:10:0.33);
+  \knob{yshift=-1.9cm}
+  \node at (1.8,-1.3){扫描范围};
+  \node at (-1.8,-1.3){衰减};
+  \fill[lightgray](-1.8,-2.7)circle(0.6);
+  \foreach \x[count=\i] in {{},1000,100,10,1} 
+  {
+    \fill([shift=(\i*30:0.7)]-1.8,-2.7)circle(1pt);
+    \node at([shift=(\i*30:0.85)]-1.8,-2.7){\scalebox{0.7}{\sffamily\x}};
+  }
+  \node at ([shift=(30:0.85)]-1.8,-2.7){\tikz \draw[x=.5ex,y=.7ex] (0,0) sin (1,1) cos (2,0) sin (3,-1) cos (4,0)--(0,0);};
+  \fill[darkgray]([shift=(119:0.65)]-1.8,-2.7)to[bend left=5]([shift=(-55:0.65)]-1.8,-2.7)--([shift=(-65:0.65)]-1.8,-2.7)to[bend left=5]([shift=(121:0.65)]-1.8,-2.7)--cycle;
+  \fill[lightgray](1.8,-2.7)circle(0.6);
+  \foreach \x[count=\i] in {外 X,100k,10k,1k,100,10} 
+  {
+    \fill([shift=(6+\i*24:0.7)]1.8,-2.7)circle(1pt);
+    \node at([shift=(6+\i*24:0.9)]1.8,-2.7){\scalebox{0.7}{\sffamily\x}};
+  }
+  \fill[darkgray]([shift=(125:0.65)]1.8,-2.7)to[bend left=5]([shift=(-49:0.65)]1.8,-2.7)--([shift=(-59:0.65)]1.8,-2.7)to[bend left=5]([shift=(127:0.65)]1.8,-2.7)--cycle;
+\end{circuitikz}
+\end{document}
