@@ -231,6 +231,7 @@
 \newcommand{\Ukms}{\;\text{km}/\text{s}} % km/s
 \newcommand{\Ukmsq}{\;\text{km}/\text{s}^2} % km/s^2
 \newcommand{\UNm}{\;\text{N}\cdot\text{m}} % N·m
+\newcommand{\UNC}{\;\text{N}/\text{C}} %N/C
 
 %取 alone 首字母
 \newcommand{\UmsA}{\text{m}/\text{s}} % m/s
@@ -252,6 +253,7 @@
 \newcommand{\UkmsA}{\;\text{km}/\text{s}} % km/s
 \newcommand{\UkmsqA}{\;\text{km}/\text{s}^2} % km/s^2
 \newcommand{\UNmA}{\text{N}\cdot\text{m}} % N·m
+\newcommand{\UNCA}{\text{N}/\text{C}} %N/C
 
 \RequirePackage{tkz-euclide}
 
