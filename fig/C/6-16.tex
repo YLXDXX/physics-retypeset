@@ -1,0 +1,33 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx,ninecolors,circuitikz}
+\setCJKmainfont{Noto Serif CJK SC}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary {decorations.pathmorphing, decorations.pathreplacing, decorations.shapes}
+\ctikzset{bipoles/length=1cm}
+\begin{document}
+\small
+\begin{circuitikz}[>=latex,scale=1.0]
+  \draw(2.8,0)--(3,0)--(3,1.7)to[battery,name=dc](-3,1.7)--(-4.4,1.7)--(-4.4,-1.0)--(-3,-1.0)--(-3,-0.1)--(-1.0,-0.1)--(-1.0,-0.3)--(-0.8,-0.3)to[L,bipoles/length=5mm](-0.8,0.3)--(-1.0,0.3)--(-1.0,0.1)--(-3,0.1)--(-3,0.3)--(-3.7,0.3)to[battery2,name=dc2](-3.7,-1.0);
+  \foreach \x in {0.2,-0.2,0}
+  {
+    \draw[azure5,densely dashed,thick,postaction={decorate},decoration={markings,mark=at position 0.3 with{\arrow{>}}}](-0.8,\x)--(1.0,\x);
+  }
+  \fill[top color=brown6,bottom color=brown6,middle color=brown9](2.8,0.05)--(1.3,0.05)to[bend right](0.5,0.3)--(1,-0.3)to[bend right](1.3,-0.05)--(2.8,-0.05)--cycle;
+  \draw[red,thick,->,decorate,decoration={snake,segment length=3mm,amplitude=.5mm,post length=3mm}](0.583,0.2)--++(160:1.0);
+  \draw[red,thick,->,decorate,decoration={snake,segment length=3mm,amplitude=.5mm,post length=3mm}](0.75,0)--++(185:1.0);
+  \draw[red,thick,->,decorate,decoration={snake,segment length=3mm,amplitude=.5mm,post length=3mm}](0.9167,-0.2)--++(208:1.0);
+  \draw[cyan!30!darkgray,fill=cyan!40!white,fill opacity=0.5,rounded corners=2.5mm](-2.6,0.3)--(-1.5,0.3)to[bend left=60](1.5,0.3)--(2.6,0.3)--(2.6,-0.3)--(1.5,-0.3)to[bend left=60](-1.5,-0.3)--(-2.6,-0.3)--cycle;
+  \node at (dc.center)[above=3mm]{高压电源};
+  \node at (dc.left)[above right,inner sep=1pt]{$+$};
+  \node at (dc.right)[above left,inner sep=1pt]{$-$};
+  \node at (dc2.left)[above left,inner sep=1pt]{$+$};
+  \node at (dc2.right)[below left,inner sep=1pt]{$-$};
+  \node at (1.0,0){$A$};
+  \node at (-0.8,0.3)[above]{$K$};
+  \draw[thin](-0.8,0)--++(-110:1.1)node[below]{螺旋钨丝};
+  \draw[thin](1.0,-0.2)--++(-80:0.8)node[below]{阳极};
+\end{circuitikz}
+\end{document}

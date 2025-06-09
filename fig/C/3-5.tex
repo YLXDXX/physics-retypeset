@@ -1,0 +1,28 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx}
+\setCJKmainfont{Noto Serif CJK SC}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary {decorations.pathmorphing, decorations.pathreplacing, decorations.shapes,}
+\begin{document}
+\small
+\begin{tikzpicture}[>=latex,scale=0.7]
+  % \useasboundingbox(0.9,0)rectangle(5.1,5);
+  \draw[->] (-1,0)--(11,0)node [right]{$\omega t$};
+  \draw[->] (3.1416/6, -1.5)--(3.1416/6, 2.5)node [above]{$i,u$};
+  \foreach \x in {3.1416*7/6, 3.1416*13/6, 3.1416*19/6}
+  {
+     \draw (\x, -.1)--(\x, .1);
+  }
+  \draw [ultra thick] plot[domain=0:3*3.1416, samples=1000] function{1.5*sin(x)} ;
+  \draw[dashed](0,-1)--(0,0);
+  \node at (3.1416/12, -.5){$\phi_0$};
+  \node at (3.1416/12, -2){$\phi_0=\pi/6=30^{\circ}$};
+  \draw[->] (-.5,-.5)--(0,-.5);
+  \draw[->] (3.1416/6+.5,-.5)--(3.1416/6,-.5);
+  \node at  (3.1416/6+.25,.25) {$O$};
+\end{tikzpicture}
+\end{document}

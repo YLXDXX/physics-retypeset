@@ -1,0 +1,45 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx,bm,ninecolors}
+\setCJKmainfont{Noto Serif CJK SC}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary {decorations.pathmorphing, decorations.pathreplacing, decorations.shapes,}
+\begin{document}
+\small
+\begin{tikzpicture}[>=stealth,scale=0.9]
+  \fill[left color=gray,right color=gray,middle color=white](0,0)ellipse(7 and 2);
+  \fill[left color=gray,right color=gray,middle color=white](7,0)rectangle(-7,0.5);
+  \fill[outer color=gray,inner color=white](0,0.5)ellipse(7 and 2);
+  \draw[ultra thick,->] (7.5,0.5) arc (0:10:7.5 and 2.0);
+  \draw[ultra thick,->] (7.5,0.5) arc (0:-10:7.5 and 2.0);
+  \foreach \x/\y in {-10/5.5,25/3.2,45/2.1} {\draw[yellow9!50, densely dashed,thick] (0,1.5)--++(\x:\y);}
+  \fill[left color =gray,right color=gray,middle color=white](5.1,0.9)rectangle(4.9,2.0);
+  \begin{scope}[xshift=3.586cm,yshift=1.814cm,rotate=5]
+    \fill[top color =gray,bottom color=gray,middle color=white](1,0.15)--(2,0.15)arc(90:-90:0.05 and 0.15)--(1,-0.15);
+    \fill[top color =gray,bottom color=gray,middle color=white](0,0.21)--(1,0.21)arc(90:-90:0.07 and 0.21)--(0,-0.21);
+    \fill[cyan!20](0,0)ellipse(0.1 and 0.3);
+  \end{scope}
+  \draw[yellow9!50, densely dashed,thick] (0,1.5)--++(5:3.6);
+  \fill[draw=black,left color=yellow7,right color=yellow8,middle color=white](0,0.5)--++(-1.2,0.8)--++(0,2)--++(1.2,-0.8);
+  \fill[draw=black,left color=yellow8,right color=yellow7,middle color=white](0,0.5)--++(1.2,-0.8)--++(0,2)--++(-1.2,0.8);
+  \begin{scope}[yshift=1.5cm,xshift=-4.2cm]
+    
+    \fill[azure9](-0.4,0.5)--++(-0.3,0.3)--++(0.8,0)--++(0.3,-0.3)--cycle;
+    \fill[azure5](0.2,0.1)--++(-0.3,0.3)--++(0.1,0)--++(0.3,-0.3)--cycle;
+    \fill[azure9](-0.2,-0.2)--++(-0.3,0.3)--++(0.4,0)--++(0.3,-0.3)--cycle;
+    \fill[azure9](0.2,-0.1)--++(-0.3,0.3)--++(0.2,0)--++(0.3,-0.3)--cycle;
+    \fill[azure5](0.2,-0.1)--++(-0.3,0.3)--++(0,-0.1)--++(0.3,-0.3)--cycle;
+    \fill[azure6](-0.4,0.5)--++(-0.3,0.3)--++(0,-1.5)--++(0.3,-0.3)--cycle;
+    \fill[azure8](0.2,0.1)--++(0.2,0)--++(0,0.4)--++(-0.8,0)--++(0,-1.5)--++(0.8,0)--++(0,0.9)--++(-0.2,0)--++(0,-0.1)--++(-0.4,0)--++(0,0.4)--++(0.4,0)--cycle;
+    \fill[ball color=azure4](0,0)circle(3pt);
+  \end{scope}
+  \draw[yellow9!50,thick](0,1.5)--++(-4,0)node[midway,below,text=black]{$\alpha$ 粒子};
+  \foreach \x/\y in {250/1.6,160/3.8} {\draw[yellow9!50, densely dashed,thick] (0,1.5)--++(\x:\y);}
+  \draw[thin](-0.9,2.7)--++(110:1)node[above]{金箔};
+  \draw[thin](3.55,2.0)--++(110:0.7)node[above]{荧光屏};
+  \draw[thin](5.5,2.0)--++(70:0.7)node[above]{显微镜};
+  \draw[thin](-4.7,2.0)--++(110:0.7)node[above]{放射源};
+\end{tikzpicture}
+\end{document}

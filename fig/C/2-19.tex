@@ -1,0 +1,29 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx,ninecolors}
+\setCJKmainfont{Noto Serif CJK SC}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{circuitikz}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary {decorations.pathmorphing, decorations.pathreplacing, decorations.shapes,}
+\begin{document}
+\small
+\begin{circuitikz}[>=latex, scale=1]
+  % \useasboundingbox(0.9,0)rectangle(5.1,5);
+  \fill[brown](-2.5,0)rectangle(2.5,0.05);
+  \fill[brown](0,0)--(240:0.3)--(-60:0.3)--cycle;
+  \foreach \x in {80,60,40,20}
+  {
+    \draw[line width={2*sin(\x)},gray!\x](-2.0,-0.53)circle(0.5);
+    \draw[line width={2*sin(\x)},gray!\x]([shift=(3:0.5)]2.0,-0.53)arc(3:357:0.5);
+  }
+  \node at (-2.0,-0.53){$A$};
+  \node at (2.0,-0.53){$B$};
+  \begin{scope}[xshift=-3.5cm,yshift=-0.8cm,rotate=20]
+    \fill[red5](0,-0.15)rectangle(0.7,0.15)node[below left,text=white,inner sep=2pt,rotate=20]{\tiny$N$};
+    \fill[azure5](0,-0.15)rectangle(-0.7,0.15)node[below right,text=white,inner sep=2pt,rotate=20]{\tiny$S$};
+  \end{scope}
+\end{circuitikz}
+\end{document}

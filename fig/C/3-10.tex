@@ -1,0 +1,26 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx}
+\setCJKmainfont{Noto Serif CJK SC}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary {decorations.pathmorphing, decorations.pathreplacing, decorations.shapes,}
+\begin{document}
+\small
+\begin{tikzpicture}[>=latex,xscale=0.6]
+  % \useasboundingbox(0.9,0)rectangle(5.1,5);
+  \draw [->](-2,0)--(10,0)node[right]{$\omega t$};
+  \draw [->](0,-1.5)--(0,1.5)node[right]{$i$};
+  \draw [ultra thick] plot[domain=0:9, samples=1000] function{-cos(x+.7)*.7} node [above]{$i_2$};
+  \draw [ultra thick] plot[domain=0:8.5, samples=1000] function{sin(x+1)} node [below]{$i_1$};
+  \draw [ultra thick, dashed] plot[domain=-1:0, samples=100] function{-cos(x+.7)*.7};
+  \draw [ultra thick, dashed] plot[domain=-1:0, samples=100] function{sin(x+1)};
+  \node at (-.25,-.25){$O$};
+  \draw [dashed] (-1,0)--(-1,-1.5);
+  \draw [dashed] (3.1416/2-.7,0)--(3.1416/2-.7,-1.5);
+  \draw [<->] (0,-1)--node[below]{$\phi_1$}(-1, -1);
+  \draw [<->] (0,-1)--node[below]{$\phi_2$}(3.1416/2-.7,-1);
+\end{tikzpicture}
+\end{document}

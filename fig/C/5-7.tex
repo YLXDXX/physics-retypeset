@@ -1,0 +1,20 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx}
+\setCJKmainfont{Noto Serif CJK SC}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary {decorations.pathmorphing, decorations.pathreplacing, decorations.shapes,}
+\begin{document}
+\small
+\begin{tikzpicture}[>=latex,scale=1]
+  \fill[pattern =north east lines] (-2,0)rectangle(2,-0.25);
+  \draw[thick] (-2,0)--(2,0);
+  \draw[thin,densely dashdotted](0,0)--(0,2.5)node [above]{法线};
+  \draw[semithick,postaction={decorate},decoration={markings,mark=between positions 0.25 and 0.75 step 0.5 with {\arrow{>}}}] (135:2)node [above]{入射光线}--(0,0)--(45:2)node [above]{反射光线};  
+  \draw (0,.65) arc (90:45:.65) node [midway,above]{$r$};	
+  \draw (0,.5) arc (90:135:.5)node [midway,above]{$i$};
+\end{tikzpicture}
+\end{document}

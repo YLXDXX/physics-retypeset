@@ -1,0 +1,73 @@
+\documentclass{standalone}
+\usepackage{tikz,ctex,siunitx,mhchem}
+\setCJKmainfont{Noto Serif CJK SC}
+\usepackage{pgfplots}
+\pgfplotsset{
+	width=9cm, 
+  height=6cm,
+  compat=1.17,
+  every tick label/.append style={font=\scriptsize},
+  every axis label/.append style={font=\footnotesize},
+  legend style={font=\footnotesize},  
+}
+\pgfkeys{/pgf/number format/.cd,fixed,min exponent for 1000 sep=4}
+\tikzstyle{every pin}=[font=\tiny,inner sep=0pt]
+\begin{document}
+  \begin{tikzpicture}
+    \begin{axis}[
+      % axis lines=left,
+      xtick={0,50,...,250},
+      % xtick style={at={(yticklabel cs:0,5pt)}},
+      ytick={0,2,...,10},
+      ylabel=比结合能/\unit{MeV},
+      y label style={at={(0,1)},rotate=-90,anchor=south west},
+      xlabel=质量数/$A$,
+      x label style={at={(1,0)},anchor=south west},
+      xmajorgrids,
+      ymajorgrids,
+      xminorgrids,
+      yminorgrids,
+      minor y tick num=1,
+      minor x tick num=4,
+      ymin=0,ymax=10,
+      xmin=0,xmax=250,
+      major grid style={brown!70!white,very thin},
+      minor grid style={brown!50!white,ultra thin,densely dashed},
+      % bar width=7pt,
+      % x tick label style={rotate=90,anchor=east},
+      % nodes near coords,
+      nodes near coords style={font=\scriptsize},
+      % nodes near coords align={vertical},
+      % legend style={at={(0,1)},anchor=north west},
+	  	]
+      \addplot [blue,text=black,
+        only marks,mark size=0.7pt,
+      ] 
+      coordinates 
+      {
+        (3.050,1.125)(4.400,7.125)(7.250,5.673)(8.500,6.553)
+        (11.550,7.703)(13.100,7.043)(14.650,7.505)(14.650,7.673)
+        (16.250,7.873)(17.000,8.025)(18.500,7.785)(20.200,8.105)
+        (22.250,8.205)(26.500,8.458)(27.800,8.625)(31.250,8.535)
+        (34.600,8.633)(37.550,8.735)(40.100,8.638)(55.800,8.860)
+        (62.250,8.895)(75.400,8.870)(83.800,8.905)(85.750,8.853)
+        (96.050,8.830)(115.850,8.698)(117.050,8.588)(121.000,8.715)
+        (122.550,8.598)(129.800,8.510)(135.850,8.603)(143.100,8.428)
+        (149.250,8.328)(174.350,8.155)(181.200,8.065)(182.600,8.135)
+        (184.200,8.053)(192.600,8.053)(194.100,8.128)(206.100,7.950)
+        (232.000,7.778)(238.000,7.690)
+      }
+      node [inner sep=0pt,pos=0, pin=0:\ce{^2H}] {}
+      node [inner sep=0pt,pos=0.03, pin=87:\ce{^4He}] {}
+      node [inner sep=0pt,pos=0.05, pin=280:\ce{^6Li}] {}
+      node [inner sep=0pt,pos=0.07, pin=280:\ce{^9Be}] {}
+      node [inner sep=0pt,pos=0.09, pin=60:\ce{^12C}] {}
+      node [inner sep=0pt,pos=0.17, pin=-45:\ce{^14C}] {}
+      node [inner sep=0pt,pos=0.22, pin=-30:\ce{^16O}] {}
+      node [inner sep=0pt,pos=0.98, pin=120:\ce{^235U}] {}
+      ;
+      \draw[semithick,red,line join=round](3.050,1.125)--(4.400,7.125)--(7.250,5.673)--(8.500,6.553)--(11.550,7.703)--(13.100,7.043)..controls( 13.650,7.558)and( 20.300,8.858)..( 61.200,8.905)..controls( 84.450,8.983)and(135.700,8.555)..      (136.850,8.525)..controls(142.800,8.448)and(254.850,7.620)..(254.850,7.620);
+      % \draw[<-](232.000,7.778)--++(45:0.5);
+		\end{axis}
+  \end{tikzpicture}
+\end{document}

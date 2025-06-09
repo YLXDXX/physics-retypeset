@@ -1,0 +1,32 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx}
+\setCJKmainfont{Noto Serif CJK SC}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{circuitikz}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary {decorations.pathmorphing, decorations.pathreplacing, decorations.shapes,}
+\ctikzset{bipoles/length=0.7cm}
+\begin{document}
+\small
+\begin{circuitikz}[>=latex, scale=1,european]
+  % \useasboundingbox(0.9,0)rectangle(5.1,5);
+  \draw (0,2)[pattern=north east lines] circle (10pt);
+  \fill [white] (-.15,1.5) rectangle (.15, 2);
+  \draw (-.15,1.7)--(-.15, 2)--(.15,2)--(.15,1.7);
+  \draw [fill=black](0,1.85) circle (2pt);
+  \node at (1.5,2){$\gamma$ 射线源};
+  \node at (2.5,-.25){钢板};
+  \draw [->, thick](0,1.85)--(0,.2);
+  \draw [pattern=north east lines] (-2,-0.5) rectangle (2,0);
+  \draw [pattern=north east lines] (-2, -1.4) rectangle (-.25,-1);
+  \draw [pattern=north east lines] (.25, -1.4) rectangle (2,-1);
+  \draw [fill=white] (0,-.25) ellipse [x radius=.2, y radius=.1];
+  \node at (0,-2.1){计数器};
+  \draw (-.7, -1.7) rectangle (.7, -1.5);
+  \draw (-.7,-1.6)--(.7,-1.6)--(2.5, -1.6)to [rmeter](2.5, -3) to [battery] (.7,-3)--(.7, -1.6);
+  \draw [->](2.4, -2.4)--(2.6, -2.2);
+\end{circuitikz}
+\end{document}

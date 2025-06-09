@@ -1,0 +1,77 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx,ninecolors}
+\setCJKmainfont{Noto Serif CJK SC}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary{decorations.pathmorphing, decorations.pathreplacing, decorations.shapes}
+\begin{document}
+\small
+\begin{tikzpicture}[>=latex,scale=1.1]
+  \draw[line width=1mm,gray](-1.1,-1.25)rectangle(1.1,4.1);
+  \begin{scope}[xshift=2.3cm]
+    \draw[fill=azure4,even odd rule](-0.65,1.8)--(-0.65,0)--(-0.05,0)--(-0.05,-0.1)arc(-180:-90:0.3)--(2.5,-0.4)to[bend right=60](2.8,-0.4)--(3.2,-0.4)arc(-90:0:0.3)--(3.5,2.2)--(3.4,2.2)--(3.4,-0.1)arc(0:-90:0.2)--(2.8,-0.3)to[bend right=60](2.5,-0.3)--(0.25,-0.3)arc(-90:-180:0.2)--(0.05,0)--(0.65,0)--(0.65,1.8)(-0.52,0.64)circle(0.05)(-0.47,0.31)circle(0.05)(-0.30,0.44)circle(0.05)(-0.20,0.17)circle(0.05)( 0.16,0.15)circle(0.05)( 0.17,0.33)circle(0.05)( 0.46,0.26)circle(0.05)( 0.56,0.63)circle(0.05)( 0.49,1.20)circle(0.05)( 0.37,1.60)circle(0.05)( 0.20,1.46)circle(0.05)(-0.10,1.64)circle(0.05)(-0.14,1.41)circle(0.05)(-0.45,1.45)circle(0.05);
+    \draw[line width=1.5mm,gray](1.5,-1.9)--(1.5,2.7)arc(0:180:2.8)--++(0,-4.6)--cycle;
+    \draw[fill=cyan!30!lightgray](0.65,1.8)--(0.65,2.9)arc(0:90:0.6)--(0.05,3.8)arc(180:90:0.2)--(1.8,4)arc(90:0:0.2)--(2,2.8)--(2.1,2.8)--(2.1,3.8)arc(0:90:0.3)--(0.25,4.1)arc(90:180:0.3)--(-0.05,3.5)arc(90:180:0.6)--(-0.65,1.8);
+    \fill[cyan!30!white]( 0.068,1.970)..controls( 0.189,1.962)and( 0.281,2.008)..
+    ( 0.266,2.069)..controls( 0.251,2.131)and( 0.144,2.176)..
+    ( 0.274,2.169)..controls( 0.403,2.161)and( 0.464,2.328)..
+    ( 0.380,2.420)..controls( 0.297,2.512)and( 0.205,2.550)..
+    ( 0.319,2.642)..controls( 0.434,2.734)and( 0.534,2.818)..
+    ( 0.442,2.925)..controls( 0.350,3.031)and( 0.205,2.917)..
+    ( 0.251,3.016)..controls( 0.297,3.115)and( 0.320,3.313)..
+    ( 0.243,3.283)..controls( 0.167,3.253)and( 0.114,3.085)..
+    ( 0.045,3.207)..controls(-0.024,3.329)and(-0.078,3.359)..
+    (-0.108,3.313)..controls(-0.139,3.268)and(-0.269,3.245)..
+    (-0.269,3.245)..controls(-0.360,3.176)and(-0.451,3.070)..
+    (-0.360,2.986)..controls(-0.269,2.901)and(-0.306,2.886)..
+    (-0.383,2.810)..controls(-0.459,2.734)and(-0.565,2.657)..
+    (-0.398,2.649)..controls(-0.231,2.642)and(-0.223,2.557)..
+    (-0.307,2.489)..controls(-0.390,2.420)and(-0.520,2.275)..
+    (-0.375,2.237)..controls(-0.231,2.199)and(-0.459,2.168)..
+    (-0.406,2.054)..controls(-0.352,1.940)and(-0.169,1.962)..
+    (-0.108,2.016)..controls(-0.047,2.069)and(-0.054,1.978)..cycle;
+  \end{scope}
+  \coordinate (A) at ([shift=(75:0.4)]2.3,0.85);
+  \coordinate (B) at ([shift=(-105:0.4)]2.3,0.85);
+  \coordinate (C) at ([shift=(105:0.8)]B);
+  \draw[fill=orange]([shift=(-165:0.1)]A)arc(195:15:0.1)--++(-75:0.8)arc(15:-165:0.1)--cycle;
+  \draw[fill=orange]([shift=(-165:0.1)]B)arc(-165:15:0.1)--++(105:0.8)arc(15:195:0.1)--cycle;
+  \draw[fill=yellow]([shift=(-15:0.1)]C)arc(-15:165:0.1)--(1.7958,0.9)--(1.55,0.9)arc(270:180:0.2)--(1.35,3.5)arc(0:90:0.3)--(-0.35,3.8)arc(90:180:0.5)--(-0.85,0)arc(-180:-90:0.5)--(-0.05,-0.5)--(-0.05,-0.7)arc(-180:-90:0.3)--(1.6,-1)to[bend right=60](1.9,-1)--(3.1,-1)arc(-90:0:0.3)--(3.4,0.6)arc(0:90:0.3)--(2.624,0.9)--(2.514,0.4895)arc(165:345:0.1)--(2.8042,0.8)--(3.1,0.8)arc(90:0:0.2)--(3.3,-0.7)arc(0:-90:0.2)--(1.9,-0.9)to[bend right=60](1.6,-0.9)--(0.25,-0.9)arc(270:180:0.2)--(0.05,-0.5)--(0.35,-0.5)arc(-90:0:0.5)--(0.85,3.3)arc(0:53.13:0.5)--(1.05,3.7)arc(90:0:0.2)--(1.25,1.1)arc(180:270:0.3)--(1.976,0.8)--cycle;
+  \draw[fill=yellow]([shift=(-15:0.1)]B)--++(75:0.8)arc(-15:165:0.1)--++(-105:0.8)arc(165:345:0.1);
+  \foreach \x in {-0.6,-0.2,0.2,0.6}
+  {
+    \draw(\x,3.0)--(\x,0);
+    \draw[fill=gray](\x-0.075,0)rectangle(\x+0.075,1.5);
+  }
+  \foreach \x in {-0.4,0,0.4}
+  {
+    \draw(\x,3.0)--(\x,1.4);
+    \draw[fill=orange](\x-0.075,0.5+0.5*rand)rectangle++(0.15,1.5);
+  }
+  \fill[top color=lightgray,bottom color=lightgray,middle color=white](5.7,2.55)rectangle(6.5,2.75);
+  \draw[fill=orange](-0.65,3.0)rectangle(0.65,3.3);
+  \draw[rounded corners,fill=violet!10!lightgray](5.4,0.3)rectangle(6.1,1.7);
+  \draw[rounded corners=0.5mm,fill=orange](4.25,2.95)rectangle(4.45,2.35);
+  \draw[rounded corners=0.5mm,fill=orange](5.65,2.2)rectangle(5.85,3.1);
+  \draw[fill=orange](4.45,2.4)--(5.65,2.25)--(5.65,3.05)--(4.45,2.9)--cycle;
+  \draw[fill=gray!80](6.65,2.25)--(6.5,2.25)arc(270:180:0.1)--(6.4,2.95)arc(180:90:0.1)--(7.5,3.05)arc(90:0:0.1)--(7.6,2.9)--(7.7,2.9)--(7.7,2.4)--(7.6,2.4)--(7.6,2.35)arc(0:-90:0.1)--(7.35,2.25)--++(0,-0.1)--++(-0.1,0)--++(0,0.1)--(6.75,2.25)--++(0,-0.1)--++(-0.1,0)--cycle;
+  \node at (7,2.65){发电机};
+  \node at (5.05,2.65){蒸汽轮机};
+  \node at (5.75,1){\parbox{1em}{冷\\凝\\器}};
+  \node at (2.3,2.65){蒸汽};
+  \draw(2.3,0.85)--++(-115:1.2)node[below]{热交换器};
+  \draw(0.5,-0.95)--++(-45:1.0)node[right]{第一回路};
+  \draw(-0.6,0.75)--++(-135:1.8)node[left]{核反应堆};
+  \draw(3.3,4.4)--++(45:0.5)node[right]{水泥防护层};
+  \draw(1.75,-0.95)--++(-45:0.5)node[right]{泵};
+  \draw(4.95,-0.35)--++(-45:0.5)node[right]{泵};
+  \draw(4.3,-0.35)--++(-45:0.5)node[right]{水};
+  \draw(5.5,-0.35)--++(-45:0.5)node[right]{第二回路};
+  \draw[->,thin](3,4.05)--++(0.5,0);
+  \draw[->,thin,white](3.1,-0.35)--++(-0.5,0);
+  \draw[->,thin](2.8,-0.95)--++(-0.5,0);
+  \draw[->,thin](0.6,3.75)--++(0.5,0);
+\end{tikzpicture}
+\end{document}

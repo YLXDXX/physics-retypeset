@@ -1,0 +1,33 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx,ninecolors}
+\setCJKmainfont{Noto Serif CJK SC}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary {decorations.pathmorphing, decorations.pathreplacing, decorations.shapes}
+\begin{document}
+\small
+\begin{tikzpicture}[>=latex, scale=1]
+  % \useasboundingbox(0.9,0)rectangle(5.1,5);
+  \foreach \x in {-0.5,0.5}
+  {
+    \draw[fill=gray](\x-0.05,0)rectangle(\x+0.05,0.2);
+    \draw[fill=gray](\x-0.1,0)rectangle(\x+0.1,-0.05);
+  }
+  \draw[rounded corners](-0.5,0.2)--(-0.2,0.8)--(-0.2,1.3);
+  \draw[rounded corners](0.5,0.2)--(0.2,0.8)--(0.2,1.3);
+  \fill[left color=darkgray, right color=darkgray,middle color=white](-0.3,1.0)arc(-180:0:0.3 and 0.1)--(0.3,1.2)--(-0.3,1.2);
+  \fill[left color=darkgray, right color=darkgray,middle color=white](-0.4,1.2)arc(-180:0:0.4 and 0.13)--(0.4,1.4)--(-0.4,1.4);
+  \fill[gray](0,1.4)ellipse(0.4 and 0.13);
+  \draw(-0.2,1.4)--(-0.2,3.3)(0.2,1.4)--(0.2,3.5);
+  \fill[brown5](0.2,2.5)--++(-45:0.05)--++(0,1.0)--++(135:0.1)--++(0,-1)--cycle;
+  \fill[brown8](0.2,3.5)--++(-45:0.05)--++(-0.30,0)--++(135:0.1)--++(0.30,0)--cycle;
+  \fill[brown6](-0.1,3.5)--++(-45:0.05)--++(0,-0.8)--++(135:0.1)--++(0,0.8)--cycle;
+  \draw(-0.1,2.7)--(-0.1,2.3);
+  \draw[ball color=gray](-0.1,2.3)arc(270:90:0.08);
+  \draw[cyan!30!lightgray,fill=cyan!20,fill opacity=0.3](-0.4,1.3)arc(-180:0:0.4 and 0.13)--(0.4,3.7)arc(0:90:0.38)to[bend left=20](0.1,4.3)to[bend right=20](-0.03,4.08)arc(90:180:0.38)--cycle;
+  \draw(-0.2,2.8)--++(135:0.5)node[left]{静触片};
+  \draw(0.2,2.8)--++(45:0.5)node[right]{U 形触片};
+\end{tikzpicture}
+\end{document}

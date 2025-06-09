@@ -1,0 +1,85 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx,ninecolors}
+\setCJKmainfont{Noto Serif CJK SC}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary {decorations.pathmorphing, decorations.pathreplacing, decorations.shapes,3d}
+\begin{document}
+\small
+\begin{tikzpicture}[>=latex,z={(225:5mm)},x={(-10:7mm)}]
+  \foreach \x in {-1.5,1.5}
+  {
+    \foreach \z in {1.0,-1.0}
+    {
+      \draw[azure6,->](\x,-0.2,\z)--++(0,-1.4,0);
+    }
+  }
+  \begin{scope}[canvas is zx plane at y=-0.1]
+    \draw[-o] (0,-0.8)--(5,-0.8);
+    \draw[-o] (0,0.8)--(5,0.8)node[left]{接交流电源};
+    \fill[yellow8!40](-3.6,0.2) arc(180:0:3.2);  
+    \draw[very thin](2.8,0.2) arc(0:115:3.2);  
+    \fill[yellow8!40](-3.0,-0.2) arc(180:360:3.0);  
+    \fill[yellow8!40](-3.4,-0.2)--(-3.0,-0.2) arc(180:295:3.0)--++(-65:0.4)arc(295:180:3.4);
+    \draw[very thin](3.0,-0.2)arc(0:-65:3.0)--++(-65:0.4);  
+  \end{scope}
+  \begin{scope}[canvas is zx plane at y=0]
+    \foreach \x/\y in {0/0.4,0.8/1.2,1.6/2.0,2.4/2.8}
+    {
+      \draw [double=red,double distance=0.5pt,draw=gray,line width=1pt]
+      (\x,-0.2)arc(0:-180:\y-0.4)
+      ;
+    }
+    \draw [double=red,double distance=0.5pt,draw=gray,line width=1pt]
+    (-3.2,-0.2)arc(180:295:3.2);
+  \end{scope}
+  \begin{scope}[canvas is zy plane at x=-0.2]
+    \fill[yellow7!40,opacity=0.5,draw=black](-3.4,-0.1)rectangle(3.0,0.1);
+  \end{scope}
+
+  \begin{scope}[canvas is zx plane at y=0]
+    \foreach \x in {-3.2,-2.4,-1.6,-0.8,0.8,1.6,2.4}
+    {
+      \draw [double=red,double distance=0.5pt,draw=gray,line width=1pt]
+    (\x,0.2)--(\x,-0.2);
+    }
+    \draw [double=red,double distance=0.5pt,draw=gray,line width=1pt]
+    (0,0)--(0,0.2);
+  \end{scope}
+  \fill[darkgray](0.05,0.05,-0.05)--(0.05,0.05,0.05)--(0.05,-0.05,0.05)--(0.05,-0.05,-0.05);
+  \fill[gray](0.05,0.05,-0.05)--(0.05,0.05,0.05)--(-0.05,0.05,0.05)--(-0.05,0.05,-0.05);
+  \fill[lightgray](0.05,0.05,0.05)--(0.05,-0.05,0.05)--(-0.05,-0.05,0.05)--(-0.05,0.05,0.05);
+  \begin{scope}[canvas is zy plane at x=0.2]
+    \fill[yellow7!40,opacity=0.5,draw=black](-3.6,-0.1)rectangle(2.8,0.1);
+  \end{scope}
+  \begin{scope}[canvas is zx plane at y=0]
+    \foreach \x/\y in {0/0.4,0.8/1.2,1.6/2.0,2.4/2.8}
+    {
+      \draw [double=red,double distance=0.5pt,draw=gray,line width=1pt]
+      (\x,0.2)arc(0:180:\y);
+    }
+  \end{scope}
+
+  \begin{scope}[canvas is zx plane at y=0.1,fill opacity=0.4]
+    \fill[yellow6,draw=black,very thin](-3.6,0.2) arc(180:0:3.2);  
+    \fill[yellow6](-3.0,-0.2) arc(180:360:3.0);  
+    \fill[yellow6](-3.4,-0.2)--(-3.0,-0.2) arc(180:295:3.0)--++(-65:0.4)arc(295:180:3.4);
+    \draw[very thin](3.0,-0.2)arc(0:-65:3.0)--++(-65:0.4)arc(295:180:3.4); 
+  \end{scope}
+
+  \foreach \x in {-1.5,1.5}
+  {
+    \foreach \z in {1.0,-1.0}
+    {
+      \draw[azure6](\x,0.2,\z)--++(0,0.8,0);
+    }
+  }
+  \node at (-1.5,1.0,-1)[above]{$B$};
+  \draw[very thin](3.1002,-0.1,-1.7524)--++(0,0.2,0)node[right]{$D_2$};
+  \draw[very thin](-2.919,-0.1,1.268)--++(0,0.2,0);
+  \draw[very thin](-3.281,-0.1,1.437)--++(0,0.2,0)node[left]{$D_1$};
+\end{tikzpicture}
+\end{document}

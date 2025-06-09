@@ -1,0 +1,32 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx}
+\setCJKmainfont{Noto Serif CJK SC}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{circuitikz}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary {decorations.pathmorphing, decorations.pathreplacing, decorations.shapes}
+\ctikzset{bipoles/length=1cm}
+\begin{document}
+\small
+\begin{circuitikz}[>=latex, scale=0.7,european]
+  % \useasboundingbox(0.9,0)rectangle(5.1,5);
+  \draw (0,1)--(7,1);
+  \draw (0,4)to [R=$R$](3,4)--(5,4)--(7,4);
+  \ctikzset{diodes/scale=0.6}\draw (3,4) to [full diode ] (3,2.5) to [battery] (3,1);
+  \ctikzset{diodes/scale=0.6}\draw (5,1) to  [battery] (5,2.5) to [full diode ](5,4);
+  \node at (2.3,3){$D_1$};\node at (5.7,3){$D_2$};
+  \draw [fill=white] (0,1) circle (2.5pt);
+  \draw [fill=white] (0,4) circle (2.5pt);
+  \draw [fill=white] (7,1) circle (2.5pt);
+  \draw [fill=white] (7,4) circle (2.5pt);
+  \draw [fill=black] (3,1) circle (2.5pt);
+  \draw [fill=black] (3,4) circle (2.5pt);
+  \draw [fill=black] (5,1) circle (2.5pt);
+  \draw [fill=black] (5,4) circle (2.5pt);
+  \draw[<->](0,1.1) --  (0,3.9) node [midway,right]{$u_1$};
+  \draw[<->](7,1.1) --  (7,3.9) node [midway,right]{$u_2$};
+\end{circuitikz}
+\end{document}

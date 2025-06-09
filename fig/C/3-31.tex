@@ -1,0 +1,32 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx}
+\setCJKmainfont{Noto Serif CJK SC}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{circuitikz}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary {decorations.pathmorphing, decorations.pathreplacing, decorations.shapes}
+\ctikzset{bipoles/length=1cm}
+\begin{document}
+\small
+\begin{circuitikz}[>=latex, scale=1,european]
+  % \useasboundingbox(0.9,0)rectangle(5.1,5);
+\draw (0,1.0)--(0,0)--(.9,0);
+\draw (.9,2.4) to [american inductor] (.9,0);
+\draw (.9,2.4)--(0,2.4)--(0,1.4) ;
+\draw (1.5,0)--(5,0) to [R=$R$,name=dz] (5,2.4) --(1.5,2.4) node[above]{$a$};
+\draw (1.50,0)node[below]{$b$} to  [american inductor,name=xq] (1.5,2.4);
+\ctikzset{diodes/scale=0.6}\draw (1.5,2.4) to[full diode=$D$](5,2.4);
+ \draw (0,1.0) [fill=white]circle (1.5pt);
+        \draw (0,1.4) [fill=white]circle (1.5pt);
+        \node at (0,1.2){$\sim$};
+\draw [ultra thick](1.2,0.8)--(1.2,1.6);   
+\node at (1.2,2.0){$B$};
+\draw [<->](2.25,0)--(2.25,2.4)node [midway,right]{$u$} ;
+\draw [<->](3.7,0)--(3.7,2.4)node [midway,right]{$u_R$};
+\node at (dz.left)[right=1mm]{$-$}; 
+\node at (dz.right)[right=1mm]{$+$};
+\end{circuitikz}
+\end{document}

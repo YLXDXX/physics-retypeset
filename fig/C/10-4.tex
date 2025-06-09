@@ -1,0 +1,32 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx,ninecolors}
+\setCJKmainfont{Noto Serif CJK SC}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{circuitikz}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary {decorations.pathmorphing, decorations.pathreplacing, decorations.shapes}
+\ctikzset{bipoles/length=1cm}
+\begin{document}
+\small
+\begin{circuitikz}[>=latex, scale=1.0,european]
+  % \useasboundingbox(0.9,0)rectangle(5.1,5);
+  \draw (-4,1.25)--(-4,2)node[above]{$A$} to[full diode=$D$,bipoles/length=6mm,name=ejg](-2.5,2)node[above]{$A'$}--(-2,2)node[above]{$P$}--(-1,2)to[R=$R$,name=R2](2,2)--(4,2)node[above]{$A''$}to[R,name=R-](4,0)node[below]{$B'$}--(-4,0)node[ground]{}--(-4,0.75);
+  \draw[fill=white](-4,1.25)circle(1.5pt)(-4,0.75)circle(1.5pt);
+  \fill(-2.5,2)circle(1.5pt);
+  \node at (ejg.center)[below=1.5mm]{2CP};
+  \node at (R-.left)[right=1mm]{$R_\text{负}$};
+  \node at (R-.right)[right=1mm]{\qty{1}{k\ohm}};
+  \node at (R2.center)[below=1.5mm]{\qty{200}{\ohm}};
+  \node at (-4,1){$\sim$};
+  \node at (-4,1)[right=2mm]{\qty{6}{V}};
+  \node at (-4,0)[below right,inner sep=1pt]{$B$};
+  \node at (-2,2){$\times$};
+  \draw (-1,2)to[eC=$C_1$,*-*,name=C1](-1,0);
+  \draw (2,2)to[eC=$C_2$,*-*,name=C2](2,0);
+  \node at (C1.center)[left=2mm]{\qty{100}{\micro F}};
+  \node at (C2.center)[left=2mm]{\qty{100}{\micro F}};
+\end{circuitikz}
+\end{document}

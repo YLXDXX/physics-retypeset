@@ -1,0 +1,38 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx,ninecolors}
+\setCJKmainfont{Noto Serif CJK SC}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary {decorations.pathmorphing, decorations.pathreplacing, decorations.shapes}
+\begin{document}
+\small
+\begin{tikzpicture}[>=stealth, scale=1]
+  % \useasboundingbox(0.9,0)rectangle(5.1,5);
+  \draw[brown5,double=brown8](-3.0,-0.8)--(-1.0,-0.80);
+  \draw[brown5,double=brown8](3.0,0.6)--(1.2,0.6)node[above right,text=black]{副线圈}--(1.0,0.6);
+  \draw[fill=gray,even odd rule](-1.2,-1.8)rectangle(1.2,1.8)(0.6,1.2)rectangle(-0.6,-1.2);
+  \draw[densely dashed](-1.05,-1.65)rectangle(1.05,1.65)(-0.75,-1.35)rectangle(0.75,1.35);
+  \foreach \x in {0.7,0.6,...,-0.7}
+  {
+    \draw[brown5,double=brown8](-1.2,\x+0.01)--(-0.6,\x-0.01)arc(90:-90:0.02);
+    \draw[brown5,double=brown8](-1.2,\x+0.01)arc(270:90:0.02);
+  }
+  \foreach \x in {0.4,0.2,...,-0.5}
+  {
+    \draw[brown5,double=brown8](0.6,\x+0.01)--(1.2,\x-0.01)arc(90:-90:0.02);
+    \draw[brown5,double=brown8](0.6,\x+0.01)arc(270:90:0.02);
+  }
+  \draw[brown5,double=brown8](-3.0,0.8)--(-1.2,0.80)node[above left,text=black]{原线圈}--(-0.6,0.79)arc(90:-90:0.02);
+  \draw[brown5,double=brown8](3.0,-0.6)--(0.6,-0.6)arc(270:90:0.02);
+  \draw[thin](0.9,-1.2)--++(0.5,0)node[right]{铁芯};
+  \draw[fill=white](-3,0.8)circle(1.5pt)(-3,-0.8)circle(1.5pt)(3,0.6)circle(1.5pt)(3,-0.6)circle(1.5pt);
+  \node at (-0.35,0){$n_1$};
+  \node at (3,0){AC};
+  \node at (-3,0){AC};
+  \node at (0.35,0){$n_2$};
+  \draw[thin,<->](-2.5,-0.8)--(-2.5,0.8)node[midway,right]{$U_1$};
+  \draw[thin,<->](2.5,-0.6)--(2.5,0.6)node[midway,left]{$U_2$};
+\end{tikzpicture}
+\end{document}

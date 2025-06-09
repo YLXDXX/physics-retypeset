@@ -1,0 +1,28 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx}
+\setCJKmainfont{Noto Serif CJK SC}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{circuitikz}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary {decorations.pathmorphing, decorations.pathreplacing, decorations.shapes,}
+\begin{document}
+\small
+\begin{circuitikz}[>=latex, yscale=0.7]
+  % \useasboundingbox(0.9,0)rectangle(5.1,5);
+  \draw (0,0) to [cute open switch] (3,0)--(6,0);
+  \draw (6,4)--(0,4) to [battery2] (0,0);
+  \foreach \x in {.5,1.25,...,6}
+  \foreach \y in {.5,1.25,...,3.5}
+  {
+     \node at (\x, \y) {$\times$};
+  }
+  \node at (1.5,-.2){$K$};
+  \draw[very thick] (4,0)node[below]{$B$}--(4,4)node[above]{$A$};
+  \draw[very thick] (4,0) arc (0:-180:0.1);
+  \draw[very thick] (4,4) arc (0:180:0.1);
+  \draw[->] (4,2.3)--(4.8,2.3)node[above]{$F$};
+\end{circuitikz}
+\end{document}

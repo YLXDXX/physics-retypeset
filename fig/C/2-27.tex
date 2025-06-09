@@ -1,0 +1,28 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx}
+\setCJKmainfont{Noto Serif CJK SC}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usepackage{circuitikz}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary {decorations.pathmorphing, decorations.pathreplacing, decorations.shapes}
+\ctikzset{bipoles/length=1cm}
+\begin{document}
+\small
+\begin{circuitikz}[>=latex, scale=1,european]
+  % \useasboundingbox(0.9,0)rectangle(5.1,5);
+  \draw[decorate,decoration={coil,segment length=0.5mm,amplitude=1mm}](-2,0.15)--(-2,-0.15);
+  \draw[decorate,decoration={coil,segment length=0.5mm,amplitude=1mm}](2,-0.15)--(2,0.15);
+  \draw(-2,0.15)--(-2.5,0.15)--(-2.5,0.8)to[rmeter,t=$S$](2.5,0.8)--(2.5,0.15)--(2.0,0.15);
+  \draw(-2,-0.15)--(-2.5,-0.15)--(-2.5,-0.8)to[L,american,name=zlq](-0.5,-0.8)to[cute open switch](-0.5,-2.4);
+  \draw(2,-0.15)--(2.5,-0.15)--(2.5,-0.8)--(0.5,-0.8)--(0.5,-2.4);
+  \draw[very thick]([yshift=2.5mm]zlq.left)--([yshift=2.5mm]zlq.right);
+  \node at (zlq.center)[below]{镇流器};
+  \node at (0,1.3){起动器};
+  \node at (0,-2.4){$\sim$};
+  \node at (0,-2.4)[below]{\qty{220}{V}};
+  \draw[fill=white](-0.5,-2.4)circle(1.2pt)(0.5,-2.4)circle(1.2pt);
+  \draw[cyan!30!lightgray,fill=cyan!30,fill opacity=0.3](-2.3,0.2)rectangle(2.3,-0.2);
+\end{circuitikz}
+\end{document}

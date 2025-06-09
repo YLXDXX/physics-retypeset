@@ -1,0 +1,98 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx,ninecolors}
+\setCJKmainfont{Noto Serif CJK SC}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary {decorations.pathmorphing, decorations.pathreplacing, decorations.shapes,3d}
+\begin{document}
+\small
+\begin{tikzpicture}[>=latex,z=(190:10mm),x=(-45:7mm)]
+  % \useasboundingbox(-1,1.2)rectangle(5,2.8);
+  \begin{scope}[canvas is zx plane at y=2.5]
+    \fill[blue!20!lightgray!50](0,0)rectangle(2.5,2.5);
+    \foreach \x in {0.5,1,1.5,2}
+    {
+      \draw (\x,0)--(\x,2.5);
+      \draw (0,\x)--(2.5,\x);
+    }
+    \foreach \x in {1,1.5,2}
+    {  \foreach \y in {0.5,1,1.5,2}
+      {
+        \fill(\x,\y) circle(2pt);
+        \fill[gray](\x,\y) circle(1.5pt);
+      }
+    }
+  \end{scope}
+  \begin{scope}[canvas is zx plane at y=2.6]
+    \fill[lightgray](-0.1,-0.1)rectangle(0.4,2.6);
+  \end{scope}
+  
+  \begin{scope}[canvas is xy plane at z=2.5]
+    \fill[blue!20!lightgray!50](0,0)rectangle(2.5,2.5);
+    \foreach \x in {0.5,1,1.5,2}
+    {
+      \draw (\x,0)--(\x,2.5);
+      \draw (0,\x)--(2.5,\x);
+    }
+    \foreach \x in {0.25,0.75,1.25,1.75,2.25}
+    {  \foreach \y in {0.75,1.25,1.75,2.25}
+      {
+        \fill(\x,\y) circle(2pt);
+        \fill[lightgray](\x,\y) circle(1.5pt);
+      }
+    }
+  \end{scope}
+  \begin{scope}[canvas is zx plane at y=0.4]
+    \fill[darkgray](2.5,-0.1)rectangle(2.6,2.6);
+  \end{scope}
+  \begin{scope}[canvas is yz plane at x=2.5]
+    \fill[blue!20!lightgray!50](0,0)rectangle(2.5,2.5);
+    \foreach \x in {0.5,1,1.5,2}
+    {
+      \draw (\x,0)--(\x,2.5);
+      \draw (0,\x)--(2.5,\x);
+    }
+  \end{scope}
+  \begin{scope}[canvas is xy plane at z=2.6]
+    \fill[lightgray](-0.1,-0.1)rectangle(2.6,0.4);
+  \end{scope}
+  \begin{scope}[canvas is xy plane at z=0.4]
+    \fill[darkgray](-0.1,2.5)rectangle(2.6,2.6);
+  \end{scope}
+  \draw[darkgray,line width=3pt](2.55,2.55,0.4)--(2.55,0.4,2.55);
+  \begin{scope}[canvas is yz plane at x=2.6]
+    \fill[lightgray](-0.1,-0.1)--(2.6,-0.1)--(2.6,0.4)--(0.4,2.6)--(-0.1,2.6);
+    \node at (0.5,1.3) [transform shape,rotate=-90]{水泥防护层};
+  \end{scope}
+  \foreach \x in {0.5,1,1.5,2}
+  {
+    \foreach \z in {1,1.5,2}
+    {
+      \foreach \w in {90,70,50,30,10}
+      \draw[line width={2.9*sin(\w)},gray!\w] (\x,2.5,\z)--++(0,0.2,0);
+    }
+  }
+  \foreach \x/\z in {1.0/2.0,1/1.5,1.5/1,2/1}
+  {
+    \foreach \w in {90,70,50,30,10}
+      \draw[line width={2.9*sin(\w)},gray!\w] (\x,2.7,\z)--++(0,1.3,0);
+  }
+  \foreach \x in {0.25,0.75,1.25,1.75,2.25}
+  {
+    \foreach \y in {0.75,1.25,1.75,2.25}
+    {
+      \foreach \w in {90,70,50,30,10}
+      \draw[line width={3.7*sin(\w)},darkgray!\w] (\x,\y,2.5)--++(0,0,0.2);
+    }
+  }
+  \foreach \x/\y in {0.75/1.75,1.25/1.25,1.75/1.25,2.25/2.25}
+  {
+    \foreach \w in {90,70,50,30,10}
+      \draw[line width={3.7*sin(\w)},darkgray!\w] (\x,\y,2.7)--++(0,0,1.0);
+  }
+  \node at(0.75,1.75,3.7)[above]{铀棒};
+  \node at(1,4,2)[left]{镉棒};
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,36 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx}
+\setCJKmainfont{Noto Serif CJK SC}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{circuitikz}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary {decorations.pathmorphing, decorations.pathreplacing, decorations.shapes,}
+\ctikzset{bipoles/length=0.9cm}
+\begin{document}
+\small
+\begin{circuitikz}[>=latex, scale=1,european]
+  % \useasboundingbox(0.9,0)rectangle(5.1,5);
+  \draw(-1.5,0)--(-2.5,0)--(-2.5,-2.5)to[battery](0,-2.5)to[cute open switch](2.5,-2.5)--(2.5,-1.75);
+  \draw(-2.5,-1.75)to[pR,name=hb](2.5,-1.75);
+  \draw(-2.5,-1.0)to[rmeter,t=V,*-*](2.5,-1.0)--(2.5,-1.4)--(2.5,-1.4-|hb.wiper)--(hb.wiper);
+  \draw(2.5,-1.0)to[rmeter,t=\unit{\micro A}](2.5,0)--(1.5,0);
+  \draw[very thick](1.5,-0.4)--(1.5,0.4)node[midway,left]{$K$}(-1.5,-0.4)--(-1.5,0.4)node[midway,right]{$A$};
+  \node at (-1.6,-0.5)[left]{$S$};
+  \foreach \x/\y in {1.0/-0.2,0.9/0.3,0.7/0}
+  {
+    \draw[very thin,arrows={-Stealth[scale=0.7]}](\x,\y)--++(-0.3,0);
+    \draw[fill=red!50!white](\x,\y)circle(2.5pt)node{\tiny$-$};
+  }
+  \draw[fill=cyan!20,opacity=0.3,rounded corners=1mm](-0.434, 0.693)--(-0.100, 0.500)--(-1.600, 0.500)--(-1.600,-0.500)--( 1.600,-0.500)--( 1.600, 0.500)--( 0.900, 0.500)--(-0.184, 1.126);
+  \fill[cyan!20](-0.231,1.211)--(-0.159,1.169)--(-0.459,0.650)--(-0.531,0.691)--cycle;
+  \foreach \x/\y in {-0.629/0.921,-0.554/1.051,-0.479/1.181}
+  {
+    \draw[red,->](\x,\y)--++(-30:1.0);
+  }
+  \node at(-0.5,1.1)[left]{光束};
+  \node at(-0.2,1.3)[right]{窗口 $C$};
+\end{circuitikz}
+\end{document}

@@ -1,0 +1,67 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx,ninecolors}
+\setCJKmainfont{Noto Serif CJK SC}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{circuitikz}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary {decorations.pathmorphing, decorations.pathreplacing, decorations.shapes}
+\ctikzset{bipoles/length=1cm}
+\tikzset{
+  methodbase/.style ={
+    rectangle,
+    rounded corners=3pt,
+    node distance=12mm,
+    inner sep=5pt ,
+    draw=green!50!black,
+    fill=green!50!black!20,
+  },
+  method/.style={
+    minimum width=#1,
+    methodbase,
+  }
+}
+\begin{document}
+\small
+\begin{circuitikz}[>=latex, scale=1,european]
+  % \useasboundingbox(0.9,0)rectangle(5.1,5);
+  \draw (-12,-1.7)to (-12,0)node[bareantenna]{};
+  \node at (-12,0)[right]{天线};
+  \node (dpfd)  at (-1.5,-1.7) [method=1.5cm] {低频放大};
+  \node (jb)    at (-4.5,-1.7) [method=1.5cm] {检波};
+  \node (gpfd)  at (-7.5,-1.7) [method=1.5cm] {高频放大};
+  \node (tx)    at (-10.5,-1.7) [method=1.5cm] {调谐};
+  \draw[->](-12,-1.7)--(tx);
+  \draw[->](tx)--(gpfd);
+  \draw[->](gpfd)--(jb);
+  \draw[->](jb)--(dpfd);
+  \draw[->](dpfd)--(0.4,-1.7);
+  \begin{scope}[xshift=-9cm,yshift=-5mm,xscale=0.4]
+    \draw [domain=-pi:pi,azure6,samples=2000]  plot (\x,{0.12*cos(2*\x r)*cos(40*\x r)-0.25*cos(40*\x r)});
+    \draw[thin,densely dashed](-pi,0)--(pi,0);
+  \end{scope}
+  \begin{scope}[xshift=-6cm,yshift=-5mm,xscale=0.4]
+    \draw [domain=-pi:pi,azure6,samples=2000]  plot (\x,{0.12*cos(2*\x r)*cos(40*\x r)-0.5*cos(40*\x r)});
+    \draw[thin,densely dashed](-pi,0)--(pi,0);
+  \end{scope}
+  \begin{scope}[xshift=-3cm,yshift=-5mm,xscale=0.4]
+    \draw [domain=-pi:pi,azure6,samples=2000]  plot (\x,{0.12*cos(2*\x r)*cos(40*\x r)-0.5*cos(40*\x r)});
+    \fill[white](-pi,0)rectangle(pi,-0.7);
+    \draw[thin,densely dashed](-pi,0)--(pi,0);
+  \end{scope}
+  \begin{scope}[xshift=0cm,yshift=-5mm,xscale=0.4]
+    \draw [domain=-pi:pi,azure6,samples=2000]  plot (\x,{-0.7*cos(2*\x r)});
+    \draw[thin,densely dashed](-pi,0)--(pi,0);
+  \end{scope}
+  \begin{scope}[xshift=0.5cm]
+  \fill[top color=gray,bottom color=gray,middle color=white](0,-1.7)ellipse(0.1 and 0.2);
+  \fill[top color=gray,bottom color=gray,middle color=white](0,-1.5)rectangle(0.2,-1.9);
+  \fill[top color=gray,bottom color=gray,middle color=white](0.4,-1.3)--(0.2,-1.5)to[bend right=90](0.2,-1.9)--(0.4,-2.1);
+  \fill[top color=darkgray,bottom color=darkgray,middle color=lightgray](0.5,-1.7)ellipse(0.2 and 0.45);
+  \fill[top color=darkgray,bottom color=darkgray,middle color=lightgray](0.4,-1.7)ellipse(0.1 and 0.2);
+  \node at (0.6,-1.7)[right]{扬声器};
+  \end{scope}
+\end{circuitikz}
+\end{document}

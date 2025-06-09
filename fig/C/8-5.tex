@@ -1,0 +1,38 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx}
+\setCJKmainfont{Noto Serif CJK SC}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary {decorations.pathmorphing, decorations.pathreplacing, decorations.shapes,}
+\begin{document}
+\small
+\begin{tikzpicture}[>=latex,scale=1.6]
+  \foreach \x[count=\i] in {5,15,30,50,75,100}
+  {
+    \draw(0,0)circle(\x pt);
+    \node at (0,-\x pt)[below]{$n=\i$};
+  }
+  \node at (60:52pt) [rotate=60,above] {赖曼系（紫外线）};
+  \node at (10:50pt)[rotate=10,above] {巴耳末系};
+  \node at (-20:77pt)[rotate=-20,above] {帕邢系（红外线）};
+  \node at (-45:87pt)[rotate=-45,above] {布喇开系};
+  \node at (-60:90pt)[left] {逢德系};
+  \draw[->] (60:100pt)--(60:5pt);
+  \draw[->] (55:75pt)--(55:5pt);
+  \draw[->] (50:50pt)--(50:5pt);
+  \draw[->] (45:30pt)--(45:5pt);
+  \draw[->] (40:15pt)--(40:5pt);
+  \draw[->] (10:100pt)--(10:15pt);
+  \draw[->] (5:75pt)--(5:15pt);
+  \draw[->] (0:50pt)--(0:15pt);
+  \draw[->] (-5:30pt)--(-5:15pt);
+  \draw[->] (-20:100pt)--(-20:30pt);
+  \draw[->] (-25:75pt)--(-25:30pt);
+  \draw[->] (-30:50pt)--(-30:30pt);
+  \draw[->] (-45:100pt)--(-45:50pt);
+  \draw[->] (-50:75pt)--(-50:50pt);
+  \draw[->] (-60:100pt)--(-60:75pt);
+\end{tikzpicture}
+\end{document}

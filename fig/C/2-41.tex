@@ -1,0 +1,46 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx,bm}
+\setCJKmainfont{Noto Serif CJK SC}
+\usepackage{tkz-euclide,ninecolors}
+\usepackage{amsmath}
+\usepackage{circuitikz}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary {decorations.pathmorphing, decorations.pathreplacing, decorations.shapes}
+\ctikzset{bipoles/length=1cm}
+\begin{document}
+\small
+\begin{circuitikz}[>=latex,yscale=1.0]
+  \draw(-1.5,0.0)to[cute open switch=$K$](-1.5,1.2)--(-1.5,1.3)--(0,1.3);
+  \draw(1.0,-0.3)--(0,-0.3);
+  \fill[left color=darkgray,right color=darkgray,middle color=white](-0.3,-1.3)rectangle(0.3,1.4);
+  \draw(-1.5,0.0)--(-1.5,-0.1)to[battery2](-0.3,-0.1)..controls(0,-0.1)and(0.31,-0.1)..(0.31,0.05);
+  \foreach \x in {0.05,0.35,0.65,0.95}
+  {
+    \draw(-0.31,\x)..controls(-0.31,\x+0.2)and(0.31,\x+0.1)..(0.31,\x+0.3);
+  }
+  \foreach \x in {-0.7,-0.4}
+  {
+    \draw(-0.31,\x)..controls(-0.31,\x-0.2)and(0.31,\x-0.1)..(0.31,\x-0.3);
+  }
+  \draw(-0.31,-1.0)..controls(-0.31,-1.2)and(0.31,-1.2)..(0.31,-1.2)--(1.0,-1.2)--(1.0,-0.3)--(0.5,-0.3);
+  \fill[top color=lightgray,bottom color=darkgray](-0.5,2.25)rectangle++(1,0.25);
+  \fill[top color=gray,bottom color=gray,middle color=white](-2.5,1.45)rectangle(1,1.5)node[above left]{$D$};
+  \draw(-2.5,1.47)--(-2.6,1.2)--(-2.4,1.2)--cycle;
+  \fill[inner color=white,outer color=gray](-2.5,1.47)circle(1.5pt);
+  \fill[top color=darkgray,bottom color=lightgray](-2.7,1.2)rectangle(-2.3,0.95);
+  \fill[top color=brown,bottom color=brown,middle color=white](1,1.46)rectangle(1.3,1.49);
+  \fill[top color=brown,bottom color=brown,middle color=white](1.3,1.42)rectangle(1.6,1.53)node[right]{$C$};
+  \draw(1.35,1.4)--++(0,-0.5)--++(0.5,0);
+  \draw(1.55,1.4)--++(0,-0.3)--++(0.3,0);
+  \draw(0,1.5)--(0,1.6)(0,2.25)--(0,2.2);
+  \foreach \x in {1.35,1.55}
+  {
+    \fill[left color=brown,right color=brown,middle color=white]
+    (\x-0.02,1.4)rectangle++(0.04,-0.04);
+  }
+  \draw[decorate,decoration={coil,segment length=1mm,amplitude=1mm}](0,1.6)--(0,2.2)node[midway,left=2mm]{$S$};
+  \node at (-0.35,-0.8)[left]{$B$};
+  \node at (0.35,0.5)[right]{$A$};
+\end{circuitikz}
+\end{document}

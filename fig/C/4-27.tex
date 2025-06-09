@@ -1,0 +1,33 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx,ninecolors}
+\setCJKmainfont{Noto Serif CJK SC}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary {decorations.pathmorphing, decorations.pathreplacing, decorations.shapes}
+\begin{document}
+\small\linespread{1.0}
+\begin{tikzpicture}[>=stealth]
+  \fill[pattern = north east lines](120:7)arc(120:60:7)--++(240:0.25)arc(60:120:6.75)--cycle;
+  \fill[pattern = crosshatch dots,pattern color=lightgray](120:9.2)arc(120:60:9.2)--++(60:0.6)arc(60:120:9.8)--cycle;
+  \draw[thick](120:7)arc(120:60:7);
+  \node at (0,9.8)[above]{电离层};
+  \node at (0,6.5){地球};
+  \node at (105:7.5)[rotate=15]{地波};
+  \foreach \x in {115,90,65}
+  {
+    \draw(\x:7)--(\x:9);
+    \draw(\x:8.7)--++(\x+30:0.3)(\x:8.7)--++(\x-30:0.3);
+  }
+  \foreach \x in {110,105,100,95,85,80,75,70}
+  {
+    \draw[->](\x+1:7.2)arc(\x+1:\x-1:7.2);
+  }
+  \draw[->](114:8.6)--(92:8.6)node[pos=0.8,sloped,above]{空间波};
+  \draw[rounded corners=4mm,postaction={decorate},decoration={markings,mark={between positions 0.25 and 1.0 step 0.75 with {\arrow{>}} }}](114:8.7)--(90:9.7)--(66:8.6)node[pos=0.6,sloped,above]{天波};
+  \node at (0,8.5)[right]{接收天线};
+  \node at (63:8.0)[rotate=-27]{\parbox{1em}{接收天线}};
+  \node at (117:8.0)[rotate=27]{\parbox{1em}{发射天线}};
+\end{tikzpicture}
+\end{document}

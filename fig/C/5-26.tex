@@ -1,0 +1,55 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx,ninecolors}
+\setCJKmainfont{Noto Serif CJK SC}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary {decorations.pathmorphing, decorations.pathreplacing, decorations.shapes,}
+\newcommand\fibersection[2][1]{
+  \begin{scope}[#2,scale=#1]
+    \foreach \x[count=\i from 0] in {8,7,6,5,4}
+    {
+      \foreach \y in {0,1,...,\x}
+      {
+        \fill[cyan!30!white]([xshift=0.02*\y cm]60:\i*0.02)circle(0.01);
+        \fill[cyan!30!white]([xshift=0.02*\y cm]-60:\i*0.02)circle(0.01);
+      }
+    }
+    \foreach \x in {0,1,...,6}
+    {
+      \fill[red!80!white]([shift=(60:0.02*\x)]-60:0.04)circle(0.01);
+    }
+    \foreach \x in {-2,-1,0,1,2}
+    {
+      \fill[red!80!white]([shift=(-60:0.02*\x)]0.1,0)circle(0.01);
+    }
+    \foreach \x in {-3,-2,-1,0,1,2}
+    {
+      \fill[red!80!white]([shift=(-60:0.02*\x)]0.12,0)circle(0.01);
+    }
+    \foreach \x in {0.04,0.06,0.08}
+    {
+      \fill[red!80!white]([shift=(-60:0.02)]\x,0)circle(0.01);
+    }
+  \end{scope}
+}
+\begin{document}
+\small
+\begin{tikzpicture}[>=latex,scale=1.0]
+  % \fibersection{}
+  \fibersection[6]{xshift=-1cm,yshift=-1cm}
+  \draw(4,-3)circle(0.3);
+  
+  \foreach \x in {90,80,...,10}
+  {
+    \draw[line width={10*sin(\x)},cyan!\x!white](0,0)..controls(4,0)and(0,-3)..(4,-3)--(4.2,-3);
+  }
+  \fill[white]([yshift=5pt]4,-3)--++(2.88pt,0)--++(-60:5.76pt)--++(-120:5.76pt)--++(-2.88pt,0)--(4,-3.28)arc(-90:90:0.28);
+  \draw[fill=white](0,0)circle(0.3);
+  \fibersection[2]{xshift=-0.15cm}
+  \fibersection[6]{xshift=3.8cm,yshift=-2cm}
+  \draw(2,-1.0)--++(45:1.0)node[right]{玻璃纤维束};
+\end{tikzpicture}
+\end{document}

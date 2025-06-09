@@ -1,0 +1,20 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx,ninecolors}
+\setCJKmainfont{Noto Serif CJK SC}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{circuitikz}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary {decorations.pathmorphing, decorations.pathreplacing, decorations.shapes,}
+\begin{document}
+\small
+\begin{circuitikz}[>=latex, scale=1]
+  % \useasboundingbox(0.9,0)rectangle(5.1,5);
+  \ctikzset{inductors/scale=2.3,  inductors/coils=6}
+  \draw (0,0)--(0,1) to [L] (2,1)--(2,0)--(0,0);
+  \fill [red5](2.25, .8)node[above right,text=white]{$N$} rectangle (3.5, 1.4);
+  \fill [azure5](3.5, 1.4) rectangle (4.75, 0.8)node[above left,text=white]{$S$};
+\end{circuitikz}
+\end{document}

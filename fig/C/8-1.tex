@@ -1,0 +1,22 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx}
+\setCJKmainfont{Noto Serif CJK SC}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary {decorations.pathmorphing, decorations.pathreplacing, decorations.shapes,}
+\begin{document}
+\small
+\begin{tikzpicture}[>=latex,scale=1.0]
+  \fill[yellow!80!lightgray](0,0)circle(2.2);
+  \foreach \x/\y in {120/1.5,180/1.7,36/1.52,265/1.42,315/1.8}
+  {
+    \fill[inner color=white,outer color=lightgray](\x:\y)circle(0.12)node{$-$};
+  }
+  \fill[inner color=white,outer color=lightgray](-2.08,2.5)circle(0.12)node{$-$};
+  \fill[yellow!80!lightgray](-2.2,2.8)rectangle++(0.24,0.24);
+  \node at (-1.9,2.92)[right]{正电荷};
+  \node at (-1.9,2.5)[right]{电子};
+\end{tikzpicture}
+\end{document}

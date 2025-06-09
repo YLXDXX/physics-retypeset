@@ -1,0 +1,23 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx}
+\setCJKmainfont{Noto Serif CJK SC}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary {decorations.pathmorphing, decorations.pathreplacing, decorations.shapes,}
+\begin{document}
+\small
+\begin{tikzpicture}[>=latex,scale=1.0]
+  \fill [cyan!20] (-3,-1.4) rectangle (3,0);
+  \node at (1,0.5){空气};
+  \draw[densely dashdotted] (0,-1)--(0,1);
+  \draw(-3,0)--(3,0);
+  \draw[->, very thick] (0,0)--(-55:1.0); 
+  \draw[very thick] (150:2)--(0,0)--(-55:1.7);
+  \draw[->, very thick] (150:2)--(150:1.0); 
+  \draw (.5,0) arc (0:-55:.5) node [midway,right] {\ang{55}};
+  \draw (-1,0) arc (180:150:1) node [midway,left] {\ang{30}};
+\end{tikzpicture}
+\end{document}

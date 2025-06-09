@@ -1,0 +1,54 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx,ninecolors}
+\setCJKmainfont{Noto Serif CJK SC}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{circuitikz}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary {decorations.pathmorphing, decorations.pathreplacing, decorations.shapes}
+\ctikzset{bipoles/length=12mm}
+\begin{document}
+\small
+\begin{circuitikz}[>=latex, scale=1.0,european]
+  % \useasboundingbox(0.9,0)rectangle(5.1,5);
+  \coordinate (A) at (-2.2,-1.5);
+  \coordinate (B) at (0.5,1.5);
+  \coordinate (C) at (8.5,1.5);
+  \draw (0,0) node[pnp,tr circle,yscale=-1](AG){};
+  \draw (8,0) node[pnp,tr circle,yscale=-1](AX){};
+  \ctikzset{bipoles/length=6mm}
+  \draw(AG.E)--(AG.E|-A);
+  \draw(AX.E)--(AX.E|-A);
+  % \draw[-*](AG.C)--++(0.25,0)node{$\times$}--([xshift=5mm]AG.C)to[american inductor]([xshift=5mm]AG.C|-B);
+  \draw(B)to[american inductor=\qty{2.5}{mH},name=L1](B|-AG.C)--++(-0.25,0)node{$\times$}--(AG.C);
+  \draw[densely dashed]([xshift=1.3mm]L1.left)--([xshift=1.3mm]L1.right);
+  \draw(B|-AG.C)to[C,name=c1]++(1.5,0)to[full diode=2AP]++(2,0)--(5,-1.5|-AG.C)to[R=\qty{10}{k\ohm},*-*](5,-1.5);
+  \node at(c1.center)[below=1mm]{\qty{510}{pF}};
+  \draw(2.2,-1.5|-AG.C)to[R=\qty{1}{k\ohm},*-*](2.2,-1.5);
+  \draw(3.5,-1.5|-AG.C)to[C=\qty{0.01}{\micro F},*-*](3.5,-1.5);
+  \draw(C)to[tlmic=\qty{1.5}{k\ohm}](C|-AX.C)--++(-0.25,0)node{$\times$}--(AX.C);
+  \draw(AX.B-|5,-1.5)to[eC=\qty{10}{\micro F},*-](AX.B);
+  \draw(7.2,1.5|-AX.B)to[R=$R^*_2$,*-*](7.2,1.5);
+  \draw(-1.4,-0.6)--(-1.7,-0.6)to[american inductor](-1.7,0)--(AG.B);
+  \draw(-1.4,-0.6)to[C=\qty{0.01}{\micro F},*-*](-1.4,-1.5);
+  \draw(-1.4,-1.5)--(10.2,-1.5)to[cute open switch](10.2,0);
+  \draw (10.2,0.7)--(10.2,1.5)--(-1.4,1.5)to[R=$R^*_1$](-1.4,0)--(-1.4,-0.6);
+  \draw(-1.4,-1.5)--(A)node[ground]{};
+  \draw(A)--(-2.2,-1.0)--(-2.4,-1.0)to[vC=\qty{270}{pF}](-2.4,0.4)--(-2.0,0.4)to[american inductor,inductors/width=1.6, inductors/coils=8](-2.0,-1.0)--(-2.2,-1.0);
+  \draw[fill=white](10.2,0.7)circle(0.8pt)node[right]{$-$}(10.2,0)circle(0.8pt)node[right]{$+$};
+  \node at (10.2,0.35){\qty{6}{V}};
+  \node at (7.65,0.7){3AX};
+  \node at (-0.35,0.7){3AG};
+  \node at (0,-1.5)[below]{高频放大};
+  \node at (8.2,-1.5)[below]{低频放大};
+  \node at (4.1,-1.5)[below]{检波};
+  \node at (-2.9,-1.5)[below]{调频};
+  \node at (10.2,-1.5)[below]{电源};
+  \foreach \x in {-1.85,1.8,6.6,9.7}
+  {
+    \draw[densely dashed](\x,-2)--(\x,2);
+  }
+\end{circuitikz}
+\end{document}

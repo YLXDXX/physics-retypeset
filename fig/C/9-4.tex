@@ -1,0 +1,29 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx,bm}
+\setCJKmainfont{Noto Serif CJK SC}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary {decorations.pathmorphing, decorations.pathreplacing, decorations.shapes,}
+\begin{document}
+\small
+\begin{tikzpicture}[>=latex,yscale=1.0]
+  
+  \fill[top color=gray,bottom color=gray, middle color=white](-0.45,0.12)--++(-0.4,0)arc(90:270:0.02)--++(0.4,0)--cycle;1
+  \fill[top color=gray,bottom color=gray, middle color=white](-0.5,0.02)--++(-0.4,0)arc(90:270:0.02)--++(0.4,0)--cycle;
+  \fill[top color=darkgray,bottom color=darkgray, middle color=white](-0.5,0)ellipse(0.1 and 0.3);
+  \fill[top color=darkgray,bottom color=darkgray, middle color=white](-0.2,0.3)rectangle(-0.5,-0.3);
+  \fill[top color=brown,bottom color=brown, middle color=white](-0.2,0)ellipse(0.1 and 0.3);
+  \fill[cyan!20!white,draw=lightgray](0,0)ellipse(0.25 and 0.5);
+  \draw[thin,densely dashed](0,0)--(2,0);
+  \fill[top color=brown,bottom color=brown, middle color=white,opacity=0.5]  (0,0)ellipse(0.08 and 0.2);
+  \fill[top color=brown,bottom color=brown, middle color=white,opacity=0.5]  (0,0.2)arc(90:-90:0.08 and 0.2)--(2,-0.2)--(2,0.2)--cycle;
+  \fill[lightgray]  (2,0)ellipse(0.08 and 0.2);
+  \draw[thin](2,0)--++(0.5,0)node[right]{$+$};
+  \node at(1.8,0.2)[inner sep=0pt,above]{$-$};
+  \fill[cyan!20!white,draw=lightgray,opacity=0.5](0,0.5)arc(90:270: 0.25 and 0.5)--++(3,0)arc(-90:90:0.5)--cycle;
+  \draw[thin](1.3,-0.2)--++(-45:0.7)node[right]{铜圆管（阴极）};
+  \draw[thin](0.4,0)--++(45:1.2)node[right]{阳极};
+\end{tikzpicture}
+\end{document}

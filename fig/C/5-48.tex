@@ -1,0 +1,29 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx}
+\setCJKmainfont{Noto Serif CJK SC}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary {decorations.pathmorphing, decorations.pathreplacing, decorations.shapes,}
+\begin{document}
+\small
+\begin{tikzpicture}[>=latex,scale=1]
+  \draw[dash dot](-3,0)--(6,0);
+  \draw [->, very thick](-2.5,0)--(-2.5,2)node[above]{蜡烛};
+  \draw [dashed](-2.5,0)--(-2.5, -2);
+  \draw [dashed](0,1.5)--(0, -.75);
+  \draw [dashed](3.5,0)--(3.5, -1.5);
+  \draw [dashed](5.5,0)--(5.5, -2);
+  \draw [very thick](5.5,0)--(5.5, 3)node[right]{屏};
+  \draw [<->](-2.5,.75)--node[fill=white]{$u_1$}(0,.75);
+  \draw [<->](5.5,.75)--node[fill=white]{$v_1$}(0,.75);
+  \draw [<->](3.5,-.5)--node[fill=white]{$d$}(0,-.5);
+  \draw [<->](-2.5,-1)--node[fill=white]{$u_2$}(3.5,-1);
+  \draw [<->](5.5,-1)--node[fill=white]{$v_2$}(3.5,-1);
+  \draw [<->](-2.5,-1.5)--node[fill=white]{$L$}(5.5,-1.5);
+  \fill (0,0) circle (1.5pt);  \fill (3.5,0) circle (1.5pt)node[above]{$B$};
+  \node at (.2,0)[above]{$A$};
+\end{tikzpicture}
+\end{document}

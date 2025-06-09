@@ -1,0 +1,55 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx,ninecolors}
+\setCJKmainfont{Noto Serif CJK SC}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary {decorations.pathmorphing, decorations.pathreplacing, decorations.shapes}
+\pgfdeclareverticalshading{rainbow}{100bp}
+{color(0bp)=(red); color(25bp)=(red); color(45bp)=(yellow);
+color(55bp)=(green); color(60bp)=(cyan); color(70bp)=(azure3);
+color(75bp)=(violet); color(100bp)=(violet)}
+\begin{document}
+\small
+\begin{tikzpicture}[>=latex,scale=1.0]
+  % \useasboundingbox(-1,1.2)rectangle(5,2.8);
+  \fill[violet!80](-5.5,4)rectangle(0.17, 3.7);
+  \fill[violet!80](1.12,4)rectangle(2.72, 3.7);
+  \fill[violet!50](-2.5,4)rectangle(-1.35,3.7);
+  \fill[violet!50](0.34,4)rectangle(1.12, 3.7);
+  \fill[violet!50](2.13,3)rectangle(3.62,3.3);
+  \draw[thin] (-5.5,3)--(5.5,3)node[right]{波长（\unit{m}）};
+  \draw[thin] (-5.5,4)--(5.5,4)node[right]{频率（\unit{Hz}）};
+  \foreach \x/\y/\z in {-5/4/10^4,-3/8/1,-1/12/10^{-4},1/16/10^{-8},3/20/10^{-12}}
+  {
+    \draw[thin](\x,4)--++(0,0.3)node[above]{$10^{\y}$};
+    \draw[thin](\x+0.238,3)--++(0,-0.3)node[below]{$\z$};
+    \foreach \w in {1,2,3}
+    {
+      \draw[thin](\x+0.5*\w,4)--++(0,0.2);
+      \draw[thin](\x+0.238+0.5*\w,3)--++(0,-0.2);
+    }
+  }
+  \draw[thin](5,4)--++(0,0.3)node[above]{$10^{24}$};
+  \draw[thin](5.238,3)--++(0,-0.3)node[below]{$10^{-16}$};
+  \foreach \x in {-2.5,-1.35,0.17,0.34,1.12,2.13,2.72,3.62}
+    { \draw[thin](\x,4)--++(0,-1.5); }
+  \fill[cyan,opacity=0.5](0.17,3)--(-3.5,1)--(-3.5,0)--(0.17,2)--cycle;
+  \fill[cyan!50,opacity=0.5](0.34,3)--(3.5,1)--(3.5,0)--(0.34,2)--cycle;
+  \fill[cyan!30,opacity=0.5](0.34,3)--(3.5,1)--(-3.5,1)--(0.17,3)--cycle;
+  \shade [shading=rainbow,shading angle=270](-3.5,0)rectangle(3.5,1);
+  \node at (-3.5,0.5)[left]{红};
+  \node at (-3.5,1)[above]{\num{4.3e14}};
+  \node at (3.5,1)[above]{\num{7.5e14}};
+  \node at (5.5,1)[above]{频率（\unit{Hz}）};
+  \node at (3.5,0.5)[right]{紫};
+  \node at (0,0)[below]{可见光};
+  \node at (0.76,3.5)[]{\scriptsize 紫外线};
+  \node at (1.625,3.5)[]{\scriptsize X 射线};
+  \node at (2.875,3.5)[]{\scriptsize $\gamma$ 射线};
+  \node at (-0.59,3.5)[]{\scriptsize 红外线};
+  \node at (-1.925,3.5)[]{\scriptsize 微波};
+  \node at (-4,3.5)[]{\scriptsize 无线电波};
+  \end{tikzpicture}
+\end{document}

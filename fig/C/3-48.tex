@@ -1,0 +1,31 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx}
+\setCJKmainfont{Noto Serif CJK SC}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{circuitikz}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary {decorations.pathmorphing, decorations.pathreplacing, decorations.shapes}
+\ctikzset{bipoles/length=1cm}
+\begin{document}
+\small
+\begin{circuitikz}[>=latex, scale=0.7,european]
+  % \useasboundingbox(0.9,0)rectangle(5.1,5);
+  \draw (0,0) to [R=$2$, *-*] (-30:3) ;
+  \draw (0,0) to [R=$3$, *-*] (-150:3);
+  \draw (0,0) to [R=$1$] (0,3);
+  \draw (0,3)--(-6,3)node[left]{$A$};
+  \draw (-150:3)--(-6,-1.5)node[left]{$C$};
+  \draw (-30:3)--++(0,-1.5)--(-6,-3)node[left]{$B$};
+  \draw (0,0)node[above right]{$O'$}--(-6,0)node[left]{$O$};
+  \foreach \x in {0,3,-1.5,-3}
+  {
+      \draw [fill=white] (-6,\x) circle (3pt);
+  }
+  \draw [<->] (-5,0)--node[fill=white]{$U_{\text{相}}$}(-5,3);
+  \draw [->](-5,3)--(-4,3) node [above]{$I_{\text{线}}$};
+  \draw [->](0,3)--(0,2.5) node [right]{$I_{\text{相}}$};
+\end{circuitikz}
+\end{document}

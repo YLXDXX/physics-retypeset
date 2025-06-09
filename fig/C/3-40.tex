@@ -1,0 +1,32 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx}
+\setCJKmainfont{Noto Serif CJK SC}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{circuitikz}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary {decorations.pathmorphing, decorations.pathreplacing, decorations.shapes}
+\ctikzset{bipoles/length=1cm}
+\begin{document}
+\small
+\begin{circuitikz}[>=latex, scale=0.9,european]
+  % \useasboundingbox(0.9,0)rectangle(5.1,5);
+  \draw(0,0.5)--(2,0.5)--(4,0.5) to [R=$R$] (4,4.5)--(0,4.5);
+  \ctikzset{diodes/scale=0.6} 
+  \draw (2,0.5) to [full diode=$D_3$, *-](2,2) to [full diode=$D_2$, -*](2,4.5) ;
+  \ctikzset{diodes/scale=0.6} 
+  \draw (0,0.5)--(0,2) to [full diode=$D_4$,](0,3.5) to [full diode=$D_1$](0,4.5) ;
+  \draw [fill=black]  (0,3.5)circle(1.5pt);
+  \draw [fill=black]  (2,2)circle (1.5pt);
+  % \draw  (-1.5,3.5);
+  % \draw  (-1.5,2)--;
+  \draw [american](2,2)--(-1.5,2) to [L] (-1.5,3.5)--(0,3.5);
+  \draw [american](-4,3)--(-4,4)--(-2.1,4) to [L] (-2.1,1.5)--(-4,1.5)--(-4,2.5);
+  \draw [fill=white]  (-4,2.5)circle(1.5pt);
+  \draw [fill=white]  (-4,3)circle(1.5pt);
+  \node at (-4,5.5/2){$\sim$};
+  \draw [ultra thick](-1.8,2)node[below]{$b$}--(-1.8,3.5)node[above]{$a$};
+\end{circuitikz}
+\end{document}

@@ -1,0 +1,24 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx}
+\setCJKmainfont{Noto Serif CJK SC}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary {decorations.pathmorphing, decorations.pathreplacing, decorations.shapes,}
+\begin{document}
+\small
+\begin{tikzpicture}[>=latex,scale=1.0]
+  % \useasboundingbox(-0.6,-1.2)rectangle(3,1.2);
+  \fill(0,1)to[bend left](0,-1)arc(-90:90:1);
+  \draw[brown](0,-1)--(0,-0.2);
+  \fill[ball color=brown!80!red](0,-0.2)circle(2pt);
+  \fill[cyan!20,opacity=0.5,draw=black](0,0)circle(1);
+  \draw[thin](0,-0.2)--++(135:1.5)node[left]{阳极};
+  \draw[thin](45:1)--++(45:0.5)node[right]{阴极};
+  \draw[thin](102:0.85)--++(90:0.3)node[above]{玻璃泡};
+  \fill[ball color=gray](0.2,-1.38)circle(3pt);
+  \fill[ball color=gray](-0.2,-1.38)circle(3pt);
+  \fill[left color=gray,right color=gray,middle color=white](240:1)rectangle(0.5,-1.4);
+\end{tikzpicture}
+\end{document}

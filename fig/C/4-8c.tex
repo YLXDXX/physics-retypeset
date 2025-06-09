@@ -1,0 +1,30 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx}
+\setCJKmainfont{Noto Serif CJK SC}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary {decorations.pathmorphing, decorations.pathreplacing, decorations.shapes,}
+\begin{document}
+\small
+\begin{tikzpicture}[>=latex,xscale=0.5]
+  % \useasboundingbox(0.9,0)rectangle(5.1,5);
+  \draw[->] (-.5, 0)--(20,0)node [right]{$z$};
+  \draw [->](0,-.8)--(0,1)node [right]{$E$};
+  \node at (0,0)[below left]{$O$};
+  \draw [very thick] plot[domain=0:6*pi, samples=1000] function{.7*sin(x)} ;
+  \foreach \x in {1,2,3}
+  {
+  \draw[dashed] (2*pi*\x, -0.8)--(2*pi*\x, 1.2);
+  }
+  \node at (-3.2, 0)[right]{$t=T$};
+  \draw[->] (pi/2, 0)--(pi/2, 0.7);
+  \draw[->] (pi*1.5, 0)--(pi*1.5, -0.7);
+  \draw[->] (pi/4, 0)--(pi/4, 0.7/1.414);
+  \draw[->] (pi*.75, 0)--(pi*.75, 0.7/1.414);
+  \draw[->] (pi*1.25, 0)--(pi*1.25, -0.7/1.414);
+  \draw[->] (pi*1.75, 0)--(pi*1.75, -0.7/1.414);
+\end{tikzpicture}
+\end{document}

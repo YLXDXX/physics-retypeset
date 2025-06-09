@@ -1,0 +1,20 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx}
+\setCJKmainfont{Noto Serif CJK SC}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary {decorations.pathmorphing, decorations.pathreplacing, decorations.shapes,}
+\begin{document}
+\small
+\begin{tikzpicture}[>=latex,scale=1]
+  \node at (0,0){\sun};
+  \node at (-.5,0){$S$};
+  \draw[dashed] (0,0)--(15:2)node[above]{$A$};
+  \draw[dashed] (0,0)--(-15:2)node[below]{$C$};
+  \draw[->](15:2)--(15:3.5)node[above]{$B$};
+  \draw[->](-15:2)--(-15:3.5)node[below]{$D$};
+\end{tikzpicture}
+\end{document}

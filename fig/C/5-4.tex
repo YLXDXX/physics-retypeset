@@ -1,0 +1,33 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx}
+\setCJKmainfont{Noto Serif CJK SC}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary {decorations.pathmorphing, decorations.pathreplacing, decorations.shapes,}
+\begin{document}
+\small
+\begin{tikzpicture}[>=stealth,scale=1.0]
+  \useasboundingbox(-2.4,-2.1)rectangle(7.5,2.5);
+  \draw(-2,0)node[left]{$A$}--(2,0)node[right]{$B$};
+  \node at(0,0)[below=2.5mm]{太阳};
+  \draw(0,0)circle(2)node[fill=white]{\huge\sun};
+  \draw[fill=white](70:2)circle(0.1)(50:2)circle(0.1);
+  \fill([shift=(-20:0.1)]70:2)arc(-20:160:0.1);
+  \fill([shift=(-40:0.1)]50:2)arc(-40:140:0.1);
+  \node at(70:2)[below left]{$D$};
+  \node at(70:2)[above left=1mm]{地球};
+  \node at(50:2)[below left ]{$C$};
+  \draw[thin](70:2)--++(70:0.5)(50:2)--++(70:0.7);
+  \draw[thin,<->](70:2.4)--++(-20:0.7)node[midway,sloped,above]{$l$};
+  \draw[->](50:2)arc(50:60:2);
+  \draw[->](260:2)arc(260:270:2);
+  \draw(5:6)circle(0.2)(5:6)circle(0.7);
+  \node at (5:6)[below=1mm]{木星};
+  \fill([shift=(-85:0.2)]5:6)arc(-85:95:0.2);
+  \fill(5:6.7)circle(1pt)node[right]{卫星};
+  \draw(5:6.7)--(70:2)(5:6.7)--(50:2);
+\end{tikzpicture}
+\end{document}

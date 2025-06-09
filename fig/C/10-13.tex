@@ -1,0 +1,41 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx,ninecolors}
+\setCJKmainfont{Noto Serif CJK SC}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary {decorations.pathmorphing, decorations.pathreplacing, decorations.shapes}
+\begin{document}
+\small
+\begin{tikzpicture}[>=latex,scale=1.5]
+  \draw[decorate,decoration={coil,segment length=1mm,amplitude=1.5mm}](0,0)--(0.7,0);
+  \fill[top color=lightgray,bottom color=lightgray,middle color=white](0,0)ellipse(0.1 and 0.3);
+  \fill[top color=lightgray,bottom color=lightgray,middle color=white](0,0.3)rectangle(-0.2,-0.3);
+  \fill[ball color=lightgray!50](0.75,0)circle(0.15);
+  \fill[ball color=lightgray!50](1.25,0)circle(0.15);
+  \fill[top color=gray,bottom color=gray,middle color=white](0.75,-0.15)rectangle(1.25,0.15);
+  \fill[ball color=lightgray!50](1.6,0)circle(0.2);
+  \fill[top color=lightgray,bottom color=lightgray,middle color=white](3.2,0.03)--(4.0,0.03)--(4.2,0)--(4.0,-0.03)--(3.2,-0.03)--cycle;
+  \fill[darkgray](3.25,0)ellipse(0.11 and 0.33);
+  \fill[darkgray](3.25,0.33)rectangle(3.2,-0.33);
+  \fill[darkgray](3.2,0)ellipse(0.11 and 0.33);
+  \fill[top color=lightgray,bottom color=lightgray,middle color=white](3.2,0)ellipse(0.1 and 0.3);
+  \fill[top color=lightgray,bottom color=lightgray,middle color=white](3,0.3)rectangle(3.2,-0.3);
+  \fill[darkgray](3.0,0)ellipse(0.1 and 0.3);
+  \fill[ball color=lightgray!50](2.8,0)circle(0.2);
+  \fill[top color=gray,bottom color=gray,middle color=white](2.8,0.2)rectangle(2.6,-0.2);
+  \fill[top color=gray,bottom color=gray,middle color=white](1.8,0.2)rectangle(1.6,-0.2);
+  \draw(1.8,0)--(2.15,0)--++(30:0.1);
+  \draw(2.6,0)--(2.25,0)--++(-150:0.1);
+  \fill[cyan!30!lightgray!50,opacity=0.3](1.8,0.2)rectangle(2.6,-0.2);
+  \fill[cyan!30!lightgray!50,fill opacity=0.3,draw](-0.2,0.3)arc(90:-90:0.1 and 0.3)--(3.2,-0.3)arc(-90:90:0.1 and 0.3)--cycle;
+  \fill[darkgray](-0.2,0)ellipse(0.11 and 0.33);
+  \fill[top color=lightgray,bottom color=lightgray,middle color=white](-0.2,0)ellipse(0.01 and 0.03);
+  \fill[top color=lightgray,bottom color=lightgray,middle color=white](-0.2,0.03)--(-1.0,0.03)--(-1.2,0)--(-1.0,-0.03)--(-0.2,-0.03)--cycle;
+  \draw[thin](3.7,0)--++(45:0.5)node[above]{钉子};
+  \draw[thin](2.5,0.2)--++(45:0.5)node[above]{氖灯};
+  \draw[thin](1.2,0.15)--++(45:0.5)node[above]{电阻};
+  \draw[thin](0.4,0.075)--++(135:0.5)node[above]{弹簧};
+\end{tikzpicture}
+\end{document}

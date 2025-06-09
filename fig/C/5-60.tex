@@ -1,0 +1,24 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx}
+\setCJKmainfont{Noto Serif CJK SC}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary {decorations.pathmorphing, decorations.pathreplacing, decorations.shapes,}
+\begin{document}
+\small
+\begin{tikzpicture}[>=latex,scale=1]
+  \draw [dash dot](-4,0)--(5,0);
+  \fill (-2,0) circle (1.5pt) node[below]{$F_1$};
+  \fill (2.5,0) circle (1.5pt)node[above]{$F_2$};
+  \draw[->, very thick, -latex](-3.5,0)node[below]{$B$}--(-3.5,.8)node[above]{$A$};
+  \draw[->, very thick, -latex](4.5,0)node[above]{$B'$}--(4.5,-1.5)node[below]{$A'$};
+  \draw[<->, ultra thick ](0,2)--(0,-2);
+  \node at (.25,.25){$O$};
+  \draw[ stealth-stealth](-3.5,.4)--node [above]{$x$}(-2,.4);
+  \draw[ stealth-stealth](4.5,-.4)--node [above]{$x'$}(2.5,-.4);
+  \draw (-2,0)--(-2,.5); \draw (2.5,0)--(2.5,-.6);
+\end{tikzpicture}
+\end{document}

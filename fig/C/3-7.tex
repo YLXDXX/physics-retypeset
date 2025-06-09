@@ -1,0 +1,25 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx}
+\setCJKmainfont{Noto Serif CJK SC}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary {decorations.pathmorphing, decorations.pathreplacing, decorations.shapes,}
+\begin{document}
+\small
+\begin{tikzpicture}[>=latex,xscale=0.8]
+  % \useasboundingbox(0.9,0)rectangle(5.1,5);
+  \draw [->](-2,0)--(6,0)node[right]{$\omega t$};
+  \draw [->](0,-1.5)--(0,1.5)node[right]{$i$};
+  \draw [ultra thick] plot[domain=0:5.3, samples=1000] function{sin(x+1)} ;
+  \draw [ultra thick, dashed] plot[domain=-1:0, samples=100] function{sin(x+1)};
+  \node at (2,1) [below]{$i_1$};
+  \draw [very thick] plot[domain=0:5.3, samples=1000] function{-.7*sin(x+1)} ;
+  \draw [very thick, dashed] plot[domain=-1:0, samples=100] function{-.7*sin(x+1)};
+  \node at (1,-.55)[below]{$i_2$};
+  \draw [dashed] (-1,0)--(-1,-1.5);
+  \draw [<->] (0,-1)--node[above]{$\phi_0$}(-1, -1);
+\end{tikzpicture}
+\end{document}

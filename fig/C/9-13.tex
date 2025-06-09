@@ -1,0 +1,108 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx,ninecolors}
+\setCJKmainfont{Noto Serif CJK SC}
+\usepackage{tkz-euclide}
+\usepackage{amsmath,mhchem}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary {decorations.pathmorphing, decorations.pathreplacing, decorations.shapes,shapes.arrows,shapes.symbols}
+\newcommand{\atomu}[2][cyan]{
+  \begin{scope}[#2]
+  \foreach \x in {0,60,...,300}
+  {
+    \fill[ball color=#1!10!white](\x:0.8)circle(0.1);
+    \fill[ball color=#1!10!white](\x+30:0.8)circle(0.1);
+    \fill[ball color=#1!10!black](\x+15:0.8)circle(0.1);
+    \fill[ball color=#1!10!black](\x+45:0.8)circle(0.1);
+    \fill[ball color=#1!10!white](\x:0.6)circle(0.1);
+    \fill[ball color=#1!10!white](\x+30:0.6)circle(0.1);
+    \fill[ball color=#1!10!black](\x+45:0.6)circle(0.1);
+    \fill[ball color=#1!10!black](\x+15:0.6)circle(0.1);
+    \fill[ball color=#1!10!black](\x:0.4)circle(0.1);
+    \fill[ball color=#1!10!white](\x+30:0.4)circle(0.1);
+    \fill[ball color=#1!10!white](\x:0.2)circle(0.1);
+    \fill[ball color=#1!10!black](\x:0.75*rnd)circle(0.1);
+    \fill[ball color=#1!10!white](\x:0.75*rnd)circle(0.1);
+    \fill[ball color=#1!10!black](\x:0.55*rnd)circle(0.1);
+    \fill[ball color=#1!10!white](\x:0.55*rnd)circle(0.1);
+  }
+  \end{scope}
+}
+\newcommand{\atomi}[2][cyan]{
+  \begin{scope}[#2]
+  \foreach \x in {0,60,...,300}
+  {
+      \fill[ball color=#1!10!white](\x+7:0.6)circle(0.1);
+      \fill[ball color=#1!10!white](\x+37:0.6)circle(0.1);
+      \fill[ball color=#1!10!black](\x+52:0.6)circle(0.1);
+      \fill[ball color=#1!10!black](\x+22:0.6)circle(0.1);
+      \fill[ball color=#1!10!white](\x:0.5)circle(0.1);
+      \fill[ball color=#1!10!white](\x+30:0.5)circle(0.1);
+      \fill[ball color=#1!10!black](\x+45:0.5)circle(0.1);
+      \fill[ball color=#1!10!black](\x+15:0.5)circle(0.1);
+      \fill[ball color=#1!10!black](\x:0.4)circle(0.1);
+      \fill[ball color=#1!10!white](\x+30:0.4)circle(0.1);
+      \fill[ball color=#1!10!white](\x:0.2)circle(0.1);
+      \fill[ball color=#1!10!black](\x:0.35*rnd)circle(0.1);
+      \fill[ball color=#1!10!white](\x:0.35*rnd)circle(0.1);
+  }
+  \end{scope}
+}
+\newcommand{\atomii}[2][cyan]{
+  \begin{scope}[#2]
+  \foreach \x in {0,60,...,300}
+  {
+      \fill[ball color=#1!10!white](\x:0.5)circle(0.1);
+      \fill[ball color=#1!10!white](\x+30:0.5)circle(0.1);
+      \fill[ball color=#1!10!black](\x+45:0.5)circle(0.1);
+      \fill[ball color=#1!10!black](\x+15:0.5)circle(0.1);
+      \fill[ball color=#1!10!black](\x:0.4)circle(0.1);
+      \fill[ball color=#1!10!white](\x+30:0.4)circle(0.1);
+      \fill[ball color=#1!10!white](\x:0.2)circle(0.1);
+      \fill[ball color=#1!10!black](\x:0.35*rnd)circle(0.1);
+      \fill[ball color=#1!10!white](\x:0.35*rnd)circle(0.1);
+  }
+  \end{scope}
+}
+\begin{document}
+\small
+\begin{tikzpicture}[>=latex,scale=1.0]
+  % \useasboundingbox(-1,1.2)rectangle(5,2.8);
+  \draw[->](-2,0)--++(0.7,0);
+  \fill[ball color=gray](-2,0)circle(0.1)node[below]{中子};
+  \atomu{}
+  \node at (0,-1.2) {\ce{^235U}};
+  \atomi{xshift=3cm,yshift=-1.2cm}
+  \atomii{xshift=3cm,yshift=1.2cm}
+  \atomu{xshift=6cm,yshift=-2.4cm}
+  \atomu{xshift=6cm,yshift=2.4cm}
+  \atomii{xshift=9cm,yshift=3.6cm}
+  \atomi{xshift=9cm,yshift=1.2cm}
+  \atomi{xshift=9cm,yshift=-3.6cm}
+  \atomii{xshift=9cm,yshift=-1.2cm}
+  \draw[->](4,1.6)--(4.8,1.92);
+  \draw[->](4,0)--(4.8,0);
+  \draw[->](4,-1.6)--(4.8,-1.92);
+  \draw[->](10,4)--(10.8,4.32);
+  \draw[->](10,2.4)--(10.8,2.4);
+  \draw[->](10,0.8)--(10.8,0.48);
+  \draw[->](10,-0.8)--(10.8,-0.48);
+  \draw[->](10,-2.4)--(10.8,-2.4);
+  \draw[->](10,-4)--(10.8,-4.32);
+  \fill[ball color=gray](4.4,1.76)circle(0.1);
+  \fill[ball color=gray](4.4,-1.76)circle(0.1);
+  \fill[ball color=gray](4.4,0)circle(0.1);
+  \fill[ball color=gray](10.4,4.16)circle(0.1);
+  \fill[ball color=gray](10.4,-4.16)circle(0.1);
+  \fill[ball color=gray](10.4,0.64)circle(0.1);
+  \fill[ball color=gray](10.4,-0.64)circle(0.1);
+  \fill[ball color=gray](10.4,2.4)circle(0.1);
+  \fill[ball color=gray](10.4,-2.4)circle(0.1);
+  \node at (1.8,0)[single arrow,fill=red,single arrow head extend=3pt]{\rule{1em}{0pt}};
+  \node at (7.8,2.4)[single arrow,fill=red,single arrow head extend=3pt]{\rule{1em}{0pt}};
+  \node at (7.8,-2.4)[single arrow,fill=red,single arrow head extend=3pt]{\rule{1em}{0pt}};
+  \node[starburst, draw, minimum width=1cm, minimum height=0.4cm,fill=yellow,draw=red] at (3,0) {};
+  \node[starburst, draw, minimum width=1cm, minimum height=0.4cm,fill=yellow,draw=red] at (9,2.4) {};
+  \node[starburst, draw, minimum width=1cm, minimum height=0.4cm,fill=yellow,draw=red] at (9,-2.4) {};
+\end{tikzpicture}
+\end{document}

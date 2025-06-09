@@ -1,0 +1,59 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx,bm}
+\setCJKmainfont{Noto Serif CJK SC}
+\usepackage{tkz-euclide,ninecolors}
+\usepackage{amsmath}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary {decorations.pathmorphing, decorations.pathreplacing, decorations.shapes,}
+\begin{document}
+\small
+\begin{tikzpicture}[>=latex,yscale=1.0]
+  \draw[fill=brown4](-0.2,-1.62)--(-0.2,-1.12)--(-0.7,-0.97)--cycle;
+  \draw[fill=brown5](-0.4,-2)--(-0.4,-0.6)--(-0.2,-0.6)--(-0.2,-2);
+  \draw[fill=brown4](0.2,-2)--(0.2,-0.6)--(-0.2,-0.6)--(-0.2,-2);
+  \draw[fill=brown8](5,1)--(-2,0.3)--(-1,-1)--(5,-0.4);
+  \draw[fill=brown7](-2,0.3)--(-1,-1)--(-1,-1.2)--(-2,0.1)--cycle;
+  \draw[fill=brown6](5,-0.4)--(-1,-1)--(-1,-1.2)--(5,-0.6);
+  \draw[fill=brown3](5,-1)--(0.2,-1.48)--(0.2,-1.08)--(5,-0.6);
+  
+  \begin{scope}[xshift=4cm,yshift=4mm]
+    \fill[left color=gray,right color=gray,middle color=white](0,0)ellipse(0.3 and 0.15);
+    \fill[lightgray](0,0.05)ellipse(0.2 and 0.1);
+    \fill[left color=gray,right color=gray,middle color=white](0,0.05)ellipse(0.05 and 0.02);
+    \fill[left color=gray,right color=gray,middle color=white](-0.05,0.05)rectangle(0.05,0.5);
+    \draw[fill=lightgray!20,even odd rule](0,0.5)--++(-0.5,0.1)--++(0,1)--++(1,-0.2)--++(0,-1)--cycle;
+    \foreach \x/\y in {-0.1/-20,0/0,0.1/20}
+    {
+      \foreach \w in {20,40,60,80}
+      {
+        \draw[line width={sin(90-\w)},darkgray!\w](\x,1.2-0.2*\x)to[bend right=\y](\x,0.8-0.2*\x);
+      }
+    }
+    \node at (0,1.5)[above]{像屏};
+  \end{scope}
+  \draw[thin](3.9,1.62)--(2.2,1.2)--(4.1,1.18);
+  \begin{scope}[xshift=2cm,yshift=2mm]
+    \fill[left color=gray,right color=gray,middle color=white](0,0)ellipse(0.3 and 0.15);
+    \fill[lightgray](0,0.05)ellipse(0.2 and 0.1);
+    \fill[left color=gray,right color=gray,middle color=white](0,0.05)ellipse(0.05 and 0.02);
+    \fill[left color=gray,right color=gray,middle color=white](-0.05,0.05)rectangle(0.05,0.5);
+    \draw[fill=lightgray!20,even odd rule](0,0.5)--++(-0.5,0.1)--++(0,1)--++(1,-0.2)--++(0,-1)--cycle(-0.05,1.01)circle(1pt)(0.05,0.99)circle(1pt);
+    \node at (0,1.5)[above]{双孔屏};
+  \end{scope}
+  \draw[thin](1.95,1.21)--(0,1.0)--(2.05,1.19);
+  \begin{scope}
+    \fill[left color=gray,right color=gray,middle color=white](0,0)ellipse(0.3 and 0.15);
+    \fill[lightgray](0,0.05)ellipse(0.2 and 0.1);
+    \fill[left color=gray,right color=gray,middle color=white](0,0.05)ellipse(0.05 and 0.02);
+    \fill[left color=gray,right color=gray,middle color=white](-0.05,0.05)rectangle(0.05,0.5);
+    \draw[fill=lightgray!20,even odd rule](0,0.5)--++(-0.5,0.1)--++(0,1)--++(1,-0.2)--++(0,-1)--cycle(0,1)circle(1pt);
+    \node at (0,1.5)[above]{单孔屏};
+  \end{scope}
+  \foreach \x in {-0.2,0,0.2}
+  {
+    \draw[postaction={decorate},decoration={markings,mark=at position 0.5 with {\arrowreversed{>}}}](\x,-0.5*\x+1)--++(-3,-0.3);
+  }
+  \node at (-2,1.3){太阳光};
+\end{tikzpicture}
+\end{document}

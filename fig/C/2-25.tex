@@ -1,0 +1,27 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx}
+\setCJKmainfont{Noto Serif CJK SC}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{circuitikz}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary {decorations.pathmorphing, decorations.pathreplacing, decorations.shapes}
+\ctikzset{bipoles/length=1cm}
+\begin{document}
+\small
+\begin{circuitikz}[>=latex, yscale=0.7,european]
+  % \useasboundingbox(0.9,0)rectangle(5.1,5);
+\draw (2,0) to [battery] (0,0)--(0,3)--(.5,3);
+\draw (2,0) to [cute open switch=$K$](3,0)--(4,0) to [pR,name=hb1] (4.8,0);
+\node at (4.5,-.5){$R_1$};
+\draw [american] (.5,3)--(.5,3.7) to [cute choke,l=$L$] (2.5,3.7) to [lamp=$A_1$] (4.5,3.7);
+\draw  (1,1.6) to [pR,name=hb2] (1.8,1.6)  to [lamp=$A_2$] (4.5,1.6)--(4.5,3.7);
+\draw (0.5,3)--(0.5,2.3)--(0.5,2.3-|hb2.wiper)--(hb2.wiper);
+\draw (4.5,5.3/2)--(5.5,5.3/2)--(5.5, 1)--(5.5, 1-|hb1.wiper)--(hb1.wiper);
+\node at (1.5,1.1){$R$};
+\draw [fill=black](4.5,5.3/2) circle(1.5pt);
+\draw [fill=black](.5,3)circle(1.5pt);
+\end{circuitikz}
+\end{document}

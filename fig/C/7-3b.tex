@@ -1,0 +1,26 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx}
+\setCJKmainfont{Noto Serif CJK SC}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{circuitikz}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary {decorations.pathmorphing, decorations.pathreplacing, decorations.shapes,}
+\ctikzset{bipoles/length=0.9cm}
+\begin{document}
+\small
+\begin{circuitikz}[>=latex, scale=1,european]
+  % \useasboundingbox(0.9,0)rectangle(5.1,5);
+  \draw(0,0)node[below left]{$A$}--(-1.5,0)--(-1.5,-1.4)to[battery,name=dc](2,-1.4)to[rmeter,t=G](2,0)--(0.5,0);
+  \draw[fill=white](0,0)circle(0.05);
+  \draw(0,0)circle(0.5);
+  \draw[line width=0.6mm](0,-0.47)arc(-90:0:0.47)node[midway,right]{$K$};
+  \node at (dc.left)[below left]{$E$};
+  \draw[very thin,->](-0.6,0.8)--++(1.0,-1.0);
+  \draw[very thin,->](-0.7,0.7)--++(1.0,-1.0)node[at start,above left]{光};
+  \draw[very thin,->](-0.8,0.6)--++(1.0,-1.0);
+  \draw[very thin,->](0.6,0.1)--++(1.0,0)node[midway,above]{$I$};
+\end{circuitikz}
+\end{document}

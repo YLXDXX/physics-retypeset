@@ -1,0 +1,21 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx}
+\setCJKmainfont{Noto Serif CJK SC}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary {decorations.pathmorphing, decorations.pathreplacing, decorations.shapes,}
+\begin{document}
+\small
+\begin{tikzpicture}[>=latex,xscale=1.2]
+  % \useasboundingbox(0.9,0)rectangle(5.1,5);
+  \draw[<->](0,2)node[above]{$U_R$}--(0,0)--(5.2,0)node[below]{$t$};
+  \draw [ thick, dashed] plot[domain=0:3.1416/2, samples=1000] function{1.5*sin(2*x)} ;
+  \draw [ thick, dashed] plot[domain=3.1416:3.1416*3/2, samples=1000] function{1.5*sin(2*x)} ;
+  \node at (3.1416/4,1.75) {滤波前};
+  \node at (0,0)[below]{$O$};
+  \draw [very thick](0,1.5*.866)--(3.1416/8, 1.5/1.414)--(3.1416/3, 1.5*.866)--(3.1416/8+3.1416, 1.5/1.414)--(3.1416/3+3.1416, 1.5*.866)--+(3.1416/8, 1.5/1.414-1.5*.866)node[right]{滤波后};
+\end{tikzpicture}
+\end{document}

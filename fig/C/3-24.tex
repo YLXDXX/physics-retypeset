@@ -1,0 +1,29 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx}
+\setCJKmainfont{Noto Serif CJK SC}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{circuitikz}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary {decorations.pathmorphing, decorations.pathreplacing, decorations.shapes}
+\ctikzset{bipoles/length=1cm}
+\begin{document}
+\small
+\begin{circuitikz}[>=latex, scale=1,european]
+  % \useasboundingbox(0.9,0)rectangle(5.1,5);
+  \draw (0,0)--(6,0);
+  \draw (6,3) to [american inductors, L=$L$] (6,1.5) to [R=$R$] (6,0);
+  \draw (5,0) to [C=$C$] (5,3);
+  \draw (6,3)--(4,3) to [rmeter, t=A] (1,3);
+  \draw (3.5,0) to [rmeter, t=V, *-*] (3.5,3);
+  \draw (0,0)--(0,1.3); \draw (0,1.7)--(0,3);
+  \draw (0,1.3) [fill=white]circle (1.5pt);
+  \draw (0,1.7) [fill=white]circle (1.5pt);
+  \draw (.2,3) [fill=black]circle (1.5pt);
+  \node at (0,1.5){$\sim$};
+  \draw(1,3) to  (1,0); \draw(1,3)--(1,3.7)--(.2,3.7)--(.2,3);
+  \draw (2,3) to [rmeter, t=W, fill=white] (0,3);
+\end{circuitikz}
+\end{document}

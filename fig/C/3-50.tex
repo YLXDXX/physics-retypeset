@@ -1,0 +1,30 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx}
+\setCJKmainfont{Noto Serif CJK SC}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{circuitikz}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary {decorations.pathmorphing, decorations.pathreplacing, decorations.shapes}
+\ctikzset{bipoles/length=1cm}
+\begin{document}
+\small
+\begin{circuitikz}[>=latex, scale=1,european]
+  % \useasboundingbox(0.9,0)rectangle(5.1,5);
+  \draw (0,0) to [american inductors, L] (0,2);
+  \draw (0,0) to [american inductors, L] (-2,-1)node[left]{$C$};	
+  \draw (0,0) to [american inductors, L] (2,-1)node[right]{$B$};	
+  \draw[european] (5,0) to [R=1] (5,2);
+  \draw [european](5,0) to [R=3] (-2+5,-1);	
+  \draw[european] (5,0) to [R=2] (2+5,-1);				
+  \draw(0,2)node[left]{$A$}--(5,2)	;
+  \draw (2,-1)--(2,-1.5)--(2+5,-1.5)--(2+5,-1);		
+  \draw (-2,-1)--(-2,-2)--(-2+5,-2)--(-2+5,-1);
+  \node at (0,.1) [right]{$O$};
+  \node at (5,.1) [right]{$O'$};
+  \node at (-1,-1.7){发电机};
+  \node at (5,-1.2){负载};
+\end{circuitikz}
+\end{document}

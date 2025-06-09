@@ -1,0 +1,25 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx,ninecolors}
+\setCJKmainfont{Noto Serif CJK SC}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{circuitikz}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary {decorations.pathmorphing, decorations.pathreplacing, decorations.shapes}
+\ctikzset{bipoles/length=1cm}
+\begin{document}
+\small
+\begin{circuitikz}[>=latex, scale=1,european]
+  \useasboundingbox(-1.9,-1.7)rectangle(1.1,1.7);
+\draw (-0.5,-0.75)--(0,-1.25)--(1,-1.25)--(1,-0.8) to [american inductor,name=xq1] (1,0.8)--(1,1.25)-- (0,1.25)--(-0.5,0.75);
+\draw(-0.5,-0.75)--++(45:0.5)node[rotate=45,below]{\tiny$-$}(-0.5,-0.75)--++(-135:0.5)node[rotate=45,below]{\tiny$-$};
+\draw(-0.5,0.75)--++(-45:0.5)node[rotate=-45,above]{\tiny$+$}(-0.5,0.75)--++(135:0.5)node[rotate=-45,above]{\tiny$+$};
+\foreach \x/\y in {0.5/15,0.3/25,0.1/35,-0.1/55,-0.3/65,-0.5/75}
+  {
+    \draw[red6,->]([shift=(-45:\x)]-0.5,0.75)to[bend right=\y]([shift=(45:\x)]-0.5,-0.75);
+  }
+  \draw[red6,->]([shift=(135:0.5)]-0.5,0.75)..controls([shift=(135:1.1)]-0.5,0.75)and (-1.8,0.75)..(-1.8,0)..controls(-1.8,-0.75)and([shift=(-135:1.1)]-0.5,-0.75)..([shift=(-135:0.5)]-0.5,-0.75);
+\end{circuitikz}
+\end{document}

@@ -1,0 +1,39 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx,bm}
+\setCJKmainfont{Noto Serif CJK SC}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary {decorations.pathmorphing, decorations.pathreplacing, decorations.shapes,}
+\begin{document}
+\small
+\begin{tikzpicture}[>=latex,scale=1]
+  \draw[densely dashed](0,0)node[left]{$\infty$}--++(10,0)node[right]{0};
+  \draw(0,-0.20)--++(10,0);
+  \draw(0,-0.34)--++(10,0);
+  \draw(0,-0.54)node[left]{5}--++(10,0)node[right]{$-0.54$};
+  \draw(0,-0.85)node[left]{4}--++(10,0)node[right]{$-0.85$};
+  \draw(0,-1.51)node[left]{3}--++(10,0)node[right]{$-1.51$};
+  \draw(0,-3.40)node[left]{2}--++(10,0)node[right]{$-3.40$};
+  \draw(0,-13.6)node[left]{1}--++(10,0)node[right]{$-13.6$};
+  \foreach \x[count=\i] in {-3.4,-1.51,-0.85,-0.54,-0.34}
+  {
+    \draw[->](\i*0.3,\x)--(\i*0.3,-13.6);
+  }
+  \foreach \x[count=\i] in {-3.4,-1.51,-0.85,-0.54}
+  {
+    \draw[->,densely dashed](1.8+\i*1.8,0)--(1.8+\i*1.8,\x);
+  }
+  \draw[->,densely dashed](1.8,0)--(1.8,-13.6);
+  \foreach \x[count=\i] in {-1.51,-0.85,-0.54,-0.34} {\draw[->](2.1+\i*0.3,\x)--(2.1+\i*0.3,-3.4);}
+  \foreach \x[count=\i] in {-0.85,-0.54,-0.34} {\draw[->](4.2+\i*0.3,\x)--(4.2+\i*0.3,-1.51);}
+  \foreach \x[count=\i] in {-0.54,-0.34} {\draw[->](6.3+\i*0.3,\x)--(6.3+\i*0.3,-0.85);}
+  \foreach \x/\y in {1.05/赖曼系,2.85/巴耳末系,4.65/帕邢系,7.35/布喇开系} 
+  {\node at (\x,0.5){\y};}
+  \node at (0,0.5)[left]{$n$};
+  \node at (10,0.5)[right]{$E/\unit{eV}$};
+  \draw[thin](11.1,0)--++(0.2,0)--++(0,-3.4)--++(-0.2,0)(11.3,-1.7)--++(0.3,0)node[right]{激发态};
+  \node at (11.9,-13.6){基态};
+\end{tikzpicture}
+\end{document}

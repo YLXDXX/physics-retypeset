@@ -1,0 +1,25 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx,ninecolors}
+\setCJKmainfont{Noto Serif CJK SC}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary{decorations.pathmorphing, decorations.pathreplacing, decorations.shapes}
+\begin{document}
+\small
+\begin{tikzpicture}[>=latex]
+  \foreach \x in {-0.8,-0.6,...,0.8}
+  { \draw[->,azure6] (\x,-1.2) --(\x,1.2);}
+  \draw[red6,densely dashed](1.6,0)arc(0:180:1.6 and 0.95);
+  \draw[red6,densely dashed](1.25,0)arc(0:180:1.25 and 0.70);
+  \draw[red6,densely dashed](1.0,0)arc(0:180:1.0 and 0.5);
+  \draw[red6,fill=white,postaction={decorate},decoration={markings,mark={at position 0.5 with {\arrow{>}}}}](1.6,0)arc(0:-180:1.6 and 0.95);
+  \draw[red6,fill=white,postaction={decorate},decoration={markings,mark={at position 0.5 with {\arrow{>}}}}](1.25,0)arc(0:-180:1.25 and 0.70);
+  \draw[red6,fill=white,postaction={decorate},decoration={markings,mark={at position 0.5 with {\arrow{>}}}}](1.0,0)arc(0:-180:1.0 and 0.5);
+  \node at (0,1.2)[above]{$B$};
+  \node (bz) at (1.5,-1.2)[above right]{电场};
+  \draw[thin](bz.west)--++(120:1.02)(bz.west)--++(140:0.74)(bz.west)--++(160:0.55);
+\end{tikzpicture}
+\end{document}

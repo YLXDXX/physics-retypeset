@@ -1,0 +1,27 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx}
+\setCJKmainfont{Noto Serif CJK SC}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary {decorations.pathmorphing, decorations.pathreplacing, decorations.shapes}
+\begin{document}
+\small
+\begin{tikzpicture}[>=latex,yscale=1.6]
+  % \useasboundingbox(0.9,0)rectangle(5.1,5);
+  \draw[decorate,decoration=brace, thick](3.55,1.4796)--node[right]{$i_b$}(3.55,0);
+  \draw[decorate,decoration=brace, thick](3.55,0)--node[right]{$i_c$}(3.55,-0.9534);
+  \draw[decorate,decoration=brace, thick](3.45,-.5262)--node[left]{$i_a$}(3.45,0);
+  \draw[->] (0,-1.6)--(0,1.8)node [right]{$i$};
+  \draw [->](0,0)--(7,0)node [right]{$t$};
+  \draw [thick] plot [domain=0:3.1416*2, samples=1000] function{1.5*sin(x)} ;
+  \draw [very thick] plot [domain=0:3.1416*2, samples=1000] function{1.5*sin(3.1416*2/3+x)} ;
+  \draw [ultra thick] plot [domain=0:3.1416*2, samples=1000] function{1.5*sin(3.1416*4/3+x)} ;
+  \node at (3.1416/2, 1.7){$i_a$};
+  \node at (3.1416/2+3.1416*2/3, 1.7){$i_b$};
+  \node at (3.1416/2+3.1416*4/3, 1.7){$i_c$};
+  \draw[dashed](3.5, 1.4796)--(3.5,-0.9534);
+\end{tikzpicture}
+\end{document}

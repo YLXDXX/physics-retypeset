@@ -1,0 +1,48 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx,ninecolors}
+\setCJKmainfont{Noto Serif CJK SC}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary {decorations.pathmorphing, decorations.pathreplacing, decorations.shapes,}
+\begin{document}
+\small
+\begin{tikzpicture}[>=stealth,scale=1.0]
+  \begin{scope}[xshift=5cm]
+    \foreach \x in {80,60,40,20} {\draw[line width=2.0*sin(\x),brown7!\x] (170:1) arc (170:-170:1); }
+    \fill[ball color=brown7](170:1)circle(0.1)node[right=1mm,text=black]{接};
+    \fill[ball color=brown7](190:1)circle(0.1)node[right=1mm,text=black]{收};
+    \node at (0,1)[above]{谐振器};
+  \end{scope}
+  \begin{scope}[xshift=-5cm]
+    \fill[blue8!80!darkgray]([xshift=-0.25mm]10:1)rectangle++(0.05,1.0)node[above,text=black]{振子};
+    \fill[blue8!80!gray]([xshift=-0.25mm]-10:1)rectangle++(0.05,-1.0);
+    \fill[ball color=blue8!80!darkgray] (10:1)circle(0.1)node[left=1mm,text=black]{发};
+    \fill[ball color=blue8!80!darkgray](-10:1)circle(0.1)node[left=1mm,text=black]{射};
+    \node at (0.8,1){$A$};
+    \node at (0.8,-1){$B$};
+  \end{scope}
+  \draw[densely dashdotted,azure6](-4,0)--(4,0);
+  \foreach \x in {-2.5,-0.5,1.5}
+  {
+    \draw[red6](\x,0)..controls(\x+0.05,0.2)and(\x+0.1,-0.3)..(\x+0.15,0)
+    ..controls(\x+0.2,0.5)and(\x+0.25,-0.6)..(\x+0.30,0)
+    ..controls(\x+0.35,0.7)and(\x+0.4,-0.8)..(\x+0.45,0)
+    ..controls(\x+0.5,0.9)and(\x+0.55,-1.0)..(\x+0.6,0)--(\x+0.7,0);
+    \draw[red6,arrows={-Stealth[scale=0.5]}](\x+0.6,0)--(\x+0.7,0);
+  }
+  \begin{scope}[xshift=-6cm,yshift=-7mm]
+    \fill[brown8,draw=black,thin](-0.8,-0.3)rectangle(1.5,-0.5);
+    \fill[brown8,draw=black,thin](-0.5,-0.05)rectangle(1.2,0.05);
+    \fill[brown8,draw=black,thin](-0.5,-0.3)rectangle(-0.65,0.4)(0.5,-0.3)rectangle(0.65,0.4)(0.75,-0.2)rectangle(0.65,0.2)(1.1,-0.1)rectangle(1.2,0.1)(0.9,-0.3)rectangle(1.0,0.15);
+    \fill[top color=blue8!80!darkgray,bottom color=blue8!80!darkgray,middle color=white,draw=black](-0.5,-0.3)rectangle(0.5,0.3);
+    \draw[fill=blue8!80!darkgray](-0.425,0.3)rectangle(-0.375,0.5)(0.425,0.3)rectangle(0.375,0.5);
+    \node at (0,0){感应圈};
+    \node at (0,.5){$C$};
+    \draw[decorate,decoration={coil,segment length=1mm,amplitude=0.7mm}](-0.4,0.5)..controls(0,2.0)and(0.5,0.5)..(2.0,1.5);
+    \draw[decorate,decoration={coil,segment length=1mm,amplitude=0.7mm}](0.4,0.5)..controls(0.8,1.0)and(1.5,-0.5)..(2.0,0.1);
+  \end{scope}
+\end{tikzpicture}
+\end{document}

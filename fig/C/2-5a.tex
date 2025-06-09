@@ -1,0 +1,67 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx,circuitikz,ninecolors}
+\setCJKmainfont{Noto Serif CJK SC}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary {decorations.pathmorphing, decorations.pathreplacing, decorations.shapes}
+\ctikzset{bipoles/length=1cm}
+\begin{document}
+\small
+\begin{circuitikz}[>=latex,scale=0.8]
+  \coordinate (A) at ({cos(-160)},{0.5*sin(-160)});
+  \coordinate (B) at ({cos(160)},{0.5*sin(160)});
+  \fill[azure8](-2.2,-0.8)--(1.0,-0.8)--(2.2,0.8)--(-1.0,0.8)--cycle;
+  \fill[azure6](-2.2,-0.8)--(1.0,-0.8)--(1.0,-1.4)--(-2.2,-1.4)--cycle;
+  \fill[azure5](1.0,-0.8)--(1.0,-1.4)--(2.2,0.2)--(2.2,0.8)--cycle;
+  \node at (0.6,-1.1)[text=white]{$S$};
+  \draw[decorate,decoration={coil,segment length=1.6mm,amplitude=0.8mm}](A)arc(-160:160:1 and 0.5);
+  \draw(A)--(A-|-3.5,0)to[rmeter,name=dlj](-3.5,1.5)--(-2.5,1.5)--(B-|-2.5,0)--(B);
+  \draw[->]([shift=(-90:0.3)]dlj.center)--++(90:0.6);
+  \begin{scope}[scale=9,xshift=-0.05cm,yshift=0.02cm]
+    \fill[pink!10!orange!10,draw=black,very thin]
+    ( 0.040,0.173)..controls( 0.033,0.133)and(-0.002,0.116)..
+(-0.002,0.089)..controls(-0.002,0.078)and( 0.000,0.071)..
+( 0.004,0.066)..controls( 0.002,0.053)and(-0.001,0.035)..
+( 0.003,0.022)..controls( 0.009,0.009)and( 0.020,0.009)..
+( 0.028,0.037)..controls( 0.037,0.064)and( 0.053,0.090)..( 0.080,0.114)
+(0.064, 0.109)..controls(0.077, 0.131)and(0.089, 0.129)..
+(0.087, 0.104)..controls(0.082, 0.054)and(0.074, 0.040)..
+(0.073, 0.021)..controls(0.071,-0.018)and(0.091,-0.018)..
+(0.117, 0.055)..controls(0.151, 0.066)and(0.198, 0.089)..(0.166, 0.214);
+    \draw[very thin](0.004,0.066)..controls(0.012,0.107)and(0.040,0.119)..(0.053,0.164)
+    (0.117,0.055)..controls(0.122,0.071)and(0.125,0.102)..(0.121,0.117)
+    (0.131,0.061)..controls(0.148,0.081)and(0.145,0.088)..(0.144,0.116)
+    (0.003,0.031)..controls(0.008,0.036)and(0.015,0.037)..(0.022,0.032)
+    (0.075,0.006)..controls(0.080,0.014)and(0.087,0.016)..(0.094,0.012);
+  \end{scope}
+  \fill[red6](-2.2,1.2)--(1.0,1.2)--(1.0,1.8)--(-2.2,1.8)--cycle;
+  \fill[red5](1.0,1.2)--(1.0,1.8)--(2.2,3.4)--(2.2,2.8)--cycle;
+  \fill[lightgray](-2.2,1.8)--(1.0,1.8)--(2.2,3.4)--(-1.0,3.4)--cycle;
+  \node at (0.6,1.5)[text=white]{$N$};
+  \begin{scope}[scale=9,yshift=-0.01cm]
+    \fill[pink!10!orange!10,draw=black,very thin](-0.160,-0.162)..controls(-0.165,-0.103)and(-0.156,-0.125)..
+    (-0.145,-0.102)..controls(-0.138,-0.086)and(-0.145,-0.069)..
+    (-0.128,-0.062)..controls(-0.114,-0.059)and(-0.116,-0.033)..
+    (-0.089,-0.041)..controls(-0.042, 0.046)and(-0.023, 0.013)..
+    (-0.041,-0.021)..controls(-0.063,-0.063)and(-0.044,-0.069)..
+    (-0.015,-0.034)..controls( 0.010, 0.002)and( 0.024, 0.003)..
+    ( 0.039,-0.006)..controls( 0.052,-0.014)and( 0.051,-0.040)..
+    ( 0.041,-0.035)..controls( 0.037,-0.032)and( 0.035,-0.029)..
+    ( 0.035,-0.019)..controls( 0.033,-0.027)and( 0.019,-0.036)..
+    ( 0.005,-0.051)..controls(-0.003,-0.070)and(-0.009,-0.070)..
+    (-0.011,-0.073)..controls(-0.014,-0.081)and(-0.003,-0.087)..
+    ( 0.020,-0.065)..controls( 0.033,-0.049)and( 0.060,-0.051)..
+    ( 0.035,-0.085)..controls( 0.045,-0.088)and( 0.054,-0.101)..
+    ( 0.028,-0.128)..controls( 0.012,-0.148)and( 0.011,-0.168)..( 0.004,-0.180);
+    \draw[very thin](-0.134,-0.119)..controls(-0.090,-0.077)and(-0.117,-0.068)..(-0.089,-0.041)
+    (-0.084,-0.062)..controls(-0.077,-0.057)and(-0.072,-0.060)..(-0.070,-0.066)
+    (-0.043,-0.076)..controls(-0.033,-0.074)and(-0.028,-0.079)..(-0.028,-0.086)
+    (-0.012,-0.096)..controls(-0.005,-0.098)and(-0.002,-0.105)..(-0.003,-0.109)
+    ( 0.007,-0.120)..controls( 0.010,-0.127)and( 0.010,-0.130)..( 0.008,-0.132)
+    ( 0.035,-0.085)..controls( 0.031,-0.090)and( 0.026,-0.096)..( 0.019,-0.103);
+  \end{scope}
+\end{circuitikz}
+\end{document}

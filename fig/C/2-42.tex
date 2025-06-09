@@ -1,0 +1,29 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx,ninecolors}
+\setCJKmainfont{Noto Serif CJK SC}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary {decorations.pathmorphing, decorations.pathreplacing, decorations.shapes}
+\begin{document}
+\small
+\begin{tikzpicture}[>=latex,scale=1.5]
+  \fill[gray!80](-1,-0.7)--(1.4,-0.7)--(1,-0.3)--(-1.4,-0.3);
+  \fill[darkgray](275:0.5)arc(-85:265:0.5)--++(-0.05,0.05)arc(265:-85:0.5)--cycle;
+  \fill[darkgray]([xshift=-0.5mm,yshift=0.5mm]275:0.5)--++(275:0.1)arc(-85:265:0.6)--(265:0.5)arc(265:-85:0.5);
+  \fill[lightgray](275:0.5)--(275:0.6)arc(-85:265:0.6)--(265:0.5)arc(265:-85:0.5);
+  \fill[gray](275:0.5)--(275:0.6)--++(-0.05,0.05)--++(95:0.1);
+  \draw[brown,semithick]
+  (-0.4,0.9)--(-0.2216,0.4482)arc(-153:27:0.01)
+  (-0.1806,0.6356)arc(193:13:0.01)--(-0.121,0.485)arc(-165:15:0.01)
+  (-0.0453,0.65)arc(180:0:0.01)--(-0.018,0.5)arc(-180:0:0.01)
+  (0.0835,0.635)arc(170:-10:0.01)--(0.0821,0.4932)arc(173:360:0.01)
+  (0.224,0.584)--(0.3,0.9);
+  \draw[thin](-0.31,0.67)--++(165:0.5)node[left]{线圈};
+  \draw[thin](1.2,-0.5)--++(0.6,0)node[right]{磁带};
+  \draw[thin](0.55,0)--++(0.6,0)node[right]{铁心};
+  \draw[thin](0,-0.55)--++(-60:0.5)node[right]{磁头缝隙};
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,36 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx,bm}
+\setCJKmainfont{Noto Serif CJK SC}
+\usepackage{tkz-euclide,ninecolors}
+\usepackage{circuitikz}
+\usepackage{amsmath}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary {decorations.pathmorphing, decorations.pathreplacing, decorations.shapes}
+\ctikzset{bipoles/length=1cm}
+\begin{document}
+\small
+\begin{circuitikz}[>=latex,yscale=1.0]
+  % \draw(-1,-1.5)--(-0.5,-1.5);
+  \draw(-2.5,-1.8)--(-2.6,-1.8)--(-2.6,0);
+  \draw(0.7,-1.8)--(0.3,-1.8)--(0.3,0);
+  \fill[top color=darkgray,bottom color=darkgray,middle color=white](3,-0.3)rectangle(-3,0.3);
+  \draw(-0.6,-1.8)--(-0.5,-1.8)--(-0.5,-0.3)..controls(-0.5,0)and(-0.5,0.31)..(-0.7,0.31);
+  \foreach \x in {-0.7,-1.0,...,-2.4}
+  {
+    \draw(\x,-0.31)..controls(\x-0.2,-0.31)and(\x-0.1,0.31)..(\x-0.3,0.31);
+  }
+  \draw(-1.6,-1.8) to[battery2](-2.6,-1.8);
+  \draw(-1.6,-1.8) to[cute open switch=$K$](-0.6,-1.8);
+
+  \draw(2.3,-1.8)--(2.4,-1.8)--(2.4,-0.3)..controls(2.4,0)and(2.4,0.31)..(2.2,0.31);
+  \foreach \x in {0.7,1.0,...,2.4}
+  {
+    \draw(\x,-0.31)..controls(\x-0.2,-0.31)and(\x-0.1,0.31)..(\x-0.3,0.31);
+  }
+  \draw(0.3,-1.8) to[rmeter,name=dlj](2.4,-1.8);
+  \draw[-stealth]([yshift=-2mm]dlj.center)--++(0,0.4)node[above=1mm]{$G$};
+  \node at (-1.5,0.4)[above]{$M$};
+  \node at (1.5,0.4)[above]{$P$};
+\end{circuitikz}
+\end{document}

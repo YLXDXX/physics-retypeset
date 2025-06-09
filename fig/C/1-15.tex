@@ -1,0 +1,37 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx,bm}
+\setCJKmainfont{Noto Serif CJK SC}
+\usepackage{tkz-euclide,ninecolors}
+\usepackage{amsmath}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary {decorations.pathmorphing, decorations.pathreplacing, decorations.shapes,}
+\begin{document}
+\small
+\begin{tikzpicture}[>=latex,yscale=1.0]
+  \begin{scope}[xshift=1.5cm,yshift=-7.5mm,scale=0.4]
+    \fill[left color=gray,right color=gray,middle color=white](0,0)ellipse(0.5 and 0.3);
+    \fill[lightgray](0,0.1)ellipse(0.4 and 0.2);
+    \fill[left color=gray,right color=gray,middle color=white](0,0.1)ellipse(0.02 and 0.01);
+    \fill[left color=gray,right color=gray,middle color=white](-0.02,0.1)rectangle(0.02,2.0);
+    \fill[azure7](0,2.0)--++(150:0.1)--(-1.5,1.9)node[text=black,left]{$S$};
+    \fill[azure4](0,2.0)--++(290:0.2)--(-1.5,1.9);
+    \fill[red7](0,2.0)--++(150:0.1)--(1.5,1.9)node[text=black,right]{$N$};
+    \fill[red4](0,2.0)--++(290:0.2)--(1.5,1.9);
+  \end{scope}
+  \draw[thick,brown5](-1,-1.5)--(-0.5,-1.5);
+  \fill[top color=darkgray,bottom color=darkgray,middle color=white](-1.0,-1.5)ellipse(0.2 and 0.4);
+  \fill[top color=darkgray,bottom color=darkgray,middle color=white](-1.0,-1.9)rectangle(-2.0,-1.1);
+  \fill[lightgray](-2.0,-1.5)ellipse(0.2 and 0.4);
+  \draw[thick,brown5](-2.0,-1.5)--(-2.6,-1.5)--(-2.6,0);
+  \fill[top color=darkgray,bottom color=darkgray,middle color=white](0,0)ellipse(0.15 and 0.3);
+  \fill[top color=darkgray,bottom color=darkgray,middle color=white](0,-0.3)rectangle(-3,0.3);
+  \fill[lightgray](-3,0)ellipse(0.15 and 0.3);
+  \draw[thick,brown5](-0.6,-1.5)--(-0.5,-1.5)--(-0.5,-0.3)..controls(-0.5,0)and(-0.5,0.31)..(-0.7,0.31);
+  \node at (-1.4,-1.5){电池};
+  \foreach \x in {-0.7,-1.0,...,-2.4}
+  {
+    \draw[thick,brown5](\x,-0.31)..controls(\x-0.2,-0.31)and(\x-0.1,0.31)..(\x-0.3,0.31);
+  }
+\end{tikzpicture}
+\end{document}

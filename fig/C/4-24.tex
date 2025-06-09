@@ -1,0 +1,37 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx,ninecolors}
+\setCJKmainfont{Noto Serif CJK SC}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary {decorations.pathmorphing, decorations.pathreplacing, decorations.shapes}
+\begin{document}
+\small\linespread{1.0}
+\begin{tikzpicture}[>=stealth]
+  \draw[thick,azure6](19:4.8)arc(19:-19:4.8);
+  \fill( 17:4.8)circle(1.5pt)node[right=3mm]{$A$};
+  \fill(  0:4.8)circle(1.5pt)node[right=3mm]{$O$};
+  \fill(-17:4.8)circle(1.5pt)node[right=3mm]{$B$};
+  \draw[ultra thick] (2,0.35)..controls(2.5,0.35)and([xshift=-1cm]20:5)..(20:5)
+  arc(20:-20:5)..controls([xshift=-1cm]-20:5)and(2.5,-0.35)..(2,-0.35);
+  \draw[thick](2,0.35)--(-0.5,0.35)--(-0.5,-0.35)--(2,-0.35);
+  \fill[top color=gray,bottom color=gray,middle color=white](-0.5,-0.37)rectangle(-1,0.37);
+  \foreach \x in {80,60,...,-80}{ \draw[thin] (-1,{0.35*sin(\x)})--++(-0.25,0);}
+  \draw[fill=gray](-0.5,-0.25)rectangle(0.3,0.25);
+  \draw[fill=gray](-0.5,-0.2)rectangle(0.2,0.2);
+  \draw[fill=gray](0.4,-0.25)rectangle(0.5,0.25);
+  \draw[fill=gray](0.6,-0.25)rectangle(1.1,-0.18)(0.6,0.25)rectangle(1.1,0.18);
+  \fill(0,0)circle(1pt)(-0.2,0)circle(1pt)(-0.4,0)circle(1.5pt);
+  \draw(-0.5,0.1)--(-0.4,0)--(-0.5,-0.1);
+  \draw[thick,red6,rounded corners=1cm,
+  decoration={markings,mark={at position 0.7 with {\arrow{>}}}},
+  postaction={decorate}
+  ](-0.4,0)--(2.2,0)--(18.5:4.8)node[midway,below,sloped,text=black]{电子束};
+  \fill[brown7!90!red,rounded corners,opacity=0.5](1.2,0.4)--(1.7,0.4)--(2.5,0.7)--(2.5,-0.7)--(1.7,-0.4)--(1.2,-0.4)--cycle;
+  \draw[thin](-5:4.8)--++(-160:0.5)node[left]{荧光屏};
+  \draw[thin](2,-0.45)--++(-135:0.5)node[left]{偏转线圈};
+  \draw[decorate,decoration={brace,amplitude=5pt}](-0.5,0.4)--(1.1,0.4);
+  \node at (0.3,0.8){电子枪};
+\end{tikzpicture}
+\end{document}

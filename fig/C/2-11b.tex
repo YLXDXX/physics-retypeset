@@ -1,0 +1,30 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx,ninecolors}
+\setCJKmainfont{Noto Serif CJK SC}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{circuitikz}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary {decorations.pathmorphing, decorations.pathreplacing, decorations.shapes}
+\ctikzset{bipoles/length=1cm}
+\begin{document}
+\small
+\begin{circuitikz}[>=latex, scale=0.9,european]
+  % \useasboundingbox(0.9,0)rectangle(5.1,5);
+  \draw(-2,1.5)--(0,1.5)to[cute inductor,bipoles/length=4.5cm](0,-1.5)--(-2,-1.5)to[rmeter,name=dlj](-2,1.5);
+  \draw[-stealth]([shift=(-110:0.2)]dlj.center)--++(70:0.4);
+  \draw[->](0.2,1.7)--(0.2,-1.7);
+  \draw[->](0.1,1.7)to[bend left=5](-0.3,-1.7);
+  \draw[->](0.3,1.7)to[bend right=5](0.7,-1.7);
+  % \draw[->](0.1,1.7)to[bend left=5](-0.5,-0.7);
+  % \draw[->](0.3,1.7)to[bend right=5](0.9,-0.7);
+  \draw[<-,densely dashed](0.5,-1.7)to[bend left=10](0.5,1.7);
+  \draw[<-,densely dashed](-0.1,-1.7)to[bend right=10](-0.1,1.7);
+  \fill[red6](0,1.7)--(0.3,1.7)node[midway,above,text=white]{$N$}--(0.3,2.4)--(0.2,2.42)--(0.12,2.37)--(0.05,2.43)--(0,2.4)--cycle;
+  \fill[red5](0.3,1.7)--(0.4,1.8)--(0.4,2.5)--(0.3,2.4)--cycle;
+  \fill[lightgray](0.3,2.4)--(0.2,2.42)--(0.12,2.37)--(0.05,2.43)--(0,2.4)--(0.1,2.5)--(0.15,2.53)--(0.22,2.47)--(0.3,2.52)--(0.4,2.5)--cycle;
+  \draw[->](0.7,2.4)--++(0,-0.6);
+\end{circuitikz}
+\end{document}

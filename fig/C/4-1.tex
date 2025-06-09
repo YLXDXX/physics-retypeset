@@ -1,0 +1,30 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx}
+\setCJKmainfont{Noto Serif CJK SC}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{circuitikz}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary {decorations.pathmorphing, decorations.pathreplacing, decorations.shapes}
+\ctikzset{bipoles/length=1cm}
+\begin{document}
+\small
+\begin{circuitikz}[>=latex, scale=1,european]
+  % \useasboundingbox(0.9,0)rectangle(5.1,5);
+  \draw (0,0)--(3,0);
+  \draw (4,0)--(5.5,0);
+  \draw (0,2) to [rmeter, t=G] (4,2)--(5.5,2) to [battery,name=dc] (5.5,0);
+  \draw (0,0) to [american inductors, L,name=xq] (0,2);
+  \draw (3.5, 2) to [C=$C$] (3.5,0.6)--(3.5,.5);
+  \draw [fill=white] (3,0) circle (1.5pt);
+  \draw [very thick] (3.5,.5)--(3.5,-.2)node [below]{$K$}; 
+  \draw [fill=white] (3.5,.5) circle (1.5pt);
+  \draw [fill=white] (4,0) circle (1.5pt);
+  \node at (xq.center)[right]{$L$};
+  \node at (dc.center)[right=2.5mm]{$E$};
+  \draw [very thick]  ([xshift=-3mm]xq.left)--([xshift=-3mm]xq.right);
+  \draw [fill=black] (3.5,2) circle (1.5pt);
+\end{circuitikz}
+\end{document}

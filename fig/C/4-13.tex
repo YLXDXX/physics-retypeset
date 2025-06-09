@@ -1,0 +1,26 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx}
+\setCJKmainfont{Noto Serif CJK SC}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{circuitikz}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary {decorations.pathmorphing, decorations.pathreplacing, decorations.shapes}
+\ctikzset{bipoles/length=1cm}
+\begin{document}
+\small
+\begin{circuitikz}[>=latex, scale=1,european]
+  % \useasboundingbox(0.9,0)rectangle(5.1,5);
+\draw (0,3)to  (2,3) to [american inductor] (2,0) to [mic] (0,0)  ;
+\node [waves,rotate=90] at(1,-1.75) {};
+\draw (2.5, -.5) node [ground]{} to(2.5,0) to [american inductor] (2.5,3)to (2.5,3.5)node[bareantenna]{} ;
+\draw (-.2, .5) rectangle (.2,2.5);
+\draw (0,0)--(0,.5);
+\draw (0,2.5)--(0,3);
+\node [rotate=90]at (-.5,1.5){振荡器};
+\node at (1.75,1.5){$L_2$};
+\node at (2.75,1.5){$L_1$};
+\end{circuitikz}
+\end{document}

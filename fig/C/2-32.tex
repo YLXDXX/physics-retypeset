@@ -1,0 +1,62 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx,ninecolors}
+\setCJKmainfont{Noto Serif CJK SC}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usetikzlibrary{patterns,calc}
+\usetikzlibrary {decorations.pathmorphing, decorations.pathreplacing, decorations.shapes}
+\begin{document}
+\small
+\begin{tikzpicture}[>=latex,scale=1.0]
+  \draw[semithick,brown!80!gray](0,-0.2)--(2,-0.2);
+  \fill[left color=gray,right color=gray,middle color=white](-1,0)--(-0.8,-2)to[bend right=90](0.8,-2)--(1,0);
+  \fill[gray](0,0)ellipse(1 and 0.4);
+  \fill[red!70](0,0)ellipse(0.8 and 0.3);
+  \foreach \x in {-0.3,-0.5,...,-1.6}
+  {
+    \draw[semithick,brown!80!gray](-1-0.1*\x,\x)to[bend right=20](0.98+0.1*\x,\x-0.2);
+  }
+  \draw[semithick,brown!80!gray](-0.83,-1.7)..controls(-0.5,-2.0)and(0,-2.0)..(0.8,-2.0)--(2,-2.0);
+  \draw(2.05,-2)circle(0.05)(2.05,-0.2)circle(0.05);
+  \node at (2.2,-1.1){接高频交流电源};
+  \draw[red!80!orange](-0.905,0.270)..controls(-1.047,0.367)and(-1.033,0.485)..(-1.100,0.549)
+  (-0.723,0.336)..controls(-0.821,0.431)and(-0.768,0.524)..(-0.858,0.652)
+  (-0.573,0.422)..controls(-0.575,0.579)and(-0.662,0.643)..(-0.602,0.725)
+  (-0.341,0.549)..controls(-0.410,0.661)and(-0.367,0.719)..(-0.428,0.836)
+  (-0.095,0.529)..controls(-0.105,0.669)and(-0.189,0.717)..(-0.146,0.843)
+  ( 0.115,0.513)..controls( 0.152,0.592)and( 0.095,0.747)..( 0.158,0.795)
+  ( 0.351,0.458)..controls( 0.340,0.590)and( 0.451,0.531)..( 0.505,0.714)
+  ( 0.552,0.376)..controls( 0.621,0.498)and( 0.685,0.424)..( 0.789,0.573)
+  ( 0.821,0.270)..controls( 0.859,0.349)and( 0.943,0.291)..( 1.003,0.424);
+  \fill[top color=red,bottom color=orange!60]
+  (-0.665, 0.134)--(-0.777, 0.064)--(-0.697,-0.021)--(-0.599,-0.007)--cycle;
+  \fill[top color=red,bottom color=orange!60]
+  (-0.629, 0.186)--(-0.505, 0.101)--(-0.470, 0.204)--(-0.570, 0.262)--cycle;
+  \fill[top color=red,bottom color=orange!60]
+  (-0.417, 0.152)--(-0.504, 0.064)--(-0.426,-0.027)--(-0.327, 0.002)--cycle;
+  \fill[top color=red,bottom color=orange!60]
+  (-0.268,-0.044)--(-0.371,-0.131)--(-0.247,-0.214)--(-0.100,-0.154)--cycle;
+  \fill[top color=red,bottom color=orange!60]
+  (-0.417, 0.284)--(-0.387, 0.195)--(-0.289, 0.167)--(-0.230, 0.239)--(-0.351, 0.343)--cycle;
+  \fill[top color=red,bottom color=orange!60]
+  (-0.187, 0.177)--(-0.290, 0.090)--(-0.166, 0.007)--(-0.019, 0.067)--cycle;
+  \fill[top color=red,bottom color=orange!60]
+  (-0.135, 0.296)--(-0.074, 0.223)--( 0.003, 0.230)--( 0.029, 0.282)--(-0.074, 0.365)--cycle;
+  \fill[top color=red,bottom color=orange!60]
+  (-0.004, 0.172)--( 0.084, 0.258)--( 0.196, 0.188)--( 0.128, 0.113)--( 0.022, 0.097)--cycle;
+  \fill[top color=red,bottom color=orange!60]
+  ( 0.093,-0.014)--( 0.014,-0.133)--( 0.054,-0.190)--( 0.167,-0.119)--cycle;
+  \fill[top color=red,bottom color=orange!60]
+  ( 0.302,-0.081)--( 0.222,-0.200)--( 0.263,-0.256)--( 0.375,-0.186)--cycle;
+  \fill[top color=red,bottom color=orange!60]
+  ( 0.289, 0.139)--( 0.209, 0.021)--( 0.250,-0.036)--( 0.362, 0.035)--cycle;
+  \fill[top color=red,bottom color=orange!60]
+  ( 0.434, 0.287)--( 0.530, 0.191)--( 0.469, 0.110)--( 0.330, 0.207)--cycle;
+  \fill[top color=red,bottom color=orange!60]
+  ( 0.437,-0.012)--( 0.492,-0.076)--( 0.536,-0.054)--( 0.551, 0.026)--( 0.475, 0.039)--cycle;
+  \fill[top color=red,bottom color=orange!60]
+  ( 0.649, 0.125)--( 0.791, 0.015)--( 0.691,-0.081)--( 0.588,-0.060)--( 0.565, 0.031)--cycle;
+\end{tikzpicture}
+\end{document}

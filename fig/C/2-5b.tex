@@ -1,0 +1,28 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx,circuitikz,ninecolors}
+\setCJKmainfont{Noto Serif CJK SC}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary {decorations.pathmorphing, decorations.pathreplacing, decorations.shapes}
+\ctikzset{bipoles/length=1cm}
+\begin{document}
+\small
+\begin{circuitikz}[>=latex,scale=0.8]
+  \coordinate (A) at ({0.5*cos(-160)},{0.25*sin(-160)});
+  \coordinate (B) at ({0.5*cos(160)},{0.25*sin(160)});
+  \fill[azure8](-2.2,-0.8)--(1.0,-0.8)--(2.2,0.8)--(-1.0,0.8)--cycle;
+  \fill[azure6](-2.2,-0.8)--(1.0,-0.8)--(1.0,-1.4)--(-2.2,-1.4)--cycle;
+  \fill[azure5](1.0,-0.8)--(1.0,-1.4)--(2.2,0.2)--(2.2,0.8)--cycle;
+  \node at (0.6,-1.1)[text=white]{$S$};
+  \draw[decorate,decoration={coil,segment length=0.8mm,amplitude=0.8mm}](A)arc(-160:160:0.5 and 0.25);
+  \draw(A)--(A-|-3.5,0)to[rmeter,name=dlj](-3.5,1.5)--(-2.5,1.5)--(B-|-2.5,0)--(B);
+  \draw[->]([shift=(-135:0.3)]dlj.center)--++(45:0.6);
+  \fill[red6](-2.2,1.2)--(1.0,1.2)--(1.0,1.8)--(-2.2,1.8)--cycle;
+  \fill[red5](1.0,1.2)--(1.0,1.8)--(2.2,3.4)--(2.2,2.8)--cycle;
+  \fill[lightgray](-2.2,1.8)--(1.0,1.8)--(2.2,3.4)--(-1.0,3.4)--cycle;
+  \node at (0.6,1.5)[text=white]{$N$};
+\end{circuitikz}
+\end{document}

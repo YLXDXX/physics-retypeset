@@ -1,0 +1,27 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx}
+\setCJKmainfont{Noto Serif CJK SC}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary {decorations.pathmorphing, decorations.pathreplacing, decorations.shapes,}
+\begin{document}
+\small
+\begin{tikzpicture}[>=latex,scale=1.0]
+  \fill[cyan!50!white](-100:2)arc(-100:-45:2)arc(135:85:2.8)--++(-95:0.8)arc(85:135:2.0)arc(-45:-100:2.8)--cycle;
+  \fill[gray](-100:2)arc(-100:-45:2)arc(135:85:2.8)--++(85:0.1)arc(85:135:2.9)arc(-45:-100:1.9)--cycle;
+  \fill[gray](-100:2.9)arc(-100:-45:2.9)arc(135:85:1.9)--++(85:0.1)arc(85:135:2.0)arc(-45:-100:2.8)--cycle;
+  \draw[thin](-100:2.9)--(-100:3.0)arc(-100:-45:3.0)arc(135:85:1.8)--++(85:0.1);
+  \draw[thin](-100:1.9)--(-100:1.8)arc(-100:-45:1.8)arc(135:85:3.0)--++(-95:0.1);
+  \draw[red,postaction={decorate},decoration={markings,mark=at position 0.5 with{\arrow{>}}}](-100:2)--(-80:2.8);
+  \draw[red,postaction={decorate},decoration={markings,mark=at position 0.5 with{\arrow{>}}}](-80:2.8)--(-60:2.0);
+  \draw[red,postaction={decorate},decoration={markings,mark=at position 0.5 with{\arrow{>}}}](-60:2.0)--(2.1835,-1.8021);
+  \draw[red,postaction={decorate},decoration={markings,mark=at position 0.5 with{\arrow{>}}}](2.1835,-1.8021)--(2.404,-0.775);
+  \draw[red,postaction={decorate},decoration={markings,mark=at position 0.5 with{\arrow{>}}}](2.404,-0.775)--(3.249,-1.4);
+  \draw[red,->](3.249,-1.4)--(3.599,-1.052);
+  \draw[thin](-45:2.85)--(-45:3.5)node[below]{外套};
+  \draw[thin](-35:2.2)--++(135:0.7)node[above]{内芯};
+\end{tikzpicture}
+\end{document}

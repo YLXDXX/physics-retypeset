@@ -1,0 +1,28 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx}
+\setCJKmainfont{Noto Serif CJK SC}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{circuitikz}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary {decorations.pathmorphing, decorations.pathreplacing, decorations.shapes}
+\ctikzset{bipoles/length=1cm}
+\begin{document}
+\small
+\begin{circuitikz}[>=latex, scale=1,european]
+  % \useasboundingbox(0.9,0)rectangle(5.1,5);
+\draw (0,0)--(2,0)--(4,0);
+\ctikzset{inductors/scale=0.75, inductors/width=2.5, inductors/coils=8}  \draw (4,3)--(2,3) to [american inductor] (2,0);
+\draw [<->](0,.1)--node[fill=white]{$U_1$}(0,1.5-.1);
+\draw [<->](4,.1)--node[fill=white]{$U_2$}(4,3-.1);
+\draw [ultra thick](2.3,.1)--node[right]{$n_2$} (2.3,2.9-.1);
+\node at (1.7, .7){$n_1$};
+\draw (0,1.5)--(2,1.5);
+\draw (0,0) [fill=white] circle (1.5pt);
+\draw (0,1.5) [fill=white] circle (1.5pt);
+\draw (4,0) [fill=white] circle (1.5pt);
+\draw (4,3) [fill=white] circle (1.5pt);
+\end{circuitikz}
+\end{document}

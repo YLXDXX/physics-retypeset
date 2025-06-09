@@ -1,0 +1,39 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{ctex,siunitx}
+\setCJKmainfont{Noto Serif CJK SC}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{circuitikz}
+\usetikzlibrary{patterns, calc}
+\usetikzlibrary {decorations.pathmorphing, decorations.pathreplacing, decorations.shapes,}
+\ctikzset{bipoles/length=1.0cm}
+\begin{document}
+\small
+\begin{circuitikz}[>=stealth, scale=0.9,european]
+  % \useasboundingbox(0.9,0)rectangle(5.1,5);
+  \foreach \x in {0.3,-0.3}
+  {
+    \foreach \y in {0.2,-0.2}
+    {
+      \draw[thin](\x-0.025,\y-0.15)rectangle(\x+0.025,\y+0.15);
+    }
+  }
+  \draw[thin,densely dashed](-1,0)--(1.5,0);
+  \draw[thick](1.5,-0.4)--(1.5,0.4)node[right]{$M$};
+  \draw[thick](4,-1)--(4,1)node[left]{$P$};
+  \draw[decorate,decoration={coil,segment length=1mm,amplitude=0.8mm}](-1,0.35)--(-1,-0.35);
+  \draw(-1,-0.35)--(-1,-0.5)--(-2,-0.5)--(-2,-1.4)to[battery2](-3,-1.4)--(-3,0.5)--(-1,0.5)node[right]{$K$}--(-1,0.35);
+  \draw(-0.3,-0.35)--(-0.3,-1.4)to[battery](-2,-1.4);
+  \node at (-0.3,0.35)[right]{$D$};
+  \node at (0.3,0.35)[right]{$D$};
+  \draw[thin,<->](-1,-0.45)--(-0.3,-0.45)node[midway,above]{$U$};
+  \foreach \x in {0.8,0.6,...,-0.8}
+  {
+    \draw[densely dashed,->](1.5,0)--(4,\x);
+  }
+  \fill[cyan!20,draw=black,opacity=0.4](1.1,-1.1)--(1.1,-0.8)arc(180:90:0.1)--++(0.4269,0)arc(90:39.167:0.5)arc(-140.833:140.833:1.4)arc(-39.167:-90:0.5)--(-1,0.7)arc(90:134.415:0.35)--++(-0.1051,0)arc(90:270:0.1)--(-1.35,-0.4)arc(90:270:0.1)--++(0.1051,0)arc(-134.415:-90:0.35)--(-0.4,-0.7)--(-0.4,-0.8)arc(180:360:0.1)--++(0,0.1)--++(1,0)arc(90:0:0.1)--++(0,-0.3);
+  \draw[thin,->](1,-0.9)--(1,-1.4)node[below]{抽真空};
+\end{circuitikz}
+\end{document}
