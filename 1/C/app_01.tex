@@ -5,12 +5,13 @@
 这个实验我们先用左手定则来判断磁场对电流的作用力
 的方向，然后再用实验验证．
 
-如图10.1所示，将矩形线圈悬挂在支架上，线圈的$AB$边
-悬在蹄形磁铁的两极间．按照图10.1把电路连接好．
-\begin{figure}[htp]\centering
-    \includegraphics[scale=.6]{fig/10-1.png}
-    \caption{}
-    \end{figure}
+如图~\ref{fig_C_10-1} 所示，将矩形线圈悬挂在支架上，线圈的$AB$边
+悬在蹄形磁铁的两极间．按照图~\ref{fig_C_10-1} 把电路连接好．
+\begin{figure}[htbp]
+    \centering
+    \includegraphics{fig/C/10-1.pdf}
+    \caption{}\label{fig_C_10-1}
+\end{figure}
 
 根据电键闭合后$AB$边中的电流方向和$AB$边所在处的磁
 场方向，用左手定则判断出磁场对$AB$边的作用力的方向，合
@@ -35,7 +36,7 @@
 \section{研究电磁感应现象}
 
 关于感生电流产生的条件，我们已经随同老师一起做过
-实验，现在用图2.3所示的装置来研究怎样判断感生电流的
+实验，现在用图~\ref{fig_C_2-3} 所示的装置来研究怎样判断感生电流的
 方向，为了加强实验效果，这里用的螺线管$A$带有铁心．
 
 首先查明电流表指针的偏转方向和螺线管中电流方向的
@@ -77,46 +78,39 @@
 益旋钮，使图象大小合适．作好这些准备工作后，把同步开关
 置于“$+$”位置，把扫描微调旋钮先顺时针转到底再慢慢地反
 时针旋转，当转到某一位置时，可以看到一个稳定的完整的正
-弦波形（图10.2甲），屏上还同时出现的水平亮线是扫描的回
+弦波形（图~\ref{fig_C_10-2a}），屏上还同时出现的水平亮线是扫描的回
 扫线，把同步开关置于“$-$”位置，又可看到波形改变半个周期
-（图10.2乙）．如果扫描频率恰好是信号频率的$1/n$（$n$为整
+（图~\ref{fig_C_10-2b}）．如果扫描频率恰好是信号频率的$1/n$（$n$为整
 数），将可看到稳定的$n$个完整波形，继续慢慢地反时针旋转
 扫描微调旋钮，减小扫描频率，就可以看到屏上出现稳定的两
 个、三个正弦波形．
 
-\begin{figure}[htp]\centering
-\begin{minipage}[t]{0.48\textwidth}
-\centering
-\begin{tikzpicture}[>=latex, scale=.7]
-\draw  (0,0) sin (1,1) cos (2,0) sin (3,-1) cos (4,0)--(0,0);
-\draw (2,0) circle (2.2);
+\begin{figure}[htbp]
+    \centering
+    \begin{subfigure}{0.4\linewidth}
+        \centering
+        \includegraphics{fig/C/10-2a.pdf}
+        \caption{}\label{fig_C_10-2a}
+    \end{subfigure}
+    \hfil
+    \begin{subfigure}{0.4\linewidth}
+        \centering
+        \includegraphics{fig/C/10-2b.pdf}
+        \caption{}\label{fig_C_10-2b}
+    \end{subfigure}
+    \caption{}\label{fig_C_10-2}
+\end{figure}
 
-
-\end{tikzpicture}
-\caption*{甲}
-\end{minipage}
-\begin{minipage}[t]{0.48\textwidth}
-\centering
-\begin{circuitikz}[>=latex, scale=.7]
-\draw  (0,0) sin (1,-1) cos (2,0) sin (3,1) cos (4,0)--(0,0);
-\draw (2,0) circle (2.2);
-
-\end{circuitikz}
-\caption*{乙}
-\end{minipage}
-    \caption{}
-    \end{figure}
-
-    \begin{figure}[htp]\centering
-        \includegraphics[scale=.6]{fig/10-3.png}
-        \caption{J2465型学生信号源
-        的面板}
-        \end{figure}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics{fig/C/10-3.pdf}
+    \caption{J2465型学生信号源的面板}\label{fig_C_10-3}
+\end{figure}
 
 现在再来观察从信号源输入的交流信号．我们用的信号
 源是J2465型学生信号源，这种信号源可以输出低频、高频正
 弦交流信号和高频调幅信号（在第四章将讲到什么是调幅信
-号）．J2465型学生信号源的面板如图10.3所示，下面先介
+号）．J2465型学生信号源的面板如图~\ref{fig_C_10-3} 所示，下面先介
 绍它的使用方法．
 
 低频正弦交流信号从右边的两个低频输出接线柱输出．
@@ -166,30 +160,52 @@
 这个实验通过示波器观察波形来了解整流滤波电路的作
 用．
 
-图10.4是一个带$\pi$型滤波器的半波整流路．交流电源
+图~\ref{fig_C_10-4} 是一个带$\pi$型滤波器的半波整流路．交流电源
 的电压，滤波电容器$C_1$、$C_2$的电容，电阻$R$的阻值，都是根据
 负载$R_{\text{负}}$的要求选定的．$C_1$、$C_2$越大，滤波效果越好．$R$大些，
 滤波效果好些，但电压损失也大些，图中的数据可作参考．
 这个电路可提供5—6伏特的直流电．
-\begin{figure}[htp]\centering
-    \includegraphics[scale=.6]{fig/10-4.png}
-    \caption{}
-    \end{figure}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics{fig/C/10-4.pdf}
+    \caption{}\label{fig_C_10-4}
+\end{figure}
 
 在一张适当大小的白纸上，画出图中所示的电路，并标出
 各个元件的规格．把这张电路图平铺在一块铁板上，选取你
-需要的实验元件（图10.5所示的是专为实验用的几种元件）．
+需要的实验元件（图~\ref{fig_C_10-5} 所示的是专为实验用的几种元件）．
 将各个元件放在电路图标出的位置上（应注意二极管和电解
 电容器的正负极不要接错），用导线将各元件按照电路图连
 接起来，为了观察整流前后的波形，$P$点先不要接通．
 
-\begin{figure}[htp]\centering
-    \includegraphics[scale=.6]{fig/10-5.png}
-
-    元件装在透明塑料盒内，盖上画着元件的符号，并有弹簧式的接
-线头，盒底有块磁铁，使元件能平稳地安放在实验用的铁板上．
-    \caption{实验用的元件}
-    \end{figure}
+\begin{figure}[htbp]
+    \centering
+    \begin{subfigure}{0.3\linewidth}
+        \centering
+        \includegraphics{fig/C/10-5a.pdf}
+        \caption{晶体三极管}\label{fig_C_10-5a}
+    \end{subfigure}
+    \hfil
+    \begin{subfigure}{0.2\linewidth}
+        \centering
+        \includegraphics{fig/C/10-5b.pdf}
+        \caption{晶体二极管}\label{fig_C_10-5b}
+    \end{subfigure}
+    \hfil
+    \begin{subfigure}{0.2\linewidth}
+        \centering
+        \includegraphics{fig/C/10-5c.pdf}
+        \caption{电容}\label{fig_C_10-5c}
+    \end{subfigure}
+    \hfil
+    \begin{subfigure}{0.2\linewidth}
+        \centering
+        \includegraphics{fig/C/10-5d.pdf}
+        \caption{电阻}\label{fig_C_10-5d}
+    \end{subfigure}
+    \caption{实验用的元件．元件装在透明塑料盒内，盖上画着元件的符号，并有弹簧式的接
+    线头，盒底有块磁铁，使元件能平稳地安放在实验用的铁板上．}
+\end{figure}
 
 电路检查无误后，即可接上6伏的交流电源，用示波器观
 察波形．先把负载$R_{\text{负}}$改接在$A$点和“地”（即$BB'$导线）之间，
@@ -197,7 +213,7 @@
 流前的交流电压波形，再把负载$R_{\text{负}}$改接在$A$点和“地”之
 间，把$A'$点接示波器的Y输入，$BB'$导线仍然接示波器的
 “地”，观察整流后的电压波形，然后接通$P$点，把负载$R_{\text{负}}$接
-在图10.4所示的位置，把$A$点接示波器的Y输入，$BB'$导线
+在图~\ref{fig_C_10-4} 所示的位置，把$A$点接示波器的Y输入，$BB'$导线
 仍然接示波器的“地”，观察滤波后的电压波形，在观察波形
 时，在坐标纸上把三种波形记录下来，以便比较．
 
@@ -250,15 +266,16 @@ $U_1/U_2$跟匝数比$n_1/n_2$
 我们用方框图已经讲过简单晶体管收音机的工作原理．
 现在来连接这种收音机的电路，学习它的安装和调试方法．
 
-图10.6是一个两管收音机的线路图，它包括调谐、高频
+图~\ref{fig_C_10-6} 是一个两管收音机的线路图，它包括调谐、高频
 放大、检波、低频放大四个部分，图中已经用虚线隔开，图中
 的$R_1^*$和$R_2^*$叫做偏流电阻．
-\begin{figure}[htp]\centering
-    \includegraphics[scale=.6]{fig/10-6.png}
-    \caption{简单收音机的线路图}
-    \end{figure}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics{fig/C/10-6.pdf}
+    \caption{简单收音机的线路图}\label{fig_C_10-6}
+\end{figure}
 
-按照图10.6连接电路，连接的方法跟实验四相同．先在
+按照图~\ref{fig_C_10-6} 连接电路，连接的方法跟实验四相同．先在
 白纸上画出电路图，然后根据规格选取需要的元件，放在纸上
 摆好，再用导线把它们连接起来．偏流电阻$R_1^*$和$R_2^*$的阻值
 待定，可以先空着，等调试后再连入．
@@ -288,12 +305,13 @@ $U_1/U_2$跟匝数比$n_1/n_2$
 相比，只有一定的侧移．只要我们找出跟某一入射光线对应的
 出射光线，就能求出在玻璃中对应的折射光线，从而求出折射
 角，再根据折射定律，就可以求出玻璃的折射率．
-\begin{figure}[htp]\centering
-    \includegraphics[scale=.6]{fig/10-7.png}
-    \caption{}
-    \end{figure}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics{fig/C/10-7.pdf}
+    \caption{}\label{fig_C_10-7}
+\end{figure}
 
-实验的具体做法如下：照图10.7那样，先在一张白纸上
+实验的具体做法如下：照图~\ref{fig_C_10-7} 那样，先在一张白纸上
 画直线$aa'$作为玻璃砖的一个界面，过$aa'$上的一点$O$画界面
 的法线$NN'$，再画直线$AO$作为入射光线，把长方形玻璃砖
 放在白纸上，使它的长边跟$aa'$对齐，画出玻璃砖的另外一边
@@ -339,7 +357,7 @@ $\sin i/\sin r$
 \subsection{利用透镜成像公式}
 
 把点燃的蜡烛、凸透镜、光屏照
-图5.38那样放在光具座上，调整它们的高度，使烛焰和光屏的
+图~\ref{fig_C_5-38} 那样放在光具座上，调整它们的高度，使烛焰和光屏的
 中心位于凸透镜的主轴上（共轴）．调节蜡烛和光屏到透镜的
 距离，使光屏上呈现出烛焰的清晰的像，量出这时的物距和像
 距，填入自己设计的表格中．
@@ -385,16 +403,17 @@ $L\ge 4f$时，$v$才有实数解）
 在这个实验里，我们用两个焦距为$f_1$和$f_2$的凸透镜在光
 具座上组成显微镜模型．
 
-实验装置如图10.8所示．把一块玻璃竖立在光具座的
+实验装置如图~\ref{fig_C_10-8} 所示．把一块玻璃竖立在光具座的
 一端，玻璃上粘一个小物体（例如一个小昆虫等）．用焦距$f_1$
 较短的凸透镜$L_1$做物镜，焦距$f_2$较长的凸透镜$L_2$做目镜，把
 它们安装在光具座上，在$L_1$和$L_2$之间放一个光屏，调整$L_1$、
 $L_2$的高度，使它们共轴．同时调整玻璃和光屏的高度，使玻璃
 上的小物体和光屏的中心在$L_1$和$L_2$的主轴上．
-\begin{figure}[htp]\centering
-    \includegraphics[scale=.6]{fig/10-8.png}
-    \caption{}
-    \end{figure}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics{fig/C/10-8.pdf}
+    \caption{}\label{fig_C_10-8}
+\end{figure}
 
 用手电筒（或其他光源）照亮玻璃上的小物体，移动物镜
 $L_1$，使它到物体的距离$2f_1>u_1>f_1$，同时移动光屏，直到在光
@@ -406,13 +425,14 @@ $L_1$，使它到物体的距离$2f_1>u_1>f_1$，同时移动光屏，直到在�
 \section{利用双缝干涉测定光波的波长}
 
 这个实验是利用双缝干涉条纹来测定单色光的波长．实
-验装置如图10.9所示，光源发出的光经滤光片成为单色光．
+验装置如图~\ref{fig_C_10-9} 所示，光源发出的光经滤光片成为单色光．
 单色光通过单缝后，经双缝产生干涉．干涉条纹可从屏上观
 察到．
-\begin{figure}[htp]\centering
-    \includegraphics[scale=.6]{fig/10-9.png}
-    \caption{}
-    \end{figure}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics{fig/C/10-9.pdf}
+    \caption{}\label{fig_C_10-9}
+\end{figure}
 
 双缝间的距离$d$是已知的，双缝到屏的距离$\ell$和相邻两
 条干涉条纹间的距离$\Delta x$能够测量，因此可以利用下面的公
