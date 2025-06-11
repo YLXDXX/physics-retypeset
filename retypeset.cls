@@ -196,6 +196,10 @@
 
 \renewcommand{\le}{\leqslant}
 \renewcommand{\ge}{\geqslant}
+\NewDocumentCommand \atom  { mmm }%
+{%
+    {}^{#2}\c_math_subscript_token{#3}{\rm #1}%
+}
 \RequirePackage{mathtools}
 
 \setlength{\abovecaptionskip}{0.cm}
