@@ -235,7 +235,14 @@
 \newcommand{\Ukms}{\;\text{km}/\text{s}} % km/s
 \newcommand{\Ukmsq}{\;\text{km}/\text{s}^2} % km/s^2
 \newcommand{\UNm}{\;\text{N}\cdot\text{m}} % N·m
-\newcommand{\UNC}{\;\text{N}/\text{C}} %N/C
+\newcommand{\UNC}{\;\text{N}/\text{C}} % N/C
+\newcommand{\UJ}{\;\text{J}} % J
+\newcommand{\Uerg}{\;\text{erg}} % erg
+\newcommand{\UW}{\;\text{W}} % W
+\newcommand{\UJs}{\;\text{J}/\text{s}} % J/s
+\newcommand{\UkW}{\;\text{kW}} % kW
+\newcommand{\UHP}{\;\text{HP}} % HP （功率单位：马力，horsepower）
+\newcommand{\Umc}{\;\text{m}^3} % m^3
 
 %取 alone 首字母
 \newcommand{\UmsA}{\text{m}/\text{s}} % m/s
@@ -257,7 +264,14 @@
 \newcommand{\UkmsA}{\;\text{km}/\text{s}} % km/s
 \newcommand{\UkmsqA}{\;\text{km}/\text{s}^2} % km/s^2
 \newcommand{\UNmA}{\text{N}\cdot\text{m}} % N·m
-\newcommand{\UNCA}{\text{N}/\text{C}} %N/C
+\newcommand{\UNCA}{\text{N}/\text{C}} % N/C
+\newcommand{\UJA}{\text{J}} % J
+\newcommand{\UergA}{\text{erg}} % erg
+\newcommand{\UWA}{\text{W}} % W
+\newcommand{\UJsA}{\text{J}/\text{s}} % J/s
+\newcommand{\UkWA}{\text{kW}} % kW
+\newcommand{\UHPA}{\text{HP}} % HP （功率单位：马力，horsepower）
+\newcommand{\UmcA}{\text{m}^3} % m^3
 
 \RequirePackage{tkz-euclide}
 
