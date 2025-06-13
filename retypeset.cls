@@ -243,6 +243,11 @@
 \newcommand{\UkW}{\;\text{kW}} % kW
 \newcommand{\UHP}{\;\text{HP}} % HP （功率单位：马力，horsepower）
 \newcommand{\Umc}{\;\text{m}^3} % m^3
+\newcommand{\UNs}{\;\text{N}\cdot\text{s}} % N·s
+\newcommand{\Ukgms}{\;\text{kg}\cdot\text{m}/\text{s}} % kg·m/s
+\newcommand{\Ukgmsq}{\;\text{kg}\cdot\text{m}/\text{s}^2} % kg·m/s^2
+\newcommand{\Ukgs}{\;\text{kg}/\text{s}} % kg/s
+
 
 %取 alone 首字母
 \newcommand{\UmsA}{\text{m}/\text{s}} % m/s
@@ -272,6 +277,10 @@
 \newcommand{\UkWA}{\text{kW}} % kW
 \newcommand{\UHPA}{\text{HP}} % HP （功率单位：马力，horsepower）
 \newcommand{\UmcA}{\text{m}^3} % m^3
+\newcommand{\UNsA}{\text{N}\cdot\text{s}} % N·s
+\newcommand{\UkgmsA}{\text{kg}\cdot\text{m}/\text{s}} % kg·m/s
+\newcommand{\UkgmsqA}{\text{kg}\cdot\text{m}/\text{s}^2} % kg·m/s^2
+\newcommand{\UkgsA}{\;\text{kg}/\text{s}} % kg/s
 
 \RequirePackage{tkz-euclide}
 
