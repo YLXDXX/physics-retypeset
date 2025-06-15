@@ -235,6 +235,7 @@
 \newcommand{\Ukms}{\;\text{km}/\text{s}} % km/s
 \newcommand{\Ukmsq}{\;\text{km}/\text{s}^2} % km/s^2
 \newcommand{\UNm}{\;\text{N}\cdot\text{m}} % N·m
+\newcommand{\UNslashm}{\;\text{N}/\text{m}} % N/m
 \newcommand{\UNC}{\;\text{N}/\text{C}} % N/C
 \newcommand{\UJ}{\;\text{J}} % J
 \newcommand{\Uerg}{\;\text{erg}} % erg
@@ -247,7 +248,8 @@
 \newcommand{\Ukgms}{\;\text{kg}\cdot\text{m}/\text{s}} % kg·m/s
 \newcommand{\Ukgmsq}{\;\text{kg}\cdot\text{m}/\text{s}^2} % kg·m/s^2
 \newcommand{\Ukgs}{\;\text{kg}/\text{s}} % kg/s
-
+\newcommand{\UWmq}{\;\text{W}/\text{m}^2} % W/m^2
+\newcommand{\UdB}{\;\text{dB}} % dB
 
 %取 alone 首字母
 \newcommand{\UmsA}{\text{m}/\text{s}} % m/s
@@ -266,9 +268,10 @@
 \newcommand{\UdynA}{\text{dyn}} % dyn
 \newcommand{\UgA}{\text{g}} % g
 \newcommand{\UNmqkgqA}{\text{N}\cdot\text{m}^2/\text{kg}^2} % N·m^2/kg^2 (万有引力常量单位)
-\newcommand{\UkmsA}{\;\text{km}/\text{s}} % km/s
-\newcommand{\UkmsqA}{\;\text{km}/\text{s}^2} % km/s^2
+\newcommand{\UkmsA}{\text{km}/\text{s}} % km/s
+\newcommand{\UkmsqA}{\text{km}/\text{s}^2} % km/s^2
 \newcommand{\UNmA}{\text{N}\cdot\text{m}} % N·m
+\newcommand{\UNslashmA}{\text{N}/\text{m}} % N/m
 \newcommand{\UNCA}{\text{N}/\text{C}} % N/C
 \newcommand{\UJA}{\text{J}} % J
 \newcommand{\UergA}{\text{erg}} % erg
@@ -280,7 +283,9 @@
 \newcommand{\UNsA}{\text{N}\cdot\text{s}} % N·s
 \newcommand{\UkgmsA}{\text{kg}\cdot\text{m}/\text{s}} % kg·m/s
 \newcommand{\UkgmsqA}{\text{kg}\cdot\text{m}/\text{s}^2} % kg·m/s^2
-\newcommand{\UkgsA}{\;\text{kg}/\text{s}} % kg/s
+\newcommand{\UkgsA}{\text{kg}/\text{s}} % kg/s
+\newcommand{\UWmqA}{\text{W}/\text{m}^2} % W/m^2
+\newcommand{\UdBA}{\text{dB}} % dB
 
 \RequirePackage{tkz-euclide}
 
