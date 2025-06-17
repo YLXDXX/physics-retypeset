@@ -225,7 +225,7 @@
 \newcommand{\Us}{\;\text{s}} % s
 \newcommand{\Usq}{\;\text{s}^2} % s^2
 \newcommand{\Um}{\;\text{m}} % m
-\newcommand{\Umq}{\;\text{m}} % m^2
+\newcommand{\Umq}{\;\text{m}^2} % m^2
 \newcommand{\Ukgf}{\;\text{kgf}} % kgf
 \newcommand{\Ukg}{\;\text{kg}} % kg
 \newcommand{\UN}{\;\text{N}} % N
@@ -245,12 +245,20 @@
 \newcommand{\UkW}{\;\text{kW}} % kW
 \newcommand{\UHP}{\;\text{HP}} % HP （功率单位：马力，horsepower）
 \newcommand{\Umc}{\;\text{m}^3} % m^3
+\newcommand{\Ucmc}{\;\text{cm}^3} % cm^3
+\newcommand{\Ummc}{\;\text{mm}^3} % mm^3
 \newcommand{\UNs}{\;\text{N}\cdot\text{s}} % N·s
 \newcommand{\Ukgms}{\;\text{kg}\cdot\text{m}/\text{s}} % kg·m/s
 \newcommand{\Ukgmsq}{\;\text{kg}\cdot\text{m}/\text{s}^2} % kg·m/s^2
 \newcommand{\Ukgs}{\;\text{kg}/\text{s}} % kg/s
+\newcommand{\Ukgmc}{\;\text{kg}/\text{m}^3} % kg/m^3
 \newcommand{\UWmq}{\;\text{W}/\text{m}^2} % W/m^2
 \newcommand{\UdB}{\;\text{dB}} % dB
+\newcommand{\Ucede}{\;{}^\circ\text{C}} % ℃ (celsius degree)
+\newcommand{\Umol}{\;\text{mol}} % mol
+\newcommand{\Umolnn}{\;\text{mol}^{-1}} % mol^{-1}
+\newcommand{\Umcmol}{\;\text{m}^3/\text{mol}} % m^3/mol
+\newcommand{\Ukgmol}{\;\text{kg}/\text{mol}} % kg/mol
 
 %取 alone 首字母
 \newcommand{\UmsA}{\text{m}/\text{s}} % m/s
@@ -262,7 +270,7 @@
 \newcommand{\UsA}{\text{s}} % s
 \newcommand{\UsqA}{\text{s}^2} % s^2
 \newcommand{\UmA}{\text{m}} % m
-\newcommand{\UmqA}{\text{m}} % m^2
+\newcommand{\UmqA}{\text{m}^2} % m^2
 \newcommand{\UkgfA}{\text{kgf}} % kgf
 \newcommand{\UkgA}{\text{kg}} % kg
 \newcommand{\UNA}{\text{N}} % N
@@ -282,12 +290,20 @@
 \newcommand{\UkWA}{\text{kW}} % kW
 \newcommand{\UHPA}{\text{HP}} % HP （功率单位：马力，horsepower）
 \newcommand{\UmcA}{\text{m}^3} % m^3
+\newcommand{\UcmcA}{\text{cm}^3} % cm^3
+\newcommand{\UmmcA}{\text{mm}^3} % mm^3
 \newcommand{\UNsA}{\text{N}\cdot\text{s}} % N·s
 \newcommand{\UkgmsA}{\text{kg}\cdot\text{m}/\text{s}} % kg·m/s
 \newcommand{\UkgmsqA}{\text{kg}\cdot\text{m}/\text{s}^2} % kg·m/s^2
 \newcommand{\UkgsA}{\text{kg}/\text{s}} % kg/s
+\newcommand{\UkgmcA}{\text{kg}/\text{m}^3} % kg/m^3
 \newcommand{\UWmqA}{\text{W}/\text{m}^2} % W/m^2
 \newcommand{\UdBA}{\text{dB}} % dB
+\newcommand{\UcedeA}{{}^\circ\text{C}} % ℃ (celsius degree)
+\newcommand{\UmolA}{\text{mol}} % mol
+\newcommand{\UmolnnA}{\text{mol}^{-1}} % mol^{-1}
+\newcommand{\UmcmolA}{\text{m}^3/\text{mol}} % m^3/mol
+\newcommand{\UkgmolA}{\text{kg}/\text{mol}} % kg/mol
 
 \RequirePackage{tkz-euclide}
 
