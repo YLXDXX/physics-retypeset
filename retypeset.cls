@@ -218,6 +218,7 @@
 %取 unit 首字母
 \newcommand{\Ums}{\;\text{m}/\text{s}} % m/s
 \newcommand{\Ucms}{\;\text{cm}/\text{s}} % cm/s
+\newcommand{\Ucm}{\;\text{cm}} % cm
 \newcommand{\Umsq}{\;\text{m}/\text{s}^2} % m/s^2
 \newcommand{\Ucmsq}{\;\text{cm}/\text{s}^2} % cm/s^2
 \newcommand{\Ukmh}{\;\text{km}/\text{h}} % km/h
@@ -254,6 +255,7 @@
 %取 alone 首字母
 \newcommand{\UmsA}{\text{m}/\text{s}} % m/s
 \newcommand{\UcmsA}{\text{cm}/\text{s}} % cm/s
+\newcommand{\UcmA}{\text{cm}} % cm
 \newcommand{\UmsqA}{\text{m}/\text{s}^2} % m/s^2
 \newcommand{\UcmsqA}{\text{cm}/\text{s}^2} % cm/s^2
 \newcommand{\UkmhA}{\text{km}/\text{h}} % km/h
