@@ -226,6 +226,7 @@
 \newcommand{\Usq}{\;\text{s}^2} % s^2
 \newcommand{\Um}{\;\text{m}} % m
 \newcommand{\Umq}{\;\text{m}^2} % m^2
+\newcommand{\Ucmq}{\;\text{cm}^2} % cm^2
 \newcommand{\Ukgf}{\;\text{kgf}} % kgf
 \newcommand{\Ukg}{\;\text{kg}} % kg
 \newcommand{\UN}{\;\text{N}} % N
@@ -259,6 +260,9 @@
 \newcommand{\Umolnn}{\;\text{mol}^{-1}} % mol^{-1}
 \newcommand{\Umcmol}{\;\text{m}^3/\text{mol}} % m^3/mol
 \newcommand{\Ukgmol}{\;\text{kg}/\text{mol}} % kg/mol
+\newcommand{\Ucal}{\;\text{cal}} % 卡路里（卡，cal）热量的旧单位
+\newcommand{\UJcal}{\;\text{J}/\text{cal}} % 热功当量单位
+\newcommand{\UJkgcede}{\;\text{J}/(\text{kg}\cdot{}^\circ\text{C})} % 比热 J/(kg·℃)
 
 %取 alone 首字母
 \newcommand{\UmsA}{\text{m}/\text{s}} % m/s
@@ -271,6 +275,7 @@
 \newcommand{\UsqA}{\text{s}^2} % s^2
 \newcommand{\UmA}{\text{m}} % m
 \newcommand{\UmqA}{\text{m}^2} % m^2
+\newcommand{\UcmqA}{\text{cm}^2} % cm^2
 \newcommand{\UkgfA}{\text{kgf}} % kgf
 \newcommand{\UkgA}{\text{kg}} % kg
 \newcommand{\UNA}{\text{N}} % N
@@ -304,6 +309,9 @@
 \newcommand{\UmolnnA}{\text{mol}^{-1}} % mol^{-1}
 \newcommand{\UmcmolA}{\text{m}^3/\text{mol}} % m^3/mol
 \newcommand{\UkgmolA}{\text{kg}/\text{mol}} % kg/mol
+\newcommand{\UcalA}{\text{cal}} % 卡路里（卡，cal）热量的旧单位
+\newcommand{\UJcalA}{\text{J}/\text{cal}} % 热功当量单位
+\newcommand{\UJkgcedeA}{\text{J}/(\text{kg}\cdot{}^\circ\text{C})} % 比热 J/(kg·℃)
 
 \RequirePackage{tkz-euclide}
 
