@@ -238,14 +238,17 @@
 \newcommand{\Ukmsq}{\;\text{km}/\text{s}^2} % km/s^2
 \newcommand{\UNm}{\;\text{N}\cdot\text{m}} % N·m
 \newcommand{\UNslashm}{\;\text{N}/\text{m}} % N/m
+\newcommand{\UNmq}{\;\text{N}/\text{m}^2} % N/m^2
 \newcommand{\UNC}{\;\text{N}/\text{C}} % N/C
 \newcommand{\UJ}{\;\text{J}} % J
+\newcommand{\UL}{\;\text{L}} % L （容积单位，升）
 \newcommand{\Uerg}{\;\text{erg}} % erg
 \newcommand{\UW}{\;\text{W}} % W
 \newcommand{\UJs}{\;\text{J}/\text{s}} % J/s
 \newcommand{\UkW}{\;\text{kW}} % kW
 \newcommand{\UHP}{\;\text{HP}} % HP （功率单位：马力，horsepower）
 \newcommand{\Umc}{\;\text{m}^3} % m^3
+\newcommand{\Udmc}{\;\text{dm}^3} % dm^3
 \newcommand{\Ucmc}{\;\text{cm}^3} % cm^3
 \newcommand{\Ummc}{\;\text{mm}^3} % mm^3
 \newcommand{\UNs}{\;\text{N}\cdot\text{s}} % N·s
@@ -259,10 +262,16 @@
 \newcommand{\Umol}{\;\text{mol}} % mol
 \newcommand{\Umolnn}{\;\text{mol}^{-1}} % mol^{-1}
 \newcommand{\Umcmol}{\;\text{m}^3/\text{mol}} % m^3/mol
-\newcommand{\Ukgmol}{\;\text{kg}/\text{mol}} % kg/mol
+\newcommand{\Ukgmol}{\;\text{kg}/\text{mol}} % kg/mol （摩尔质量单位）
 \newcommand{\Ucal}{\;\text{cal}} % 卡路里（卡，cal）热量的旧单位
 \newcommand{\UJcal}{\;\text{J}/\text{cal}} % 热功当量单位
 \newcommand{\UJkgcede}{\;\text{J}/(\text{kg}\cdot{}^\circ\text{C})} % 比热 J/(kg·℃)
+\newcommand{\UPa}{\;\text{Pa}} % Pa
+\newcommand{\Uatm}{\;\text{atm}} % atm （压强单位，标准大气压）
+\newcommand{\UmmHg}{\;\text{mmHg}} % mmHg （压强单位，毫米汞柱）
+\newcommand{\UK}{\;\text{K}} % K （热力学温度）
+\newcommand{\UJmolK}{\;\text{J}/(\text{mol}\cdot\text{K})} % J/(mol·K) （摩尔气体恒量单位）
+\newcommand{\UatmLmolK}{\;\text{atm}\cdot\text{L}/(\text{mol}\cdot\text{K})} % atm·L/(mol·K)
 
 %取 alone 首字母
 \newcommand{\UmsA}{\text{m}/\text{s}} % m/s
@@ -287,14 +296,17 @@
 \newcommand{\UkmsqA}{\text{km}/\text{s}^2} % km/s^2
 \newcommand{\UNmA}{\text{N}\cdot\text{m}} % N·m
 \newcommand{\UNslashmA}{\text{N}/\text{m}} % N/m
+\newcommand{\UNmqA}{\text{N}/\text{m}^2} % N/m^2
 \newcommand{\UNCA}{\text{N}/\text{C}} % N/C
 \newcommand{\UJA}{\text{J}} % J
+\newcommand{\ULA}{\text{L}} % L （容积单位，升）
 \newcommand{\UergA}{\text{erg}} % erg
 \newcommand{\UWA}{\text{W}} % W
 \newcommand{\UJsA}{\text{J}/\text{s}} % J/s
 \newcommand{\UkWA}{\text{kW}} % kW
 \newcommand{\UHPA}{\text{HP}} % HP （功率单位：马力，horsepower）
 \newcommand{\UmcA}{\text{m}^3} % m^3
+\newcommand{\UdmcA}{\text{dm}^3} % dm^3
 \newcommand{\UcmcA}{\text{cm}^3} % cm^3
 \newcommand{\UmmcA}{\text{mm}^3} % mm^3
 \newcommand{\UNsA}{\text{N}\cdot\text{s}} % N·s
@@ -308,10 +320,16 @@
 \newcommand{\UmolA}{\text{mol}} % mol
 \newcommand{\UmolnnA}{\text{mol}^{-1}} % mol^{-1}
 \newcommand{\UmcmolA}{\text{m}^3/\text{mol}} % m^3/mol
-\newcommand{\UkgmolA}{\text{kg}/\text{mol}} % kg/mol
+\newcommand{\UkgmolA}{\text{kg}/\text{mol}} % kg/mol （摩尔质量单位）
 \newcommand{\UcalA}{\text{cal}} % 卡路里（卡，cal）热量的旧单位
 \newcommand{\UJcalA}{\text{J}/\text{cal}} % 热功当量单位
 \newcommand{\UJkgcedeA}{\text{J}/(\text{kg}\cdot{}^\circ\text{C})} % 比热 J/(kg·℃)
+\newcommand{\UPaA}{\text{Pa}} % Pa
+\newcommand{\UatmA}{\text{atm}} % atm （压强单位，标准大气压）
+\newcommand{\UmmHgA}{\text{mmHg}} % mmHg （压强单位，毫米汞柱）
+\newcommand{\UKA}{\text{K}} % K （热力学温度）
+\newcommand{\UJmolKA}{\text{J}/(\text{mol}\cdot\text{K})} % J/(mol·K) （摩尔气体恒量单位）
+\newcommand{\UatmLmolKA}{\text{atm}\cdot\text{L}/(\text{mol}\cdot\text{K})} % atm·L/(mol·K)
 
 \RequirePackage{tkz-euclide}
 
