@@ -272,6 +272,8 @@
 \newcommand{\UK}{\;\text{K}} % K （热力学温度）
 \newcommand{\UJmolK}{\;\text{J}/(\text{mol}\cdot\text{K})} % J/(mol·K) （摩尔气体恒量单位）
 \newcommand{\UatmLmolK}{\;\text{atm}\cdot\text{L}/(\text{mol}\cdot\text{K})} % atm·L/(mol·K)
+\newcommand{\UJkg}{\;\text{J}/\text{kg}} % J/kg （熔解热）
+\newcommand{\UkJkg}{\;\text{kJ}/\text{kg}} % kJ/kg （熔解热）
 
 %取 alone 首字母
 \newcommand{\UmsA}{\text{m}/\text{s}} % m/s
@@ -330,6 +332,8 @@
 \newcommand{\UKA}{\text{K}} % K （热力学温度）
 \newcommand{\UJmolKA}{\text{J}/(\text{mol}\cdot\text{K})} % J/(mol·K) （摩尔气体恒量单位）
 \newcommand{\UatmLmolKA}{\text{atm}\cdot\text{L}/(\text{mol}\cdot\text{K})} % atm·L/(mol·K)
+\newcommand{\UJkgA}{\text{J}/\text{kg}} % J/kg （熔解热）
+\newcommand{\UkJkgA}{\text{kJ}/\text{kg}} % kJ/kg （熔解热）
 
 \RequirePackage{tkz-euclide}
 
