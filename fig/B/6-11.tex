@@ -184,6 +184,12 @@
     }
   \fill[rounded corners=2pt,left color=red!50,right color= red!50,middle color=red!10](-1.1,-0.1)rectangle(-0.9,4.1);
   \fill[rounded corners=2pt,left color=blue!50,right color= blue!50,middle color=blue!10](1.1,-0.1)rectangle(0.9,4.1);
-   
+  
+  \foreach \x in {0.2,0.6,1.0,...,4}
+  {
+  		\node [black,font=\tiny] at (+\a,\x)  {$-$};
+  		\node [black,font=\tiny] at (-\a,\x) {$+$};
+  }
+  
 \end{tikzpicture}
 \end{document}

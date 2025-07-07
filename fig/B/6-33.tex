@@ -68,7 +68,7 @@
 \small
 \begin{circuitikz}[>=latex,scale=1.2]
   % \useasboundingbox(-1,-2)rectangle(8,6);
-  \fill[inner color=white, outer color=cyan!20](0,0)circle(0.6);
+  \fill[inner color=white, outer color=cyan!50](0,0)circle(0.6);
   \fill[left color=darkgray,right color=darkgray, middle color=white](-0.5,-1.2)--++(0.2,0)--++(0.05,0.1)--++(0.5,0)--++(0.05,-0.1)--++(0.2,0)--++(-0.1,0.2)--++(-0.8,0)--cycle;
   \fill[left color=gray,right color=white](-0.05,-0.6)rectangle(-0.02,-1.0);
   \fill[left color=white,right color=darkgray](-0.02,-0.6)rectangle(0.05,-1.0);
@@ -114,5 +114,7 @@
     \draw [decorate,decoration={coil,segment length=1mm,amplitude=0.6mm}](0.75,-0.5)to[bend left](0.2,-1.2)node[ground]{};
     \draw[->](0.6,0.6)--(0.6,1.0);
   \end{scope}
+  \node at (-2,1.2) {$A$};
+  \node at (-2.35,1.3) {$B$};
 \end{circuitikz}
 \end{document}

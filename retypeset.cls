@@ -216,6 +216,8 @@
 
 %物理单位
 %取 unit 首字母
+\newcommand{\Uspace}{\;} % 物理单位的空格
+
 \newcommand{\Ums}{\;\text{m}/\text{s}} % m/s
 \newcommand{\Ucms}{\;\text{cm}/\text{s}} % cm/s
 \newcommand{\Ucm}{\;\text{cm}} % cm
@@ -239,7 +241,6 @@
 \newcommand{\UNm}{\;\text{N}\cdot\text{m}} % N·m
 \newcommand{\UNslashm}{\;\text{N}/\text{m}} % N/m
 \newcommand{\UNmq}{\;\text{N}/\text{m}^2} % N/m^2
-\newcommand{\UNC}{\;\text{N}/\text{C}} % N/C
 \newcommand{\UJ}{\;\text{J}} % J
 \newcommand{\UL}{\;\text{L}} % L （容积单位，升）
 \newcommand{\Uerg}{\;\text{erg}} % erg
@@ -274,6 +275,19 @@
 \newcommand{\UatmLmolK}{\;\text{atm}\cdot\text{L}/(\text{mol}\cdot\text{K})} % atm·L/(mol·K)
 \newcommand{\UJkg}{\;\text{J}/\text{kg}} % J/kg （熔解热）
 \newcommand{\UkJkg}{\;\text{kJ}/\text{kg}} % kJ/kg （熔解热）
+\newcommand{\UC}{\;\text{C}} % C （电荷量）
+\newcommand{\UNmqCq}{\;\text{N}\cdot\text{m}^2/\text{C}^2} % N·m^2/C^2 （静电力常量）
+\newcommand{\UNC}{\;\text{N}/\text{C}} % N/C （电场强度）
+\newcommand{\UV}{\;\text{V}} % V （电压）
+\newcommand{\UJC}{\;\text{J}/\text{C}} % J/C （同电压）
+\newcommand{\UeV}{\;\text{eV}} % eV （能量，电子伏特）
+\newcommand{\Ue}{\;\text{e}} % e （元电荷）
+\newcommand{\UVm}{\;\text{V}/\text{m}} % V/m （同电场强度）
+\newcommand{\UF}{\;\text{F}} % F （电容）
+\newcommand{\UCV}{\;\text{C}/\text{V}} % C/V （同电容）
+\newcommand{\UuF}{\;\mu\text{F}} % uF （电容）
+\newcommand{\UnF}{\;\text{nF}} % nF （电容）
+\newcommand{\UpF}{\;\text{pF}} % pF （电容）
 
 %取 alone 首字母
 \newcommand{\UmsA}{\text{m}/\text{s}} % m/s
@@ -299,7 +313,6 @@
 \newcommand{\UNmA}{\text{N}\cdot\text{m}} % N·m
 \newcommand{\UNslashmA}{\text{N}/\text{m}} % N/m
 \newcommand{\UNmqA}{\text{N}/\text{m}^2} % N/m^2
-\newcommand{\UNCA}{\text{N}/\text{C}} % N/C
 \newcommand{\UJA}{\text{J}} % J
 \newcommand{\ULA}{\text{L}} % L （容积单位，升）
 \newcommand{\UergA}{\text{erg}} % erg
@@ -334,6 +347,19 @@
 \newcommand{\UatmLmolKA}{\text{atm}\cdot\text{L}/(\text{mol}\cdot\text{K})} % atm·L/(mol·K)
 \newcommand{\UJkgA}{\text{J}/\text{kg}} % J/kg （熔解热）
 \newcommand{\UkJkgA}{\text{kJ}/\text{kg}} % kJ/kg （熔解热）
+\newcommand{\UCA}{\text{C}} % C （电荷量）
+\newcommand{\UNmqCqA}{\text{N}\cdot\text{m}^2/\text{C}^2} % N·m^2/C^2 （静电力常量）
+\newcommand{\UNCA}{\text{N}/\text{C}} % N/C （电场强度）
+\newcommand{\UVA}{\text{V}} % V （电压）
+\newcommand{\UJCA}{\text{J}/\text{C}} % J/C （同电压）
+\newcommand{\UeVA}{\text{eV}} % eV （能量，电子伏特）
+\newcommand{\UeA}{\text{e}} % e （元电荷）
+\newcommand{\UVmA}{\text{V}/\text{m}} % V/m （同电场强度）
+\newcommand{\UFA}{\text{F}} % F （电容）
+\newcommand{\UCVA}{\text{C}/\text{V}} % C/V （同电容）
+\newcommand{\UuFA}{\mu\text{F}} % uF （电容）
+\newcommand{\UnFA}{\text{nF}} % nF （电容）
+\newcommand{\UpFA}{\text{pF}} % pF （电容）
 
 \RequirePackage{tkz-euclide}
 
