@@ -16,11 +16,13 @@
   % \draw [->](0.05,0)--(2,0)--(3,0)to [R=$W$,-*](3,2)--(2.15,2);
 
   \draw (1,2.5)--(2,2.5) to [pR,name=hb,-*] (2,0)--(1,0);
-  \draw[-o](1,0)--(0,0);
-  \draw[-o](1,2.5)--(0,2.5);
-  \draw[<->] (0.06,0.06)--(0.06,2.44)node[midway,right]{$U$};
-  \node at (hb.left) [left=1mm]{$R_1$};
-  \node at (hb.right)[left=1mm]{$R_2$};
+  \draw(1,0)--(0,0);
+  \draw(1,2.5)--(0,2.5);
+  \draw [fill=white](0.06,0) circle (2pt);
+  \draw [fill=white](0.06,2.5) circle (2pt);
+  \draw[<->] (0.06,0.12)--(0.06,2.38)node[midway,right]{$U$};
+  \node at (hb.left) [right=1mm]{$R_1$};
+  \node at (hb.right)[right=1mm]{$R_2$};
   \draw (2,0)--(3,0)to[R=$W$](3,0|-hb.wiper)--(hb.wiper);
 \end{circuitikz}
 \end{document}

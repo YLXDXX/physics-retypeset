@@ -252,6 +252,7 @@
 \newcommand{\Udmc}{\;\text{dm}^3} % dm^3
 \newcommand{\Ucmc}{\;\text{cm}^3} % cm^3
 \newcommand{\Ummc}{\;\text{mm}^3} % mm^3
+\newcommand{\Ummq}{\;\text{mm}^2} % mm^2
 \newcommand{\UNs}{\;\text{N}\cdot\text{s}} % N·s
 \newcommand{\Ukgms}{\;\text{kg}\cdot\text{m}/\text{s}} % kg·m/s
 \newcommand{\Ukgmsq}{\;\text{kg}\cdot\text{m}/\text{s}^2} % kg·m/s^2
@@ -288,6 +289,13 @@
 \newcommand{\UuF}{\;\mu\text{F}} % uF （电容）
 \newcommand{\UnF}{\;\text{nF}} % nF （电容）
 \newcommand{\UpF}{\;\text{pF}} % pF （电容）
+\newcommand{\UA}{\;\text{A}} % A （电流）
+\newcommand{\UImA}{\;\text{mA}} % mA （电流）
+\newcommand{\UuA}{\;\mu\text{A}} % μA （电流）
+\newcommand{\UO}{\;\Omega} % Ω （电阻）
+\newcommand{\UkO}{\;\text{k}\Omega} % kΩ （电阻）
+\newcommand{\UMO}{\;\text{M}\Omega} % MΩ （电阻）
+\newcommand{\UOm}{\;\Omega\cdot\text{m}} % Ω·m （电阻率）
 
 %取 alone 首字母
 \newcommand{\UmsA}{\text{m}/\text{s}} % m/s
@@ -324,6 +332,7 @@
 \newcommand{\UdmcA}{\text{dm}^3} % dm^3
 \newcommand{\UcmcA}{\text{cm}^3} % cm^3
 \newcommand{\UmmcA}{\text{mm}^3} % mm^3
+\newcommand{\UmmqA}{\text{mm}^2} % mm^2
 \newcommand{\UNsA}{\text{N}\cdot\text{s}} % N·s
 \newcommand{\UkgmsA}{\text{kg}\cdot\text{m}/\text{s}} % kg·m/s
 \newcommand{\UkgmsqA}{\text{kg}\cdot\text{m}/\text{s}^2} % kg·m/s^2
@@ -360,6 +369,13 @@
 \newcommand{\UuFA}{\mu\text{F}} % uF （电容）
 \newcommand{\UnFA}{\text{nF}} % nF （电容）
 \newcommand{\UpFA}{\text{pF}} % pF （电容）
+\newcommand{\UAA}{\text{A}} % A （电流）
+\newcommand{\UImAA}{\text{mA}} % mA （电流）
+\newcommand{\UuAA}{\mu\text{A}} % μA （电流）
+\newcommand{\UOA}{\Omega} % Ω （电阻）
+\newcommand{\UkOA}{\text{k}\Omega} % kΩ （电阻）
+\newcommand{\UMOA}{\text{M}\Omega} % MΩ （电阻）
+\newcommand{\UOmA}{\Omega\cdot\text{m}} % Ω·m （电阻率）
 
 \RequirePackage{tkz-euclide}
 
