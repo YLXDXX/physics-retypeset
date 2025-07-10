@@ -249,6 +249,7 @@
 \newcommand{\UkW}{\;\text{kW}} % kW
 \newcommand{\UHP}{\;\text{HP}} % HP （功率单位：马力，horsepower）
 \newcommand{\Umc}{\;\text{m}^3} % m^3
+\newcommand{\Umnc}{\;\text{m}^{-3}} % m^{-3}
 \newcommand{\Udmc}{\;\text{dm}^3} % dm^3
 \newcommand{\Ucmc}{\;\text{cm}^3} % cm^3
 \newcommand{\Ummc}{\;\text{mm}^3} % mm^3
@@ -264,7 +265,7 @@
 \newcommand{\Umol}{\;\text{mol}} % mol
 \newcommand{\Umolnn}{\;\text{mol}^{-1}} % mol^{-1}
 \newcommand{\Umcmol}{\;\text{m}^3/\text{mol}} % m^3/mol
-\newcommand{\Ukgmol}{\;\text{kg}/\text{mol}} % kg/mol （摩尔质量单位）
+\newcommand{\Ukgmol}{\;\text{kg}/\text{mol}} % kg/mol （摩尔质量单位，化学当量）
 \newcommand{\Ucal}{\;\text{cal}} % 卡路里（卡，cal）热量的旧单位
 \newcommand{\UJcal}{\;\text{J}/\text{cal}} % 热功当量单位
 \newcommand{\UJkgcede}{\;\text{J}/(\text{kg}\cdot{}^\circ\text{C})} % 比热 J/(kg·℃)
@@ -296,6 +297,9 @@
 \newcommand{\UkO}{\;\text{k}\Omega} % kΩ （电阻）
 \newcommand{\UMO}{\;\text{M}\Omega} % MΩ （电阻）
 \newcommand{\UOm}{\;\Omega\cdot\text{m}} % Ω·m （电阻率）
+\newcommand{\UkgC}{\;\text{kg}/\text{C}} % kg/C （电化当量）
+\newcommand{\UCmol}{\;\text{C}/\text{mol}} % C/mol （法拉第恒量）
+\newcommand{\Umoln}{\;\text{mol}^{-1}} % mol^{-1} （阿伏伽德罗常数）
 
 %取 alone 首字母
 \newcommand{\UmsA}{\text{m}/\text{s}} % m/s
@@ -329,6 +333,7 @@
 \newcommand{\UkWA}{\text{kW}} % kW
 \newcommand{\UHPA}{\text{HP}} % HP （功率单位：马力，horsepower）
 \newcommand{\UmcA}{\text{m}^3} % m^3
+\newcommand{\UmncA}{\text{m}^{-3}} % m^{-3}
 \newcommand{\UdmcA}{\text{dm}^3} % dm^3
 \newcommand{\UcmcA}{\text{cm}^3} % cm^3
 \newcommand{\UmmcA}{\text{mm}^3} % mm^3
@@ -344,7 +349,7 @@
 \newcommand{\UmolA}{\text{mol}} % mol
 \newcommand{\UmolnnA}{\text{mol}^{-1}} % mol^{-1}
 \newcommand{\UmcmolA}{\text{m}^3/\text{mol}} % m^3/mol
-\newcommand{\UkgmolA}{\text{kg}/\text{mol}} % kg/mol （摩尔质量单位）
+\newcommand{\UkgmolA}{\text{kg}/\text{mol}} % kg/mol （摩尔质量单位，化学当量）
 \newcommand{\UcalA}{\text{cal}} % 卡路里（卡，cal）热量的旧单位
 \newcommand{\UJcalA}{\text{J}/\text{cal}} % 热功当量单位
 \newcommand{\UJkgcedeA}{\text{J}/(\text{kg}\cdot{}^\circ\text{C})} % 比热 J/(kg·℃)
@@ -376,6 +381,9 @@
 \newcommand{\UkOA}{\text{k}\Omega} % kΩ （电阻）
 \newcommand{\UMOA}{\text{M}\Omega} % MΩ （电阻）
 \newcommand{\UOmA}{\Omega\cdot\text{m}} % Ω·m （电阻率）
+\newcommand{\UkgCA}{\text{kg}/\text{C}} % kg/C （电化当量）
+\newcommand{\UCmolA}{\text{C}/\text{mol}} % C/mol （法拉第恒量）
+\newcommand{\UmolnA}{\text{mol}^{-1}} % mol^{-1} （阿伏伽德罗常数）
 
 \RequirePackage{tkz-euclide}
 
