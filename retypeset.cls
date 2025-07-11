@@ -269,14 +269,15 @@
 \newcommand{\Ucal}{\;\text{cal}} % 卡路里（卡，cal）热量的旧单位
 \newcommand{\UJcal}{\;\text{J}/\text{cal}} % 热功当量单位
 \newcommand{\UJkgcede}{\;\text{J}/(\text{kg}\cdot{}^\circ\text{C})} % 比热 J/(kg·℃)
+\newcommand{\UJkgK}{\;\text{J}/(\text{kg}\cdot\text{K})} % 比热 J/(kg·K)
 \newcommand{\UPa}{\;\text{Pa}} % Pa
 \newcommand{\Uatm}{\;\text{atm}} % atm （压强单位，标准大气压）
 \newcommand{\UmmHg}{\;\text{mmHg}} % mmHg （压强单位，毫米汞柱）
 \newcommand{\UK}{\;\text{K}} % K （热力学温度）
 \newcommand{\UJmolK}{\;\text{J}/(\text{mol}\cdot\text{K})} % J/(mol·K) （摩尔气体恒量单位）
 \newcommand{\UatmLmolK}{\;\text{atm}\cdot\text{L}/(\text{mol}\cdot\text{K})} % atm·L/(mol·K)
-\newcommand{\UJkg}{\;\text{J}/\text{kg}} % J/kg （熔解热）
-\newcommand{\UkJkg}{\;\text{kJ}/\text{kg}} % kJ/kg （熔解热）
+\newcommand{\UJkg}{\;\text{J}/\text{kg}} % J/kg （熔解热、汽化热）
+\newcommand{\UkJkg}{\;\text{kJ}/\text{kg}} % kJ/kg （熔解热、汽化热）
 \newcommand{\UC}{\;\text{C}} % C （电荷量）
 \newcommand{\UNmqCq}{\;\text{N}\cdot\text{m}^2/\text{C}^2} % N·m^2/C^2 （静电力常量）
 \newcommand{\UNC}{\;\text{N}/\text{C}} % N/C （电场强度）
@@ -353,14 +354,15 @@
 \newcommand{\UcalA}{\text{cal}} % 卡路里（卡，cal）热量的旧单位
 \newcommand{\UJcalA}{\text{J}/\text{cal}} % 热功当量单位
 \newcommand{\UJkgcedeA}{\text{J}/(\text{kg}\cdot{}^\circ\text{C})} % 比热 J/(kg·℃)
+\newcommand{\UJkgKA}{\text{J}/(\text{kg}\cdot\text{K})} % 比热 J/(kg·K)
 \newcommand{\UPaA}{\text{Pa}} % Pa
 \newcommand{\UatmA}{\text{atm}} % atm （压强单位，标准大气压）
 \newcommand{\UmmHgA}{\text{mmHg}} % mmHg （压强单位，毫米汞柱）
 \newcommand{\UKA}{\text{K}} % K （热力学温度）
 \newcommand{\UJmolKA}{\text{J}/(\text{mol}\cdot\text{K})} % J/(mol·K) （摩尔气体恒量单位）
 \newcommand{\UatmLmolKA}{\text{atm}\cdot\text{L}/(\text{mol}\cdot\text{K})} % atm·L/(mol·K)
-\newcommand{\UJkgA}{\text{J}/\text{kg}} % J/kg （熔解热）
-\newcommand{\UkJkgA}{\text{kJ}/\text{kg}} % kJ/kg （熔解热）
+\newcommand{\UJkgA}{\text{J}/\text{kg}} % J/kg （熔解热、汽化热）
+\newcommand{\UkJkgA}{\text{kJ}/\text{kg}} % kJ/kg （熔解热、汽化热）
 \newcommand{\UCA}{\text{C}} % C （电荷量）
 \newcommand{\UNmqCqA}{\text{N}\cdot\text{m}^2/\text{C}^2} % N·m^2/C^2 （静电力常量）
 \newcommand{\UNCA}{\text{N}/\text{C}} % N/C （电场强度）
