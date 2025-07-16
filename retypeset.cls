@@ -238,7 +238,7 @@
 \newcommand{\UNmqkgq}{\;\text{N}\cdot\text{m}^2/\text{kg}^2} % N·m^2/kg^2 (万有引力常量单位)
 \newcommand{\Ukms}{\;\text{km}/\text{s}} % km/s
 \newcommand{\Ukmsq}{\;\text{km}/\text{s}^2} % km/s^2
-\newcommand{\UNm}{\;\text{N}\cdot\text{m}} % N·m
+\newcommand{\UNm}{\;\text{N}\cdot\text{m}} % N·m （力矩）
 \newcommand{\UNslashm}{\;\text{N}/\text{m}} % N/m
 \newcommand{\UNmq}{\;\text{N}/\text{m}^2} % N/m^2
 \newcommand{\UJ}{\;\text{J}} % J
@@ -301,6 +301,14 @@
 \newcommand{\UkgC}{\;\text{kg}/\text{C}} % kg/C （电化当量）
 \newcommand{\UCmol}{\;\text{C}/\text{mol}} % C/mol （法拉第恒量）
 \newcommand{\Umoln}{\;\text{mol}^{-1}} % mol^{-1} （阿伏伽德罗常数）
+\newcommand{\UT}{\;\text{T}} % T （磁感应强度，特斯拉）
+\newcommand{\UAm}{\;\text{A}\cdot\text{m}} % A·m 
+\newcommand{\UWb}{\;\text{Wb}} % Wb （磁通量）
+\newcommand{\UTmq}{\;\text{T}\cdot\text{m}^2} % T·m^2 （同磁通量）
+\newcommand{\UWbmq}{\;\text{Wb}/\text{m}^2} % Wb/m^2 （磁通密度，同磁感应强度）
+\newcommand{\UNAq}{\;\text{N}/\text{A}^2} % N/A^2 （直导线电流产生磁场的比例系数 B=kI/r）
+\newcommand{\UAs}{\;\text{A}\cdot\text{s}} % A·s （同电荷单位库仑）
+\newcommand{\UCkg}{\;\text{C}/\text{kg}} % C/kg （电荷与质量之比，荷质比）
 
 %取 alone 首字母
 \newcommand{\UmsA}{\text{m}/\text{s}} % m/s
@@ -323,7 +331,7 @@
 \newcommand{\UNmqkgqA}{\text{N}\cdot\text{m}^2/\text{kg}^2} % N·m^2/kg^2 (万有引力常量单位)
 \newcommand{\UkmsA}{\text{km}/\text{s}} % km/s
 \newcommand{\UkmsqA}{\text{km}/\text{s}^2} % km/s^2
-\newcommand{\UNmA}{\text{N}\cdot\text{m}} % N·m
+\newcommand{\UNmA}{\text{N}\cdot\text{m}} % N·m （力矩）
 \newcommand{\UNslashmA}{\text{N}/\text{m}} % N/m
 \newcommand{\UNmqA}{\text{N}/\text{m}^2} % N/m^2
 \newcommand{\UJA}{\text{J}} % J
@@ -386,6 +394,14 @@
 \newcommand{\UkgCA}{\text{kg}/\text{C}} % kg/C （电化当量）
 \newcommand{\UCmolA}{\text{C}/\text{mol}} % C/mol （法拉第恒量）
 \newcommand{\UmolnA}{\text{mol}^{-1}} % mol^{-1} （阿伏伽德罗常数）
+\newcommand{\UTA}{\text{T}} % T （磁感应强度，特斯拉）
+\newcommand{\UAmA}{\text{A}\cdot\text{m}} % A·m 
+\newcommand{\UWbA}{\text{Wb}} % Wb （磁通量）
+\newcommand{\UTmqA}{\text{T}\cdot\text{m}^2} % T·m^2 （同磁通量）
+\newcommand{\UWbmqA}{\text{Wb}/\text{m}^2} % Wb/m^2 （磁通密度，同磁感应强度）
+\newcommand{\UNAqA}{\text{N}/\text{A}^2} % N/A^2 （直导线电流产生磁场的比例系数 B=kI/r）
+\newcommand{\UAsA}{\text{A}\cdot\text{s}} % A·s （同电荷单位库仑）
+\newcommand{\UCkgA}{\text{C}/\text{kg}} % C/kg （电荷与质量之比，荷质比）
 
 \RequirePackage{tkz-euclide}
 
