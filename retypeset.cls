@@ -309,6 +309,13 @@
 \newcommand{\UNAq}{\;\text{N}/\text{A}^2} % N/A^2 （直导线电流产生磁场的比例系数 B=kI/r）
 \newcommand{\UAs}{\;\text{A}\cdot\text{s}} % A·s （同电荷单位库仑）
 \newcommand{\UCkg}{\;\text{C}/\text{kg}} % C/kg （电荷与质量之比，荷质比）
+\newcommand{\UWbs}{\;\text{Wb}/\text{s}} % Wb/s （同电压） 
+\newcommand{\UH}{\;\text{H}} % H （自感系数） 
+\newcommand{\UVsA}{\;\text{V}\cdot\text{s}/\text{A}} % V·s/A （同自感系数） 
+\newcommand{\UmH}{\;\text{mH}} % mH （自感系数） 
+\newcommand{\UuH}{\;\mu\text{H}} % μH （自感系数） 
+\newcommand{\UAslashs}{\;\text{A}/\text{s}} % A/s （电流强度变化率）
+\newcommand{\UOs}{\;\Omega\cdot\text{s}} % Ω·s （同自感系数）
 
 %取 alone 首字母
 \newcommand{\UmsA}{\text{m}/\text{s}} % m/s
@@ -402,6 +409,13 @@
 \newcommand{\UNAqA}{\text{N}/\text{A}^2} % N/A^2 （直导线电流产生磁场的比例系数 B=kI/r）
 \newcommand{\UAsA}{\text{A}\cdot\text{s}} % A·s （同电荷单位库仑）
 \newcommand{\UCkgA}{\text{C}/\text{kg}} % C/kg （电荷与质量之比，荷质比）
+\newcommand{\UWbsA}{\text{Wb}/\text{s}} % Wb/s （同电压） 
+\newcommand{\UHA}{\text{H}} % H （自感系数） 
+\newcommand{\UVsAA}{\text{V}\cdot\text{s}/\text{A}} % V·s/A （同自感系数） 
+\newcommand{\UmHA}{\text{mH}} % mH （自感系数） 
+\newcommand{\UuHA}{\mu\text{H}} % μH （自感系数） 
+\newcommand{\UAslashsA}{\text{A}/\text{s}} % A/s （电流强度变化率）
+\newcommand{\UOsA}{\Omega\cdot\text{s}} % Ω·s （同自感系数）
 
 \RequirePackage{tkz-euclide}
 
