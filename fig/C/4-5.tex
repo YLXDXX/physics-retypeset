@@ -1,4 +1,4 @@
-\documentclass{standalone}
+\documentclass[margin={0 2 0 2}]{standalone}
 \usepackage{tikz}
 \usepackage{ctex,siunitx,ninecolors}
 \setCJKmainfont{Noto Serif CJK SC}
@@ -24,6 +24,10 @@
   }
   \draw[fill=white](-0.5,1.4)--++(-1,-0.8)--++(2,0)--++(1,0.8)--cycle;
   \draw[red6,postaction={decorate},decoration={markings,mark={at position 0.35 with {\arrow{>}}}}](0,1)--++(0,0.7)node[pos=0.35,right,text=black]{$i$};
+  \draw[red6,](0,1.7)--++(-2,0);
+  \draw[red6,postaction={decorate},decoration={markings,mark={at position 0.5 with {\arrow{>}}}}](-2,1.7)--++(0,-2.7)node[pos=0.5,left
+  ,text=black]{$i$};
+  \draw[red6](-2,-1)--++(2,0);
   \draw[thin](0.96,0)--(1.8,0)node[right]{$B$};
   \draw[thin](1.3,0.9)--(1.8,0.9)node[right]{$E$};
 \end{tikzpicture}

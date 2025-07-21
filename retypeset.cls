@@ -228,6 +228,8 @@
 \newcommand{\Us}{\;\text{s}} % s
 \newcommand{\Usq}{\;\text{s}^2} % s^2
 \newcommand{\Um}{\;\text{m}} % m
+\newcommand{\Udm}{\;\text{dm}} % dm
+\newcommand{\Umm}{\;\text{mm}} % mm
 \newcommand{\Umq}{\;\text{m}^2} % m^2
 \newcommand{\Ucmq}{\;\text{cm}^2} % cm^2
 \newcommand{\Ukgf}{\;\text{kgf}} % kgf
@@ -321,6 +323,9 @@
 \newcommand{\UuH}{\;\mu\text{H}} % μH （自感系数） 
 \newcommand{\UAslashs}{\;\text{A}/\text{s}} % A/s （电流强度变化率）
 \newcommand{\UOs}{\;\Omega\cdot\text{s}} % Ω·s （同自感系数）
+\newcommand{\UHz}{\;\text{Hz}} % Hz （频率）
+\newcommand{\UkHz}{\;\text{kHz}} % kHz （频率）
+\newcommand{\UMHz}{\;\text{MHz}} % MHz （频率）
 
 %取 alone 首字母
 \newcommand{\UmsA}{\text{m}/\text{s}} % m/s
@@ -333,6 +338,8 @@
 \newcommand{\UsA}{\text{s}} % s
 \newcommand{\UsqA}{\text{s}^2} % s^2
 \newcommand{\UmA}{\text{m}} % m
+\newcommand{\UdmA}{\text{dm}} % dm
+\newcommand{\UmmA}{\text{mm}} % mm
 \newcommand{\UmqA}{\text{m}^2} % m^2
 \newcommand{\UcmqA}{\text{cm}^2} % cm^2
 \newcommand{\UkgfA}{\text{kgf}} % kgf
@@ -426,6 +433,9 @@
 \newcommand{\UuHA}{\mu\text{H}} % μH （自感系数） 
 \newcommand{\UAslashsA}{\text{A}/\text{s}} % A/s （电流强度变化率）
 \newcommand{\UOsA}{\Omega\cdot\text{s}} % Ω·s （同自感系数）
+\newcommand{\UHzA}{\text{Hz}} % Hz （频率）
+\newcommand{\UkHzA}{\text{kHz}} % kHz （频率）
+\newcommand{\UMHzA}{\text{MHz}} % MHz （频率）
 
 \RequirePackage{tkz-euclide}
 
