@@ -62,12 +62,12 @@
 \small
 \begin{tikzpicture}[>=latex]
   \eye[45]{xshift=1.4cm,yshift=3.8cm}
-  \fill[cyan!30!white](-2.2,0)rectangle(2.2,2.5);
+  \fill[cyan!40!white](-2.2,0)rectangle(2.2,2.5);
   \draw [postaction ={decorate},decoration={markings,mark={between positions 0.3 and 0.9 step 0.4 with {\arrow{>}}}}](-1.3576,0)--(0,2.5)--(1.11,3.823);
   \draw [postaction ={decorate},decoration={markings,mark={between positions 0.3 and 0.9 step 0.4 with {\arrow{>}}}}](-1.3576,0)--(0.3034,2.5)--(1.495,3.5);
   \draw[very thick](-2.2,3)--(-2.2,0)--(2.2,0)--(2.2,3);
   \draw[thin,densely dashed](0,2.5)--(-0.9024,1.4246)--(0.3034,2.5);
-  \fill (-1.3576,0) circle (1pt) node[above]{$A$};
-  \fill (-0.9024,1.4246) circle (1pt) node[above]{$A'$};
+  \fill (-1.3576,0) circle (1pt) node[above left]{$A$};
+  \fill (-0.9024,1.4246) circle (1pt) node[above left]{$A'$};
 \end{tikzpicture}
 \end{document}
