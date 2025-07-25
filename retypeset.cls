@@ -326,6 +326,7 @@
 \newcommand{\UHz}{\;\text{Hz}} % Hz （频率）
 \newcommand{\UkHz}{\;\text{kHz}} % kHz （频率）
 \newcommand{\UMHz}{\;\text{MHz}} % MHz （频率）
+\newcommand{\UAi}{\;\text{\AA}} % Å（长度，埃）
 
 %取 alone 首字母
 \newcommand{\UmsA}{\text{m}/\text{s}} % m/s
@@ -436,6 +437,7 @@
 \newcommand{\UHzA}{\text{Hz}} % Hz （频率）
 \newcommand{\UkHzA}{\text{kHz}} % kHz （频率）
 \newcommand{\UMHzA}{\text{MHz}} % MHz （频率）
+\newcommand{\UAiA}{\text{\AA}} % Å（长度，埃）
 
 \RequirePackage{tkz-euclide}
 

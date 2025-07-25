@@ -9,7 +9,7 @@
 \begin{document}
 \small
 \begin{tikzpicture}[>=stealth,scale=1.0]
-  \node at(-7.5,0) {\includegraphics{a.pdf}};
+  \node at(-7.5,0) {\includegraphics[height=2.7cm]{a.pdf}};
   \draw[cyan,domain=-3:0,samples=200] plot (\x, {0.2*sin(\x*2*pi r)});
   \draw[cyan,densely dashed,domain=-3:0,samples=200] plot (\x, {-0.2*sin(\x*2*pi r)});
   \draw[cyan,domain=-3:0,samples=200] plot (\x, {0.2*sin(\x*2*pi r)+1.5});
