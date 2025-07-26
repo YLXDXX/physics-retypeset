@@ -327,6 +327,7 @@
 \newcommand{\UkHz}{\;\text{kHz}} % kHz （频率）
 \newcommand{\UMHz}{\;\text{MHz}} % MHz （频率）
 \newcommand{\UAi}{\;\text{\AA}} % Å（长度，埃）
+\newcommand{\UJcdots}{\;\text{J}\cdot\text{s}} % J·s（普朗克常数 h 单位）
 
 %取 alone 首字母
 \newcommand{\UmsA}{\text{m}/\text{s}} % m/s
@@ -438,6 +439,7 @@
 \newcommand{\UkHzA}{\text{kHz}} % kHz （频率）
 \newcommand{\UMHzA}{\text{MHz}} % MHz （频率）
 \newcommand{\UAiA}{\text{\AA}} % Å（长度，埃）
+\newcommand{\UJcdotsA}{\text{J}\cdot\text{s}} % J·s（普朗克常数 h 单位）
 
 \RequirePackage{tkz-euclide}
 
