@@ -230,6 +230,8 @@
 \newcommand{\Um}{\;\text{m}} % m
 \newcommand{\Udm}{\;\text{dm}} % dm
 \newcommand{\Umm}{\;\text{mm}} % mm
+\newcommand{\Umum}{\;\mu\text{m}} % μm
+\newcommand{\Umn}{\;\text{m}^{-1}} % m^{-1} （长度 m 的倒数）
 \newcommand{\Umq}{\;\text{m}^2} % m^2
 \newcommand{\Ucmq}{\;\text{cm}^2} % cm^2
 \newcommand{\Ukgf}{\;\text{kgf}} % kgf
@@ -342,6 +344,8 @@
 \newcommand{\UmA}{\text{m}} % m
 \newcommand{\UdmA}{\text{dm}} % dm
 \newcommand{\UmmA}{\text{mm}} % mm
+\newcommand{\UmumA}{\mu\text{m}} % μm
+\newcommand{\UmnA}{\text{m}^{-1}} % m^{-1} （长度 m 的倒数）
 \newcommand{\UmqA}{\text{m}^2} % m^2
 \newcommand{\UcmqA}{\text{cm}^2} % cm^2
 \newcommand{\UkgfA}{\text{kgf}} % kgf
