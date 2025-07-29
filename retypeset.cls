@@ -196,9 +196,11 @@
 
 \renewcommand{\le}{\leqslant}
 \renewcommand{\ge}{\geqslant}
+
+\RequirePackage{mhchem} %核素、同位素、化学式
 \NewDocumentCommand \atom  { mmm }%
 {%
-    {}^{#2}\c_math_subscript_token{#3}{\rm #1}%
+    \ce{^{#2}_{#3}#1}%
 }
 \RequirePackage{mathtools}
 
@@ -236,6 +238,7 @@
 \newcommand{\Ucmq}{\;\text{cm}^2} % cm^2
 \newcommand{\Ukgf}{\;\text{kgf}} % kgf
 \newcommand{\Ukg}{\;\text{kg}} % kg
+\newcommand{\Uua}{\;\text{u}} % u （原子质量单位）
 \newcommand{\UN}{\;\text{N}} % N
 \newcommand{\UNkg}{\;\text{N}/\text{kg}} % N/kg
 \newcommand{\Udyn}{\;\text{dyn}} % dyn
@@ -289,6 +292,7 @@
 \newcommand{\UV}{\;\text{V}} % V （电压）
 \newcommand{\UJC}{\;\text{J}/\text{C}} % J/C （同电压）
 \newcommand{\UeV}{\;\text{eV}} % eV （能量，电子伏特）
+\newcommand{\UMeV}{\;\text{MeV}} % MeV （能量，兆电子伏特）
 \newcommand{\Ue}{\;\text{e}} % e （元电荷）
 \newcommand{\UVm}{\;\text{V}/\text{m}} % V/m （同电场强度）
 \newcommand{\UF}{\;\text{F}} % F （电容）
@@ -350,6 +354,7 @@
 \newcommand{\UcmqA}{\text{cm}^2} % cm^2
 \newcommand{\UkgfA}{\text{kgf}} % kgf
 \newcommand{\UkgA}{\text{kg}} % kg
+\newcommand{\UuaA}{\text{u}} % u （原子质量单位）
 \newcommand{\UNA}{\text{N}} % N
 \newcommand{\UNkgA}{\text{N}/\text{kg}} % N/kg
 \newcommand{\UdynA}{\text{dyn}} % dyn
@@ -403,6 +408,7 @@
 \newcommand{\UVA}{\text{V}} % V （电压）
 \newcommand{\UJCA}{\text{J}/\text{C}} % J/C （同电压）
 \newcommand{\UeVA}{\text{eV}} % eV （能量，电子伏特）
+\newcommand{\UMeVA}{\text{MeV}} % MeV （能量，兆电子伏特）
 \newcommand{\UeA}{\text{e}} % e （元电荷）
 \newcommand{\UVmA}{\text{V}/\text{m}} % V/m （同电场强度）
 \newcommand{\UFA}{\text{F}} % F （电容）
