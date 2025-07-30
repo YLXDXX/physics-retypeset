@@ -61,10 +61,16 @@
 \begin{document}
 \small
 \begin{tikzpicture}[>=latex,scale=1.0]
-  \draw [fill=cyan!20] (-3.0,-2) rectangle (3,0);
+  \draw [fill=cyan!40] (-3.0,-2) rectangle (3,0);
   \draw [thick](-0.7,0)--(0.7,-2);	
+  \node at (-.7,1)[above]{$N$};
   \node at (-.7,0)[above right]{$O$};
+  \node at (-.7,-1)[below]{$N^{\prime}$};
+  \node at (-1.2,0.5)[below]{$P_2$};
+  \node at (-1.8,1.1)[below]{$P_1$};
   \node at (.7,-2)[below left]{$E$};
+  \node at (1.1,-2.45)[below]{$P_3$};
+  \node at (1.6,-2.9)[below]{$P_4$};
   \draw[->,thick](-0.7,0)--(0,-1)	;
   \draw[thick] (-0.7,0)--+(135:2.1)node [left]{$A$};
   \draw[thick] (0.7,-2)--+(-45:2.1)node [right]{$B$};
@@ -78,6 +84,7 @@
   \node at (3,0)[above]{$a'$};
   \node at (-3,-2)[below]{$b$};
   \node at (3,-2) [below]{$b'$};
+  
   \foreach \x in {0.7,1.4}
   {
     \draw[thin]([shift=(135:\x)]-0.7,0)--++(0,0.2)--++(0.03,0)arc(0:180:0.03)--++(0.03,0);

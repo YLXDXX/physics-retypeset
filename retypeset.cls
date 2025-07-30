@@ -243,7 +243,7 @@
 \newcommand{\UNkg}{\;\text{N}/\text{kg}} % N/kg
 \newcommand{\Udyn}{\;\text{dyn}} % dyn
 \newcommand{\Ug}{\;\text{g}} % g
-\newcommand{\UNmqkgq}{\;\text{N}\cdot\text{m}^2/\text{kg}^2} % N·m^2/kg^2 (万有引力常量单位)
+\newcommand{\UNmqkgq}{\;\text{N}\cdot\text{m}^2/\text{kg}^2} % N·m^2/kg^2 (万有引力常量 G 单位)
 \newcommand{\Ukms}{\;\text{km}/\text{s}} % km/s
 \newcommand{\Ukmsq}{\;\text{km}/\text{s}^2} % km/s^2
 \newcommand{\UNm}{\;\text{N}\cdot\text{m}} % N·m （力矩）
@@ -282,12 +282,12 @@
 \newcommand{\Uatm}{\;\text{atm}} % atm （压强单位，标准大气压）
 \newcommand{\UmmHg}{\;\text{mmHg}} % mmHg （压强单位，毫米汞柱）
 \newcommand{\UK}{\;\text{K}} % K （热力学温度）
-\newcommand{\UJmolK}{\;\text{J}/(\text{mol}\cdot\text{K})} % J/(mol·K) （摩尔气体恒量单位）
+\newcommand{\UJmolK}{\;\text{J}/(\text{mol}\cdot\text{K})} % J/(mol·K) （摩尔气体恒量 R 单位）
 \newcommand{\UatmLmolK}{\;\text{atm}\cdot\text{L}/(\text{mol}\cdot\text{K})} % atm·L/(mol·K)
 \newcommand{\UJkg}{\;\text{J}/\text{kg}} % J/kg （熔解热、汽化热）
 \newcommand{\UkJkg}{\;\text{kJ}/\text{kg}} % kJ/kg （熔解热、汽化热）
 \newcommand{\UC}{\;\text{C}} % C （电荷量）
-\newcommand{\UNmqCq}{\;\text{N}\cdot\text{m}^2/\text{C}^2} % N·m^2/C^2 （静电力常量）
+\newcommand{\UNmqCq}{\;\text{N}\cdot\text{m}^2/\text{C}^2} % N·m^2/C^2 （静电力常量 k）
 \newcommand{\UNC}{\;\text{N}/\text{C}} % N/C （电场强度）
 \newcommand{\UV}{\;\text{V}} % V （电压）
 \newcommand{\UJC}{\;\text{J}/\text{C}} % J/C （同电压）
@@ -312,8 +312,8 @@
 \newcommand{\UMO}{\;\text{M}\Omega} % MΩ （电阻）
 \newcommand{\UOm}{\;\Omega\cdot\text{m}} % Ω·m （电阻率）
 \newcommand{\UkgC}{\;\text{kg}/\text{C}} % kg/C （电化当量）
-\newcommand{\UCmol}{\;\text{C}/\text{mol}} % C/mol （法拉第恒量）
-\newcommand{\Umoln}{\;\text{mol}^{-1}} % mol^{-1} （阿伏伽德罗常数）
+\newcommand{\UCmol}{\;\text{C}/\text{mol}} % C/mol （法拉第恒量 F）
+\newcommand{\Umoln}{\;\text{mol}^{-1}} % mol^{-1} （阿伏伽德罗常数 N）
 \newcommand{\UT}{\;\text{T}} % T （磁感应强度，特斯拉）
 \newcommand{\UAm}{\;\text{A}\cdot\text{m}} % A·m 
 \newcommand{\UWb}{\;\text{Wb}} % Wb （磁通量）
@@ -334,6 +334,7 @@
 \newcommand{\UMHz}{\;\text{MHz}} % MHz （频率）
 \newcommand{\UAi}{\;\text{\AA}} % Å（长度，埃）
 \newcommand{\UJcdots}{\;\text{J}\cdot\text{s}} % J·s（普朗克常数 h 单位）
+\newcommand{\Umolnnn}{\;\text{mol}^{-1}} % mol^{-1}（长度，埃）
 
 %取 alone 首字母
 \newcommand{\UmsA}{\text{m}/\text{s}} % m/s
@@ -359,7 +360,7 @@
 \newcommand{\UNkgA}{\text{N}/\text{kg}} % N/kg
 \newcommand{\UdynA}{\text{dyn}} % dyn
 \newcommand{\UgA}{\text{g}} % g
-\newcommand{\UNmqkgqA}{\text{N}\cdot\text{m}^2/\text{kg}^2} % N·m^2/kg^2 (万有引力常量单位)
+\newcommand{\UNmqkgqA}{\text{N}\cdot\text{m}^2/\text{kg}^2} % N·m^2/kg^2 (万有引力常量 G 单位)
 \newcommand{\UkmsA}{\text{km}/\text{s}} % km/s
 \newcommand{\UkmsqA}{\text{km}/\text{s}^2} % km/s^2
 \newcommand{\UNmA}{\text{N}\cdot\text{m}} % N·m （力矩）
@@ -398,12 +399,12 @@
 \newcommand{\UatmA}{\text{atm}} % atm （压强单位，标准大气压）
 \newcommand{\UmmHgA}{\text{mmHg}} % mmHg （压强单位，毫米汞柱）
 \newcommand{\UKA}{\text{K}} % K （热力学温度）
-\newcommand{\UJmolKA}{\text{J}/(\text{mol}\cdot\text{K})} % J/(mol·K) （摩尔气体恒量单位）
+\newcommand{\UJmolKA}{\text{J}/(\text{mol}\cdot\text{K})} % J/(mol·K) （摩尔气体恒量 R 单位）
 \newcommand{\UatmLmolKA}{\text{atm}\cdot\text{L}/(\text{mol}\cdot\text{K})} % atm·L/(mol·K)
 \newcommand{\UJkgA}{\text{J}/\text{kg}} % J/kg （熔解热、汽化热）
 \newcommand{\UkJkgA}{\text{kJ}/\text{kg}} % kJ/kg （熔解热、汽化热）
 \newcommand{\UCA}{\text{C}} % C （电荷量）
-\newcommand{\UNmqCqA}{\text{N}\cdot\text{m}^2/\text{C}^2} % N·m^2/C^2 （静电力常量）
+\newcommand{\UNmqCqA}{\text{N}\cdot\text{m}^2/\text{C}^2} % N·m^2/C^2 （静电力常量 k）
 \newcommand{\UNCA}{\text{N}/\text{C}} % N/C （电场强度）
 \newcommand{\UVA}{\text{V}} % V （电压）
 \newcommand{\UJCA}{\text{J}/\text{C}} % J/C （同电压）
@@ -428,8 +429,8 @@
 \newcommand{\UMOA}{\text{M}\Omega} % MΩ （电阻）
 \newcommand{\UOmA}{\Omega\cdot\text{m}} % Ω·m （电阻率）
 \newcommand{\UkgCA}{\text{kg}/\text{C}} % kg/C （电化当量）
-\newcommand{\UCmolA}{\text{C}/\text{mol}} % C/mol （法拉第恒量）
-\newcommand{\UmolnA}{\text{mol}^{-1}} % mol^{-1} （阿伏伽德罗常数）
+\newcommand{\UCmolA}{\text{C}/\text{mol}} % C/mol （法拉第恒量 F）
+\newcommand{\UmolnA}{\text{mol}^{-1}} % mol^{-1} （阿伏伽德罗常数 N）
 \newcommand{\UTA}{\text{T}} % T （磁感应强度，特斯拉）
 \newcommand{\UAmA}{\text{A}\cdot\text{m}} % A·m 
 \newcommand{\UWbA}{\text{Wb}} % Wb （磁通量）

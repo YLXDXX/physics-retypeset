@@ -1,7 +1,8 @@
 \chapter{常用电磁学量的国际制单位}
 
-电磁学的单位制是一个比较复杂的问题，长期以来存在
-着多种单位制，本书采用的是国际单位制．在国际单位制中，
+电磁学的单位制是一个比较复杂的问题．
+长期以来存在着多种单位制．
+本书采用的是国际单位制．在国际单位制中，
 所有的电磁学量，都是由长度、质量、时间、电流强度这四个基
 本量导出的．因此，米、千克、秒、安培是电磁学里的基本单位．
 表~\ref{tab_C_10-1} 列出了常用的电磁学量的国际制单位．
@@ -9,47 +10,50 @@
 \begin{table}[htbp]
 	\centering
 	\caption{}\label{tab_C_10-1}
-    \begin{tabular}{cc|cc|c|c}
+	{
+	\zihao{5}
+    \begin{tblr}{colspec={cc|ccc|c|c}, cell{1}{1}={c=2}{c}, cell{1}{3}={c=3}{c},cell{1}{6}={r=2}{c},cell{1}{7}={r=2}{c},cells={valign=m},cell{6}{1-Z}={bg=gray!40}}
   		\toprule
-		\multicolumn{2}{c|}{物理量} & \multicolumn{2}{c|}{单位} & 量纲式 & 备注\\
-		名称 & 符号 & 名称 & 国际符号 & & \\
+		物理量& & 单位 & && 量纲式 & 备注\\
+		名称 & 符号 & 名称 &中文符号& 英文符号 & & \\
 		  \midrule
-		电流   &  $I$ & 安培 & A & $[I]$ & \\
-		电量    &  $Q$  &  库仑  & C   & $[TI]$  &  $1 \text{ 库}=1\text{ 安}\cdot \text{秒}$\\
-		电场强度    &$E$    &  伏特每米  & V/m   &  $[LMT^{-3}I^{-1}]$  & \\
-		电势（差）、电压& $U$ ($V$)   &  伏特  &  V  &  $[L^2MT^{-3}I^{-1}]$ & $1 \text{ 伏} =1 \text{ 瓦}/\text{安}$ \\
-		电容    &  $C$  &  法拉  & F   &  $[L^{-2}M^{-1}T^{4}I^{2}]$  & $1 \text{ 法}=1 \text{ 库}/\text{伏}$ \\
-		电阻    & $R$  & 欧姆  &  $\Omega$ & $[L^2MT^{-3}I^{-2}]$  & $1 \text{ 欧}=1 \text{ 伏}/\text{安}$ \\
-		电阻率    & $\rho$  & 欧姆米  &  $\Omega\cdot {\rm m}$ & $[L^3MT^{-3}I^{-2}]$  & \\
-		磁感应强度    & $B$  & 特斯拉  & T  &  $[MT^{-2}I^{-1}]$ & $1 \text{ 特}=1 \text{ 韦}/\text{米}^2$ \\
-		磁通量    & $\phi$  & 韦伯  & Wb  & $[L^2MT^{-2}I^{-1}]$ & $1 \text{ 韦}=1 \text{ 伏}\cdot\text{秒}$ \\
-		电感    & $L$  & 亨利  & H  &  $[L^2MT^{-2}I^{-2}]$ & $1 \text{ 享}=1 \text{ 韦}/\text{安}$ \\
+		电流   &  $I$ & 安培 &安& $\UA$ & $[I]$ & \\
+		电量    &  $Q$  &  库仑  &库& $\UC$   & $[TI]$  &  $1 \text{ 库}=1\text{ 安}\cdot \text{秒}$\\
+		电场强度    &$E$    &  伏特每米  &伏/米& $\UVm$   &  $[LMT^{-3}I^{-1}]$  & \\
+		{电势、电压\\电势差} & $U(V)$  &  伏特  &伏&  $\UV$  &  $[L^2MT^{-3}I^{-1}]$ & $1 \text{ 伏} =1 \text{ 瓦}/\text{安}$ \\
+		电容    &  $C$  &  法拉  &法& $\UF$   &  $[L^{-2}M^{-1}T^{4}I^{2}]$  & $1 \text{ 法}=1 \text{ 库}/\text{伏}$ \\
+		电阻    & $R$  & 欧姆  &欧&  $\UO$ & $[L^2MT^{-3}I^{-2}]$  & $1 \text{ 欧}=1 \text{ 伏}/\text{安}$ \\
+		电阻率    & $\rho$  & 欧姆米  &欧$\cdot$米&  $\UOm$ & $[L^3MT^{-3}I^{-2}]$  & \\
+		磁感应强度    & $B$  & 特斯拉  &特& $\UT$  &  $[MT^{-2}I^{-1}]$ & $1 \text{ 特}=1 \text{ 韦}/\text{米}^2$ \\
+		磁通量    & $\phi$  & 韦伯  &韦& $\UWb$  & $[L^2MT^{-2}I^{-1}]$ & $1 \text{ 韦}=1 \text{ 伏}\cdot\text{秒}$ \\
+		电感    & $L$  & 亨利  &享& $\UH$  &  $[L^2MT^{-2}I^{-2}]$ & $1 \text{ 享}=1 \text{ 韦}/\text{安}$ \\
 		  \bottomrule   
-    \end{tabular}
+    \end{tblr}
+	}
 \end{table}
 
 \chapter{常用的物理恒量}
 \begin{table}[htbp]
 	\centering
 	\caption{}\label{tab_C_10-2}
-    \begin{tabular}{rl}
-        万有引力恒量&    $G=6.67\times10^{-11}\; {\rm N}\cdot {\rm m^2}/{\rm kg}^2$\\
-        摩尔气体恒量&    $R=8.31\;  {\rm J}/({\rm mol}\cdot {\rm K})$\\
-        阿伏伽德罗常数&    $N=6.02\times 10^{23}\; {\rm mol}^{-1}$\\
-        静电力恒量&    $k=9.0\times10^9\;  {\rm N}\cdot {\rm m^2}/{\rm C}$\\
-        法拉第恒量&    $F=9.65\times10^4\;  {\rm C}/{\rm mol}$\\
-        基本电荷&    $e=1.60\times10^{-19}\;  {\rm C}$\\
-        电子的质量&    $m_e=0.91\times10^{-30}\; {\rm kg}$\\
-        质子的质量&    $m_p=1.67\times10^{-27}\;   {\rm kg}$\\
-        中子的质量&    $m_n=1.67\times10^{-27} \;   {\rm kg}$\\
-        $\alpha$粒子的质量&    $m_{\alpha}=6.64\times10^{-27} \;  {\rm kg}$\\
-        原子质量单位&    $1{\rm u}=1.66\times10^{-27} \;   {\rm kg}$\\
+    \begin{tblr}{rl}
+        万有引力恒量&    $G=6.67\times10^{-11} \UNmqkgq$\\
+        摩尔气体恒量&    $R=8.31 \UJmolK $\\
+        阿伏伽德罗常数&    $N=6.02\times 10^{23} \Umoln$\\
+        静电力恒量&    $k=9.0\times10^9 \UNmqCq $\\
+        法拉第恒量&    $F=9.65\times10^4 \UCmol$\\
+        基本电荷&    $e=1.60\times10^{-19} \UC$\\
+        电子的质量&    $m_e=0.91\times10^{-30} \Ukg$\\
+        质子的质量&    $m_p=1.67\times10^{-27} \Ukg$\\
+        中子的质量&    $m_n=1.67\times10^{-27} \Ukg$\\
+        $\alpha$粒子的质量&    $m_{\alpha}=6.64\times10^{-27} \Ukg$\\
+        原子质量单位&    $1{\rm u}=1.66\times10^{-27} \Ukg $\\
         真空中光速&    $c=3.00\times10^8 \Ums$\\
-        电子的荷质比&    $e/m=1.76\times10^{11}\; {\rm C}/{\rm kg}$ \\
-        氢原子的半径&    $a_0=0.53\times10^{-10}\; {\rm m}$   \\
-        普朗克恒量&    $h=6.63\times10^{-34}\;  {\rm J}\cdot {\rm s}$   \\
-        里德伯恒量&    $R=1.097\times10^7\;  {\rm m}^{-1}$\\        
-    \end{tabular}
+        电子的荷质比&    $e/m=1.76\times10^{11} \UCkg $ \\
+        氢原子的半径&    $a_0=0.53\times10^{-10} \Um $   \\
+        普朗克恒量&    $h=6.63\times10^{-34} \UJcdots$   \\
+        里德伯恒量&    $R=1.097\times10^7 \Umn$\\        
+    \end{tblr}
 \end{table}
 
 \chapter{用于构成十进倍数和分数单位的词头}
@@ -57,9 +61,9 @@
 \begin{table}[htbp]
 	\centering
 	\caption{}\label{tab_C_10-3}
-    \begin{tabular}{cccc}
+    \begin{tblr}{colspec={cccc},cells={valign=m}}
         \toprule
-		所表示的因数&词头名称（中文）&词头名称（英文）&词头符号\\
+		所表示的因数&{词头名称\\（中文）}&{词头名称\\（英文）}&词头符号\\
 		\midrule
 		$10^{18}$ &艾[可萨]&exa-&E\\
 		$10^{15}$ &拍[它]&peta-&P\\
@@ -78,7 +82,7 @@
 		$10^{-15}$&飞[母托]&femto-&f\\
 		$10^{-18}$&阿[托]&atto-&a\\
 		\bottomrule
-    \end{tabular}
+    \end{tblr}
 \end{table}
 
 
