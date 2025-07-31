@@ -63,9 +63,26 @@
 \RequirePackage{ntheorem}
 \theoremseparator{\;}
 
+\RequirePackage{xeCJKfntef} %中文的波浪线、加点、删除线等
+\NewDocumentCommand \NoteUnderWave  { m }%
+{%
+    %原文加波浪线部分
+    \CJKunderwave{#1}%
+}
+\NewDocumentCommand \NoteBold  { m }%
+{%
+    %原文加粗部分
+    %考虑到即有加粗又有波浪线的情况
+    %这里当前只能使用 \CJKunderdot 配合才能实现粗体效果
+    %若用其它的方面有两个弊端：1. 多个字只能加粗一个字。 2. 不能自动换行
+    \CJKunderdot[textformat=\bfseries,symbol=\space,depth=0em,boxdepth=0pt,sep=0pt]%
+    {#1}
+}
 
+\RequirePackage{tabularray} %现代表格环境
+\UseTblrLibrary{booktabs} %三线表用
+\UseTblrLibrary{diagbox} %表头用
 
-\RequirePackage{blkarray}
 \RequirePackage{bm}
 \RequirePackage[bookmarksnumbered,draft=false,CJKbookmarks=true,colorlinks=true, linkcolor=blue]{hyperref}
 
