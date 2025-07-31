@@ -1,109 +1,96 @@
-\documentclass{retypeset}
+\documentclass[
+book_number=1, %需要编译第几册（共三册，数字 1, 2, 3）
+hyperlink_color_is=true, %超链接颜色开关
+hyperlink_color=Brown, %超链接颜色
+]{retypeset}
 
 
 
 
 \begin{document}
-	
-	
+
+\BookContent
+{
 	%
 	%第一册相关内容
 	%
-	
-	%封面内容
-	%\title{\Huge\bfseries 高中物理（甲种本）\\ 第一册 \vspace*{2cm} }
-	%\author{\Large 张同恂 \and \Large 方玉珍 \and \Large 马淑美}
-	%\date{\Large 1983年11月\\~\\~\\ \includegraphics[width=85mm]{fig/A/cover.pdf} }
-	
-	%\maketitle %封面
-	%\tableofcontents %目录
-	%\frontmatter
-	%\include{1/A/preface} %引言
-	%\mainmatter
-	
-	
+	\maketitle %封面
+	\tableofcontents %目录
+	\frontmatter
+	\include{1/A/preface} %引言
+	\mainmatter
+	%
 	%正文内容
-	%\include{1/A/01} %力
+	\include{1/A/01} %力
 	\include{1/A/02} %直线运动
-	%\include{1/A/03} %运动定律
-	%\include{1/A/04} %曲线运动
-	%\include{1/A/05} %万有引力定律
-	%\include{1/A/06} %物体的平衡
-	%\include{1/A/07} %机械能
-	%\include{1/A/08} %动量
-	%\include{1/A/09} %机械振动和机械波
-	
-	%\include{1/A/app_01} %学生实验
-	%\include{1/A/app_02} %课外实验活动
-	
-	%\appendix
-	%\include{1/A/app_03} %附录
-	
-	
+	\include{1/A/03} %运动定律
+	\include{1/A/04} %曲线运动
+	\include{1/A/05} %万有引力定律
+	\include{1/A/06} %物体的平衡
+	\include{1/A/07} %机械能
+	\include{1/A/08} %动量
+	\include{1/A/09} %机械振动和机械波
+	%
+	\include{1/A/app_01} %学生实验
+	\include{1/A/app_02} %课外实验活动
+	%
+	\appendix
+	\include{1/A/app_03} %附录
+	%
+}{
 	%
 	%第二册相关内容
 	%
-	
-	%封面内容
-	%\title{\Huge\bfseries 高中物理（甲种本）\\ 第二册\vspace*{2cm}}
-	%\author{\Large 张同恂\and \Large 方玉珍\and \Large 马淑美\and \Large 郭连壁\and \Large 李福利 }
-	%\date{\Large 1984年7月 \\~\\~\\ \includegraphics[scale=1.2]{fig/B/cover.pdf}}
-	
-	%\maketitle %封面
-	%\tableofcontents %目录
-	%\frontmatter
-	%\include{1/B/preface.tex} %说明
-	%\mainmatter
-	
+	\maketitle %封面
+	\tableofcontents %目录
+	\frontmatter
+	\include{1/B/preface.tex} %说明
+	\mainmatter
+	%
 	%正文内容
-	%\include{1/B/01} %分子运动论基础
-	%\include{1/B/02} %内能 能的转化和守恒定律
-	%\include{1/B/03} %气体的性质
-	%\include{1/B/04} %固体和液体的性质
-	%\include{1/B/05} %物态变化
-	%\include{1/B/06} %电场
-	%\include{1/B/07} %稳恒电流
-	%\include{1/B/08} %物质的导电性
-	
-	%\include{1/B/app_01} %学生实验
-	%\include{1/B/app_02} %课外实验活动
-	
-	%\appendix
-	%\include{1/B/app_03} %附录
-	
-	
+	\include{1/B/01} %分子运动论基础
+	\include{1/B/02} %内能 能的转化和守恒定律
+	\include{1/B/03} %气体的性质
+	\include{1/B/04} %固体和液体的性质
+	\include{1/B/05} %物态变化
+	\include{1/B/06} %电场
+	\include{1/B/07} %稳恒电流
+	\include{1/B/08} %物质的导电性
+	%
+	\include{1/B/app_01} %学生实验
+	\include{1/B/app_02} %课外实验活动
+	%
+	\appendix
+	\include{1/B/app_03} %附录
+	%
+}{
 	%
 	%第三册相关内容
 	%
-	
-	%封面内容
-	%\title{\Huge\bfseries 高中物理（甲种本）\\ 第三册\vspace*{2cm} }
-	%\author{\Large 张同恂\and \Large 方玉珍\and \Large 马淑美}
-	%\date{\Large 1985年11月\\~\\~\\ %\includegraphics[scale=1.8]{fig/C/cover.pdf}}
-	
-	%\maketitle %封面
-	%\tableofcontents %目录
-	%\frontmatter
-	%\include{1/C/preface.tex} %说明
-	%\mainmatter
-	
+	\maketitle %封面
+	\tableofcontents %目录
+	\frontmatter
+	\include{1/C/preface.tex} %说明
+	\mainmatter
+	%
 	%正文内容
-	%\include{1/C/01} %磁场
-	%\include{1/C/02} %电磁感应
-	%\include{1/C/03} %交流电
-	%\include{1/C/04} %电磁振荡和电磁波
-	%\include{1/C/05} %光的反射和折射
-	%\include{1/C/06} %光的波动性
-	%\include{1/C/07} %光的粒子性
-	%\include{1/C/08} %原子结构
-	%\include{1/C/09} %原子核
-	
-	%\include{1/C/app_01} %学生实验
-	%\include{1/C/app_02} %课外实验活动
-	
-	%\appendix
-	%\include{1/C/app_03} %附录
-	
+	\include{1/C/01} %磁场
+	\include{1/C/02} %电磁感应
+	\include{1/C/03} %交流电
+	\include{1/C/04} %电磁振荡和电磁波
+	\include{1/C/05} %光的反射和折射
+	\include{1/C/06} %光的波动性
+	\include{1/C/07} %光的粒子性
+	\include{1/C/08} %原子结构
+	\include{1/C/09} %原子核
+	%
+	\include{1/C/app_01} %学生实验
+	\include{1/C/app_02} %课外实验活动
+	%
+	\appendix
+	\include{1/C/app_03} %附录
+	%
+}
 \end{document}
 
 

@@ -3,19 +3,11 @@
 %%% retypeset: 高中物理甲种本重排
 %%% Copyright : 2021-2025 (c) <ylxdxx@qq.com>
 %%% Repository: 
-%%% License   : The LaTeX Project Public License 1.3c
+%%% License   : 「随君所想，成君所愿」
 %%% ----------------------------------------------------------------------------
 
-%LaTeX3 环增的开关
-%\ExplSyntaxOn
-%\ExplSyntaxOff
 
-%在文档开始前后添加处理代码
-%\AtBeginDocument{code}
-%\AtEndDocument{code}
-
-
-%格式声名
+%格式声明
 \NeedsTeXFormat{LaTeX2e}[2021-11-15]
 
 \RequirePackage{expl3}
@@ -27,66 +19,99 @@
 %It also deals properly with nested package loading, and
 %so is the recommended way to use LaTeX3 syntax inside LaTeX2e packages.
 \ProvidesExplPackage{retypeset} % Package name
-{2025-05-22} % Release date
-{0.1} % Release version
+{2025-07-31} % Release date
+{0.2} % Release version
 {高中物理甲种本重排模板} % Description 
 
 
-\LoadClass[a4paper, openany, fontset=windows, zihao=-4,]{ctexbook}
+%
+%变量
+%
+\int_new:N  \l_RT_book_number_int %需要编译生成的册数（共三册）
+\bool_new:N \l_RT_hyperlink_color_bool %是否对超链接添加颜色
+\tl_new:N   \l_RT_hyperlink_color_tl %超链接颜色
+%
+%
+%
 
-%\RequirePackage{anysize}
-%\papersize{26cm}{18.5cm}
-%\marginsize{2.25cm}{2.25cm}{2cm}{2cm}
-\RequirePackage[margin=2.5cm]{geometry}
+\msg_new:nnn { RT_Msg_Book_number } { number_error }
+{
+  ERROR: ~ The ~ number ~ of ~ books ~ is ~ wrong, ~ the ~ number ~ can ~ only ~ be ~ 1, ~ 2, ~ 3.
+}
+
+%
+%
+%
+
+\keys_define:nn {retypeset}
+{
+    book_number .int_set:N = \l_RT_book_number_int,
+    hyperlink_color_is .bool_set:N = \l_RT_hyperlink_color_bool,
+    hyperlink_color .tl_set:N  = \l_RT_hyperlink_color_tl,
+    
+    % 初始值
+    book_number .initial:n = {1},
+    hyperlink_color_is .initial:n = {true},
+    hyperlink_color .initial:n = {blue},
+}
+\ProcessKeyOptions[retypeset] %处理传入参数
+
+%
+%
+%
+
+
+\LoadClass[UTF8, a4paper, openright, fontset=windows, zihao=-4,]{ctexbook}
+
+\RequirePackage{emptypage} %This package suppresses page numbers and headings from appearing on empty pages.
+
+\RequirePackage[top=2.5cm,bottom=2.5cm,left=2.8cm,right=2.2cm]{geometry} %页边距
+\RequirePackage[dvipsnames]{xcolor}
+%超链接
+\bool_if:NTF {\l_RT_hyperlink_color_bool}
+{
+\RequirePackage[bookmarksnumbered,draft=false,CJKbookmarks=true,
+                colorlinks=true,
+                linkcolor=\tl_use:N \l_RT_hyperlink_color_tl,
+                citecolor=\tl_use:N \l_RT_hyperlink_color_tl,
+                urlcolor=\tl_use:N \l_RT_hyperlink_color_tl,
+                anchorcolor=\tl_use:N \l_RT_hyperlink_color_tl,
+                filecolor=\tl_use:N \l_RT_hyperlink_color_tl,
+                hyperindex]{hyperref}
+}
+{
+\RequirePackage[bookmarksnumbered,draft=false,CJKbookmarks=true,
+                colorlinks=false,hyperindex,hidelinks]{hyperref}
+}
+
+
+\RequirePackage{amsmath,amsfonts,mathrsfs,amssymb}
+\RequirePackage{graphicx}
+\RequirePackage[font=bf,labelfont=bf,labelsep=quad]{caption}
+\RequirePackage{tikz}
+\RequirePackage{tabularray} %现代表格环境
+\UseTblrLibrary{booktabs} %三线表用
+\UseTblrLibrary{diagbox} %表头用
+\RequirePackage{subcaption}
+\RequirePackage{zhnumber}
+\RequirePackage{bm}
+\RequirePackage{mhchem} %核素、同位素、化学式
+\RequirePackage{mathtools}
+\RequirePackage{yhmath} %圆弧
+\RequirePackage{physics}
+\RequirePackage{xeCJKfntef} %中文的波浪线、加点、删除线等
 
 
 % 修改脚注的编号为加圈样式，并且各页单独编号
 \RequirePackage{pifont}
 \RequirePackage[perpage,symbol*]{footmisc}
 \DefineFNsymbols{circled}{{\ding{192}}{\ding{193}}{\ding{194}}
-	{\ding{195}}{\ding{196}}{\ding{197}}{\ding{198}}{\ding{199}}{\ding{200}}{\ding{201}}}
+    {\ding{195}}{\ding{196}}{\ding{197}}{\ding{198}}{\ding{199}}{\ding{200}}{\ding{201}}}
 \setfnsymbol{circled}
 
 
-
-\RequirePackage{amsmath,amsfonts,mathrsfs,amssymb}
-\RequirePackage{graphicx}
-
-\RequirePackage[font=bf,labelfont=bf,labelsep=quad]{caption}
-
-\RequirePackage{tikz}
-
-
-
-\RequirePackage{physics}
-%\RequirePackage{amsthm}
 \RequirePackage{ntheorem}
 \theoremseparator{\;}
-
-\RequirePackage{xeCJKfntef} %中文的波浪线、加点、删除线等
-\NewDocumentCommand \NoteUnderWave  { m }%
-{%
-    %原文加波浪线部分
-    \CJKunderwave{#1}%
-}
-\NewDocumentCommand \NoteBold  { m }%
-{%
-    %原文加粗部分
-    %考虑到即有加粗又有波浪线的情况
-    %这里当前只能使用 \CJKunderdot 配合才能实现粗体效果
-    %若用其它的方面有两个弊端：1. 多个字只能加粗一个字。 2. 不能自动换行
-    \CJKunderdot[textformat=\bfseries,symbol=\space,depth=0em,boxdepth=0pt,sep=0pt]%
-    {#1}
-}
-
-\RequirePackage{tabularray} %现代表格环境
-\UseTblrLibrary{booktabs} %三线表用
-\UseTblrLibrary{diagbox} %表头用
-
-\RequirePackage{bm}
-\RequirePackage[bookmarksnumbered,draft=false,CJKbookmarks=true,colorlinks=true, linkcolor=blue]{hyperref}
-
-\RequirePackage{tkz-euclide}
 
 
 \theoremstyle{plain}
@@ -94,41 +119,6 @@
 \theorembodyfont{\normalfont}
 
 
-% \newtheorem{defn}{定义}[chapter]
-% \newtheorem{thm}{定理}[chapter]
-% \newtheorem{yl}{引理}[chapter]
-% \newtheorem{tl}{推论}[chapter]
-
-%\RequirePackage[framemethod=tikz]{mdframed}
-%
-%\newmdtheoremenv[
-%  linecolor=black,
-%  leftmargin=20pt,
-%  innerleftmargin=5pt,
-%  innerrightmargin=2pt, roundcorner=5pt
-%  ]{defn}{定义}[chapter]
-%  \newmdtheoremenv[
-%	linecolor=black,
-%	leftmargin=20pt,
-%	innerleftmargin=5pt, 
-%	innerrightmargin=2pt, roundcorner=5pt
-%	]{thm}{定理}[chapter]
-%
-%	\newmdtheoremenv[
-%  linecolor=black,
-%  leftmargin=20pt,
-%  innerleftmargin=5pt,
-%  innerrightmargin=2pt, roundcorner=5pt
-%  ]{yl}{引理}[chapter]
-%
-%  \newmdtheoremenv[
-%  linecolor=black,
-%  leftmargin=20pt,
-%  innerleftmargin=5pt,
-%  innerrightmargin=2pt, roundcorner=5pt
-%  ]{tl}{推论}[chapter]
-%
-%
 \newtheorem{example}{\bf 例题}[chapter]
 \newenvironment{solution}{\noindent {\bf 解答：}}{}%{\hfill $\blacksquare$\par}
 
@@ -144,55 +134,37 @@
 \newcommand{\Var}{{\rm Var}}
 \newcommand{\Cov}{{\rm Cov}}
 
+\renewcommand{\le}{\leqslant}
+\renewcommand{\ge}{\geqslant}
 
 
-\RequirePackage{tcolorbox}
-\tcbuselibrary{breakable}
-\tcbuselibrary{most}
-
-% \tcolorboxenvironment{tl}{colback = cyan!5!white, colframe = cyan!75!black,
-	%     colbacktitle = cyan!85!black, enhanced,  breakable}
-
-% \tcolorboxenvironment{thm}{colback = magenta!5!white, colframe = magenta!75!black, 
-	%     colbacktitle = magenta!85!black, enhanced,     breakable}
-
-% \tcolorboxenvironment{yl}{colback = red!5!white, colframe = red!75!black, 
-	%     colbacktitle = red!85!black, enhanced,     breakable}
-
-% \tcolorboxenvironment{defn}{colback = blue!5!white, colframe = blue!75!black,
-	%     colbacktitle = blue!85!black, enhanced,    breakable
-	% }
-
-
-%\tcolorboxenvironment{tl}{colback = cyan!5!white, colframe = cyan!75!black, fonttitle = \bfseries,
-	%    colbacktitle = cyan!85!black, enhanced,
-	%    attach boxed title to top center={yshift=-2mm}, breakable}
 \setcounter{tocdepth}{1}
-
 \setcounter{secnumdepth}{3}
 
-
+\setlength{\abovecaptionskip}{0.cm}
+\setlength{\belowcaptionskip}{-0.cm}
 
 \ctexset {
-	section = {
-		name = {第,节},
-		number = \chinese{section}},
-	subsection = {
-		name = {\hspace{2em},、\hspace{-1em}},
-		number = \chinese{subsection}
-	},
-	subsubsection = {
-		name = {\hspace{2em}（,）\hspace{-1em}},
-		number = \chinese{subsubsection},
-	}
+    section = {
+        name = {第,节},
+        number = \chinese{section}},
+    subsection = {
+        name = {,、\hspace{-1em}},
+        number = \chinese{subsection}
+    },
+    subsubsection = {
+        name = {（,）\hspace{-1em}},
+        number = \chinese{subsubsection},
+    }
 }
 
 
-%\RequirePackage{fancyhdr}
-%
-%% \RequirePackage{enumitem}   [itemindent=1em]
-%
-%
+\DeclareCaptionFormat{MySubfigFormat}{\zihao{-5}{\heiti #1#2}\space#3 \par}
+\captionsetup{justification=centering}
+\captionsetup[subfigure]{format=MySubfigFormat,justification=centering,labelformat=simple}
+\renewcommand{\thesubfigure}{\zhtiangan{\arabic{subfigure}}}
+
+
 \renewcommand{\contentsname}{目~~录}
 
 \RequirePackage{paralist}
@@ -208,30 +180,31 @@
 \titlespacing{\chapter}{0pt}{*1}{*1}
 \titlespacing{\section}{0pt}{*1}{*1}
 \titlespacing{\subsection}{0pt}{*1}{*1}
-
 \titlespacing{\subsubsection}{0pt}{*1}{*1}
 
-\renewcommand{\le}{\leqslant}
-\renewcommand{\ge}{\geqslant}
 
-\RequirePackage{mhchem} %核素、同位素、化学式
+\NewDocumentCommand \NoteUnderWave  { m }%
+{%
+    %原文加波浪线部分
+    \CJKunderwave{#1}%
+}
+
+\NewDocumentCommand \NoteBold  { m }%
+{%
+    %原文加粗部分
+    %考虑到即有加粗又有波浪线的情况
+    %这里当前只能使用 \CJKunderdot 配合才能实现粗体效果
+    %若用其它的方面有两个弊端：1. 多个字只能加粗一个字。 2. 不能自动换行
+    \CJKunderdot[textformat=\bfseries,symbol=\space,depth=0em,boxdepth=0pt,sep=0pt]%
+    {#1}
+}
+
 \NewDocumentCommand \atom  { mmm }%
 {%
     \ce{^{#2}_{#3}#1}%
 }
-\RequirePackage{mathtools}
 
-\setlength{\abovecaptionskip}{0.cm}
-\setlength{\belowcaptionskip}{-0.cm}
 
-%\setmainfont{Times New Roman}
-\usetikzlibrary{decorations.pathmorphing, patterns}
-\usetikzlibrary{calc, patterns, decorations.markings}
-\usetikzlibrary{positioning, decorations}
-
-%\cover{cover.pdf}
-
-\RequirePackage{yhmath}
 
 %物理单位
 %取 unit 首字母
@@ -469,16 +442,37 @@
 \newcommand{\UAiA}{\text{\AA}} % Å（长度，埃）
 \newcommand{\UJcdotsA}{\text{J}\cdot\text{s}} % J·s（普朗克常数 h 单位）
 
-\RequirePackage{tkz-euclide}
 
-
-\RequirePackage{subcaption}
-\RequirePackage{zhnumber}
-
-\DeclareCaptionFormat{MySubfigFormat}{\zihao{-5}{\heiti #1#2}\space#3 \par}
-\captionsetup[subfigure]{format=MySubfigFormat,justification=centering,labelformat=simple}
-\renewcommand{\thesubfigure}{\zhtiangan{\arabic{subfigure}}}
-
-
-
-
+\NewDocumentCommand \BookContent { mmm }
+{
+    \int_case:nnF \l_RT_book_number_int
+    {
+        {1} %第一册
+        {%
+            %封面内容
+            \title{\Huge\bfseries 高中物理~甲种本\\ 第一册\\\vspace*{1cm} {\zihao{2}\songti 重排版}\\\vspace*{2cm} }
+            \author{\Large 张同恂 \and \Large 方玉珍 \and \Large 马淑美}
+            \date{\Large 1983年11月 \\ \rule{0em}{0em} \\ \rule{0em}{0em} \\ \includegraphics[width=85mm]{fig/A/cover.pdf}\setcounter{page}{-1}}
+            #1
+        }
+        {2} %第二册
+        {
+            %封面内容
+            \title{\Huge\bfseries 高中物理~甲种本\\ 第二册\\\vspace*{1cm} {\zihao{2}\songti 重排版}\\\vspace*{2cm}}
+            \author{\Large 张同恂 \and \Large 方玉珍 \and \Large 马淑美 \and \Large 郭连壁 \and \Large 李福利 }
+            \date{\Large 1984年7月 \\ \rule{0em}{0em} \\ \rule{0em}{0em} \\ \includegraphics[scale=1.2]{fig/B/cover.pdf}\setcounter{page}{-1}}
+            #2
+        }
+        {3} %第三册
+        {
+            %封面内容
+            \title{\Huge\bfseries 高中物理~甲种本\\ 第三册\\\vspace*{1cm} {\zihao{2}\songti 重排版}\\\vspace*{2cm}}
+            \author{\Large 张同恂 \and \Large 方玉珍 \and \Large 马淑美}
+            \date{\Large 1985年11月 \\ \rule{0em}{0em} \\ \rule{0em}{0em} \\ \includegraphics[scale=1.8]{fig/C/cover.pdf}\setcounter{page}{-1}}
+            #3
+        }
+    }
+    {
+        \msg_error:nn { RT_Msg_Book_number } { number_error }
+    }
+}
