@@ -4,7 +4,7 @@
 
 在前人制作的基础上，针对高中物理甲种本（全三册），精校精排，修复上千处问题，终于得到了一个较为完善的版本。
 
-编译好的 PDF 文件：点此下载
+编译好的 PDF 文件：[点此下载](https://gitee.com/ylxdxx/physics-retypeset/releases)
 
 编译项目示例：
 
