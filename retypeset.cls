@@ -226,7 +226,7 @@
 \newcommand{\Umn}{\;\text{m}^{-1}} % m^{-1} （长度 m 的倒数）
 \newcommand{\Umq}{\;\text{m}^2} % m^2
 \newcommand{\Ucmq}{\;\text{cm}^2} % cm^2
-\newcommand{\Ukgf}{\;\text{kgf}} % kgf
+\newcommand{\Ukgf}{\;\text{kgf}} % kgf （千克力）
 \newcommand{\Ukg}{\;\text{kg}} % kg
 \newcommand{\Uua}{\;\text{u}} % u （原子质量单位）
 \newcommand{\UN}{\;\text{N}} % N
