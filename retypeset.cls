@@ -141,8 +141,8 @@
 \setcounter{tocdepth}{1}
 \setcounter{secnumdepth}{3}
 
-\setlength{\abovecaptionskip}{0.cm}
-\setlength{\belowcaptionskip}{-0.cm}
+%\setlength{\abovecaptionskip}{0.cm}
+%\setlength{\belowcaptionskip}{-0.cm}
 
 \ctexset {
     section = {
