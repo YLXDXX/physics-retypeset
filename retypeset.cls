@@ -452,7 +452,7 @@
             %封面内容
             \title{\Huge\bfseries 高中物理~甲种本\\ 第一册\\\vspace*{1cm} {\zihao{2}\songti 重排版}\\\vspace*{2cm} }
             \author{\Large 张同恂 \and \Large 方玉珍 \and \Large 马淑美}
-            \date{\Large 1983年11月 \\ \rule{0em}{0em} \\ \rule{0em}{0em} \\ \includegraphics[width=85mm]{fig/A/cover.pdf}\setcounter{page}{-1}}
+            \date{\Large 1983年11月 \\ \rule{0em}{0em} \\ \rule{0em}{0em} \\ \includegraphics[scale=1.2]{fig/A/9-22.pdf}\setcounter{page}{-1}}
             #1
         }
         {2} %第二册
