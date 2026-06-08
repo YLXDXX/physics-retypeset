@@ -9,10 +9,10 @@
 \small
 \begin{tikzpicture}[>=stealth, samples=100]
   \draw[<->] (0,5)node [right]{$p$}--(0,0)--(5,0) node [right]{$V$};
-  \draw[color=black, ultra thick] plot[domain=0.22:4.5] (\x,{1/\x}) ;
-  \draw[color=black, ultra thick] plot[domain=0.44:4.5] (\x,{2/\x}) ;
-  \draw[color=black, ultra thick] plot[domain=0.66:4.5] (\x,{3/\x}) ;
-  \draw[color=black, ultra thick] plot[domain=0.88:4.5] (\x,{4/\x}) ;
+  \draw[color=black, ultra thick] plot[domain=0.22:4.5] (\x,{1/\x}) node [right] {$t_1$};
+  \draw[color=black, ultra thick] plot[domain=0.44:4.5] (\x,{2/\x}) node [right] {$t_2$};
+  \draw[color=black, ultra thick] plot[domain=0.66:4.5] (\x,{3/\x}) node [right] {$t_3$};
+  \draw[color=black, ultra thick] plot[domain=0.88:4.5] (\x,{4/\x}) node [right] {$t_4$};
   \draw [dashed] (0,3)--(4/3,3);
   \draw [dashed] (3,0)--(3,4/3);
   \node at (-.2,-.2){$O$};
